@@ -3,12 +3,13 @@
 > **Leia este arquivo antes de qualquer alteração.** Ele registra o estado atual do projeto para que outra IA (ou pessoa) consiga continuar sem perder o contexto. **Atualize este arquivo ao final de cada tarefa.**
 
 Última atualização: 26/10/2026
-Última tarefa concluída: projeto preparado para a **Vercel** (guia `DEPLOY-VERCEL.md`, `vercel.json` com cabeçalhos/cache, `.vercelignore`, menu compatível com `cleanUrls`); cadastro **sem confirmação de e-mail** e com CPF/telefone/endereço; painel admin com **Clientes cadastrados** (busca + CSV) e **Gerar contrato**; migração `supabase/002_clientes_admin.sql` (**ainda precisa ser executada no SQL Editor**); cache busting em `?v=37`.
+Última tarefa concluída: projeto versionado no Git e enviado ao GitHub (repositório privado `jotta19992026-coder/oficial-leilao`, branch `main`); `images/lotes/` fora do repositório (fotos já no Supabase); próximo passo: importar o repositório na Vercel.
 
 ---
 
 ## 0. Onde paramos (resumo rápido)
 
+- **Repositório:** https://github.com/jotta19992026-coder/oficial-leilao (privado, branch `main`). O remoto usa `https://jotta19992026-coder@github.com/...` porque este computador também tem a conta `jefersonsousa19992025` salva no Git Credential Manager; o usuário na URL força a conta certa. Fora do Git: `.env` (secret key) e `images/lotes/` (fotos originais, já no Supabase Storage). Deploy: importar esse repositório em vercel.com/new (Framework *Other*, sem build, sem variáveis); cada `git push` na `main` publica.
 - **Estado:** site estático funcionando localmente em `http://127.0.0.1:8000/`.
 - **Catálogo:** 225 lotes e 1.985 fotos importados (`js/lots-data.js` + `images/lotes/`).
 - **Cards:** fotos alternam automaticamente com fade/zoom, stagger e pausa no hover; a rotação continua mesmo com `prefers-reduced-motion` (sem zoom).
@@ -361,6 +362,7 @@ Abrir: `http://127.0.0.1:8000/`
 
 ## 11. Histórico de tarefas
 
+- **26/10/2026** — `git init` + commit inicial (79 arquivos, sem segredos — conferido com busca por `sb_secret_`), `images/lotes/` adicionada ao `.gitignore`, push para `github.com/jotta19992026-coder/oficial-leilao` (privado).
 - **26/10/2026** — Preparação para Vercel (`DEPLOY-VERCEL.md`, `vercel.json`, `.vercelignore`, menu com `cleanUrls`); cadastro sem confirmação de e-mail, com CPF/telefone/endereço; painel com Clientes (busca/CSV) e Gerar contrato; migração `supabase/002_clientes_admin.sql` criada (pendente de execução); `js/contract.js` compartilhado; pedido de lances automáticos da casa recusado (shill bidding); cache busting em `?v=37`.
 - **26/10/2026** — Supabase conectado: credenciais movidas do `.env.example` para `.env`; upload das 1.985 fotos (`--only=1006` conferido antes); `scripts/import-lotes-supabase.js` importou 8 leilões, 225 lotes `published` e 1.985 fotos; `js/supabase.js` novo; `auth.js`, `store.js` e `admin.js` reescritos sobre supabase-js 2.45.4; lances via `place_bid`, histórico via `lot_bid_history`, realtime no detalhe; "Lance automático" do admin removido; `.vercelignore` criado; testes de RLS, `place_bid` e fluxo pela interface feitos com usuário temporário (removido depois); cache busting em `?v=37`.
 - **26/10/2026** — Home: "Aberto para lance" em vermelho (#e11d2a, mesmo tom do selo "Ao vivo"), apenas na seção `#leiloes`; cache busting em `?v=37`.
