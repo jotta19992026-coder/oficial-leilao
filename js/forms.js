@@ -38,7 +38,8 @@
         address: qs('signup-address') ? qs('signup-address').value : ''
       };
       window.NLAuth.signup(qs('signup-name').value, qs('signup-email').value, qs('signup-pass').value, extra).then(function (r) {
-        if (r.ok && !r.needsConfirm) { location.href = 'minha-conta.html'; return; }
+        // Cadastro concluído: o cliente já entra logado e vai direto para a página inicial.
+        if (r.ok && !r.needsConfirm) { location.href = 'index.html'; return; }
         if (submit) submit.disabled = false;
         if (r.ok) {
           signForm.reset();

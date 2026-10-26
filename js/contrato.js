@@ -29,7 +29,10 @@
         if (!p) return;
         [['c-nome', p.name], ['c-cpf', p.cpf], ['c-tel', p.phone], ['c-endereco', p.address]].forEach(function (f) {
           var el = document.getElementById(f[0]);
-          if (el && !el.value && f[1]) el.value = f[1];
+          if (el && !el.value && f[1]) {
+            el.value = f[1];
+            if (window.NLMasks && el.hasAttribute('data-mask')) window.NLMasks.apply(el);
+          }
         });
       });
     }

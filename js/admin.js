@@ -51,6 +51,8 @@
   var clients = [];
   var MIGRATION_HINT = 'Execute supabase/002_clientes_admin.sql no SQL Editor do Supabase para liberar esta lista.';
   function fmtDate(v) { return v ? new Date(v).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) : '—'; }
+  // CPF/telefone no padrão oficial (o banco guarda o CPF só com dígitos).
+  function fmt(type, v) { return v ? (window.NLMasks ? window.NLMasks.format(type, v) : v) : ''; }
   function money(v) { return v == null ? '—' : window.NL_BRL(Math.round(Number(v))); }
   function clientMatches(c, q) {
     if (!q) return true;
@@ -64,7 +66,7 @@
     document.getElementById('clients-body').innerHTML = list.length
       ? list.map(function (c) {
           return '<tr><td>' + esc(c.name) + (c.role === 'admin' ? ' <span class="chip">admin</span>' : '') + '</td>' +
-            '<td>' + esc(c.email) + '</td><td class="nowrap">' + esc(c.cpf || '—') + '</td><td class="nowrap">' + esc(c.phone || '—') + '</td>' +
+            '<td>' + esc(c.email) + '</td><td class="nowrap">' + esc(fmt('cpf', c.cpf) || '—') + '</td><td class="nowrap">' + esc(fmt('phone', c.phone) || '—') + '</td>' +
             '<td>' + esc(c.address || '—') + '</td><td class="nowrap">' + fmtDate(c.created_at) + '</td><td class="nowrap">' + fmtDate(c.last_sign_in_at) + '</td>' +
             '<td>' + c.bid_count + '</td><td class="nowrap">' + money(c.max_bid) + '</td><td>' + c.leading_lots + '</td>' +
             '<td><button class="btn btn--ghost btn--sm" data-contract="' + c.id + '" type="button">Contrato</button></td></tr>';
@@ -97,7 +99,7 @@
   document.getElementById('clients-csv').addEventListener('click', function () {
     var head = ['Nome', 'E-mail', 'CPF', 'Telefone', 'Endereço', 'Cadastro', 'Último acesso', 'Lances', 'Maior lance', 'Lotes liderando'];
     var rows = clients.map(function (c) {
-      return [c.name, c.email, c.cpf, c.phone, c.address, fmtDate(c.created_at), fmtDate(c.last_sign_in_at), c.bid_count,
+      return [c.name, c.email, fmt('cpf', c.cpf), fmt('phone', c.phone), c.address, fmtDate(c.created_at), fmtDate(c.last_sign_in_at), c.bid_count,
         c.max_bid == null ? '' : Number(c.max_bid).toFixed(2).replace('.', ','), c.leading_lots];
     });
     var csv = [head].concat(rows).map(function (r) {
@@ -156,7 +158,7 @@
     if (!l.is_leading && !confirm('Este cliente não tem o maior lance do lote. Gerar o contrato mesmo assim?')) return;
     window.NLContractPrint({
       numero: document.getElementById('k-number').value.trim(),
-      nome: c.name, cpf: c.cpf, email: c.email, tel: c.phone, endereco: c.address,
+      nome: c.name, cpf: fmt('cpf', c.cpf), email: c.email, tel: fmt('phone', c.phone), endereco: c.address,
       lote: 'Lote ' + String(l.n || l.lot_id).padStart(2, '0') + ' — ' + l.title + (l.auction_label ? ' (' + l.auction_label + ')' : ''),
       valor: Number(kValue.value) || 0,
       data: l.ends_at ? new Date(l.ends_at).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) : '—'
