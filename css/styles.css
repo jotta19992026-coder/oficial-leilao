@@ -70,7 +70,7 @@ img{max-width:100%;display:block}
   grid-template-areas:"viewport viewport viewport" "prev dots next";align-items:center;background:var(--navy)}
 .banners__viewport{grid-area:viewport;overflow:hidden;width:100%;
   transition:height .38s cubic-bezier(.22,.61,.36,1)}
-.banners__track{display:flex;align-items:flex-start;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.banners__track{display:flex;align-items:flex-start;transition:transform .35s cubic-bezier(.22,.61,.36,1)}
 @media (prefers-reduced-motion:reduce){
   .banners__viewport,.banners__track{transition:none}
 }

@@ -43,7 +43,7 @@
       timer = setInterval(function () {
         if (document.hidden) return;
         next();
-      }, 6000);
+      }, 4000); // troca a cada 4 s
     }
 
     var resizeTick = 0;
