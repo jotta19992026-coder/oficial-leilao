@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=45';
+      s.src = 'js/lots-data.js?v=46';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();

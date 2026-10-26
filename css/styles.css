@@ -175,14 +175,6 @@ img{max-width:100%;display:block}
   padding-bottom:.6rem;scrollbar-width:thin}
 .lot-slider__track .lot{flex:0 0 280px;scroll-snap-align:start}
 
-/* Selos de segurança (rodapé) */
-.seals{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:22px 0;
-  border-top:1px solid rgba(255,255,255,.1)}
-.seal{display:flex;align-items:center;gap:.7rem}
-.seal__txt{display:flex;flex-direction:column;line-height:1.25}
-.seal__txt strong{color:#fff;font-size:.9rem}
-.seal__txt span{color:#9fb2cc;font-size:.78rem}
-@media (max-width:760px){.seals{grid-template-columns:1fr 1fr}}
 
 /* Hero */
 .hero{background:
@@ -278,20 +270,6 @@ img{max-width:100%;display:block}
 .event{position:relative}
 .event__sponsor{position:absolute;right:1.1rem;top:50%;transform:translateY(-30%)}
 .event__sponsor .sponsor{width:56px;height:56px}
-/* Selos de segurança: faixa acima do rodapé e bloco dentro do rodapé */
-.trustbar{background:#fff;border-top:1px solid var(--line);padding:22px 0}
-.trustbar__inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem 2.2rem}
-.trustbar__label{font-family:"Sora",sans-serif;font-weight:600;color:var(--navy);font-size:.95rem}
-.trustbar img{display:block;height:44px;width:auto}
-.trustbar img+img{height:58px}
-.footer__trust{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1rem}
-.footer__trust img{display:block;height:30px;width:auto;background:#fff;border-radius:8px;padding:6px 9px;box-sizing:content-box}
-.footer__trust img+img{height:40px;padding:1px 6px}
-@media (max-width:560px){
-  .trustbar__label{flex-basis:100%;text-align:center}
-  .trustbar img{height:36px}
-  .trustbar img+img{height:50px}
-}
 .lot__status{color:var(--brand-600);font-weight:600;font-size:.82rem;margin:0 0 .7rem}
 .lot__row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .lot__price{font-family:"Sora";font-weight:700;font-size:1.15rem;color:var(--ink)}

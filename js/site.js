@@ -5,14 +5,6 @@
   var LOGO = '<img class="brand__logo" src="images/logo.webp" alt="Copart" width="153" height="60">';
   var LOGO_LIGHT = LOGO;
 
-  function seal(path, path2, title, sub) {
-    var p2 = path2 ? '<path d="' + path2 + '"/>' : '';
-    return '<div class="seal">' +
-      '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1e4f8f" stroke-width="2" ' +
-      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + path + '"/>' + p2 + '</svg>' +
-      '<div class="seal__txt"><strong>' + title + '</strong><span>' + sub + '</span></div></div>';
-  }
-
   // Selo de patrocinadores ("Bancos e Financeiras"): logos deslizando em loop (animação em CSS).
   // Usado nos cards de lote, na página do lote e nas datas dos leilões da home.
   var SPONSORS = [
@@ -40,11 +32,6 @@
     Array.prototype.forEach.call(els, function (el, idx) {
       el.innerHTML = window.NLSponsorBadge(el.getAttribute('data-sponsors') || idx, el.getAttribute('data-sponsors-size'));
     });
-  }
-
-  function trustHTML() {
-    return '<img src="images/selos/leilao-seguro.webp" alt="Leilão Seguro" width="260" height="44" loading="lazy" decoding="async">' +
-      '<img src="images/selos/ssl-site-seguro.webp" alt="SSL — Certificado Site Seguro" width="198" height="88" loading="lazy" decoding="async">';
   }
 
   function navLinks() {
@@ -99,12 +86,9 @@
   }
 
   function footerHTML() {
-    return '<section class="trustbar" aria-label="Selos de segurança"><div class="container trustbar__inner">' +
-      '<span class="trustbar__label">Ambiente seguro e verificado</span>' + trustHTML() + '</div></section>' +
-      '<footer class="footer"><div class="container footer__grid">' +
+    return '<footer class="footer"><div class="container footer__grid">' +
       '<div class="footer__col"><a class="brand brand--light" href="index.html">' + LOGO_LIGHT + '</a>' +
-      '<p class="footer__muted">Leilões online com transparência e procedência.</p>' +
-      '<div class="footer__trust">' + trustHTML() + '</div></div>' +
+      '<p class="footer__muted">Leilões online com transparência e procedência.</p></div>' +
       '<div class="footer__col"><h4>Localização</h4>' +
       '<p class="footer__muted">Av. Exemplo, 1000 — Centro<br>Sua Cidade — UF, 00000-000</p>' +
       '<h4>Horário</h4><p class="footer__muted">Seg. a sex., das 8h às 18h</p></div>' +
@@ -118,12 +102,6 @@
       '<li><a href="edital.html">Edital</a></li>' +
       '<li><a href="#">Política de privacidade</a></li>' +
       '<li><a href="#">Termos de uso</a></li></ul></div></div>' +
-      '<div class="container"><div class="seals">' +
-        seal('M12 2l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V5l7-3z', 'M9 12l2 2 4-4', 'SSL Seguro', 'Conexão criptografada') +
-        seal('M6 10V8a6 6 0 0 1 12 0v2 M5 10h14v10H5z', '', 'Dados protegidos', 'Criptografia de ponta a ponta') +
-        seal('M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z', '', 'Leilão verificado', 'Lotes com laudo e procedência') +
-        seal('M20 6L9 17l-5-5', '', 'Compra protegida', 'Acompanhamento do início ao fim') +
-      '</div></div>' +
       '<div class="footer__bottom"><div class="container">' +
       '<p>© <span id="year"></span> Leilão Oficial. Todos os direitos reservados. · <a href="admin-login.html">Área administrativa</a></p>' +
       '</div></div></footer>' +
@@ -188,7 +166,7 @@
     if (reduce || !('IntersectionObserver' in window)) return;
 
     setTimeout(function () {
-      var els = [].slice.call(document.querySelectorAll('.event,.step,.trust,.auction-block,.finder__card,.seal'));
+      var els = [].slice.call(document.querySelectorAll('.event,.step,.trust,.auction-block,.finder__card'));
       els.forEach(function (el) { el.classList.add('reveal'); });
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
