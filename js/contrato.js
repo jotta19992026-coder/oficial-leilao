@@ -4,12 +4,14 @@
   var form = document.getElementById('contract-form');
   if (!form) return;
 
-  // Exige login; pré-preenche com os dados da conta.
-  if (!window.NLAuth.requireAuth('login.html?next=contrato.html')) return;
-  var u = window.NLAuth.current();
-
-  // Renderiza depois que os lotes chegam do Supabase (ou do catálogo local, se offline).
-  (window.NLStore ? window.NLStore.ready : Promise.resolve()).then(function () {
+  // Exclusivo do administrador (profiles.role = 'admin'); os demais vão para o login do painel.
+  form.style.visibility = 'hidden';
+  window.NLAdmin.require().then(function (ok) {
+    if (!ok) return;
+    form.style.visibility = '';
+    return window.NLStore ? window.NLStore.ready : null;
+  }).then(function () {
+    if (form.style.visibility === 'hidden') return;
     var lots = window.NLStore ? window.NLStore.lots() : (window.NL_LOTS || []);
     var sel = document.getElementById('c-lote');
     lots.forEach(function (l) {
@@ -18,24 +20,6 @@
       o.textContent = 'Lote ' + l.n + ' — ' + l.title;
       sel.appendChild(o);
     });
-
-    if (u) {
-      document.getElementById('c-nome').value = u.name || '';
-      document.getElementById('c-email').value = u.email || '';
-    }
-    // Completa com o que o cliente informou no cadastro (sem apagar o que já foi digitado).
-    if (window.NLAuth.profile) {
-      window.NLAuth.profile().then(function (p) {
-        if (!p) return;
-        [['c-nome', p.name], ['c-cpf', p.cpf], ['c-tel', p.phone], ['c-endereco', p.address]].forEach(function (f) {
-          var el = document.getElementById(f[0]);
-          if (el && !el.value && f[1]) {
-            el.value = f[1];
-            if (window.NLMasks && el.hasAttribute('data-mask')) window.NLMasks.apply(el);
-          }
-        });
-      });
-    }
 
     function lotById(id) {
       return lots.filter(function (l) { return l.id === parseInt(id, 10); })[0] || null;

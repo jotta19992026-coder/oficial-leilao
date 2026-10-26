@@ -3,12 +3,14 @@
 > **Leia este arquivo antes de qualquer alteração.** Ele registra o estado atual do projeto para que outra IA (ou pessoa) consiga continuar sem perder o contexto. **Atualize este arquivo ao final de cada tarefa.**
 
 Última atualização: 26/10/2026
-Última tarefa concluída: máscaras de CPF (000.000.000-00) e telefone ((00) 00000-0000 / (00) 0000-0000) no cadastro e no contrato (`js/masks.js`); após o cadastro o cliente vai direto para a página inicial já logado; painel/CSV/contrato do admin exibem CPF e telefone formatados; cache busting em `?v=38`.
+Última tarefa concluída: geração de contrato **exclusiva do admin** (link removido de "Minha conta"; `contrato.html` exige `profiles.role=admin` via `NLAdmin.require()` + guarda rápida no `<head>`; atalho "Contrato manual" no painel; `noindex`/`no-store` em `/contrato*`); cache busting em `?v=39`. **Pendente:** upscale dos banners (Real-ESRGAN bloqueado pelo modo automático; aguardando autorização do usuário).
 
 ---
 
 ## 0. Onde paramos (resumo rápido)
 
+- **Contrato:** só o admin gera contratos — no painel (cliente + lote, valor do maior lance) ou em `contrato.html` ("Contrato manual", formulário livre, também restrito ao admin). Clientes não têm mais acesso à página.
+- **Upscale dos banners (pendente):** plano = Real-ESRGAN ncnn-vulkan (GPU GTX 1650) ×4 → Lanczos para ×2 (2280×594 desktop, 1560×1494 mobile), arquivos `-2x.webp` ao lado dos atuais e `srcset` com descritores `w` (o banner ocupa 100% da largura; acima de 1140 px a arte 1x é esticada pelo navegador). O executável foi baixado em `<scratchpad>/realesrgan/bin` (release oficial v0.2.5.0) mas a execução foi negada pelo modo automático; alternativa sem IA: Lanczos + unsharp mask (ganho pequeno).
 - **Estado do Supabase (conferido em 26/10/2026):** migração `002_clientes_admin.sql` **já executada** (perfil grava `cpf` só com dígitos, `phone` formatado e `address`); "Confirm email" **desligado** (`mailer_autoconfirm: true`); conta admin criada: `jotta19992026@gmail.com`.
 - **Máscaras (`js/masks.js`):** `<input data-mask="cpf">` → `000.000.000-00`; `data-mask="phone"` → `(00) 00000-0000` (celular) ou `(00) 0000-0000` (fixo). Funciona digitando, colando (inclusive `+55 …`, o 55 é descartado) e editando no meio (cursor preservado). `NLMasks.format(tipo, valor)` formata para exibição (usado no painel, CSV e contrato do admin). Usado em `cadastro.html`, `contrato.html` e `admin.html`.
 - **Cadastro:** concluído → `index.html` já logado (antes ia para `minha-conta.html`).
@@ -33,7 +35,7 @@
 - **Backend (Supabase, ativo):** projeto `srxtmyhcfncscjvyibhg` (`https://srxtmyhcfncscjvyibhg.supabase.co`), schema de `supabase/schema.sql` executado, Auth por e-mail com Site URL `http://127.0.0.1:8000`. O site lê lotes/fotos do banco, faz login/cadastro pelo Supabase Auth e grava lances só via `place_bid`. Chave do navegador: **publishable** `sb_publishable_9R2e…` em `js/supabase.js` (pública por definição; a proteção é a RLS). A **secret key** fica só no `.env` (scripts Node), nunca no navegador.
 - **Fotos e catálogo no Supabase:** 1.985 fotos enviadas (0 falhas) para `lot-photos/lotes/<id>/…` por `scripts/upload-images-supabase.js`; mapa em `js/lots-photos.json`. `scripts/import-lotes-supabase.js` gravou 8 `auctions` (`LO-2026/NN`), 225 `lots` (`published`, ids iguais aos de `lots-data.js`) e 1.985 `lot_photos`. `js/lots-data.js` continua carregado só como **fallback** se o Supabase não responder (aí as fotos apontam para `images/lotes/`, que não vai para o deploy).
 - **Segredos:** a URL e a secret key tinham sido preenchidas no `.env.example`; foram movidas para `.env` (ignorado pelo `.gitignore` e pelo novo `.vercelignore`) e o `.env.example` voltou a ser só modelo. `.vercelignore` também exclui `scripts/`, `supabase/`, `images/lotes/`, `AGENTS.md` e `CONTEXTO-IA.md` do deploy.
-- **Cache busting:** `?v=38` em todas as páginas.
+- **Cache busting:** `?v=39` em todas as páginas.
 - **Pendências do dono (passo a passo em `DEPLOY-VERCEL.md`):** (1) rodar `supabase/002_clientes_admin.sql` no SQL Editor; (2) desligar **Confirm email** em Authentication → Sign In / Providers → Email; (3) criar o admin (Authentication → Users → Add user com *Auto Confirm* + `update public.profiles set role='admin' where email='...'`); (4) publicar na Vercel e apontar o domínio; (5) colocar o domínio em Authentication → URL Configuration.
 - **Recusado:** "lances automáticos para incentivar os usuários" (lances da casa/robô para inflar o preço = *shill bidding*, fraude contra o arrematante). O antigo "Lance automático" do admin já tinha sido removido. Alternativas legítimas sugeridas: lance automático **do próprio cliente** até um teto (proxy bidding), aviso de "você foi superado", preço inicial atrativo e destaque de lotes encerrando.
 - **Cadastro:** coleta nome, e-mail, **CPF** (validado com dígitos verificadores), **telefone com DDD** e endereço (opcional). Vão em `user_metadata` e o gatilho `handle_new_user` (migração 002) copia para `profiles.cpf/phone/address`. Com "Confirm email" desligado, o `signUp` devolve sessão e o cliente entra direto (o código ainda trata o caso com confirmação).
@@ -53,19 +55,19 @@ Site estático de leilões (HTML + CSS + JavaScript puro, sem build) com backend
 ### Ordem dos scripts nas páginas (importante)
 
 ```html
-<script src="js/lots-data.js?v=38"></script>  <!-- catálogo importado (225 lotes) -->
-<script src="js/data.js?v=38"></script>       <!-- utilitários + fallback -->
+<script src="js/lots-data.js?v=39"></script>  <!-- catálogo importado (225 lotes) -->
+<script src="js/data.js?v=39"></script>       <!-- utilitários + fallback -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script src="js/supabase.js?v=38"></script>   <!-- cria window.NLSupa (URL + publishable key) -->
-<script src="js/auth.js?v=38"></script>
-<script src="js/store.js?v=38"></script>
-<script src="js/site.js?v=38"></script>
-<script src="js/timers.js?v=38"></script>
-<script src="js/card.js?v=38"></script>
-<script src="js/lotes.js?v=38"></script>      <!-- ou index.js/lote.js/admin.js -->
+<script src="js/supabase.js?v=39"></script>   <!-- cria window.NLSupa (URL + publishable key) -->
+<script src="js/auth.js?v=39"></script>
+<script src="js/store.js?v=39"></script>
+<script src="js/site.js?v=39"></script>
+<script src="js/timers.js?v=39"></script>
+<script src="js/card.js?v=39"></script>
+<script src="js/lotes.js?v=39"></script>      <!-- ou index.js/lote.js/admin.js -->
 ```
 
-Todas as páginas HTML usam `?v=38` (cache busting).
+Todas as páginas HTML usam `?v=39` (cache busting).
 
 ### Fluxo de dados
 
@@ -365,16 +367,17 @@ Abrir: `http://127.0.0.1:8000/`
 
 ## 11. Histórico de tarefas
 
-- **26/10/2026** — `js/masks.js` (CPF/telefone com pontos, traços e parênteses no cadastro e no contrato); cadastro redireciona para a página inicial; admin formata CPF/telefone; teste de cadastro real pelo formulário (redirecionou para `/index.html` com "Minha conta"; perfil gravou CPF/telefone/endereço) e usuário de teste removido; cache busting em `?v=38`.
+- **26/10/2026** — Contrato restrito ao admin (link removido de `minha-conta.html`; guarda de admin em `contrato.html`/`contrato.js`; atalho no painel; cabeçalhos `noindex`/`no-store` para `/contrato*` no `vercel.json`); testado sem login e com cliente comum (ambos redirecionados para `admin-login.html`); cache busting em `?v=39`. Upscale dos banners pendente de autorização.
+- **26/10/2026** — `js/masks.js` (CPF/telefone com pontos, traços e parênteses no cadastro e no contrato); cadastro redireciona para a página inicial; admin formata CPF/telefone; teste de cadastro real pelo formulário (redirecionou para `/index.html` com "Minha conta"; perfil gravou CPF/telefone/endereço) e usuário de teste removido; cache busting em `?v=39`.
 - **26/10/2026** — `git init` + commit inicial (79 arquivos, sem segredos — conferido com busca por `sb_secret_`), `images/lotes/` adicionada ao `.gitignore`, push para `github.com/jotta19992026-coder/oficial-leilao` (privado).
-- **26/10/2026** — Preparação para Vercel (`DEPLOY-VERCEL.md`, `vercel.json`, `.vercelignore`, menu com `cleanUrls`); cadastro sem confirmação de e-mail, com CPF/telefone/endereço; painel com Clientes (busca/CSV) e Gerar contrato; migração `supabase/002_clientes_admin.sql` criada (pendente de execução); `js/contract.js` compartilhado; pedido de lances automáticos da casa recusado (shill bidding); cache busting em `?v=38`.
-- **26/10/2026** — Supabase conectado: credenciais movidas do `.env.example` para `.env`; upload das 1.985 fotos (`--only=1006` conferido antes); `scripts/import-lotes-supabase.js` importou 8 leilões, 225 lotes `published` e 1.985 fotos; `js/supabase.js` novo; `auth.js`, `store.js` e `admin.js` reescritos sobre supabase-js 2.45.4; lances via `place_bid`, histórico via `lot_bid_history`, realtime no detalhe; "Lance automático" do admin removido; `.vercelignore` criado; testes de RLS, `place_bid` e fluxo pela interface feitos com usuário temporário (removido depois); cache busting em `?v=38`.
-- **26/10/2026** — Home: "Aberto para lance" em vermelho (#e11d2a, mesmo tom do selo "Ao vivo"), apenas na seção `#leiloes`; cache busting em `?v=38`.
-- **26/10/2026** — Selo "Bancos e Financeiras" estendido à página do lote e às datas de "Próximos leilões" (função compartilhada `NLSponsorBadge` em `site.js`; classes renomeadas de `.lot__sponsor*` para `.sponsor*`); selos "Leilão Seguro" e "SSL" acima do rodapé e no rodapé; cache busting em `?v=38`.
-- **26/10/2026** — Banners passam automaticamente sem pausas por interação/visibilidade; adicionado selo de patrocinadores (6 logos em `images/patrocinadores/`) deslizando em loop ao lado do título de cada card de lote (`js/card.js` + `css/styles.css`); cache busting em `?v=38`.
-- **26/10/2026** — Banners recompostos no formato do Bradesco: RIZA e Daycoval (desktop 1140×297 + mobile 780×747) e Pan mobile (780×747) gerados por `scripts/recompose-banners.py`; removido o fundo desfocado (`.banner--fill`/`.banner__bg`); cache busting em `?v=38`.
-- **26/10/2026** — Banners padronizados pela dimensão do 1º (Bradesco) em desktop e mobile, com arte inteira sobre fundo desfocado nos slides de outra proporção; os 3 cards de campanha saíram do bloco único acima do rodapé: veículos após "Próximos leilões", motos após "Leilões em destaque" e só pesados acima do rodapé; cache busting em `?v=38`.
-- **26/10/2026** — Banners da home reorganizados: o slider superior passou a ter 4 artes (Bradesco, Banco Pan, RIZA e Daycoval) e os antigos banners de texto viraram cards na seção `.promos` acima do rodapé; corrigida a proporção do Bradesco mobile (`780/747`), ajustado o contraste dos títulos e o autoplay agora pausa fora da tela/hover/toque/aba oculta; validado em 320–1440 px; cache busting em `?v=38`.
+- **26/10/2026** — Preparação para Vercel (`DEPLOY-VERCEL.md`, `vercel.json`, `.vercelignore`, menu com `cleanUrls`); cadastro sem confirmação de e-mail, com CPF/telefone/endereço; painel com Clientes (busca/CSV) e Gerar contrato; migração `supabase/002_clientes_admin.sql` criada (pendente de execução); `js/contract.js` compartilhado; pedido de lances automáticos da casa recusado (shill bidding); cache busting em `?v=39`.
+- **26/10/2026** — Supabase conectado: credenciais movidas do `.env.example` para `.env`; upload das 1.985 fotos (`--only=1006` conferido antes); `scripts/import-lotes-supabase.js` importou 8 leilões, 225 lotes `published` e 1.985 fotos; `js/supabase.js` novo; `auth.js`, `store.js` e `admin.js` reescritos sobre supabase-js 2.45.4; lances via `place_bid`, histórico via `lot_bid_history`, realtime no detalhe; "Lance automático" do admin removido; `.vercelignore` criado; testes de RLS, `place_bid` e fluxo pela interface feitos com usuário temporário (removido depois); cache busting em `?v=39`.
+- **26/10/2026** — Home: "Aberto para lance" em vermelho (#e11d2a, mesmo tom do selo "Ao vivo"), apenas na seção `#leiloes`; cache busting em `?v=39`.
+- **26/10/2026** — Selo "Bancos e Financeiras" estendido à página do lote e às datas de "Próximos leilões" (função compartilhada `NLSponsorBadge` em `site.js`; classes renomeadas de `.lot__sponsor*` para `.sponsor*`); selos "Leilão Seguro" e "SSL" acima do rodapé e no rodapé; cache busting em `?v=39`.
+- **26/10/2026** — Banners passam automaticamente sem pausas por interação/visibilidade; adicionado selo de patrocinadores (6 logos em `images/patrocinadores/`) deslizando em loop ao lado do título de cada card de lote (`js/card.js` + `css/styles.css`); cache busting em `?v=39`.
+- **26/10/2026** — Banners recompostos no formato do Bradesco: RIZA e Daycoval (desktop 1140×297 + mobile 780×747) e Pan mobile (780×747) gerados por `scripts/recompose-banners.py`; removido o fundo desfocado (`.banner--fill`/`.banner__bg`); cache busting em `?v=39`.
+- **26/10/2026** — Banners padronizados pela dimensão do 1º (Bradesco) em desktop e mobile, com arte inteira sobre fundo desfocado nos slides de outra proporção; os 3 cards de campanha saíram do bloco único acima do rodapé: veículos após "Próximos leilões", motos após "Leilões em destaque" e só pesados acima do rodapé; cache busting em `?v=39`.
+- **26/10/2026** — Banners da home reorganizados: o slider superior passou a ter 4 artes (Bradesco, Banco Pan, RIZA e Daycoval) e os antigos banners de texto viraram cards na seção `.promos` acima do rodapé; corrigida a proporção do Bradesco mobile (`780/747`), ajustado o contraste dos títulos e o autoplay agora pausa fora da tela/hover/toque/aba oculta; validado em 320–1440 px; cache busting em `?v=39`.
 - **26/10/2026** — Header mobile fixo no topo ao rolar: `#site-header` sticky em ≤560 px, `.header` relativo dentro dele, troca de `overflow-x:hidden` por `overflow-x:clip` no html/body (o hidden quebrava o sticky) e `scroll-margin-top:72px` em `#localizar`/`#contract-output`; validado em 390/360/320 px; cache busting em `?v=29`.
 - **26/10/2026** — Header: botão de conta agora é quadrado (cantos retos, `border-radius:0`) e centralizado exatamente entre a logo e o hambúrguer no mobile, mantendo o rótulo "Entre ou cadastre-se", a logo maior e a compactação por largura; validado em 320–560 px com gaps iguais e sem overflow; cache busting em `?v=28`.
 - **26/10/2026** — Header: botão de conta passou a exibir "Entre ou cadastre-se" (desktop e mobile), pill menor e centralizada ao lado da logo, logo maior (46/42/40 px) e ajustes de fonte/espaçamento em ≤560/≤400/≤360 px; validado de 320 a 1440 px sem overflow; cache busting em `?v=27`.
