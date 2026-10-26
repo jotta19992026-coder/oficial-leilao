@@ -3,7 +3,7 @@
 > **Leia este arquivo antes de qualquer alteração.** Ele registra o estado atual do projeto para que outra IA (ou pessoa) consiga continuar sem perder o contexto. **Atualize este arquivo ao final de cada tarefa.**
 
 Última atualização: 26/10/2026
-Última tarefa concluída: novo login admin (credenciais em `ADMIN-LOGIN.txt`, local), upscale ×2 dos 8 banners com Real-ESRGAN e otimização de carregamento; cache busting em `?v=42`. **Pendente:** push dos commits locais.
+Última tarefa concluída: novo login admin (credenciais em `ADMIN-LOGIN.txt`, local), upscale ×2 dos 8 banners com Real-ESRGAN e otimização de carregamento; cache busting em `?v=42`. Commits enviados ao GitHub (`main`).
 
 ---
 
