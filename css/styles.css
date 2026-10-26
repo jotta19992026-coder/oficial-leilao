@@ -270,6 +270,17 @@ img{max-width:100%;display:block}
 .event{position:relative}
 .event__sponsor{position:absolute;right:1.1rem;top:50%;transform:translateY(-30%)}
 .event__sponsor .sponsor{width:56px;height:56px}
+/* Selos de segurança: faixa acima do rodapé */
+.trustbar{background:#fff;border-top:1px solid var(--line);padding:22px 0}
+.trustbar__inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem 2.2rem}
+.trustbar__label{font-family:"Sora",sans-serif;font-weight:600;color:var(--navy);font-size:.95rem}
+.trustbar img{display:block;height:44px;width:auto}
+.trustbar img+img{height:58px}
+@media (max-width:560px){
+  .trustbar__label{flex-basis:100%;text-align:center}
+  .trustbar img{height:36px}
+  .trustbar img+img{height:50px}
+}
 .lot__status{color:var(--brand-600);font-weight:600;font-size:.82rem;margin:0 0 .7rem}
 .lot__row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .lot__price{font-family:"Sora";font-weight:700;font-size:1.15rem;color:var(--ink)}

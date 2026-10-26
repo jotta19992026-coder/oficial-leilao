@@ -85,8 +85,16 @@
       '<span></span><span></span><span></span></button></div></header>';
   }
 
+  // Faixa de selos logo acima do rodapé.
+  function trustHTML() {
+    return '<img src="images/selos/leilao-seguro.webp" alt="Leilão Seguro" width="260" height="44" loading="lazy" decoding="async">' +
+      '<img src="images/selos/ssl-site-seguro.webp" alt="SSL — Certificado Site Seguro" width="198" height="88" loading="lazy" decoding="async">';
+  }
+
   function footerHTML() {
-    return '<footer class="footer"><div class="container footer__grid">' +
+    return '<section class="trustbar" aria-label="Selos de segurança"><div class="container trustbar__inner">' +
+      '<span class="trustbar__label">Ambiente seguro e verificado</span>' + trustHTML() + '</div></section>' +
+      '<footer class="footer"><div class="container footer__grid">' +
       '<div class="footer__col"><a class="brand brand--light" href="index.html">' + LOGO_LIGHT + '</a>' +
       '<p class="footer__muted">Leilões online com transparência e procedência.</p></div>' +
       '<div class="footer__col"><h4>Localização</h4>' +
