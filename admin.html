@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Painel administrativo — Leilão Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=47">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=47">
+  <link rel="icon" type="image/png" href="favicon.png?v=52">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=52">
   <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=47">
+  <link rel="stylesheet" href="css/styles.css?v=52">
 </head>
 <body>
   <div class="admin-top">
@@ -53,6 +53,44 @@
       <div class="kpi"><span>Visualizações hoje</span><strong id="kpi-views">—</strong></div>
       <div class="kpi"><span>Visitantes hoje</span><strong id="kpi-visitors">—</strong></div>
       <div class="kpi"><span>Online agora <small>(5 min)</small></span><strong id="kpi-online">—</strong></div>
+    </section>
+
+    <section class="panel panel--sim" id="sim-panel">
+      <div class="panel__head">
+        <h2>Simulador de lances <small class="muted">(arrematantes fictícios para teste)</small></h2>
+        <div class="panel__tools">
+          <button class="btn btn--primary btn--sm" id="sim-start" type="button">▶ Iniciar</button>
+          <button class="btn btn--ghost btn--sm" id="sim-pause" type="button" hidden>⏸ Pausar</button>
+          <button class="btn btn--ghost btn--sm" id="sim-clear" type="button" hidden>🗑 Limpar dados</button>
+        </div>
+      </div>
+      <p class="sim-note">Cria <strong>arrematantes fictícios</strong> que dão <strong>lances automáticos</strong> nos lotes do
+        catálogo — no escopo <strong>Todos os lotes do catálogo</strong>, todos os lotes (abertos e encerrados) recebem lances
+        em rajadas, para você testar tudo no painel: arremates por data, clientes, CSV e geração de contrato (procure o chip
+        <span class="chip chip--sim" style="margin:0">sim</span> nas tabelas). Os dados ficam <strong>só neste navegador</strong> —
+        nada é gravado no banco e <strong>o site público não mostra esses lances</strong>. Lances inventados exibidos a
+        arrematantes reais são fraude (lance de reserva), então nunca saem daqui.</p>
+      <div class="switches">
+        <label class="switch"><span>Arrematantes fictícios</span>
+          <select id="sim-bidders">
+            <option value="2">2</option><option value="4">4</option><option value="6" selected>6</option>
+            <option value="8">8</option><option value="10">10</option><option value="12">12</option>
+          </select>
+        </label>
+        <label class="switch"><span>Lance a cada</span>
+          <select id="sim-interval">
+            <option value="5">~5 s</option><option value="10" selected>~10 s</option>
+            <option value="20">~20 s</option><option value="40">~40 s</option>
+          </select>
+        </label>
+        <label class="switch"><span>Escopo dos lances</span>
+          <select id="sim-scope">
+            <option value="all" selected>Todos os lotes do catálogo</option>
+            <option value="auto">Automático (até 10 abertos)</option>
+          </select>
+        </label>
+      </div>
+      <p class="muted" id="sim-status">Simulação parada — nenhum lance fictício no painel.</p>
     </section>
 
     <section class="panel">
@@ -128,7 +166,6 @@
           <div class="field"><label for="k-comitente">Comitente / vendedor (banco, financeira ou proprietário)</label><input id="k-comitente" placeholder="Razão social e CNPJ do vendedor"></div>
           <p class="muted" id="k-info" style="font-size:.85rem;margin:-.2rem 0 .8rem"></p>
           <button class="btn btn--primary" type="submit">Gerar contrato (imprimir / PDF)</button>
-          <a class="btn btn--ghost" href="contrato.html" style="margin-left:.4rem">Contrato manual</a>
           <p class="form__msg" id="k-msg"></p>
         </form>
       </section>
@@ -162,6 +199,9 @@
       <div class="panel__head">
         <h2>Clientes cadastrados</h2>
         <div class="panel__tools">
+          <label class="switch" title="Desligado: o CSV traz só quem se cadastrou de verdade (sem os 'sim')">
+            <input type="checkbox" id="clients-include-sim"> <span>Incluir fictícios no CSV</span>
+          </label>
           <button class="btn btn--ghost btn--sm" id="clients-csv" type="button">Exportar CSV</button>
         </div>
       </div>
@@ -199,13 +239,14 @@
     </section>
   </main>
 
-  <script src="js/data.js?v=47"></script>
+  <script src="js/data.js?v=52"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=47"></script>
-  <script src="js/auth.js?v=47"></script>
-  <script src="js/store.js?v=47"></script>
-  <script src="js/masks.js?v=47"></script>
-  <script src="js/contract.js?v=47"></script>
-  <script src="js/admin.js?v=47"></script>
+  <script src="js/supabase.js?v=52"></script>
+  <script src="js/auth.js?v=52"></script>
+  <script src="js/store.js?v=52"></script>
+  <script src="js/masks.js?v=52"></script>
+  <script src="js/contract.js?v=52"></script>
+  <script src="js/simulate.js?v=52"></script>
+  <script src="js/admin.js?v=52"></script>
 </body>
 </html>

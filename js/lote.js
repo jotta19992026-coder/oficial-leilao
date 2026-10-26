@@ -84,6 +84,11 @@
         '<ul class="specs">' + specsHTML + '</ul>' +
         '<div class="bidbox">' +
           '<div class="bidbox__row"><span>Lance atual</span><strong class="bidbox__price" id="d-price">' + window.NL_BRL(current) + '</strong></div>' +
+          '<div class="outbid" id="d-outbid" hidden>' +
+            '<strong>⚠ Você foi superado!</strong>' +
+            '<span class="outbid__txt" id="d-outbid-txt"></span>' +
+            '<button type="button" class="outbid__go" id="d-outbid-go">Dar novo lance</button>' +
+          '</div>' +
           '<div class="bidbox__row bidbox__last"><span>Último lance</span><span id="d-last">—</span></div>' +
           '<div class="bidbox__row"><span>Encerra em</span><strong class="countdown" id="d-countdown">—</strong></div>' +
           '<div class="bidbox__row"><span>Visualizações</span><span class="views" id="d-views">—</span></div>' +
@@ -98,6 +103,18 @@
               '<button type="button" class="bidamount__step" data-dir="1" aria-label="Aumentar valor">+</button>' +
             '</div>' +
             '<p class="bidbox__hint" id="d-amount-hint">Lance mínimo: ' + window.NL_BRL(current + step) + '</p>' +
+          '</div>' +
+          '<div class="autobid">' +
+            '<div class="autobid__row">' +
+              '<label class="autobid__on"><input type="checkbox" id="d-autobid"> <span>Lance automático</span></label>' +
+              '<div class="autobid__max"><label for="d-autobid-max">Teto</label>' +
+                '<div class="autobid__box"><span class="autobid__prefix">R$</span>' +
+                '<input id="d-autobid-max" class="autobid__input" type="text" inputmode="numeric" autocomplete="off" placeholder="0"></div>' +
+              '</div>' +
+            '</div>' +
+            '<p class="bidbox__hint" id="d-autobid-hint">O sistema dá lances por você quando alguém o supera, de ' +
+              window.NL_BRL(step) + ' em ' + window.NL_BRL(step) + ', sempre até o seu teto. Seu teto é privado.</p>' +
+            '<p class="bidbox__note" id="d-autobid-note"></p>' +
           '</div>' +
           '<p class="bidbox__note" id="d-note"></p>' +
         '</div>' +
@@ -223,8 +240,154 @@
       current = fresh.price;
       document.getElementById('d-price').textContent = window.NL_BRL(current);
       syncAmountControls(false);
+      updateOutbid();
     }
   }
+
+  // ---- Aviso "Você foi superado" (dados reais: seus lances + lance atual) ----
+  var outbidBox = document.getElementById('d-outbid');
+  var outbidTxt = document.getElementById('d-outbid-txt');
+  function myMax() {
+    if (!window.NLStore) return 0;
+    var m = 0;
+    window.NLStore.bids().forEach(function (b) {
+      if (b.lotId === lot.id && b.amount > m) m = b.amount;
+    });
+    return m;
+  }
+  function updateOutbid() {
+    if (!outbidBox) return;
+    var logged = window.NLAuth && window.NLAuth.current();
+    var mine = myMax();
+    var show = !!(logged && mine > 0 && current > mine);
+    outbidBox.hidden = !show;
+    if (show) {
+      outbidTxt.innerHTML = 'O lance atual agora é <strong>' + window.NL_BRL(current) +
+        '</strong> — o seu maior lance foi ' + window.NL_BRL(mine) + '. Continue na disputa!';
+    }
+  }
+  var goBtn = document.getElementById('d-outbid-go');
+  if (goBtn) {
+    goBtn.addEventListener('click', function () {
+      syncAmountControls(true);
+      var box = document.querySelector('.bidbox');
+      if (box) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (amountEl) amountEl.focus();
+    });
+  }
+
+  // ---- Lance automático do próprio arrematante (proxy bidding) ----
+  // Quando outro arrematante real supera o usuário, o sistema dá o próximo lance
+  // em nome dele, sempre respeitando o teto que só ele vê. Os lances são REAIS
+  // (vão ao histórico como lances dele); nada de lances inventados.
+  var abBox = document.getElementById('d-autobid');
+  var abMaxEl = document.getElementById('d-autobid-max');
+  var abNote = document.getElementById('d-autobid-note');
+  var abHint = document.getElementById('d-autobid-hint');
+  var PROXY_KEY = 'nl_proxy_v1';
+  var abUid = (window.NLAuth && window.NLAuth.current() ? window.NLAuth.current().id : null);
+  var proxy = null;   // { max, on } — deste usuário, neste lote
+  var lastAuto = 0;
+
+  function proxyLoad() {
+    if (abUid && abBox) {
+      try {
+        var all = JSON.parse(localStorage.getItem(PROXY_KEY) || '{}');
+        var p = all[lot.id];
+        if (p && p.uid === abUid) {
+          proxy = { max: Number(p.max) || 0, on: !!p.on };
+          if (abMaxEl) abMaxEl.value = proxy.max ? proxy.max.toLocaleString('pt-BR') : '';
+        }
+      } catch (e) {}
+      if (proxy && proxy.on && abBox) abBox.checked = true;
+    }
+    renderAuto();
+  }
+  function proxySave() {
+    try {
+      var all = JSON.parse(localStorage.getItem(PROXY_KEY) || '{}');
+      if (proxy && proxy.on) all[lot.id] = { uid: abUid, max: proxy.max, on: true };
+      else delete all[lot.id];
+      localStorage.setItem(PROXY_KEY, JSON.stringify(all));
+    } catch (e) {}
+  }
+  function abMsg(t) { if (abNote) abNote.textContent = t || ''; }
+  function renderAuto() {
+    if (!abBox) return;
+    var logged = !!(window.NLAuth && window.NLAuth.current());
+    abBox.disabled = !logged;
+    if (abMaxEl) abMaxEl.disabled = !logged;
+    if (abHint) {
+      abHint.textContent = !logged
+        ? 'Entre na sua conta para usar o lance automático.'
+        : (proxy && proxy.on
+          ? 'Ativo: damos lances por você quando for superado, de ' + window.NL_BRL(step) + ' em ' + window.NL_BRL(step) + ', até o teto de ' + window.NL_BRL(proxy.max) + '.'
+          : 'O sistema dá lances por você quando alguém o supera, de ' + window.NL_BRL(step) + ' em ' + window.NL_BRL(step) + ', sempre até o seu teto. Seu teto é privado.');
+    }
+  }
+  function stopAuto(t) {
+    if (proxy) proxy.on = false;
+    proxySave();
+    if (abBox) abBox.checked = false;
+    renderAuto();
+    abMsg(t);
+  }
+  function autoBid() {
+    if (!proxy || !proxy.on || !abUid || !window.NLStore) return;
+    if (!(window.NLAuth && window.NLAuth.current())) { stopAuto('Sua sessão expirou — lance automático desligado.'); return; }
+    if (endTime && Date.now() >= endTime) { stopAuto('Leilão encerrado — lance automático desligado.'); return; }
+    if (sending || Date.now() - lastAuto < 2500) return;
+    if (current + step > proxy.max) {
+      var mine = myMax();
+      stopAuto(mine >= current
+        ? 'Você é o maior lance — o próximo passaria o seu teto (' + window.NL_BRL(proxy.max) + '). Lance automático desligado.'
+        : 'O lance atual (' + window.NL_BRL(current) + ') passou o seu teto (' + window.NL_BRL(proxy.max) + '). Lance automático desligado.');
+      return;
+    }
+    var target = Math.min(proxy.max, current + step);
+    if (myMax() >= target) return;
+    if (current <= myMax()) return; // você lidera; só reage quando é superado
+    lastAuto = Date.now();
+    abMsg('Lance automático enviando ' + window.NL_BRL(target) + '…');
+    window.NLStore.placeBid(lot.id, target).then(function (r) {
+      if (!r.ok) { abMsg(r.error); return; }
+      applyLot(r.lot);
+      abMsg('Lance automático registrado: ' + window.NL_BRL(r.amount) + '.');
+      updateOutbid();
+      loadHistory();
+    });
+  }
+  if (abBox) {
+    abBox.addEventListener('change', function () {
+      if (!(window.NLAuth && window.NLAuth.current())) {
+        abBox.checked = false;
+        abMsg('Entre na sua conta para usar o lance automático.');
+        return;
+      }
+      var max = parseInt(String(abMaxEl.value).replace(/\D/g, ''), 10) || 0;
+      if (abBox.checked && max < current + step) {
+        abBox.checked = false;
+        abMsg('O teto precisa ser pelo menos o lance mínimo atual (' + window.NL_BRL(current + step) + ').');
+        if (abMaxEl) abMaxEl.focus();
+        return;
+      }
+      proxy = { max: max, on: abBox.checked };
+      proxySave();
+      renderAuto();
+      if (proxy.on) { abMsg('Lance automático ativo até ' + window.NL_BRL(proxy.max) + '.'); autoBid(); }
+      else abMsg('Lance automático desligado.');
+    });
+    if (abMaxEl) {
+      abMaxEl.addEventListener('input', function () {
+        abMaxEl.value = abMaxEl.value.replace(/[^\d]/g, '');
+      });
+      abMaxEl.addEventListener('blur', function () {
+        var v = parseInt(String(abMaxEl.value).replace(/\D/g, ''), 10) || 0;
+        if (v) abMaxEl.value = v.toLocaleString('pt-BR');
+      });
+    }
+  }
+  proxyLoad();
 
   var btn = document.getElementById('d-bid');
   var note = document.getElementById('d-note');
@@ -270,13 +433,13 @@
     syncAmountControls(false);
   }
 
-  // Tempo real: qualquer lance novo neste lote atualiza preço e histórico.
+  // Tempo real: qualquer lance novo neste lote atualiza preço, histórico e o lance automático.
   if (window.NLStore) {
-    window.NLStore.watchLot(lot.id, function (fresh) { applyLot(fresh); loadHistory(); });
+    window.NLStore.watchLot(lot.id, function (fresh) { applyLot(fresh); loadHistory(); autoBid(); });
     // Rede de segurança caso o realtime caia: relê o lote a cada 20 s.
     setInterval(function () {
       if (document.hidden) return;
-      window.NLStore.refreshLot(lot.id).then(applyLot);
+      window.NLStore.refreshLot(lot.id).then(function (f) { applyLot(f); autoBid(); });
     }, 20000);
   }
   loadHistory();
@@ -310,8 +473,10 @@
       applyLot(r.lot);
       syncAmountControls(true);
       note.textContent = 'Lance registrado: ' + window.NL_BRL(r.amount) + '.';
+      updateOutbid();
       loadHistory();
     });
   });
+  updateOutbid();
   }
 })();

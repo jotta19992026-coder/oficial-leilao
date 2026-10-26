@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=47';
+      s.src = 'js/lots-data.js?v=52';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -109,7 +109,7 @@
       })
     : Promise.reject(new Error('supabase-js indisponível'))
   ).catch(function (err) {
-    console.warn('Usando o catálogo local:', err && err.message);
+    // Sem ruído no console: em silêncio usa o catálogo local (js/lots-data.js).
     return loadLocalCatalog().then(function () {
       setLots((window.NL_LOTS || []).map(fromLocal), 'local');
     });

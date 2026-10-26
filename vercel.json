@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/(admin|contrato|redefinir-senha)(.*)",
+      "source": "/(admin|redefinir-senha)(.*)",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
         { "key": "Cache-Control", "value": "no-store" }

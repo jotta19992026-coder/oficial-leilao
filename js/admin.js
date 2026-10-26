@@ -32,6 +32,13 @@
   var A = window.NLStore.admin;
   var DEMO = /[?&]demo=1\b/.test(location.search);
   if (DEMO) A = demoAdmin(A);
+  // Simulador de lances (arrematantes fictícios, só neste navegador) — desligado no modo de exemplo.
+  var SIM = (!DEMO && window.NLSimulate) ? window.NLSimulate : null;
+  if (SIM) A = SIM.attach(A);
+  else {
+    var simPanel = document.getElementById('sim-panel');
+    if (simPanel) simPanel.hidden = true;
+  }
   var lotsById = {};
   var allLots = [];
   var leaders = {};   // lotId -> maior lance ativo (com profiles)
@@ -39,6 +46,7 @@
 
   window.NLAdmin.require().then(function (ok) {
     if (!ok) return;
+    if (SIM) SIM.markReady(renderAll);
     panel.style.visibility = '';
     renderAll();
     restartTimers();
@@ -114,7 +122,7 @@
           return '<tr><td class="nowrap">' + fmtDate(w.when) + '</td><td class="nowrap">Lote ' + esc(w.lot.n) + '</td>' +
             '<td><a href="lote.html?id=' + w.lot.id + '" target="_blank" rel="noopener">' + esc(w.lot.title) + '</a>' +
             (w.lot.auction ? '<br><small class="muted">' + esc(w.lot.auction) + '</small>' : '') + '</td>' +
-            '<td>' + esc(w.user.name || '—') + '<br><small class="muted">' + esc(w.user.email || '') + '</small></td>' +
+            '<td>' + esc(w.user.name || '—') + (w.user.sim ? ' <span class="chip chip--sim">sim</span>' : '') + '<br><small class="muted">' + esc(w.user.email || '') + '</small></td>' +
             '<td class="nowrap">' + esc(fmt('cpf', w.user.cpf) || '—') + '</td><td class="nowrap">' + esc(fmt('phone', w.user.phone) || '—') + '</td>' +
             '<td class="nowrap"><strong>' + money(w.bid.amount) + '</strong></td><td>' + (w.lot.bids || 0) + '</td>' +
             '<td>' + (w.ended ? '<span class="tag tag--done">✓ Encerrado</span>' : '<span class="tag tag--open">⏱ Em andamento</span>') + '</td>' +
@@ -168,7 +176,10 @@
   }
   function drawClients() {
     var list = filteredClients();
-    document.getElementById('clients-count').textContent = clients.length ? list.length + ' de ' + clients.length + ' cliente(s)' : '';
+    var simCount = clients.filter(function (c) { return c.sim; }).length;
+    document.getElementById('clients-count').textContent = clients.length
+      ? list.length + ' de ' + clients.length + ' cliente(s)' + (simCount ? ' · ' + simCount + ' fictício(s) na simulação (chip sim)' : '')
+      : '';
     document.getElementById('clients-body').innerHTML = list.length
       ? list.map(function (c) {
           var mine = winsOf(c.id);
@@ -178,7 +189,7 @@
                   (w.ended ? 'encerrado ' : 'encerra ') + fmtDate(w.when) + '</li>';
               }).join('') + '</ul>'
             : '<span class="muted">—</span>';
-          return '<tr><td>' + esc(c.name) + (c.role === 'admin' ? ' <span class="chip">admin</span>' : '') + '</td>' +
+          return '<tr><td>' + esc(c.name) + (c.sim ? ' <span class="chip chip--sim">sim</span>' : '') + (c.role === 'admin' ? ' <span class="chip">admin</span>' : '') + '</td>' +
             '<td>' + esc(c.email) + '</td><td class="nowrap">' + esc(fmt('cpf', c.cpf) || '—') + '</td><td class="nowrap">' + esc(fmt('phone', c.phone) || '—') + '</td>' +
             '<td>' + esc(c.address || '—') + '</td><td class="nowrap">' + fmtDate(c.created_at) + '</td><td class="nowrap">' + fmtDate(c.last_sign_in_at) + '</td>' +
             '<td>' + c.bid_count + '</td><td class="nowrap">' + money(c.max_bid) + '</td><td>' + vehicles + '</td>' +
@@ -213,9 +224,14 @@
   });
 
   // Exportação CSV (abre no Excel com acentos: BOM + ponto e vírgula).
+  // Padrão: só clientes REAIS cadastrados — fictícios da simulação/demo ficam de fora.
   document.getElementById('clients-csv').addEventListener('click', function () {
+    var includeSim = document.getElementById('clients-include-sim').checked;
+    var rows = filteredClients().filter(function (c) {
+      return includeSim || !/^(sim|demo)-/.test(String(c.id));
+    });
     downloadCSV('clientes', ['Nome', 'E-mail', 'CPF', 'Telefone', 'Endereço', 'Cadastro', 'Último acesso', 'Lances', 'Maior lance', 'Deve arrematar'],
-      filteredClients().map(function (c) {
+      rows.map(function (c) {
         return [c.name, c.email, fmt('cpf', c.cpf), fmt('phone', c.phone), c.address, fmtDate(c.created_at), fmtDate(c.last_sign_in_at), c.bid_count,
           csvMoney(c.max_bid), winsOf(c.id).map(function (w) { return lotLabel(w.lot.n, w.lot.title) + ' (' + money(w.bid.amount) + ')'; }).join(' | ')];
       }));
@@ -386,8 +402,11 @@
       document.getElementById('bids-body').innerHTML = bids.length
         ? bids.map(function (b) {
             var lot = b.lots ? lotLabel(b.lots.n || b.lot_id, b.lots.title) : '#' + b.lot_id;
-            var who = b.profiles ? (b.profiles.name + ' <' + b.profiles.email + '>') : '—';
-            return '<tr><td>' + esc(lot) + '</td><td>' + esc(who) + '</td><td>' + window.NL_BRL(Number(b.amount)) + '</td><td>' +
+            var who = b.profiles
+              ? esc(b.profiles.name || '') + ' <' + esc(b.profiles.email || '') + '>' +
+                (b.profiles.sim ? ' <span class="chip chip--sim">sim</span>' : '')
+              : '—';
+            return '<tr><td>' + esc(lot) + '</td><td>' + who + '</td><td>' + window.NL_BRL(Number(b.amount)) + '</td><td>' +
               new Date(b.created_at).toLocaleString('pt-BR') + '</td></tr>';
           }).join('')
         : '<tr><td colspan="4" class="muted">Nenhum lance registrado ainda.</td></tr>';

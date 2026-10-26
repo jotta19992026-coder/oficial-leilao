@@ -1,4 +1,4 @@
-// Leilão Oficial — modelo do contrato de arrematação (usado em contrato.html e no painel admin).
+// Leilão Oficial — modelo do contrato de arrematação (usado no painel admin).
 (function () {
   'use strict';
 
@@ -6,16 +6,17 @@
   // DADOS DA EMPRESA E DO LEILOEIRO — preencha com os dados REAIS e registrados.
   // Campo vazio sai no contrato como linha em branco ("________") para preencher à mão.
   // logo: caminho de um arquivo da SUA empresa (ex.: 'images/logo-empresa.png'); vazio = cabeçalho só com o nome.
+  // razaoSocial/CNPJ/leiloeiro/matrícula ainda em branco: sem eles o contrato não é válido para assinatura.
   // ------------------------------------------------------------------
   var EMPRESA = {
     razaoSocial: '',
-    nomeFantasia: '',
+    nomeFantasia: 'Leilão Oficial',
     cnpj: '',
-    endereco: '',
+    endereco: 'Estr. Muranaka, 199 - Jardim Novo Horizonte, Itaquaquecetuba - SP, 08597-230',
     telefone: '',
     email: '',
     site: '',
-    logo: '',
+    logo: 'images/logo.webp',
     leiloeiro: '',          // nome do leiloeiro oficial
     leiloeiroCpf: '',
     matricula: '',          // nº de matrícula na Junta Comercial

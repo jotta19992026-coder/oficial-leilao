@@ -235,7 +235,9 @@ img{max-width:100%;display:block}
 .chip.is-active{background:var(--navy);color:#fff;border-color:var(--navy)}
 .lots{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
 .lot{background:#fff;border:1px solid var(--card-line);border-radius:var(--radius);overflow:hidden;
-  display:flex;flex-direction:column;transition:.18s}
+  display:flex;flex-direction:column;transition:.18s;
+  /* Scroll mais leve: card fora da tela não é renderizado (o navegador reserva a altura). */
+  content-visibility:auto;contain-intrinsic-size:auto 420px}
 .lot:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .lot__media{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#d9dde3,#eef1f5)}
 .lot__img{width:100%;height:100%;object-fit:contain;display:block}
@@ -271,7 +273,7 @@ img{max-width:100%;display:block}
 .event__sponsor{position:absolute;right:1.1rem;top:50%;transform:translateY(-30%)}
 .event__sponsor .sponsor{width:56px;height:56px}
 /* Selos de segurança: faixa acima do rodapé */
-.trustbar{background:#fff;border-top:1px solid var(--line);padding:22px 0}
+.trustbar{background:#fff;border-top:1px solid var(--line);padding:22px 0;content-visibility:auto;contain-intrinsic-size:auto 100px}
 .trustbar__inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem 2.2rem}
 .trustbar__label{font-family:"Sora",sans-serif;font-weight:600;color:var(--navy);font-size:.95rem}
 .trustbar img{display:block;height:44px;width:auto}
@@ -280,6 +282,20 @@ img{max-width:100%;display:block}
   .trustbar__label{flex-basis:100%;text-align:center}
   .trustbar img{height:36px}
   .trustbar img+img{height:50px}
+}
+
+/* Mapa da sede (Google Street View) acima do rodapé */
+.mapsec{padding:36px 0 8px;content-visibility:auto;contain-intrinsic-size:auto 420px}
+.mapsec__card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:1.6rem;align-items:center;
+  border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;background:#fff;box-shadow:var(--shadow)}
+.mapsec__addr{margin:0;color:var(--muted);font-size:.98rem}
+.mapsec__addr strong{color:var(--ink);font-family:"Sora",sans-serif}
+.mapsec__map{min-width:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg-alt)}
+.mapsec__map iframe{display:block;width:100%;height:340px;border:0}
+@media (max-width:860px){
+  .mapsec{padding-top:26px}
+  .mapsec__card{grid-template-columns:1fr;gap:1.1rem}
+  .mapsec__map iframe{height:260px}
 }
 .lot__status{color:var(--brand-600);font-weight:600;font-size:.82rem;margin:0 0 .7rem}
 .lot__row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
@@ -421,6 +437,17 @@ img{max-width:100%;display:block}
 .bidbox__last #d-last strong{color:var(--brand-600);font-family:"Sora"}
 .bidbox__hint{font-size:.8rem;color:var(--muted);margin:.2rem 0 .8rem}
 .bidbox__note{font-size:.85rem;color:var(--brand-600);font-weight:600;margin:.6rem 0 0;min-height:1.1em}
+
+/* Aviso "Você foi superado" (lance real de outra pessoa superou o seu) */
+.outbid{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;background:#fdecea;
+  border:1px solid #e11d2a;border-radius:10px;padding:.65rem .9rem;margin:.55rem 0 .2rem;font-size:.9rem}
+.outbid[hidden]{display:none}
+.outbid strong{color:#b3160f;font-family:"Sora",sans-serif;font-size:.95rem}
+.outbid__txt{color:#7a1a12;flex:1 1 240px;min-width:0}
+.outbid__txt strong{font-size:1em}
+.outbid__go{margin-left:auto;background:#e11d2a;color:#fff;border:0;border-radius:999px;
+  padding:.45rem 1rem;font-weight:600;font-size:.85rem;font-family:"Sora",sans-serif;cursor:pointer;white-space:nowrap}
+.outbid__go:hover{background:#c11212}
 .bidamount{margin-top:1rem}
 .bidamount label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
 .bidamount__box{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;
@@ -433,6 +460,17 @@ img{max-width:100%;display:block}
   color:var(--navy);font-size:1.1rem;font-weight:700;cursor:pointer;transition:.15s}
 .bidamount__step:hover{background:#e6ebf3}
 .bidamount .bidbox__hint{margin:.4rem 0 0}
+
+/* Lance automático do próprio arrematante (proxy bidding) */
+.autobid{border-top:1px dashed var(--line);margin-top:.9rem;padding-top:.75rem}
+.autobid__row{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap}
+.autobid__on{display:inline-flex;align-items:center;gap:.45rem;font-weight:600;font-size:.9rem;color:var(--ink);cursor:pointer}
+.autobid__on input{width:17px;height:17px;accent-color:var(--brand);cursor:pointer}
+.autobid__max{display:inline-flex;align-items:center;gap:.4rem}
+.autobid__max label{font-size:.85rem;color:var(--muted)}
+.autobid__box{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fff;padding:.35rem .55rem}
+.autobid__prefix{color:var(--muted);font-size:.85rem;margin-right:.15rem}
+.autobid__input{border:0;outline:0;width:110px;font-weight:600;color:var(--ink);font-size:.9rem;background:transparent;min-width:0}
 .editalbox{background:#fff;border:1px solid var(--card-line);border-radius:var(--radius);padding:1rem 1.2rem;
   box-shadow:var(--shadow);margin-bottom:1rem}
 .editalbox h3{margin:0 0 .6rem;color:var(--navy);font-size:1rem}
@@ -489,6 +527,8 @@ img{max-width:100%;display:block}
 /* ---- Painel admin ---- */
 .admin-top{background:var(--navy);position:sticky;top:0;z-index:40}
 .admin-top__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+/* Logo do painel sobre placa branca (a arte tem letras escuras; no navy fica ilegível) */
+.admin-top .brand__logo{height:38px;width:auto;padding:6px 10px;background:#fff;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
 .admin{padding-bottom:60px}
 .btn--sm{padding:.35rem .7rem;font-size:.8rem}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:1.4rem}
@@ -621,12 +661,9 @@ a.stat:hover{background:rgba(255,255,255,.08)}
 .auction-block__type{color:var(--muted);font-size:.85rem}
 .auction-block__head .link{margin-left:auto}
 
-/* ---- Efeitos de interface (site inteiro) ---- */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;will-change:opacity,transform}
-.reveal.is-visible{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1 !important;transform:none !important;transition:none}
-}
+/* ---- Efeitos de interface (site inteiro) ----
+   Sem animações de entrada por scroll: o conteúdo é visível de imediato
+   (menos repaint e nada de elemento "piscando" ao rolar). */
 
 /* Painel de login/cadastro na home */
 .authpanel{display:grid;grid-template-columns:1fr 1.25fr;gap:2rem;align-items:center}
@@ -772,5 +809,13 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{             /* Chrome / Safari 
 .demo-bar{margin:1.2rem 0;padding:.75rem 1rem;border:1px dashed var(--line);border-radius:10px;font-size:.9rem;color:var(--muted);background:#fff}
 .demo-bar a{font-weight:600}
 .demo-bar--on{border:1px solid #e3b341;background:#fff8e1;color:#5c4400}
+
+/* Simulador de lances (painel admin) — dados fictícios só neste navegador */
+.panel--sim{border:1px dashed #e3b341;background:#fffdf6}
+.sim-note{font-size:.85rem;color:#5c4400;background:#fff8e1;border:1px solid #e3b341;border-radius:8px;padding:.6rem .85rem;margin:0 0 1rem}
+.sim-note strong{color:#4a3600}
+.chip--sim{border-color:#e3b341;background:#fff8e1;color:#5c4400;font-size:.68rem;padding:.15rem .55rem;margin-left:.35rem;white-space:nowrap}
+.sim-live{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;color:#5c4400}
+.sim-live::before{content:"";width:9px;height:9px;border-radius:50%;background:#e3b341;animation:livePulse 1.4s ease-in-out infinite}
 .forgot{margin-top:.8rem;padding-top:1rem;border-top:1px solid var(--line)}
 .forgot .muted{font-size:.9rem;margin-top:0}

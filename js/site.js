@@ -5,6 +5,10 @@
   var LOGO = '<img class="brand__logo" src="images/logo.webp" alt="Copart" width="153" height="60">';
   var LOGO_LIGHT = LOGO;
 
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; });
+  }
+
   // Selo de patrocinadores ("Bancos e Financeiras"): logos deslizando em loop (animação em CSS).
   // Usado nos cards de lote, na página do lote e nas datas dos leilões da home.
   var SPONSORS = [
@@ -91,14 +95,44 @@
       '<img src="images/selos/ssl-site-seguro.webp" alt="SSL — Certificado Site Seguro" width="198" height="88" loading="lazy" decoding="async">';
   }
 
+  // Endereço da sede (usado no mapa, no rodapé e no contrato).
+  var ENDERECO = {
+    rua: 'Estr. Muranaka, 199',
+    bairro: 'Jardim Novo Horizonte',
+    cidade: 'Itaquaquecetuba — SP',
+    cep: '08597-230',
+    lat: -23.4565424,
+    lng: -46.307716
+  };
+  // Panorama do Google Street View da sede (mesmo ângulo da foto compartilhada:
+  // rumo 271,18° e inclinação −13,61°), incorporado pelo player oficial do Google.
+  var STREETVIEW_SRC = 'https://maps.google.com/maps?q=&layer=c&cbll=' + ENDERECO.lat + ',' + ENDERECO.lng +
+    '&cbpanoid=WkRS93H8f8kh9MIefItJxg&cbp=11,271.18,,0,13.61&output=svembed&hl=pt-BR';
+
+  // Seção do mapa: endereço + Street View, acima do rodapé (sem título, a pedido do dono).
+  function mapsHTML() {
+    return '<section class="mapsec" id="onde-estamos" aria-label="Onde estamos"><div class="container">' +
+      '<div class="mapsec__card">' +
+      '<div class="mapsec__info">' +
+      '<p class="mapsec__addr"><strong>Leilão Oficial</strong><br>' +
+      esc(ENDERECO.rua) + ' — ' + esc(ENDERECO.bairro) + '<br>' +
+      esc(ENDERECO.cidade) + ', ' + esc(ENDERECO.cep) + '</p>' +
+      '</div>' +
+      '<div class="mapsec__map"><iframe src="' + STREETVIEW_SRC + '" title="Google Street View — Estr. Muranaka, 199, Itaquaquecetuba - SP" ' +
+      'loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>' +
+      '</div></div></section>';
+  }
+
   function footerHTML() {
-    return '<section class="trustbar" aria-label="Selos de segurança"><div class="container trustbar__inner">' +
+    return mapsHTML() +
+      '<section class="trustbar" aria-label="Selos de segurança"><div class="container trustbar__inner">' +
       '<span class="trustbar__label">Ambiente seguro e verificado</span>' + trustHTML() + '</div></section>' +
       '<footer class="footer"><div class="container footer__grid">' +
       '<div class="footer__col"><a class="brand brand--light" href="index.html">' + LOGO_LIGHT + '</a>' +
       '<p class="footer__muted">Leilões online com transparência e procedência.</p></div>' +
       '<div class="footer__col"><h4>Localização</h4>' +
-      '<p class="footer__muted">Av. Exemplo, 1000 — Centro<br>Sua Cidade — UF, 00000-000</p>' +
+      '<p class="footer__muted"><a href="index.html#onde-estamos">' + esc(ENDERECO.rua) + ' — ' + esc(ENDERECO.bairro) + '</a><br>' +
+      '<a href="index.html#onde-estamos">' + esc(ENDERECO.cidade) + ', ' + esc(ENDERECO.cep) + '</a></p>' +
       '<h4>Horário</h4><p class="footer__muted">Seg. a sex., das 8h às 18h</p></div>' +
       '<div class="footer__col"><h4>Contato</h4><p class="footer__muted">' +
       '<a href="mailto:contato@leilaooficial.exemplo">contato@leilaooficial.exemplo</a><br>' +
@@ -173,16 +207,8 @@
 
     if (reduce || !('IntersectionObserver' in window)) return;
 
+    // Números das estatísticas contam uma única vez, ao entrar na tela.
     setTimeout(function () {
-      var els = [].slice.call(document.querySelectorAll('.event,.step,.trust,.auction-block,.finder__card'));
-      els.forEach(function (el) { el.classList.add('reveal'); });
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      els.forEach(function (el) { io.observe(el); });
-
       var nums = [].slice.call(document.querySelectorAll('.stats .stat strong'));
       var cio = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
