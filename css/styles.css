@@ -793,8 +793,7 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{             /* Chrome / Safari 
 .bidbox .countdown{font-family:"Sora",sans-serif;font-weight:700;color:var(--navy);
   font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .bidbox .countdown--ended{color:#e11d2a}
-.bidbox .views{color:var(--muted);font-size:.9rem;display:inline-flex;align-items:center;gap:.35rem}
-.bidbox .views::before{content:"👁";font-size:.95rem}
+.bidbox .views{color:var(--muted);font-size:.9rem}
 
 /* FAQ (sanfona) */
 .faq{max-width:820px;margin:0 auto}
