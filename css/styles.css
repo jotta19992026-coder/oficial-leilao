@@ -502,10 +502,11 @@ img{max-width:100%;display:block}
 .admin-top__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .admin{padding-bottom:60px}
 .btn--sm{padding:.35rem .7rem;font-size:.8rem}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.4rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:1.4rem}
 .kpi{background:#fff;border:1px solid var(--card-line);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow)}
 .kpi span{display:block;color:var(--muted);font-size:.85rem}
 .kpi strong{font-family:"Sora";font-size:2rem;color:var(--navy)}
+.kpi small{font-size:.75rem}
 .admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-bottom:1.4rem}
 .panel{background:#fff;border:1px solid var(--card-line);border-radius:var(--radius);padding:1.4rem;margin-bottom:1.4rem}
 .panel h2{color:var(--navy);font-size:1.15rem;margin:0 0 1rem}
@@ -524,7 +525,35 @@ img{max-width:100%;display:block}
 .table th,.table td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line)}
 .table th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em}
 .table td{color:var(--ink)}
-@media (max-width:760px){ .admin-grid,.kpis,.grid-2{grid-template-columns:1fr} }
+.admin-grid--flush{margin:1.2rem 0 0}
+.table__cap{caption-side:top;text-align:left;font-weight:600;color:var(--navy);padding:0 0 .5rem}
+/* Filtros do painel (datas, situação, busca) */
+.filters{display:flex;flex-wrap:wrap;gap:.7rem;align-items:flex-end;margin-bottom:.6rem}
+.filters label{display:flex;flex-direction:column;gap:.25rem;font-size:.78rem;color:var(--muted);font-weight:600}
+.filters input,.filters select{padding:.5rem .65rem;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.9rem;color:var(--ink);background:#fff;min-width:0}
+.filters__grow{flex:1 1 240px}
+.filters__count{font-size:.85rem;margin:0 0 .6rem}
+.tag{display:inline-flex;align-items:center;gap:.3rem;padding:.15rem .55rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap;border:1px solid var(--line);color:var(--ink);background:#f4f6f9}
+.tag--done{background:#e8f5ee;border-color:#b9e0c9;color:#155c37}
+.tag--open{background:#eef3fb;border-color:#c7d6ee;color:#1c3f75}
+.vehicles{margin:0;padding:0;list-style:none;font-size:.85rem;min-width:180px}
+.vehicles li+li{margin-top:.2rem}
+/* Visualizações: totais + gráfico de barras (uma série) */
+.views__totals{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}
+.views__totals div{border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem}
+.views__totals span{display:block;color:var(--muted);font-size:.8rem}
+.views__totals strong{font-family:"Sora";font-size:1.5rem;color:var(--navy)}
+.vchart{position:relative;margin:0;border:1px solid var(--line);border-radius:10px;padding:1rem 1rem .6rem}
+.vchart__title{font-weight:600;color:var(--navy);font-size:.9rem;margin-bottom:.6rem}
+.vchart__plot{display:flex;align-items:stretch;gap:2px;height:180px;border-bottom:1px solid var(--line)}
+.vchart__col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;cursor:default;position:relative}
+.vchart__bar{width:min(70%,28px);background:var(--navy);border-radius:4px 4px 0 0;min-height:0}
+.vchart__col:hover .vchart__bar,.vchart__col:focus .vchart__bar{background:var(--brand)}
+.vchart__val{font-size:.7rem;color:var(--muted);margin-bottom:2px;font-variant-numeric:tabular-nums}
+.vchart__axis{display:flex;gap:2px;margin-top:.35rem}
+.vchart__axis span{flex:1 1 0;min-width:0;text-align:center;font-size:.68rem;color:var(--muted);white-space:nowrap;overflow:hidden}
+.vchart__tip{position:absolute;pointer-events:none;background:var(--navy);color:#fff;font-size:.78rem;padding:.35rem .55rem;border-radius:6px;white-space:nowrap;transform:translate(-50%,-100%);z-index:2}
+@media (max-width:760px){ .admin-grid,.kpis,.grid-2{grid-template-columns:1fr} .kpis{grid-template-columns:repeat(2,1fr)} .views__totals{grid-template-columns:1fr} }
 
 
 /* ---- Blocos estruturais (referência, identidade Leilão Oficial) ---- */

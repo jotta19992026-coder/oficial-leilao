@@ -219,12 +219,28 @@
     }
   }
 
+  // Visualizações para o painel admin (função track_view, migração 003). Falha em silêncio.
+  function trackView() {
+    var supa = window.NLSupa;
+    if (!supa) return;
+    var vid = null;
+    try {
+      vid = localStorage.getItem('nl_vid');
+      if (!vid) { vid = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); localStorage.setItem('nl_vid', vid); }
+    } catch (e) {}
+    var lotId = /lote(\.html)?$/.test(location.pathname) ? parseInt(new URLSearchParams(location.search).get('id'), 10) : NaN;
+    var path = location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/') || '/';
+    supa.rpc('track_view', { p_path: path, p_lot_id: isNaN(lotId) ? null : lotId, p_visitor: vid })
+      .then(function () {}, function () {});
+  }
+
   function init() {
     mount('site-header', headerHTML());
     mount('site-footer', footerHTML());
     fillSponsors();
     wire();
     effects();
+    trackView();
   }
 
   if (document.readyState === 'loading') {

@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=43';
+      s.src = 'js/lots-data.js?v=44';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -205,6 +205,25 @@
       // Lotes em que um cliente deu lance (para o contrato).
       clientLots: function (userId) {
         return supa.rpc('admin_client_lots', { p_user_id: userId }).then(function (r) { if (r.error) throw r.error; return r.data; });
+      },
+      // Resumo das visualizações do site (função admin_views, migração 003).
+      views: function (days) {
+        return supa.rpc('admin_views', { p_days: days || 14 }).then(function (r) { if (r.error) throw r.error; return r.data; });
+      },
+      // Maior lance ativo de cada lote = quem deve arrematar. { lotId: lance + profiles }, paginado de 1000 em 1000.
+      leaders: function () {
+        var out = {};
+        function page(from) {
+          return supa.from('bids').select('lot_id,amount,created_at,user_id,profiles(id,name,email,cpf,phone,address)')
+            .eq('status', 'active').order('amount', { ascending: false }).order('created_at', { ascending: true })
+            .range(from, from + 999)
+            .then(function (r) {
+              if (r.error) throw r.error;
+              r.data.forEach(function (b) { if (!out[b.lot_id]) out[b.lot_id] = b; });
+              return r.data.length === 1000 ? page(from + 1000) : out;
+            });
+        }
+        return page(0);
       },
       users: function () {
         return supa.from('profiles').select('id,name,email,role,created_at').order('created_at', { ascending: false })

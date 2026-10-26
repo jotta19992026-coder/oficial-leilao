@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Painel administrativo — Leilão Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=43">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=43">
+  <link rel="icon" type="image/png" href="favicon.png?v=44">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=44">
   <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=43">
+  <link rel="stylesheet" href="css/styles.css?v=44">
 </head>
 <body>
   <div class="admin-top">
@@ -49,6 +49,44 @@
       <div class="kpi"><span>Clientes cadastrados</span><strong id="kpi-users">0</strong></div>
       <div class="kpi"><span>Lotes</span><strong id="kpi-lots">0</strong></div>
       <div class="kpi"><span>Lances registrados</span><strong id="kpi-bids">0</strong></div>
+      <div class="kpi"><span>Lotes com vencedor</span><strong id="kpi-wins">0</strong></div>
+      <div class="kpi"><span>Visualizações hoje</span><strong id="kpi-views">—</strong></div>
+      <div class="kpi"><span>Visitantes hoje</span><strong id="kpi-visitors">—</strong></div>
+      <div class="kpi"><span>Online agora <small>(5 min)</small></span><strong id="kpi-online">—</strong></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <h2>Visualizações do site</h2>
+        <div class="panel__tools">
+          <label class="switch"><span>Período</span>
+            <select id="views-days"><option value="7">7 dias</option><option value="14" selected>14 dias</option><option value="30">30 dias</option></select>
+          </label>
+        </div>
+      </div>
+      <p class="muted" id="views-hint" hidden></p>
+      <div class="views" id="views-box">
+        <div class="views__totals">
+          <div><span>Últimos 7 dias</span><strong id="views-7">—</strong></div>
+          <div><span>Últimos 30 dias</span><strong id="views-30">—</strong></div>
+          <div><span>Total registrado</span><strong id="views-total">—</strong></div>
+        </div>
+        <figure class="vchart">
+          <figcaption class="vchart__title">Visualizações por dia</figcaption>
+          <div class="vchart__plot" id="views-chart" role="img" aria-label="Gráfico de visualizações por dia"></div>
+          <div class="vchart__tip" id="views-tip" hidden></div>
+        </figure>
+        <div class="admin-grid admin-grid--flush">
+          <div class="table-wrap">
+            <table class="table"><caption class="table__cap">Lotes mais vistos no período</caption>
+              <thead><tr><th>Lote</th><th>Veículo</th><th>Visualizações</th><th>Última</th></tr></thead><tbody id="views-lots"></tbody></table>
+          </div>
+          <div class="table-wrap">
+            <table class="table"><caption class="table__cap">Páginas mais vistas no período</caption>
+              <thead><tr><th>Página</th><th>Visualizações</th></tr></thead><tbody id="views-pages"></tbody></table>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="admin-grid">
@@ -77,7 +115,12 @@
         <h2>Gerar contrato de arrematação</h2>
         <form id="form-contract" novalidate>
           <div class="field"><label for="k-client">Cliente</label><select id="k-client" required><option value="">Carregando clientes…</option></select></div>
-          <div class="field"><label for="k-lot">Lote (lances deste cliente)</label><select id="k-lot" required><option value="">Selecione um cliente</option></select></div>
+          <div class="field"><label for="k-lot">Lote (lances deste cliente)</label><select id="k-lot" required><option value="">Selecione um cliente</option><option value="__manual">✎ Digitar o veículo manualmente</option></select></div>
+          <div class="field" id="k-manual" hidden>
+            <label for="k-vehicle">Veículo / lote (digitado)</label>
+            <input id="k-vehicle" placeholder="Ex.: Lote 12 — Toyota Corolla XEi 2.0 2021, placa ABC-1D23">
+          </div>
+          <div class="field" id="k-date-field" hidden><label for="k-date">Data do arremate</label><input id="k-date" type="date"></div>
           <div class="grid-2">
             <div class="field"><label for="k-value">Valor de arremate (R$)</label><input id="k-value" type="number" min="0" step="1" required></div>
             <div class="field"><label for="k-number">Nº do contrato (opcional)</label><input id="k-number" placeholder="Ex.: 2026/0001"></div>
@@ -92,14 +135,50 @@
 
     <section class="panel">
       <div class="panel__head">
+        <h2>Arremates por data <small class="muted">(quem deve arrematar cada veículo)</small></h2>
+        <div class="panel__tools">
+          <button class="btn btn--ghost btn--sm" id="wins-csv" type="button">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="filters">
+        <label>Encerramento de<input id="wins-from" type="date"></label>
+        <label>até<input id="wins-to" type="date"></label>
+        <label>Situação
+          <select id="wins-status"><option value="">Todos</option><option value="ended">Encerrados</option><option value="open">Em andamento</option></select>
+        </label>
+        <label class="filters__grow">Buscar<input id="wins-search" type="search" placeholder="Veículo, lote, cliente, CPF ou telefone"></label>
+        <button class="btn btn--ghost btn--sm" id="wins-today" type="button">Hoje</button>
+        <button class="btn btn--ghost btn--sm" id="wins-clear" type="button">Limpar</button>
+      </div>
+      <p class="muted filters__count" id="wins-count"></p>
+      <div class="table-wrap">
+        <table class="table"><thead><tr><th>Encerramento</th><th>Lote</th><th>Veículo</th><th>Cliente (maior lance)</th><th>CPF</th><th>Telefone</th><th>Valor</th><th>Lances</th><th>Situação</th><th></th></tr></thead>
+        <tbody id="wins-body"></tbody></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
         <h2>Clientes cadastrados</h2>
         <div class="panel__tools">
-          <input id="clients-search" type="search" placeholder="Buscar por nome, e-mail, CPF ou telefone" aria-label="Buscar clientes">
           <button class="btn btn--ghost btn--sm" id="clients-csv" type="button">Exportar CSV</button>
         </div>
       </div>
+      <div class="filters">
+        <label>Cadastro de<input id="clients-from" type="date"></label>
+        <label>até<input id="clients-to" type="date"></label>
+        <label>Ordenar
+          <select id="clients-sort">
+            <option value="recent">Mais recentes</option><option value="name">Nome (A–Z)</option>
+            <option value="bids">Mais lances</option><option value="max">Maior lance</option><option value="leading">Mais arremates</option>
+          </select>
+        </label>
+        <label class="filters__grow">Buscar<input id="clients-search" type="search" placeholder="Nome, e-mail, CPF, telefone ou veículo"></label>
+        <button class="btn btn--ghost btn--sm" id="clients-clear" type="button">Limpar</button>
+      </div>
+      <p class="muted filters__count" id="clients-count"></p>
       <div class="table-wrap">
-        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Cadastro</th><th>Último acesso</th><th>Lances</th><th>Maior lance</th><th>Liderando</th><th></th></tr></thead>
+        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Cadastro</th><th>Último acesso</th><th>Lances</th><th>Maior lance</th><th>Deve arrematar</th><th></th></tr></thead>
         <tbody id="clients-body"></tbody></table>
       </div>
     </section>
@@ -119,13 +198,13 @@
     </section>
   </main>
 
-  <script src="js/data.js?v=43"></script>
+  <script src="js/data.js?v=44"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=43"></script>
-  <script src="js/auth.js?v=43"></script>
-  <script src="js/store.js?v=43"></script>
-  <script src="js/masks.js?v=43"></script>
-  <script src="js/contract.js?v=43"></script>
-  <script src="js/admin.js?v=43"></script>
+  <script src="js/supabase.js?v=44"></script>
+  <script src="js/auth.js?v=44"></script>
+  <script src="js/store.js?v=44"></script>
+  <script src="js/masks.js?v=44"></script>
+  <script src="js/contract.js?v=44"></script>
+  <script src="js/admin.js?v=44"></script>
 </body>
 </html>
