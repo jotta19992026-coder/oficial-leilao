@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Painel administrativo — Leilão Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=44">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=44">
+  <link rel="icon" type="image/png" href="favicon.png?v=45">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=45">
   <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=44">
+  <link rel="stylesheet" href="css/styles.css?v=45">
 </head>
 <body>
   <div class="admin-top">
@@ -125,6 +125,7 @@
             <div class="field"><label for="k-value">Valor de arremate (R$)</label><input id="k-value" type="number" min="0" step="1" required></div>
             <div class="field"><label for="k-number">Nº do contrato (opcional)</label><input id="k-number" placeholder="Ex.: 2026/0001"></div>
           </div>
+          <div class="field"><label for="k-comitente">Comitente / vendedor (banco, financeira ou proprietário)</label><input id="k-comitente" placeholder="Razão social e CNPJ do vendedor"></div>
           <p class="muted" id="k-info" style="font-size:.85rem;margin:-.2rem 0 .8rem"></p>
           <button class="btn btn--primary" type="submit">Gerar contrato (imprimir / PDF)</button>
           <a class="btn btn--ghost" href="contrato.html" style="margin-left:.4rem">Contrato manual</a>
@@ -198,13 +199,13 @@
     </section>
   </main>
 
-  <script src="js/data.js?v=44"></script>
+  <script src="js/data.js?v=45"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=44"></script>
-  <script src="js/auth.js?v=44"></script>
-  <script src="js/store.js?v=44"></script>
-  <script src="js/masks.js?v=44"></script>
-  <script src="js/contract.js?v=44"></script>
-  <script src="js/admin.js?v=44"></script>
+  <script src="js/supabase.js?v=45"></script>
+  <script src="js/auth.js?v=45"></script>
+  <script src="js/store.js?v=45"></script>
+  <script src="js/masks.js?v=45"></script>
+  <script src="js/contract.js?v=45"></script>
+  <script src="js/admin.js?v=45"></script>
 </body>
 </html>

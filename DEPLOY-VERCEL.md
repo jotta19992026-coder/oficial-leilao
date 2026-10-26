@@ -84,6 +84,28 @@ O que **não** é publicado (veja `.vercelignore`): `.env`, `scripts/`, `supabas
 
 ---
 
+## 4.1. Recuperação de senha ("Esqueci minha senha")
+
+O site já está programado: `login` e `admin-login` têm o link **Esqueci minha senha** (`js/recover.js` → `NLAuth.requestPasswordReset`, que chama `supabase.auth.resetPasswordForEmail`) e o e-mail leva a `redefinir-senha`, que grava a nova senha (`NLAuth.updatePassword` → `supabase.auth.updateUser`). Falta configurar o Supabase:
+
+1. **Redirect URLs** (seção 4 acima): o link do e-mail só volta para o site se o endereço estiver na lista. Sem isso o Supabase manda a pessoa para o **Site URL**.
+2. **SMTP próprio (obrigatório em produção):** o e-mail embutido do Supabase só entrega para os membros da equipe do projeto e tem limite de poucos e-mails por hora. Em **Authentication → Emails → SMTP Settings**, ative *Custom SMTP* com um provedor (Resend, Brevo, Amazon SES, Zoho…), usando um remetente do seu domínio (ex.: `nao-responda@seudominio.com.br`) e os registros **SPF/DKIM** que o provedor indicar no DNS — sem isso os e-mails caem no spam.
+3. **Modelo do e-mail:** em **Authentication → Emails → Templates → Reset Password**, troque para português. Exemplo:
+   - Assunto: `Redefinição de senha`
+   - Corpo:
+     ```html
+     <h2>Redefinir sua senha</h2>
+     <p>Recebemos um pedido para criar uma nova senha para a sua conta.</p>
+     <p><a href="{{ .ConfirmationURL }}">Criar nova senha</a></p>
+     <p>O link vale por 1 hora e só pode ser usado uma vez. Se você não pediu, ignore este e-mail: sua senha atual continua valendo.</p>
+     ```
+   Mantenha `{{ .ConfirmationURL }}`: é ele que leva o token até `redefinir-senha`.
+4. **Limites e segurança (Authentication → Rate Limits / Providers → Email):** mantenha o limite de e-mails por hora, o prazo do link (*Email OTP Expiration*, 3600 s) e, se quiser senhas mais fortes, aumente *Minimum password length* para 8 **e** troque o `6` por `8` em `signup` e `updatePassword` no `js/auth.js` (as duas regras precisam ser iguais).
+
+Boas práticas já aplicadas no código: a resposta ao pedido é sempre a mesma, exista ou não a conta (não revela e-mails cadastrados); o token chega no `#hash` da URL e é lido pelo supabase-js (`detectSessionInUrl`), nunca vai para o servidor nem para o contador de visitas; link expirado ou já usado mostra a mensagem com o caminho para pedir outro; `redefinir-senha` tem `noindex` e `no-store` (`vercel.json`).
+
+---
+
 ## 5. Conferência depois de publicar
 
 - [ ] A home abre e mostra os lotes com fotos.
@@ -92,6 +114,7 @@ O que **não** é publicado (veja `.vercelignore`): `.env`, `scripts/`, `supabas
 - [ ] Um lance pelo site aparece no histórico e no painel admin.
 - [ ] `/admin-login` com a conta admin abre o painel; aparecem **Clientes cadastrados** e **Gerar contrato**.
 - [ ] Uma conta comum **não** entra no painel.
+- [ ] **Esqueci minha senha** com o seu e-mail: o e-mail chega, o link abre `/redefinir-senha` e a nova senha funciona no login.
 
 ### Atualizar o site depois
 - Opção A: faça as alterações, `git commit` e `git push`.

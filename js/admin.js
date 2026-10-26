@@ -30,6 +30,8 @@
   if (!panel) return;
   panel.style.visibility = 'hidden';
   var A = window.NLStore.admin;
+  var DEMO = /[?&]demo=1\b/.test(location.search);
+  if (DEMO) A = demoAdmin(A);
   var lotsById = {};
   var allLots = [];
   var leaders = {};   // lotId -> maior lance ativo (com profiles)
@@ -298,6 +300,7 @@
     }
     window.NLContractPrint({
       numero: document.getElementById('k-number').value.trim(),
+      comitente: document.getElementById('k-comitente').value.trim(),
       nome: c.name, cpf: fmt('cpf', c.cpf), email: c.email, tel: fmt('phone', c.phone), endereco: c.address,
       lote: lote,
       valor: Number(kValue.value) || 0,
@@ -542,4 +545,108 @@
     if (viewTimer) clearInterval(viewTimer);
     window.NLAdmin.logout().then(function () { location.href = 'admin-login.html'; });
   });
+
+  // Faixa do modo de exemplo / atalho para entrar nele.
+  (function () {
+    var bar = document.createElement('div');
+    bar.className = 'demo-bar' + (DEMO ? ' demo-bar--on' : '');
+    bar.innerHTML = DEMO
+      ? '<strong>Modo de exemplo:</strong> clientes, lances, arremates e visualizações abaixo são fictícios, gerados só neste navegador. Nada foi gravado no banco e o site público não mostra esses dados. <a href="admin.html">Sair do modo de exemplo</a>'
+      : 'Quer ver o painel preenchido? <a href="admin.html?demo=1">Abrir com dados de exemplo</a> (fictícios, só neste navegador).';
+    panel.insertBefore(bar, panel.firstChild);
+  })();
+
+  // ---- Modo de exemplo (admin.html?demo=1): dados fictícios só no navegador; nada é gravado no banco ----
+  function demoAdmin(real) {
+    var DAY = 86400000, now = Date.now();
+    var people = [
+      ['Ana Exemplo Souza', 'ana.exemplo@example.com', '(41) 90000-0001', 'Rua Exemplo, 100 — Curitiba/PR'],
+      ['Bruno Exemplo Lima', 'bruno.exemplo@example.com', '(11) 90000-0002', 'Av. Fictícia, 250 — São Paulo/SP'],
+      ['Carla Exemplo Rocha', 'carla.exemplo@example.com', '(21) 90000-0003', 'Rua Modelo, 33 — Rio de Janeiro/RJ'],
+      ['Diego Exemplo Alves', 'diego.exemplo@example.com', '(31) 90000-0004', 'Rua Teste, 18 — Belo Horizonte/MG'],
+      ['Elisa Exemplo Prado', 'elisa.exemplo@example.com', '(51) 90000-0005', 'Av. Amostra, 900 — Porto Alegre/RS'],
+      ['Fábio Exemplo Nunes', 'fabio.exemplo@example.com', '(61) 90000-0006', ''],
+      ['Gisele Exemplo Melo', 'gisele.exemplo@example.com', '(41) 90000-0007', 'Rua Simulada, 7 — Londrina/PR']
+    ];
+    var clients = people.map(function (p, i) {
+      return { id: 'demo-' + (i + 1), name: p[0], email: p[1], cpf: '0000000000' + (i + 1), phone: p[2], address: p[3], role: 'user',
+        created_at: new Date(now - (i * 3 + 1) * DAY - i * 3600000).toISOString(),
+        last_sign_in_at: new Date(now - i * 5400000).toISOString(), bid_count: 0, max_bid: null, leading_lots: 0 };
+    });
+    var data = null;
+    function build() {
+      if (data) return data;
+      data = real.lots().then(function (lots) {
+        var pub = lots.filter(function (l) { return l.status === 'published'; });
+        var chosen = [], bids = [], leaders = {}, wins = {};
+        for (var k = 0; k < 14 && pub.length; k++) chosen.push(pub[(k * 17 + 3) % pub.length]);
+        chosen.forEach(function (lot, i) {
+          if (leaders[lot.id]) return;
+          var winner = clients[i % clients.length];
+          var rival = clients[(i + 3) % clients.length];
+          var steps = 2 + (i % 4), inc = lot.increment || 100, start = lot.basePrice || lot.price;
+          var t0 = (lot.endsAt || now) - (steps + 2) * 5 * 3600000;
+          var amount = start;
+          for (var s = 0; s < steps; s++) {
+            amount = start + inc * (s + 1) * (3 + (i % 3));
+            var who = s === steps - 1 ? winner : (s % 2 ? winner : rival);
+            bids.push({ id: 'demo-b' + i + '-' + s, lot_id: lot.id, user_id: who.id, amount: amount, status: 'active',
+              created_at: new Date(Math.min(t0 + s * 5 * 3600000, now - (s + 1) * 600000)).toISOString(),
+              lots: { title: lot.title, n: lot.n }, profiles: { name: who.name, email: who.email } });
+          }
+          lot.bids = steps; lot.price = amount;
+          leaders[lot.id] = { lot_id: lot.id, amount: amount, created_at: bids[bids.length - 1].created_at, user_id: winner.id, profiles: winner };
+          (wins[winner.id] = wins[winner.id] || []).push({ lot: lot, amount: amount });
+        });
+        clients.forEach(function (c) {
+          var mine = bids.filter(function (b) { return b.user_id === c.id; });
+          c.bid_count = mine.length;
+          c.max_bid = mine.length ? Math.max.apply(null, mine.map(function (b) { return b.amount; })) : null;
+          c.leading_lots = (wins[c.id] || []).length;
+        });
+        bids.sort(function (a, b) { return Date.parse(b.created_at) - Date.parse(a.created_at); });
+        return { lots: lots, bids: bids, leaders: leaders, wins: wins };
+      });
+      return data;
+    }
+    function viewsFor(days, d) {
+      var daily = [];
+      for (var i = days - 1; i >= 0; i--) {
+        var day = new Date(now - i * DAY), wd = day.getDay();
+        var v = 60 + ((i * 37) % 45) + (wd === 0 || wd === 6 ? 35 : 0) + Math.round((days - i) * 1.5);
+        daily.push({ day: dayKey(day), views: v, visitors: Math.round(v * 0.58) });
+      }
+      var sum = function (n) { return daily.slice(-n).reduce(function (s, x) { return s + x.views; }, 0); };
+      var top = Object.keys(d.leaders).map(function (id, i) {
+        var l = d.lots.filter(function (x) { return String(x.id) === id; })[0];
+        return { lot_id: l.id, n: l.n, title: l.title, views: 140 - i * 9, last_view: new Date(now - i * 900000).toISOString() };
+      }).slice(0, 10);
+      var last = daily[daily.length - 1];
+      return {
+        today: last.views, today_visitors: last.visitors, online: 4,
+        last7: sum(7), last30: sum(Math.min(30, days)) + (days < 30 ? (30 - days) * 70 : 0), total: 4821,
+        daily: daily, top_lots: top,
+        top_pages: [{ path: '/', views: 1240 }, { path: '/lote', views: 980 }, { path: '/lotes', views: 760 }, { path: '/leiloes', views: 310 },
+          { path: '/cadastro', views: 190 }, { path: '/login', views: 150 }, { path: '/edital', views: 95 }, { path: '/faq', views: 60 }]
+      };
+    }
+    function blocked() { return Promise.reject(new Error('Desativado no modo de exemplo (nada é gravado no banco).')); }
+    var demo = Object.create(real);
+    demo.lots = function () { return build().then(function (d) { return d.lots; }); };
+    demo.leaders = function () { return build().then(function (d) { return d.leaders; }); };
+    demo.clients = function () { return build().then(function () { return clients.slice(); }); };
+    demo.bids = function () { return build().then(function (d) { return d.bids; }); };
+    demo.counts = function () { return build().then(function (d) { return { users: clients.length, lots: d.lots.length, bids: d.bids.length }; }); };
+    demo.views = function (days) { return build().then(function (d) { return viewsFor(days || 14, d); }); };
+    demo.clientLots = function (userId) {
+      return build().then(function (d) {
+        return (d.wins[userId] || []).map(function (w) {
+          return { lot_id: w.lot.id, n: w.lot.n, title: w.lot.title, my_max: w.amount, current_price: w.amount,
+            ends_at: w.lot.endsAt ? new Date(w.lot.endsAt).toISOString() : null, auction_label: w.lot.auction, is_leading: true };
+        });
+      });
+    };
+    demo.addLot = demo.removeLot = demo.uploadCover = demo.removeCover = blocked;
+    return demo;
+  }
 })();

@@ -122,6 +122,38 @@
         }, function (e) { return { ok: false, error: msg(e) }; });
     },
 
+    // Envia o e-mail com o link de redefinição. A resposta é sempre a mesma, exista ou não a conta
+    // (não revelar quais e-mails estão cadastrados). redirectTo precisa estar em
+    // Authentication > URL Configuration > Redirect URLs, senão o Supabase usa o Site URL.
+    requestPasswordReset: function (email) {
+      email = (email || '').trim().toLowerCase();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return Promise.resolve({ ok: false, error: 'Informe um e-mail válido.' });
+      if (!supa) return offline();
+      // Mantém o formato das URLs da página atual (/login no deploy com cleanUrls, login.html local).
+      var page = /\.html$/.test(location.pathname) ? 'redefinir-senha.html' : 'redefinir-senha';
+      var redirectTo = location.origin + location.pathname.replace(/[^/]*$/, '') + page;
+      return supa.auth.resetPasswordForEmail(email, { redirectTo: redirectTo })
+        .then(function (r) {
+          if (r.error && /rate limit|too many|seconds/i.test(r.error.message || '')) return { ok: false, error: msg(r.error) };
+          if (r.error && /failed to fetch|network/i.test(r.error.message || '')) return { ok: false, error: msg(r.error) };
+          return { ok: true };
+        }, function (e) { return { ok: false, error: msg(e) }; });
+    },
+
+    // Troca a senha da sessão aberta pelo link do e-mail (evento PASSWORD_RECOVERY).
+    updatePassword: function (password) {
+      if ((password || '').length < 6) return Promise.resolve({ ok: false, error: 'A senha deve ter ao menos 6 caracteres.' });
+      if (!supa) return offline();
+      return supa.auth.updateUser({ password: password }).then(function (r) {
+        if (r.error) {
+          if (/different from the old|same password/i.test(r.error.message || '')) return { ok: false, error: 'A nova senha precisa ser diferente da anterior.' };
+          if (/session|jwt|not authenticated/i.test(r.error.message || '')) return { ok: false, error: 'O link expirou ou já foi usado. Peça um novo e-mail de recuperação.' };
+          return { ok: false, error: msg(r.error) };
+        }
+        return { ok: true };
+      }, function (e) { return { ok: false, error: msg(e) }; });
+    },
+
     logout: function () {
       cached = null;
       return supa ? supa.auth.signOut().catch(function () {}) : Promise.resolve();
