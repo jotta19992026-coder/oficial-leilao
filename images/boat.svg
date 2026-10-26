@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Ilustração de embarcação">
+  <defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C2D57"/><stop offset="1" stop-color="#1E9E6A"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#gb)"/>
+  <path d="M70 176 L330 176 L298 220 L102 220 Z" fill="#ffffff"/>
+  <rect x="150" y="132" width="86" height="46" rx="6" fill="#ffffff"/>
+  <path d="M236 132 L300 176 L236 176 Z" fill="#ffffff"/>
+  <rect x="166" y="144" width="54" height="24" rx="3" fill="#0C2D57" opacity=".28"/>
+  <path d="M60 240 q20 -12 40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#ffffff" stroke-width="6" opacity=".55" stroke-linecap="round"/>
+  <path d="M70 262 q20 -12 40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#ffffff" stroke-width="5" opacity=".35" stroke-linecap="round"/>
+</svg>

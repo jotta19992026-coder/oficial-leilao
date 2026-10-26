@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leilão Oficial — Leilões de veículos, motos e pesados</title>
+  <meta name="description" content="Leilão Oficial: leilões online de veículos, motos, utilitários e náuticos. Lances abertos, lotes verificados e atendimento transparente.">
+  <link rel="icon" type="image/png" href="favicon.png?v=37">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=37">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=37">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="banners" aria-label="Destaques" aria-roledescription="carrossel">
+    <div class="banners__viewport">
+      <div class="banners__track" id="banners-track">
+        <a class="banner banner--promo banner--promo-bradesco" href="lotes.html?cat=carro" aria-label="Leilão de veículos exclusivo Grupo Bradesco">
+          <picture>
+            <source media="(max-width:560px)" srcset="images/banner-mobile.webp?v=1">
+            <img src="images/web-6d8e7f4041.webp" alt="Leilão de veículos exclusivo Grupo Bradesco. Toda quarta às 14h e todo sábado às 9h30. Possibilidade de financiar." width="1140" height="297">
+          </picture>
+        </a>
+        <a class="banner banner--promo" href="lotes.html?cat=carro" aria-label="Leilão de veículos Banco Pan">
+          <picture>
+            <source media="(max-width:560px)" srcset="images/banner-pan-mobile.webp?v=1">
+            <img src="images/web-1e63dc7f3f.webp" alt="Leilão de veículos Banco Pan. Possibilidade de financiar. IPVA 2026 pago. Online toda segunda às 9h30 e toda sexta às 14h." width="1140" height="297">
+          </picture>
+        </a>
+        <a class="banner banner--promo" href="lotes.html?cat=imovel" aria-label="Leilão de 11 imóveis RIZA SEC">
+          <picture>
+            <source media="(max-width:560px)" srcset="images/banner-riza-mobile.webp?v=1">
+            <img src="images/banner-riza.webp?v=1" alt="11 imóveis em alienação fiduciária extrajudicial. 1º leilão em 26 de outubro às 11h e 2º leilão em 29 de outubro às 11h. RIZA SEC." width="1140" height="297">
+          </picture>
+        </a>
+        <a class="banner banner--promo" href="lotes.html?cat=imovel" aria-label="Leilão de 29 imóveis Banco Daycoval">
+          <picture>
+            <source media="(max-width:560px)" srcset="images/banner-daycoval-mobile.webp?v=1">
+            <img src="images/banner-daycoval.webp?v=1" alt="29 imóveis em leilão, incluindo apartamentos, casas e imóveis comerciais e residenciais. Leilão em 5 de novembro às 12h. Banco Daycoval." width="1140" height="297">
+          </picture>
+        </a>
+      </div>
+    </div>
+    <button class="banners__nav banners__nav--prev" id="banner-prev" aria-label="Banner anterior">‹</button>
+    <button class="banners__nav banners__nav--next" id="banner-next" aria-label="Próximo banner">›</button>
+    <div class="banners__dots" id="banners-dots" role="tablist" aria-label="Selecionar banner"></div>
+  </section>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">Lances abertos agora</span>
+        <h1>Arremate o seu próximo veículo com <span>transparência</span>.</h1>
+        <p>Veículos, motos, utilitários e náuticos verificados, com documentação clara e lances 100% online.</p>
+        <a class="btn btn--primary" href="#localizar">Localizar lotes</a>
+      </div>
+      <div class="hero__media">
+        <img src="images/hero.svg" alt="Destaque de leilões do Leilão Oficial" width="480" height="400">
+      </div>
+    </div>
+  </section>
+
+  <section class="finder" id="localizar">
+    <div class="container">
+      <div class="finder__card">
+        <h2>Localizar ofertas</h2>
+        <form class="search" action="lotes.html" method="get" role="search">
+          <input type="search" name="q" placeholder="Busque por marca ou modelo (ex.: Honda, Hilux…)" aria-label="Buscar por marca ou modelo">
+          <button class="btn btn--primary" type="submit">Localizar lotes</button>
+        </form>
+        <div class="finder__opts">
+          <div class="finder__cats">
+            <a class="chip" href="lotes.html?cat=carro">Veículos</a>
+            <a class="chip" href="lotes.html?cat=moto">Motos</a>
+            <a class="chip" href="lotes.html?cat=pesado">Pesados</a>
+            <a class="chip" href="lotes.html?cat=nautico">Náuticos</a>
+            <a class="chip" href="lotes.html?cat=imovel">Imóveis</a>
+            <a class="chip" href="lotes.html?cat=equipamento">Equipamentos</a>
+          </div>
+          <div class="finder__field">
+            <label for="finder-date">Data do leilão</label>
+            <select id="finder-date" onchange="if(this.value){location.href='lotes.html?date='+encodeURIComponent(this.value)}">
+              <option value="">Todas</option>
+              <option value="26/10">26/10</option>
+              <option value="27/10">27/10</option>
+              <option value="07/11">07/11</option>
+              <option value="10/11">10/11</option>
+              <option value="12/11">12/11</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Resumo">
+    <div class="container stats__grid">
+      <a class="stat" href="leiloes.html"><strong>8</strong><span>Leilões ativos</span></a>
+      <a class="stat" href="lotes.html"><strong>225</strong><span>Lotes disponíveis</span></a>
+      <a class="stat" href="lotes.html?cat=carro"><strong>111</strong><span>Veículos</span></a>
+      <a class="stat" href="lotes.html?cat=moto"><strong>70</strong><span>Motos</span></a>
+      <a class="stat" href="lotes.html?cat=pesado"><strong>15</strong><span>Pesados</span></a>
+      <a class="stat" href="lotes.html?cat=nautico"><strong>19</strong><span>Náuticos</span></a>
+    </div>
+  </section>
+
+  <section class="section" id="leiloes">
+    <div class="container">
+      <div class="section__head">
+        <h2>Próximos leilões</h2>
+        <a class="link" href="leiloes.html">Ver todos os eventos →</a>
+      </div>
+      <div class="events">
+        <a class="event" href="lotes.html?cat=moto"><span class="event__status event__status--open">Aberto para lance</span><span class="event__day">Segunda-feira</span><span class="event__date">26/10</span><span class="event__meta">70 Motos</span><span class="event__sponsor" data-sponsors="0"></span></a>
+        <a class="event" href="lotes.html?cat=carro"><span class="event__status event__status--open">Aberto para lance</span><span class="event__day">Segunda-feira</span><span class="event__date">26/10</span><span class="event__meta">54 Veículos</span><span class="event__sponsor" data-sponsors="1"></span></a>
+        <a class="event" href="lotes.html?cat=pesado"><span class="event__status event__status--open">Aberto para lance</span><span class="event__day">Terça-feira</span><span class="event__date">27/10</span><span class="event__meta">15 Pesados</span><span class="event__sponsor" data-sponsors="2"></span></a>
+        <a class="event" href="lotes.html?cat=nautico"><span class="event__status event__status--soon">Aguardando início</span><span class="event__day">Sábado</span><span class="event__date">07/11</span><span class="event__meta">19 Náuticos</span><span class="event__sponsor" data-sponsors="3"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="promos promos--single" aria-label="Campanha: veículos">
+    <div class="container">
+      <article class="promo-card promo-card--wide">
+        <span class="promo-card__badge">Documentação OK</span>
+        <h2 class="promo-card__title">Leilões de veículos<br><em>abaixo da tabela</em></h2>
+        <p class="promo-card__text">Recuperados de bancos e financeiras, com documentação em dia e lances 100% online.</p>
+        <a class="btn btn--primary" href="lotes.html?cat=carro">Cadastre-se e participe</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>Lotes em destaque</h2>
+        <div class="slider-ctrl">
+          <button class="slider-ctrl__btn" id="lots-prev" aria-label="Lotes anteriores">‹</button>
+          <button class="slider-ctrl__btn" id="lots-next" aria-label="Próximos lotes">›</button>
+          <a class="link" href="lotes.html">Ver todos →</a>
+        </div>
+      </div>
+      <div class="lot-slider__track" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head"><h2>Leilões em destaque</h2></div>
+      <div id="auction-sections"></div>
+    </div>
+  </section>
+
+  <section class="promos promos--single" aria-label="Campanha: motos">
+    <div class="container">
+      <article class="promo-card promo-card--wide">
+        <span class="promo-card__badge">Pronta entrega</span>
+        <h2 class="promo-card__title">Motos em leilão<br><em>do trabalho à estrada</em></h2>
+        <p class="promo-card__text">Modelos populares e esportivas, com lance inicial acessível.</p>
+        <a class="btn btn--primary" href="lotes.html?cat=moto">Ver motos</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="como-funciona">
+    <div class="container">
+      <div class="section__head"><h2>Como funciona</h2></div>
+      <ol class="steps">
+        <li class="step"><span class="step__num">1</span><h3>Cadastre-se</h3><p>Crie sua conta gratuita e envie seus documentos para habilitação.</p></li>
+        <li class="step"><span class="step__num">2</span><h3>Escolha o lote</h3><p>Navegue pelos leilões, confira fotos, laudos e a descrição de cada lote.</p></li>
+        <li class="step"><span class="step__num">3</span><h3>Dê seu lance</h3><p>Participe em tempo real. Você é avisado sempre que for superado.</p></li>
+        <li class="step"><span class="step__num">4</span><h3>Arremate e retire</h3><p>Ganhou? Finalize o pagamento e combine a retirada com segurança.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="promos promos--single" aria-label="Campanha: caminhões e utilitários">
+    <div class="container">
+      <article class="promo-card promo-card--wide">
+        <span class="promo-card__badge">Frota revisada</span>
+        <h2 class="promo-card__title">Caminhões e utilitários<br><em>para o seu negócio</em></h2>
+        <p class="promo-card__text">Pesados, vans e implementos prontos para arrematar.</p>
+        <a class="btn btn--primary" href="lotes.html?cat=pesado">Ver pesados</a>
+      </article>
+    </div>
+  </section>
+
+
+  <div id="site-footer"></div>
+
+  <script src="js/lots-data.js?v=37"></script>
+  <script src="js/data.js?v=37"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase.js?v=37"></script>
+  <script src="js/auth.js?v=37"></script>
+  <script src="js/store.js?v=37"></script>
+  <script src="js/site.js?v=37"></script>
+  <script src="js/timers.js?v=37"></script>
+  <script src="js/card.js?v=37"></script>
+  <script src="js/index.js?v=37"></script>
+  <script src="js/banners.js?v=37"></script>
+</body>
+</html>

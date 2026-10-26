@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Entrar | Leilão Oficial</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="favicon.png?v=37">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=37">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=37">
+</head>
+<body>
+  <div class="container authwrap">
+    <div class="card">
+      <a class="brand" href="index.html" style="margin-bottom:1rem">
+        <img class="brand__logo" src="images/logo.png" alt="" width="92" height="36">
+        <span class="brand__name">Leilão <strong>Oficial</strong></span>
+      </a>
+      <h1>Painel administrativo</h1>
+      <p class="muted">Acesso restrito.</p>
+      <form id="form-admin-login" novalidate>
+        <div class="field"><label for="admin-email">E-mail</label><input id="admin-email" type="email" autocomplete="username" required></div>
+        <div class="field"><label for="admin-pass">Senha</label><input id="admin-pass" type="password" autocomplete="current-password" required></div>
+        <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+        <p class="form__msg" id="admin-login-msg"></p>
+      </form>
+      <p class="form__alt"><a href="index.html">← Voltar ao site</a></p>
+    </div>
+  </div>
+
+  <script src="js/lots-data.js?v=37"></script>
+  <script src="js/data.js?v=37"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase.js?v=37"></script>
+  <script src="js/auth.js?v=37"></script>
+  <script src="js/store.js?v=37"></script>
+  <script src="js/admin.js?v=37"></script>
+</body>
+</html>

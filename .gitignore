@@ -1,0 +1,10 @@
+.env
+.env.local
+node_modules/
+.vercel/
+js/lots-photos.preview.json
+js/lots-photos.partial.json
+
+# Fotos originais dos lotes: já estão no Supabase Storage (bucket lot-photos).
+# Ficam só no computador, para reimportar com scripts/upload-images-supabase.js.
+images/lotes/

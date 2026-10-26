@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Ilustração de motocicleta">
+  <defs><linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C2D57"/><stop offset="1" stop-color="#1E9E6A"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#gm)"/>
+  <circle cx="108" cy="205" r="38" fill="none" stroke="#ffffff" stroke-width="11"/>
+  <circle cx="300" cy="205" r="38" fill="none" stroke="#ffffff" stroke-width="11"/>
+  <path d="M108 205 L175 150 L258 150 L300 205" fill="none" stroke="#ffffff" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="165" y="138" width="86" height="22" rx="10" fill="#ffffff"/>
+  <path d="M250 150 q26 -26 58 -14" fill="none" stroke="#1E9E6A" stroke-width="11" stroke-linecap="round"/>
+  <path d="M108 205 L150 205" stroke="#1E9E6A" stroke-width="10" stroke-linecap="round"/>
+</svg>

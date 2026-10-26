@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" role="img" aria-label="Banner de motos em leilão">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a2548"/><stop offset=".6" stop-color="#0C2D57"/><stop offset="1" stop-color="#14407a"/></linearGradient>
+  </defs>
+  <rect width="1280" height="440" fill="url(#sky2)"/>
+  <circle cx="1060" cy="110" r="270" fill="#1E9E6A" opacity=".13"/>
+  <path d="M1000 30 a210 210 0 0 1 40 380" fill="none" stroke="#1E9E6A" stroke-width="6" opacity=".25"/>
+  <g transform="translate(1178,72)"><circle r="34" fill="#1E9E6A"/><path d="M0 -16 L4.7 -5 L16 -4 L7 3 L10 15 L0 8 L-10 15 L-7 3 L-16 -4 L-4.7 -5 Z" fill="#fff"/></g>
+  <g transform="translate(690,120)">
+    <ellipse cx="260" cy="214" rx="245" ry="22" fill="#000" opacity=".22"/>
+    <circle cx="120" cy="188" r="54" fill="#13233c"/><circle cx="120" cy="188" r="27" fill="#cdd8e6"/><circle cx="120" cy="188" r="9" fill="#13233c"/>
+    <circle cx="404" cy="188" r="54" fill="#13233c"/><circle cx="404" cy="188" r="27" fill="#cdd8e6"/><circle cx="404" cy="188" r="9" fill="#13233c"/>
+    <path d="M120 188 L214 118 L300 118 L362 150 L404 188" fill="none" stroke="#ffffff" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M200 120 Q244 94 306 112 L304 130 L206 138 Z" fill="#ffffff"/>
+    <path d="M362 150 q26 -36 66 -22" fill="none" stroke="#1E9E6A" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="420" cy="130" r="10" fill="#1E9E6A"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+# Nunca publicar segredos nem ferramentas locais
+.env
+.env.*
+scripts/
+supabase/
+
+# Fotos dos lotes já servidas pelo Supabase Storage (bucket lot-photos)
+images/lotes/
+
+
+# Mapa das fotos (usado só pelo script de importação)
+js/lots-photos.json
+*.md

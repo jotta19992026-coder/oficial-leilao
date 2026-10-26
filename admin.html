@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel administrativo — Leilão Oficial</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="favicon.png?v=37">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=37">
+  <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
+  <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=37">
+</head>
+<body>
+  <div class="admin-top">
+    <div class="container admin-top__inner">
+      <a class="brand brand--light" href="index.html">
+        <img class="brand__logo" src="images/logo.png" alt="" width="77" height="30">
+        <span class="brand__name">Admin</span>
+      </a>
+      <div style="display:flex;gap:.6rem">
+        <a class="btn btn--ghost" href="index.html" style="color:#fff;border-color:rgba(255,255,255,.3)">Ver site</a>
+        <a class="btn btn--primary" href="#" id="admin-logout">Sair</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container admin" id="admin-panel">
+
+    <section class="panel">
+      <h2>Atualização automática</h2>
+      <div class="switches">
+        <label class="switch"><input type="checkbox" id="auto-view" checked> <span>Atualizar a tela automaticamente</span></label>
+        <label class="switch"><span>Intervalo</span>
+          <select id="auto-interval"><option value="5000">5s</option><option value="10000" selected>10s</option><option value="30000">30s</option></select>
+        </label>
+      </div>
+      <p class="muted" id="auto-status">Atualização automática parada.</p>
+    </section>
+
+    <section class="kpis">
+      <div class="kpi"><span>Clientes cadastrados</span><strong id="kpi-users">0</strong></div>
+      <div class="kpi"><span>Lotes</span><strong id="kpi-lots">0</strong></div>
+      <div class="kpi"><span>Lances registrados</span><strong id="kpi-bids">0</strong></div>
+    </section>
+
+    <div class="admin-grid">
+      <section class="panel">
+        <h2>Adicionar veículo / lote</h2>
+        <form id="form-add-lot" novalidate>
+          <div class="field"><label for="a-title">Título (marca e modelo)</label><input id="a-title" required placeholder="Ex.: Honda Civic 2.0"></div>
+          <div class="grid-2">
+            <div class="field"><label for="a-cat">Categoria</label>
+              <select id="a-cat"><option value="carro">Veículo</option><option value="moto">Moto</option><option value="pesado">Pesado</option><option value="nautico">Náutico</option></select>
+            </div>
+            <div class="field"><label for="a-price">Lance inicial (R$)</label><input id="a-price" type="number" min="0" required placeholder="35000"></div>
+          </div>
+          <div class="grid-2">
+            <div class="field"><label for="a-year">Ano/Modelo</label><input id="a-year" placeholder="2020/2021"></div>
+            <div class="field"><label for="a-km">Hodômetro</label><input id="a-km" placeholder="45.000 km"></div>
+          </div>
+          <div class="field"><label for="a-city">Localização</label><input id="a-city" placeholder="Curitiba/PR"></div>
+          <div class="field"><label for="a-photo">Foto do veículo (opcional)</label><input id="a-photo" type="file" accept="image/*"></div>
+          <button class="btn btn--primary" type="submit">Adicionar lote</button>
+          <p class="form__msg" id="add-msg"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Gerar contrato de arrematação</h2>
+        <form id="form-contract" novalidate>
+          <div class="field"><label for="k-client">Cliente</label><select id="k-client" required><option value="">Carregando clientes…</option></select></div>
+          <div class="field"><label for="k-lot">Lote (lances deste cliente)</label><select id="k-lot" required><option value="">Selecione um cliente</option></select></div>
+          <div class="grid-2">
+            <div class="field"><label for="k-value">Valor de arremate (R$)</label><input id="k-value" type="number" min="0" step="1" required></div>
+            <div class="field"><label for="k-number">Nº do contrato (opcional)</label><input id="k-number" placeholder="Ex.: 2026/0001"></div>
+          </div>
+          <p class="muted" id="k-info" style="font-size:.85rem;margin:-.2rem 0 .8rem"></p>
+          <button class="btn btn--primary" type="submit">Gerar contrato (imprimir / PDF)</button>
+          <p class="form__msg" id="k-msg"></p>
+        </form>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="panel__head">
+        <h2>Clientes cadastrados</h2>
+        <div class="panel__tools">
+          <input id="clients-search" type="search" placeholder="Buscar por nome, e-mail, CPF ou telefone" aria-label="Buscar clientes">
+          <button class="btn btn--ghost btn--sm" id="clients-csv" type="button">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Cadastro</th><th>Último acesso</th><th>Lances</th><th>Maior lance</th><th>Liderando</th><th></th></tr></thead>
+        <tbody id="clients-body"></tbody></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Lances</h2>
+      <div class="table-wrap">
+        <table class="table"><thead><tr><th>Lote</th><th>Usuário</th><th>Valor</th><th>Data/hora</th></tr></thead><tbody id="bids-body"></tbody></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Lotes cadastrados</h2>
+      <div class="table-wrap">
+        <table class="table"><thead><tr><th>#</th><th>Foto</th><th>Título</th><th>Categoria</th><th>Lance inicial</th><th>Ações</th></tr></thead><tbody id="lots-body"></tbody></table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/lots-data.js?v=37"></script>
+  <script src="js/data.js?v=37"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase.js?v=37"></script>
+  <script src="js/auth.js?v=37"></script>
+  <script src="js/store.js?v=37"></script>
+  <script src="js/contract.js?v=37"></script>
+  <script src="js/admin.js?v=37"></script>
+</body>
+</html>
