@@ -11,3 +11,4 @@ images/lotes/
 # Mapa das fotos (usado só pelo script de importação)
 js/lots-photos.json
 *.md
+ADMIN-LOGIN.txt

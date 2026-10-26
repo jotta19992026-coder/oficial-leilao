@@ -12,6 +12,21 @@
 
   var cache = { lots: [], byId: {}, myBids: [], source: 'loading' };
 
+  // O catálogo local (270 KB) só é baixado quando o Supabase falha; as páginas não o carregam mais.
+  function loadLocalCatalog() {
+    if (window.NL_REAL_LOTS) return Promise.resolve();
+    return new Promise(function (resolve) {
+      var s = document.createElement('script');
+      s.src = 'js/lots-data.js?v=42';
+      s.onload = function () {
+        if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
+        resolve();
+      };
+      s.onerror = function () { resolve(); };
+      document.head.appendChild(s);
+    });
+  }
+
   function incrementFor(price) { return Math.max(100, Math.round(price * 0.01 / 100) * 100); }
 
   // Linha do banco -> formato usado pelos cards/detalhe (mesmos nomes de lots-data.js).
@@ -95,7 +110,9 @@
     : Promise.reject(new Error('supabase-js indisponível'))
   ).catch(function (err) {
     console.warn('Usando o catálogo local:', err && err.message);
-    setLots((window.NL_LOTS || []).map(fromLocal), 'local');
+    return loadLocalCatalog().then(function () {
+      setLots((window.NL_LOTS || []).map(fromLocal), 'local');
+    });
   }).then(function () {
     return (window.NLAuth ? window.NLAuth.ready : Promise.resolve()).then(fetchMyBids);
   }).then(function (mine) {

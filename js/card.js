@@ -30,7 +30,7 @@
     var w = winnerOf(lot);
     return '<article class="lot lot--' + di.status.k + '" data-cat="' + lot.cat + '">' +
       '<a class="lot__media lot__media--' + lot.media + '" href="lote.html?id=' + lot.id + '" data-lot-id="' + lot.id + '">' +
-      '<img class="lot__img" src="' + window.NL_IMG_FOR(lot) + '" alt="' + lot.title + '" loading="lazy">' +
+      '<img class="lot__img" src="' + window.NL_IMG_FOR(lot) + '" alt="' + lot.title + '" loading="lazy" decoding="async">' +
       '<span class="lot__badge lot__badge--' + di.status.k + '">' + di.status.l + '</span>' +
       (di.status.k === 'open' ? '<span class="lot__live"><span class="lot__live-dot"></span>Ao vivo</span>' : '') +
       '<span class="lot__tag">Lote ' + lot.n + '</span>' +

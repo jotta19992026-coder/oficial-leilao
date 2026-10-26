@@ -26,7 +26,7 @@
 
   var photos = (lot.photos && lot.photos.length) ? lot.photos : [window.NL_IMG_FOR(lot)];
   var thumbs = photos.map(function (src, i) {
-    return '<span data-src="' + src + '" class="' + (i === 0 ? 'is-active' : '') + '" role="button" tabindex="0" aria-label="Ver foto ' + (i + 1) + ' de ' + photos.length + '"><img src="' + src + '" alt="' + lot.title + ' — foto ' + (i + 1) + '" loading="lazy"></span>';
+    return '<span data-src="' + src + '" class="' + (i === 0 ? 'is-active' : '') + '" role="button" tabindex="0" aria-label="Ver foto ' + (i + 1) + ' de ' + photos.length + '"><img src="' + src + '" alt="' + lot.title + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async"></span>';
   }).join('');
 
   function areaOf(title) {
@@ -72,7 +72,7 @@
     '<nav class="crumbs"><a href="index.html">Início</a> / <a href="lotes.html">Lotes</a> / <span>Lote ' + lot.n + '</span></nav>' +
     '<div class="detail">' +
       '<div class="detail__media">' +
-        '<div class="gallery gallery--' + lot.media + '"><img class="gallery__img" id="d-main" src="' + photos[0] + '" alt="' + lot.title + '"><span class="lot__tag">Lote ' + lot.n + '</span></div>' +
+        '<div class="gallery gallery--' + lot.media + '"><img class="gallery__img" id="d-main" fetchpriority="high" src="' + photos[0] + '" alt="' + lot.title + '"><span class="lot__tag">Lote ' + lot.n + '</span></div>' +
         '<div class="thumbs" id="d-thumbs">' + thumbs + '</div>' +
       '</div>' +
       '<div class="detail__info">' +

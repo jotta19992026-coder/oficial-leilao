@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Painel administrativo — Leilão Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=41">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=41">
+  <link rel="icon" type="image/png" href="favicon.png?v=42">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=42">
   <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=41">
+  <link rel="preconnect" href="https://srxtmyhcfncscjvyibhg.supabase.co" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="css/styles.css?v=42">
 </head>
 <body>
   <div class="admin-top">
     <div class="container admin-top__inner">
       <a class="brand brand--light" href="index.html">
-        <img class="brand__logo" src="images/logo.png" alt="" width="77" height="30">
+        <img class="brand__logo" src="images/logo.webp" alt="" width="77" height="30">
         <span class="brand__name">Admin</span>
       </a>
       <div style="display:flex;gap:.6rem">
@@ -115,14 +119,13 @@
     </section>
   </main>
 
-  <script src="js/lots-data.js?v=41"></script>
-  <script src="js/data.js?v=41"></script>
+  <script src="js/data.js?v=42"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=41"></script>
-  <script src="js/auth.js?v=41"></script>
-  <script src="js/store.js?v=41"></script>
-  <script src="js/masks.js?v=41"></script>
-  <script src="js/contract.js?v=41"></script>
-  <script src="js/admin.js?v=41"></script>
+  <script src="js/supabase.js?v=42"></script>
+  <script src="js/auth.js?v=42"></script>
+  <script src="js/store.js?v=42"></script>
+  <script src="js/masks.js?v=42"></script>
+  <script src="js/contract.js?v=42"></script>
+  <script src="js/admin.js?v=42"></script>
 </body>
 </html>

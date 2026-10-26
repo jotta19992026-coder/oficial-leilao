@@ -52,6 +52,11 @@
       resizeTick = requestAnimationFrame(sizeViewport);
     });
     window.addEventListener('load', sizeViewport);
+    // Slides 2–4 começam com loading="lazy" para não disputar banda com o 1º; depois do load
+    // da página são liberados, para já estarem prontos quando o slider chegar neles.
+    window.addEventListener('load', function () {
+      [].forEach.call(track.querySelectorAll('img[loading="lazy"]'), function (img) { img.loading = 'eager'; });
+    });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeViewport);
 
     document.getElementById('banner-next').addEventListener('click', function () { next(); restart(); });

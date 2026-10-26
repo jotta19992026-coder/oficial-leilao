@@ -8,3 +8,6 @@ js/lots-photos.partial.json
 # Fotos originais dos lotes: já estão no Supabase Storage (bucket lot-photos).
 # Ficam só no computador, para reimportar com scripts/upload-images-supabase.js.
 images/lotes/
+
+# Credenciais locais do admin
+ADMIN-LOGIN.txt

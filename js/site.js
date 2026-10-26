@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var LOGO = '<img class="brand__logo" src="images/logo.png" alt="Copart" width="153" height="60">';
+  var LOGO = '<img class="brand__logo" src="images/logo.webp" alt="Copart" width="153" height="60">';
   var LOGO_LIGHT = LOGO;
 
   function seal(path, path2, title, sub) {
@@ -43,8 +43,8 @@
   }
 
   function trustHTML() {
-    return '<img src="images/selos/leilao-seguro.png" alt="Leilão Seguro" width="260" height="44" loading="lazy" decoding="async">' +
-      '<img src="images/selos/ssl-site-seguro.png" alt="SSL — Certificado Site Seguro" width="198" height="88" loading="lazy" decoding="async">';
+    return '<img src="images/selos/leilao-seguro.webp" alt="Leilão Seguro" width="260" height="44" loading="lazy" decoding="async">' +
+      '<img src="images/selos/ssl-site-seguro.webp" alt="SSL — Certificado Site Seguro" width="198" height="88" loading="lazy" decoding="async">';
   }
 
   function navLinks() {
