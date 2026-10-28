@@ -2,7 +2,7 @@
 # (Cloudflare Pages: 200 = rewrite/proxy, 301 = redirecionamento)
 
 # /br -> home, sem trocar a URL
-/br /index.html 200
+/br / 200
 
 # /br/ -> 301 para /br
 /br/ /br 301

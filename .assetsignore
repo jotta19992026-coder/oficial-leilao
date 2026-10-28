@@ -1,0 +1,23 @@
+# Cloudflare Workers (assets.directory = "."): arquivos do repositório que NÃO vão para o site.
+# Mesmo recorte de scripts/build-pages.js.
+.git
+.github
+.gitignore
+.assetsignore
+.env*
+.htaccess
+.vercelignore
+vercel.json
+wrangler.json*
+wrangler.toml
+node_modules
+scripts/
+supabase/
+*.md
+*.txt
+*.py
+*.zip
+dist/
+__pycache__
+js/lots-photos*.json
+images/lotes/
