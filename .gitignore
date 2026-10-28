@@ -13,3 +13,6 @@ images/lotes/
 
 # Credenciais locais do admin
 ADMIN-LOGIN.txt
+
+# Contexto/estado do projeto: só local (nunca versionar)
+CONTEXTO-IA.md

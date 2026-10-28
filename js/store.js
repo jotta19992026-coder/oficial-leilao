@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=70';
+      s.src = 'js/lots-data.js?v=71';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -215,6 +215,16 @@
         });
         return real.concat(sim).sort(function (a, b) { return b.time - a.time; });
       }, function () { return sim; });
+    },
+
+    // Visualizações REAIS do lote (page_views da migração 003; leitura via lot_view_count, migração 006).
+    // Devolve { views: total, online: visitantes únicos nos últimos 5 min } — null se o banco não responder.
+    lotViews: function (lotId) {
+      if (!supa || cache.source !== 'supabase') return Promise.resolve(null);
+      return supa.rpc('lot_view_count', { p_lot_id: lotId }).then(function (r) {
+        if (r.error || !r.data) return null;
+        return { views: Number(r.data.views) || 0, online: Number(r.data.online) || 0 };
+      }, function () { return null; });
     },
 
     // Relê um lote (preço/lances atuais).

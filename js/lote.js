@@ -203,12 +203,23 @@
   tickCountdown();
   setInterval(tickCountdown, 1000);
 
-  // ---- Visualizações (estimadas, sobem aos poucos) ----
-  var views = 90 + ((lot.id * 37) % 760) + Math.floor(Math.random() * 40);
+  // ---- Visualizações (contagem REAL de page_views, migração 006) ----
   var vEl = document.getElementById('d-views');
-  function renderViews() { vEl.textContent = views.toLocaleString('pt-BR') + ' pessoas vendo agora'; }
-  renderViews();
-  setInterval(function () { views += Math.floor(Math.random() * 3); renderViews(); }, 5000);
+  function plural(n, one, many) { return n === 1 ? one : many; }
+  function renderViews(v) {
+    if (!v) { vEl.textContent = '—'; return; }
+    var txt = v.views.toLocaleString('pt-BR') + plural(v.views, ' visualização', ' visualizações');
+    if (v.online > 0) {
+      txt = v.online.toLocaleString('pt-BR') + plural(v.online, ' pessoa vendo agora', ' pessoas vendo agora') + ' · ' + txt;
+    }
+    vEl.textContent = txt;
+  }
+  function loadViews() {
+    if (!window.NLStore || !window.NLStore.lotViews) return;
+    window.NLStore.lotViews(lot.id).then(renderViews);
+  }
+  loadViews();
+  setInterval(loadViews, 30000);
 
   // ---- Histórico (lot_bid_history: só o primeiro nome) e lance atual ----
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }

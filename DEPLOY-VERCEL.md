@@ -14,6 +14,7 @@ O site é estático (HTML/CSS/JS, sem build). Os dados, logins, lances e fotos f
    3. `supabase/003_visualizacoes.sql` — contador de visitas do painel
    4. `supabase/005_documento_usuario.sql` — foto opcional do documento + bucket privado `user-docs`
    (não existe migração 004 — a numeração pulou)
+   5. `supabase/006_visitas_lote.sql` — contador REAL de visualizações na página do lote ("vendo agora" de `page_views`)
 3. Ativar o tempo real (página do lote atualiza sozinha quando chega lance):
    ```sql
    alter publication supabase_realtime add table public.lots;
