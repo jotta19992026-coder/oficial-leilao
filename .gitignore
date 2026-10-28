@@ -16,3 +16,6 @@ ADMIN-LOGIN.txt
 
 # Contexto/estado do projeto: só local (nunca versionar)
 CONTEXTO-IA.md
+
+# Build de publicação gerado por scripts/build-pages.js (Cloudflare Pages)
+dist/

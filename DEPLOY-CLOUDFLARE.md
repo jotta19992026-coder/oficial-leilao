@@ -16,9 +16,12 @@
    | Project name | `oficial-leilao` (vira `<nome>.pages.dev`) |
    | Production branch | `main` |
    | Framework preset | nenhum (site estático, sem build) |
-   | Build command | deixe **vazio** (ou `exit 0`) |
-   | Build output directory | `/` (raiz do repositório) |
+   | Build command | `node scripts/build-pages.js` |
+   | Build output directory | `dist` |
    | Root directory | vazio (raiz) |
+
+   > O build monta `dist/` só com o site (HTML, `css/`, `js/`, `images/`, ícones e os arquivos `_redirects`/`_headers`) e **deixa de fora** `scripts/`, `supabase/*.sql`, `*.md`, `.env*`, `vercel.json`, `js/lots-photos.json` e `images/lotes/` — igual ao antigo `.vercelignore` da Vercel (sem ele, tudo isso seria publicado).
+   > Alternativa **sem build**: apague o Build command, deixe a saída em `/` (raiz) — aí os arquivos de desenvolvimento vão ao ar junto (não há segredo versionado, mas `supabase/*.sql` e `scripts/` ficam acessíveis).
 
 6. **Save and Deploy** → pronto. Você recebe uma URL `https://oficial-leilao.pages.dev`.
    A cada `git push` na `main` um novo deploy é publicado (igual à Vercel); branches diferentes geram URL de preview.
