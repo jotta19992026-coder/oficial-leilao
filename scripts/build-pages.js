@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Build de publicação — Cloudflare Pages (site estático, sem dependências).
+ * Build de publicação — Cloudflare Pages ou Hostinger (site estático, sem dependências).
  *
  * Uso (na raiz do projeto ou no build da Pages):
  *     node scripts/build-pages.js
@@ -22,7 +22,7 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'dist');
 
 // Arquivos soltos da raiz que o site serve.
-const ROOT_FILES = ['favicon.png', 'favicon.svg', 'apple-touch-icon.png', '_redirects', '_headers'];
+const ROOT_FILES = ['favicon.png', 'favicon.svg', 'apple-touch-icon.png', '_redirects', '_headers', '.htaccess'];
 // Pastas do site.
 const DIRS = ['css', 'js', 'images'];
 // Exceções dentro das pastas.
@@ -68,7 +68,7 @@ function main() {
     }
   }
 
-  // Ícones e arquivos de roteamento/cabeçalhos do Pages.
+  // Ícones e arquivos de roteamento/cabeçalhos (Pages: _redirects/_headers; Hostinger: .htaccess).
   for (const name of ROOT_FILES) {
     const from = path.join(ROOT, name);
     if (fs.existsSync(from)) { fs.copyFileSync(from, path.join(OUT, name)); files++; }

@@ -48,6 +48,25 @@ Para o domínio passar a servir o Pages:
 
 Depois do domínio no Pages, **delete o projeto na Vercel** (Settings → Danger Zone) para não existir dois deploys disputando o mesmo endereço.
 
+## 2.2. Situação em 28/10/2026 (fim da tarde): domínio na Hostinger, site QUEBRADO
+
+Teste no site publicado: `https://leiloes-copart.com/` passa pelo Cloudflare (DNS `vera`/`ignacio.ns.cloudflare.com`, proxy ligado), mas o **origem é a Hostinger** (header `x-hcdn-request-id`). Lá só existe o **`index.html`** (`?v=71`); **todo o resto** — `css/styles.css`, `js/*.js`, `images/*` — devolve a página **"Parked Domain name on Hostinger DNS system"** (HTML com status 200). Resultado: home sem estilo, sem banners, sem lotes e sem mapa. `oficial-leilao.pages.dev` **não existe** (o projeto Pages não foi criado com esse nome).
+
+Escolha **um** dos caminhos:
+
+**A) Hostinger (o que está ligado hoje)**
+1. Na raiz do projeto: `node scripts/build-pages.js` e compacte o `dist/` (ou use o `site-hostinger.zip` já gerado na raiz — 86 entradas, 1,55 MB).
+2. hPanel → **Sites → Gerenciador de Arquivos** → pasta **`public_html`** do domínio `leiloes-copart.com` → apague o `index.html` solto e qualquer página padrão da Hostinger (`default.php`/parking).
+3. **Enviar** → `site-hostinger.zip` → botão direito → **Extrair** dentro de `public_html` (as pastas `css/`, `js/`, `images/` e o `.htaccess` têm de ficar **direto** em `public_html`, não em subpasta). Ative "mostrar arquivos ocultos" para ver o `.htaccess`.
+4. Se a Hostinger mostrar o domínio como "estacionado"/sem plano, ele precisa estar **vinculado a um plano de hospedagem** (Sites → Adicionar site → domínio existente); senão continua respondendo a página de parking.
+5. Cloudflare → **Caching → Purge Everything**. Teste: `https://leiloes-copart.com/js/site.js?v=71` deve abrir **JavaScript**, não HTML.
+6. Na Hostinger **cada mudança exige reenviar** o `dist/` (não há deploy automático pelo GitHub).
+
+**B) Cloudflare Pages (recomendado — deploy automático a cada `git push`)**
+Seguir as seções 1 e 2.1. Na hora de anexar o domínio, o Cloudflare vai avisar que já existe registro A/CNAME apontando para a Hostinger: apague esse registro e deixe o Pages criar o dele.
+
+O `.htaccess` (no repo e no `dist/`) é o equivalente de `_redirects` + `_headers` para a Hostinger (rota `/br`, headers de segurança, `noindex` no painel, cache). A Pages ignora o `.htaccess`, a Hostinger ignora `_redirects`/`_headers` — os três podem ficar juntos.
+
 ## 3. Supabase — obrigatório antes de testar login
 
 A `Site URL` e as `Redirect URLs` do Supabase continuam apontando para a Vercel/local. Sem isso, login e "Esqueci minha senha" falham no domínio novo.
