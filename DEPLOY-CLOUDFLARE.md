@@ -30,6 +30,21 @@
 1. Seu domínio precisa estar no Cloudflare (troque os *nameservers* na registradora) — assim o apex (`seudominio.com.br`) funciona direto.
 2. No projeto: **Custom domains** → **Set up a domain** → informe o domínio → **Continue** (com o domínio no Cloudflare tudo é automático).
 
+## 2.1. O domínio ainda está na Vercel (é o caso de `leiloes-copart.com`)
+
+Sintoma: `https://www.leiloes-copart.com/` responde com o header **`x-vercel-id`** e mostra a versão ANTIGA do site (HTML com `?v=37`, **sem a seção do mapa** — o build de 26/10), mesmo com o repositório já conectado ao Pages. Ou seja: o DNS já está no Cloudflare, mas o **origem** continua sendo a Vercel.
+
+Para o domínio passar a servir o Pages:
+
+1. Confirme o nome/caminho do projeto: **Workers & Pages → seu projeto** — no topo aparece a URL `<projeto>.pages.dev`. **Abra ela primeiro**: tem que mostrar o site ATUAL (`?v=70`, com o mapa "Onde estamos" e os 4 banners). Se essa URL estiver quebrada, o problema é o build (Deployments → ver o log) e não o domínio.
+2. No projeto: **Settings → Domains** (ou aba **Custom domains**) → **Set up a domain** → informe `leiloes-copart.com` → **Continue**. Repita para `www.leiloes-copart.com`.
+3. Como a zona já está no Cloudflare, o registro é criado/apontado sozinho. Se aparecer aviso de que **já existe um registro apontando para a Vercel** (`cname.vercel-dns.com` ou IP antigo): **DNS → registros do domínio → delete/edite o registro antigo** deixando o Pages criar o dele (ou cole o alvo `*.pages.dev` que o Pages mostrar).
+4. Aguarde alguns minutos e teste de novo. Confirmação de que funcionou: a resposta **não tem mais `x-vercel-id`** e o HTML traz `?v=70` + a seção `.mapsec` (mapa).
+
+> Enquanto o domínio estiver na Vercel, **nenhum `git push` chega ao ar** — por isso mapa e banners parecem "quebrados"/desatualizados no site publicado.
+
+Depois do domínio no Pages, **delete o projeto na Vercel** (Settings → Danger Zone) para não existir dois deploys disputando o mesmo endereço.
+
 ## 3. Supabase — obrigatório antes de testar login
 
 A `Site URL` e as `Redirect URLs` do Supabase continuam apontando para a Vercel/local. Sem isso, login e "Esqueci minha senha" falham no domínio novo.
@@ -38,6 +53,8 @@ Supabase → **Authentication → URL Configuration**:
 
 - **Site URL:** `https://oficial-leilao.pages.dev` (ou seu domínio)
 - **Redirect URLs:** adicione `https://oficial-leilao.pages.dev/*` e o domínio próprio `https://seudominio.com.br/*` (mantendo os antigos enquanto houver testes locais)
+
+> **Migração nova no Supabase (SQL Editor):** rode `supabase/006_visitas_lote.sql` — ativa o contador REAL de visualizações na página do lote (sem ele, o campo "Visualizações" fica vazio). Ordem completa das migrações em `DEPLOY-VERCEL.md`, seção 1.1.
 
 ## 4. O que já foi migrado do `vercel.json`
 
