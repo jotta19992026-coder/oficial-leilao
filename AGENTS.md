@@ -7,7 +7,10 @@ Leia `CONTEXTO-IA.md` (estado atual, decisões, mapa dos 225 lotes e pendências
 ## Comandos
 
 ```powershell
-# Servir o site localmente (na raiz)
+# Servir o site localmente (na raiz) — já aplica o rewrite /br -> home
+python scripts/serve-local.py
+
+# Alternativa simples (sem /br, que dá 404 neste modo)
 python -m http.server 8000 --bind 127.0.0.1
 
 # Reimportar catálogo da pasta Desktop\Leilão

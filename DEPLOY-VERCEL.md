@@ -67,6 +67,8 @@ O que **não** é publicado (veja `.vercelignore`): `.env`, `scripts/`, `supabas
 ## 3. Conectar o domínio
 
 > **Página inicial também em `/br`:** `leiloes-copart.com/br` abre a mesma home (`vercel.json` → `rewrites`). Login e "cookies" funcionam igual lá — mesmo domínio, a sessão é compartilhada automaticamente. Para mudar o destino do `/br`, edite o `rewrites` no `vercel.json` e publique.
+>
+> No computador local, use **`python scripts/serve-local.py`** (em vez de `python -m http.server`): ele aplica o mesmo rewrite, então `http://127.0.0.1:8000/br` também abre a home.
 
 1. Na Vercel: **Project → Settings → Domains → Add**. Adicione `seudominio.com.br` e também `www.seudominio.com.br` (marque para redirecionar um para o outro).
 2. No painel do registro do domínio (ex.: Registro.br → **DNS → Editar zona**), crie os registros que a Vercel mostrar. Normalmente são:
