@@ -120,7 +120,7 @@
   function headerHTML() {
     return '<div class="topbar"><div class="container topbar__inner">' +
       '<span>Atendimento seg. a sex. das 8h às 18h</span>' +
-      '<div class="topbar__links"><a href="contato.html">Central (41) 0000-0000</a>' +
+      '<div class="topbar__links"><a href="contato.html">Central (11) 4863-5629</a>' +
       '<a href="como-funciona.html">Como funciona</a></div></div></div>' +
       '<header class="header" id="inicio"><div class="container header__inner">' +
       '<a class="brand" href="index.html" aria-label="Leilão Oficial — início">' + LOGO + '</a>' +
@@ -180,7 +180,7 @@
       '<h4>Horário</h4><p class="footer__muted">Seg. a sex., das 8h às 18h</p></div>' +
       '<div class="footer__col"><h4>Contato</h4><p class="footer__muted">' +
       '<a href="mailto:atendimento@leiloes-copart.com">atendimento@leiloes-copart.com</a><br>' +
-      '<a href="tel:+550000000000">(41) 0000-0000</a><br>' +
+      '<a href="tel:+551148635629">(11) 4863-5629</a><br>' +
       '<a href="https://wa.me/551148635629?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento%20sobre%20os%20leil%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 4863-5629</a></p></div>' +
       '<div class="footer__col"><h4>Informações</h4><ul class="footer__links">' +
       '<li><a href="sobre.html">Quem somos</a></li>' +

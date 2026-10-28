@@ -13,7 +13,7 @@
     nomeFantasia: 'Leilão Oficial',
     cnpj: '',
     endereco: 'Estr. Muranaka, 199 - Jardim Novo Horizonte, Itaquaquecetuba - SP, 08597-230',
-    telefone: '',
+    telefone: '(11) 4863-5629',
     email: 'atendimento@leiloes-copart.com',
     site: '',
     logo: 'images/logo.webp',
