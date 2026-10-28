@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leilão Oficial — Leilões de veículos, motos e pesados</title>
   <meta name="description" content="Leilão Oficial: leilões online de veículos, motos, utilitários e náuticos. Lances abertos, lotes verificados e atendimento transparente.">
-  <link rel="icon" type="image/png" href="favicon.png?v=53">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=53">
+  <link rel="icon" type="image/png" href="favicon.png?v=70">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=70">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://srxtmyhcfncscjvyibhg.supabase.co" crossorigin>
@@ -14,7 +14,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=53">
+  <link rel="stylesheet" href="css/styles.css?v=70">
   <link rel="preload" as="image" href="images/banner-mobile.webp?v=2" imagesrcset="images/banner-mobile.webp?v=2 780w, images/banner-mobile-2x.webp?v=2 1560w" imagesizes="100vw" media="(max-width:560px)" fetchpriority="high">
   <link rel="preload" as="image" href="images/web-6d8e7f4041.webp?v=2" imagesrcset="images/web-6d8e7f4041.webp?v=2 1140w, images/web-6d8e7f4041-2x.webp?v=2 2280w" imagesizes="100vw" media="(min-width:561px)" fetchpriority="high">
 </head>
@@ -87,11 +87,6 @@
             <label for="finder-date">Data do leilão</label>
             <select id="finder-date" onchange="if(this.value){location.href='lotes.html?date='+encodeURIComponent(this.value)}">
               <option value="">Todas</option>
-              <option value="26/10">26/10</option>
-              <option value="27/10">27/10</option>
-              <option value="07/11">07/11</option>
-              <option value="10/11">10/11</option>
-              <option value="12/11">12/11</option>
             </select>
           </div>
         </div>
@@ -116,11 +111,8 @@
         <h2>Próximos leilões</h2>
         <a class="link" href="leiloes.html">Ver todos os eventos →</a>
       </div>
-      <div class="events">
-        <a class="event" href="lotes.html?cat=moto"><span class="event__status event__status--open">Aberto para lance</span><span class="event__day">Segunda-feira</span><span class="event__date">26/10</span><span class="event__meta">70 Motos</span><span class="event__sponsor" data-sponsors="0"></span></a>
-        <a class="event" href="lotes.html?cat=carro"><span class="event__status event__status--open">Aberto para lance</span><span class="event__day">Segunda-feira</span><span class="event__date">26/10</span><span class="event__meta">54 Veículos</span><span class="event__sponsor" data-sponsors="1"></span></a>
-        <a class="event" href="lotes.html?cat=pesado"><span class="event__status event__status--open">Aberto para lance</span><span class="event__day">Terça-feira</span><span class="event__date">27/10</span><span class="event__meta">15 Pesados</span><span class="event__sponsor" data-sponsors="2"></span></a>
-        <a class="event" href="lotes.html?cat=nautico"><span class="event__status event__status--soon">Aguardando início</span><span class="event__day">Sábado</span><span class="event__date">07/11</span><span class="event__meta">19 Náuticos</span><span class="event__sponsor" data-sponsors="3"></span></a>
+      <div class="events" id="upcoming-events">
+        <p class="empty">Carregando próximos leilões…</p>
       </div>
     </div>
   </section>
@@ -194,15 +186,15 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=53"></script>
+  <script src="js/data.js?v=70"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=53"></script>
-  <script src="js/auth.js?v=53"></script>
-  <script src="js/store.js?v=53"></script>
-  <script src="js/site.js?v=53"></script>
-  <script src="js/timers.js?v=53"></script>
-  <script src="js/card.js?v=53"></script>
-  <script src="js/index.js?v=53"></script>
-  <script src="js/banners.js?v=53"></script>
+  <script src="js/supabase.js?v=70"></script>
+  <script src="js/auth.js?v=70"></script>
+  <script src="js/store.js?v=70"></script>
+  <script src="js/site.js?v=70"></script>
+  <script src="js/timers.js?v=70"></script>
+  <script src="js/card.js?v=70"></script>
+  <script src="js/index.js?v=70"></script>
+  <script src="js/banners.js?v=70"></script>
 </body>
 </html>

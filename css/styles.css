@@ -223,6 +223,8 @@ img{max-width:100%;display:block}
 /* Home: "Aberto para lance" em vermelho (mesmo tom do selo Ao vivo) */
 #leiloes .event__status--open{background:rgba(225,29,42,.1);color:#e11d2a}
 .event__status--soon{background:rgba(12,45,87,.1);color:var(--navy)}
+.event__status--closed{background:rgba(12,45,87,.08);color:var(--muted)}
+.event--closed{opacity:.72}
 .event__day{font-family:"Sora";font-weight:600;color:var(--navy)}
 .event__date{font-size:1.6rem;font-family:"Sora";font-weight:700;color:var(--ink)}
 .event__meta{color:var(--muted);font-size:.9rem}
@@ -285,11 +287,12 @@ img{max-width:100%;display:block}
 }
 
 /* Mapa da sede (Google Street View) acima do rodapé */
-.mapsec{padding:36px 0 8px;content-visibility:auto;contain-intrinsic-size:auto 420px}
+.mapsec{padding:36px 0 8px}
 .mapsec__card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:1.6rem;align-items:center;
   border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;background:#fff;box-shadow:var(--shadow)}
 .mapsec__addr{margin:0;color:var(--muted);font-size:.98rem}
 .mapsec__addr strong{color:var(--ink);font-family:"Sora",sans-serif}
+.mapsec__actions{margin:.7rem 0 0;font-size:.9rem}
 .mapsec__map{min-width:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg-alt)}
 .mapsec__map iframe{display:block;width:100%;height:340px;border:0}
 @media (max-width:860px){
@@ -529,6 +532,18 @@ img{max-width:100%;display:block}
 .admin-top__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 /* Logo do painel sobre placa branca (a arte tem letras escuras; no navy fica ilegível) */
 .admin-top .brand__logo{height:38px;width:auto;padding:6px 10px;background:#fff;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+/* Navegação do painel: botões com as funções existentes, rolando até cada seção */
+.adminnav{position:sticky;top:64px;z-index:39;background:rgba(255,255,255,.95);
+  backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+.adminnav__inner{display:flex;gap:.45rem;overflow-x:auto;padding:.5rem 0;scrollbar-width:none}
+.adminnav__inner::-webkit-scrollbar{display:none}
+.adminnav__btn{flex:0 0 auto;font-weight:600;font-size:.84rem;color:var(--navy);background:#eef3f9;
+  border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;transition:.15s}
+.adminnav__btn:hover{border-color:var(--navy);color:var(--brand)}
+.adminnav__btn.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
+/* Folga para a barra sticky ao navegar por botão/âncora */
+#dates-panel,#sim-panel,#views-panel,#add-panel,#contract-panel,
+#wins-panel,#clients-panel,#bids-panel,#lots-panel{scroll-margin-top:122px}
 .admin{padding-bottom:60px}
 .btn--sm{padding:.35rem .7rem;font-size:.8rem}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:1.4rem}
@@ -562,6 +577,31 @@ img{max-width:100%;display:block}
 .filters input,.filters select{padding:.5rem .65rem;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.9rem;color:var(--ink);background:#fff;min-width:0}
 .filters__grow{flex:1 1 240px}
 .filters__count{font-size:.85rem;margin:0 0 .6rem}
+.dates-table td{vertical-align:top}
+.date-input{padding:.5rem .6rem;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.86rem;color:var(--ink);background:#fff;min-width:195px;max-width:100%}
+.dates-table .tag{margin-top:.35rem}
+.dates-bulk{border:1px dashed #c7d6ee;border-radius:12px;padding:1rem;margin:1rem 0 1.2rem;background:#f7faff}
+.dates-bulk h3{font-family:"Sora",sans-serif;font-size:1rem;color:var(--navy);margin:0 0 .25rem}
+.dates-bulk__intro p{margin:0}
+.dates-bulk__form{display:flex;flex-wrap:wrap;gap:.8rem;align-items:flex-end;margin-top:.9rem}
+.dates-bulk__form .field{flex:1 1 220px;margin:0}
+.dates-bulk__form .date-input{min-width:0;width:100%}
+.dates-bulk__form .btn{flex:0 0 auto}
+.dates-bulk .form__msg{margin:.6rem 0 0}
+@media (max-width:760px){.date-input{min-width:0;width:100%}}
+@media (max-width:560px){.dates-bulk__form .btn{width:100%}}
+.dates-lots{border:1px dashed #c7d6ee;border-radius:12px;padding:1rem;margin:1.2rem 0 0;background:#f7faff}
+.dates-lots h3{font-family:"Sora",sans-serif;font-size:1rem;color:var(--navy);margin:0 0 .25rem}
+.dates-lots__intro p{margin:0}
+.dates-lots__filters{display:flex;flex-wrap:wrap;gap:.8rem;align-items:flex-end;margin:.9rem 0 .8rem}
+.dates-lots__filters .field{flex:1 1 220px;margin:0}
+.dates-lots__filters .btn{flex:0 0 auto}
+.dates-lots__filters select,.dates-lots__filters input{padding:.5rem .6rem;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.86rem;color:var(--ink);background:#fff;width:100%}
+.dates-lots__count{flex:1 1 100%;margin:0}
+.lotdates-table td{vertical-align:top}
+.lotdates-table .tag{margin-top:.35rem}
+.lotdates-table th:first-child,.lotdates-table td:first-child{width:30px;text-align:center}
+@media (max-width:560px){.dates-lots__filters .field{flex:1 1 100%}}
 .tag{display:inline-flex;align-items:center;gap:.3rem;padding:.15rem .55rem;border-radius:999px;font-size:.75rem;font-weight:600;white-space:nowrap;border:1px solid var(--line);color:var(--ink);background:#f4f6f9}
 .tag--done{background:#e8f5ee;border-color:#b9e0c9;color:#155c37}
 .tag--open{background:#eef3fb;border-color:#c7d6ee;color:#1c3f75}
@@ -598,6 +638,9 @@ img{max-width:100%;display:block}
 .finder__field{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--muted)}
 .finder select,.filters-side select{border:1px solid var(--line);border-radius:10px;padding:.5rem .6rem;font:inherit;background:#fff;color:var(--ink)}
 input[type=checkbox]{accent-color:var(--brand);width:16px;height:16px}
+.checkline{display:flex;align-items:flex-start;gap:.55rem;font-size:.9rem;font-weight:400;cursor:pointer;padding:.25rem 0}
+.checkline input{margin-top:.2rem;flex:0 0 auto}
+.checkline span{line-height:1.45}
 
 /* Contadores clicáveis */
 a.stat{cursor:pointer;color:inherit;border-radius:10px;padding:.5rem .3rem;transition:.15s}
@@ -818,3 +861,11 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{             /* Chrome / Safari 
 .sim-live::before{content:"";width:9px;height:9px;border-radius:50%;background:#e3b341;animation:livePulse 1.4s ease-in-out infinite}
 .forgot{margin-top:.8rem;padding-top:1rem;border-top:1px solid var(--line)}
 .forgot .muted{font-size:.9rem;margin-top:0}
+
+/* Toast — aviso flutuante do painel (ex.: "Data alterada") */
+.nl-toasts{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;flex-direction:column;gap:8px;max-width:min(420px,calc(100vw - 32px))}
+.nl-toast{background:var(--navy);color:#fff;border-radius:10px;padding:.8rem 1rem;font-size:.9rem;line-height:1.45;
+  box-shadow:0 10px 30px rgba(12,45,87,.35);opacity:0;transform:translateY(10px);transition:opacity .25s ease,transform .25s ease}
+.nl-toast--on{opacity:1;transform:none}
+.nl-toast--ok{border-left:4px solid #27ae60}
+.nl-toast--err{border-left:4px solid #c0392b}

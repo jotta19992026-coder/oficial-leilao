@@ -6,10 +6,18 @@ O site é estático (HTML/CSS/JS, sem build). Os dados, logins, lances e fotos f
 
 ## 1. Supabase (fazer uma vez, antes de publicar)
 
-### 1.1 Rodar a migração dos clientes
+### 1.1 Rodar as migrações (na ordem, uma vez)
 1. Abra o projeto no Supabase → **SQL Editor** → **New query**.
-2. Cole todo o conteúdo de `supabase/002_clientes_admin.sql` e clique em **Run**.
-   - Adiciona CPF, telefone e endereço ao perfil do cliente, cria as funções do painel (`admin_clients`, `admin_client_lots`) e confirma contas que tenham ficado pendentes.
+2. Cole e rode, **um por vez, nesta ordem** (todos são idempotentes: pode rodar de novo sem perder dados):
+   1. `supabase/schema.sql` — base: tabelas, funções, políticas, bucket `lot-photos`
+   2. `supabase/002_clientes_admin.sql` — CPF/telefone/endereço do cliente + funções do painel
+   3. `supabase/003_visualizacoes.sql` — contador de visitas do painel
+   4. `supabase/005_documento_usuario.sql` — foto opcional do documento + bucket privado `user-docs`
+   (não existe migração 004 — a numeração pulou)
+3. Ativar o tempo real (página do lote atualiza sozinha quando chega lance):
+   ```sql
+   alter publication supabase_realtime add table public.lots;
+   ```
 
 ### 1.2 Desligar a confirmação de e-mail
 1. **Authentication → Sign In / Providers → Email**.

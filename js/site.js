@@ -37,6 +37,47 @@
       el.innerHTML = window.NLSponsorBadge(el.getAttribute('data-sponsors') || idx, el.getAttribute('data-sponsors-size'));
     });
   }
+  window.NLFillSponsors = fillSponsors;
+
+  // Agenda compartilhada (home e leiloes.html): agrupa os lotes por leilão e monta os cards
+  // sempre a partir das datas atuais do banco — o painel admin altera e o site acompanha.
+  var EVENT_STATUS = { open: 'Aberto para lances', closed: 'Encerrado' };
+  window.NL_EVENT_LIST = function (lots, limit, onlyUpcoming) {
+    var groups = {};
+    (lots || []).forEach(function (l) {
+      var key = l.auctionNum != null ? 'n:' + l.auctionNum : 'l:' + (l.auction || l.id);
+      var g = groups[key];
+      if (!g) g = groups[key] = { num: l.auctionNum, lots: [], cats: {} };
+      g.lots.push(l);
+      g.cats[l.cat] = (g.cats[l.cat] || 0) + 1;
+    });
+    var list = Object.keys(groups).map(function (k) {
+      var g = groups[k];
+      g.lot = g.lots[0];
+      g.di = window.NL_DATEINFO(g.lot);
+      g.cat = Object.keys(g.cats).sort(function (a, b) { return g.cats[b] - g.cats[a]; })[0];
+      g.mixed = Object.keys(g.cats).length > 1;
+      return g;
+    }).sort(function (a, b) {
+      return a.di.sortKey - b.di.sortKey || (Number(a.num) || 0) - (Number(b.num) || 0);
+    });
+    if (onlyUpcoming) list = list.filter(function (g) { return g.di.status.k !== 'closed'; });
+    if (limit) list = list.slice(0, limit);
+    if (!list.length) return '';
+
+    return list.map(function (g, i) {
+      var status = g.di.status;
+      var label = (!g.mixed && window.NL_CATS && window.NL_CATS[g.cat]) ? window.NL_CATS[g.cat].label : 'Itens';
+      var meta = (g.num != null ? 'Leilão ' + g.num + ' · ' : '') + g.lots.length + ' ' + label;
+      var href = 'lotes.html?date=' + encodeURIComponent(g.di.dm) + (g.mixed ? '' : '&cat=' + encodeURIComponent(g.cat));
+      return '<a class="event' + (status.k === 'closed' ? ' event--closed' : '') + '" href="' + href + '">' +
+        '<span class="event__status event__status--' + status.k + '">' + (EVENT_STATUS[status.k] || 'Aberto para lances') + '</span>' +
+        '<span class="event__day">' + g.di.weekday + '</span>' +
+        '<span class="event__date">' + g.di.dm + '</span>' +
+        '<span class="event__meta">' + esc(meta) + '</span>' +
+        '<span class="event__sponsor">' + window.NLSponsorBadge(i) + '</span></a>';
+    }).join('');
+  };
 
   function navLinks() {
     return [
@@ -108,6 +149,8 @@
   // rumo 271,18° e inclinação −13,61°), incorporado pelo player oficial do Google.
   var STREETVIEW_SRC = 'https://maps.google.com/maps?q=&layer=c&cbll=' + ENDERECO.lat + ',' + ENDERECO.lng +
     '&cbpanoid=WkRS93H8f8kh9MIefItJxg&cbp=11,271.18,,0,13.61&output=svembed&hl=pt-BR';
+  var MAPS_LINK = 'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent(ENDERECO.rua + ', ' + ENDERECO.bairro + ', ' + ENDERECO.cidade + ', ' + ENDERECO.cep);
 
   // Seção do mapa: endereço + Street View, acima do rodapé (sem título, a pedido do dono).
   function mapsHTML() {
@@ -117,6 +160,7 @@
       '<p class="mapsec__addr"><strong>Leilão Oficial</strong><br>' +
       esc(ENDERECO.rua) + ' — ' + esc(ENDERECO.bairro) + '<br>' +
       esc(ENDERECO.cidade) + ', ' + esc(ENDERECO.cep) + '</p>' +
+      '<p class="mapsec__actions"><a class="link" href="' + MAPS_LINK + '" target="_blank" rel="noopener">Abrir no Google Maps →</a></p>' +
       '</div>' +
       '<div class="mapsec__map"><iframe src="' + STREETVIEW_SRC + '" title="Google Street View — Estr. Muranaka, 199, Itaquaquecetuba - SP" ' +
       'loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>' +
@@ -135,9 +179,9 @@
       '<a href="index.html#onde-estamos">' + esc(ENDERECO.cidade) + ', ' + esc(ENDERECO.cep) + '</a></p>' +
       '<h4>Horário</h4><p class="footer__muted">Seg. a sex., das 8h às 18h</p></div>' +
       '<div class="footer__col"><h4>Contato</h4><p class="footer__muted">' +
-      '<a href="mailto:contato@leilaooficial.exemplo">contato@leilaooficial.exemplo</a><br>' +
+      '<a href="mailto:atendimento@leiloes-copart.com">atendimento@leiloes-copart.com</a><br>' +
       '<a href="tel:+550000000000">(41) 0000-0000</a><br>' +
-      '<a href="contato.html">WhatsApp (41) 00000-0000</a></p></div>' +
+      '<a href="https://wa.me/551148635629?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento%20sobre%20os%20leil%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 4863-5629</a></p></div>' +
       '<div class="footer__col"><h4>Informações</h4><ul class="footer__links">' +
       '<li><a href="sobre.html">Quem somos</a></li>' +
       '<li><a href="como-funciona.html">Como funciona</a></li>' +
@@ -147,7 +191,7 @@
       '<div class="footer__bottom"><div class="container">' +
       '<p>© <span id="year"></span> Leilão Oficial. Todos os direitos reservados. · <a href="admin-login.html">Área administrativa</a></p>' +
       '</div></div></footer>' +
-      '<a class="whatsapp" href="contato.html" aria-label="Falar no WhatsApp">' +
+      '<a class="whatsapp" href="https://wa.me/551148635629?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento%20sobre%20os%20leil%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">' +
       '<svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15c-1.52 0-3-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></a>' +
       '<div class="cookies" id="cookies" hidden><p>Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa política.</p>' +
       '<button class="btn btn--primary" id="cookies-ok">Concordar</button></div>';

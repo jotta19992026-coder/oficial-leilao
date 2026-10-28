@@ -9,7 +9,8 @@
   (window.NLStore ? window.NLStore.ready : Promise.resolve()).then(function () {
 
     function allLots() { return window.NLStore ? window.NLStore.lots() : (window.NL_LOTS || []); }
-    function dateOf(lot) { var m = (lot.auction || '').match(/(\d{2}\/\d{2})/); return m ? m[1] : ''; }
+    // Mesma data usada na agenda/cards (auction_date do banco), não o texto antigo do rótulo.
+    function dateOf(lot) { return window.NL_DATEINFO(lot).dm || ''; }
     var state = { cats: [], price: '', date: '', q: '', sort: 'default' };
 
     var card = window.NLCard;
@@ -40,13 +41,17 @@
       if (window.NLTimers) window.NLTimers.scan();
     }
 
-    // Popular datas disponíveis
+    // Popular datas disponíveis (ordem cronológica, com a mesma data da agenda/cards)
     var dateSel = document.getElementById('f-date');
     if (dateSel) {
-      var dates = [];
-      allLots().forEach(function (l) { var d = dateOf(l); if (d && dates.indexOf(d) < 0) dates.push(d); });
-      dates.sort();
-      dates.forEach(function (d) { var o = document.createElement('option'); o.value = d; o.textContent = d; dateSel.appendChild(o); });
+      var seenDates = {};
+      var dateList = [];
+      allLots().forEach(function (l) {
+        var di = window.NL_DATEINFO(l);
+        if (di.dm && !seenDates[di.dm]) { seenDates[di.dm] = true; dateList.push(di); }
+      });
+      dateList.sort(function (a, b) { return a.sortKey - b.sortKey; });
+      dateList.forEach(function (di) { var o = document.createElement('option'); o.value = di.dm; o.textContent = di.dm; dateSel.appendChild(o); });
       dateSel.addEventListener('change', function () { state.date = dateSel.value; render(); });
     }
 

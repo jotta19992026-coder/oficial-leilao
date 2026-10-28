@@ -11,6 +11,31 @@
       return window.NL_DATEINFO(a).sortKey - window.NL_DATEINFO(b).sortKey;
     });
 
+    // Próximos leilões: gerados a partir das datas atuais do banco (editáveis no painel).
+    var events = document.getElementById('upcoming-events');
+    if (events && window.NL_EVENT_LIST) {
+      events.innerHTML = window.NL_EVENT_LIST(lots, 4, true) ||
+        '<p class="empty">Nenhum leilão programado no momento.</p>';
+    }
+
+    // Datas do filtro "Data do leilão" da home (antes eram opções fixas no HTML).
+    var dateSel = document.getElementById('finder-date');
+    if (dateSel) {
+      var seen = {};
+      var dates = [];
+      lots.forEach(function (l) {
+        var di = window.NL_DATEINFO(l);
+        if (!seen[di.dm]) { seen[di.dm] = true; dates.push(di); }
+      });
+      dates.sort(function (a, b) { return a.sortKey - b.sortKey; });
+      dates.forEach(function (di) {
+        var o = document.createElement('option');
+        o.value = di.dm;
+        o.textContent = di.dm;
+        dateSel.appendChild(o);
+      });
+    }
+
     // Lotes em destaque (carrossel)
     var grid = document.getElementById('featured-grid');
     if (grid) grid.innerHTML = byDate.slice(0, 8).map(card).join('');

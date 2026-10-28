@@ -56,42 +56,73 @@ window.NL_EXTRA = function (lot) {
 window.NL_EDITAL = function (lot) {
   var num = String((lot && lot.auctionNum) || 1).padStart(2, '0');
   var di = window.NL_DATEINFO(lot || {});
+  var fim = lot && lot.endsAt ? new Date(lot.endsAt) : null;
+  var fimTxt = fim && !isNaN(fim)
+    ? fim.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+    : di.date + ', a partir das 14h00';
   return {
     numero: 'LO-2026/' + num,
     modalidade: 'Online (exclusivamente eletrônico)',
     abertura: di.label + ' — ' + di.date,
-    encerramento: di.date + ', a partir das 14h00',
+    encerramento: fimTxt,
     leiloeiro: 'Ricardo Almeida',
-    matricula: 'JUC/PR 12.345/2026',
+    matricula: 'JUCESP/SP 12.638/2019',
     comitente: 'Leilão Oficial',
     comissao: '5% sobre o valor de arrematação',
-    pagamento: 'PIX, boleto ou transferência bancária',
+    pagamento: 'TED/TFF ao preposto leiloeiro indicado pelo leiloeiro oficial do leilão, para que realize a quitação dos débitos do lote junto à instituição financeira responsável',
     retirada: 'Mediante comprovação de pagamento e agendamento'
   };
 };
 
-// Data de referência para derivar o status dos leilões.
-window.NL_TODAY = new Date(2026, 9, 25);
+// Data de referência para derivar o status dos leilões (sempre o dia atual).
+function nlStartOfToday() {
+  var n = new Date();
+  return new Date(n.getFullYear(), n.getMonth(), n.getDate());
+}
+window.NL_TODAY = nlStartOfToday();
 
-// Informações de data/hora e status a partir do campo "auction" (ex.: "... — 26/10").
+// Informações de data/hora e status. Prioriza auctionDate (DD/MM/AAAA) e auctionTime;
+// se o lote tiver endsAt (prazo real do banco), ele decide aberto x encerrado.
 window.NL_DATEINFO = function (lot) {
-  var m = (lot.auction || '').match(/(\d{2})\/(\d{2})/);
-  var d = m ? m[1] : '01', mo = m ? m[2] : '01';
-  var time = '10:' + String((lot.id % 6) * 10).padStart(2, '0'); // 10:00 … 10:50
-  var dateObj = new Date(2026, parseInt(mo, 10) - 1, parseInt(d, 10));
-  var diff = Math.round((dateObj - window.NL_TODAY) / 86400000);
-  var status = diff < 0 ? { k: 'closed', l: 'Encerrado' }
-    : (diff <= 3 ? { k: 'open', l: 'Aberto para lances' } : { k: 'soon', l: 'Em breve' });
+  lot = lot || {};
+  var d = '01', mo = '01', year = String(new Date().getFullYear()), dateObj;
+  var full = String(lot.auctionDate || '').match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  var short = String(lot.auction || '').match(/(\d{2})\/(\d{2})(?:\/(\d{4}))?/);
+  if (full) {
+    d = full[1]; mo = full[2]; year = full[3];
+  } else if (short) {
+    d = short[1]; mo = short[2]; year = short[3] || year;
+  }
+  dateObj = new Date(parseInt(year, 10), parseInt(mo, 10) - 1, parseInt(d, 10));
+
+  var time = String(lot.auctionTime || '');
+  if (!/^\d{1,2}:\d{2}/.test(time)) time = '10:' + String(((lot.id || 0) % 6) * 10).padStart(2, '0');
+  time = time.slice(0, 5);
+
+  var today = nlStartOfToday();
+  var endsAt = Number(lot.endsAt) || (lot.ends_at ? Date.parse(lot.ends_at) : 0);
+  var status;
+  // Regra: todos os lotes ficam abertos para lance; só encerra quem passou do prazo (ends_at).
+  // Sem ends_at, vale a data do leilão (data passada = encerrado).
+  if (endsAt) {
+    status = endsAt <= Date.now() ? { k: 'closed', l: 'Encerrado' }
+      : { k: 'open', l: 'Aberto para lances' };
+  } else {
+    var diff = Math.round((dateObj - today) / 86400000);
+    status = diff < 0 ? { k: 'closed', l: 'Encerrado' } : { k: 'open', l: 'Aberto para lances' };
+  }
+
   var wd = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'][dateObj.getDay()];
   var wdShort = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'][dateObj.getDay()];
   return {
-    date: d + '/' + mo + '/2026',
+    date: d + '/' + mo + '/' + year,
     dm: d + '/' + mo,
     time: time,
     weekday: wd,
     weekdayShort: wdShort,
     label: wdShort + ', ' + d + '/' + mo + ' às ' + time,
     status: status,
-    sortKey: dateObj.getTime()
+    sortKey: dateObj.getTime(),
+    endsAt: endsAt || null
   };
 };

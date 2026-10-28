@@ -488,8 +488,8 @@ select setval(
 -- ------------------------------------------------------------
 insert into public.auctions (numero, modalidade, abertura, encerramento, leiloeiro, matricula, comitente, comissao, pagamento, retirada)
 values ('LO-2026/01', 'Online (exclusivamente eletrônico)', '2026-10-26 10:00:00-03', '2026-10-26 14:00:00-03',
-        'Ricardo Almeida', 'JUC/PR 12.345/2026', 'Leilão Oficial', 5,
-        'PIX, boleto ou transferência bancária', 'Mediante comprovação de pagamento e agendamento')
+        'Ricardo Almeida', 'JUCESP/SP 12.638/2019', 'Leilão Oficial', 5,
+        'TED/TFF ao preposto leiloeiro — quitação dos débitos do lote junto à instituição financeira responsável', 'Mediante comprovação de pagamento e agendamento')
 on conflict (numero) do nothing;
 
 notify pgrst, 'reload schema';

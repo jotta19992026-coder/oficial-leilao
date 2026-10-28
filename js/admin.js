@@ -6,6 +6,27 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
   function errText(e) { return (e && e.message) || 'Erro inesperado.'; }
 
+  // Toast: aviso flutuante no canto inferior direito (confirmações do painel).
+  // Fica visível independente da rolagem — complementa as mensagens inline da seção.
+  var toastBox = null;
+  function nlToast(text, type) {
+    if (!toastBox) {
+      toastBox = document.createElement('div');
+      toastBox.className = 'nl-toasts';
+      document.body.appendChild(toastBox);
+    }
+    var t = document.createElement('div');
+    t.className = 'nl-toast nl-toast--' + (type === 'err' ? 'err' : 'ok');
+    t.setAttribute('role', 'status');
+    t.textContent = text;
+    toastBox.appendChild(t);
+    requestAnimationFrame(function () { t.classList.add('nl-toast--on'); });
+    setTimeout(function () {
+      t.classList.remove('nl-toast--on');
+      setTimeout(function () { t.remove(); }, 300);
+    }, 5000);
+  }
+
   // ----- Tela de login do admin -----
   var loginForm = document.getElementById('form-admin-login');
   if (loginForm) {
@@ -43,6 +64,8 @@
   var allLots = [];
   var leaders = {};   // lotId -> maior lance ativo (com profiles)
   var wins = [];      // lotes com maior lance = quem deve arrematar
+  var dateGroups = []; // leilões agrupados para a edição de datas
+  var datesDrawn = false;
 
   window.NLAdmin.require().then(function (ok) {
     if (!ok) return;
@@ -70,6 +93,62 @@
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
   function inRange(key, from, to) { return (!from || (key && key >= from)) && (!to || (key && key <= to)); }
+  function pad2(n) { return String(n).padStart(2, '0'); }
+  // Valor para <input type="datetime-local"> no fuso do navegador.
+  function dtInput(ms) {
+    if (!ms) return '';
+    var d = new Date(ms);
+    if (isNaN(d)) return '';
+    return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()) + 'T' + pad2(d.getHours()) + ':' + pad2(d.getMinutes());
+  }
+  function lotStartInput(l) {
+    var iso = l.auctionDateISO || '';
+    if (!iso) {
+      var m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(l.auctionDate || '');
+      if (m) iso = m[3] + '-' + m[2] + '-' + m[1];
+    }
+    if (!iso) return l.endsAt ? dtInput(l.endsAt) : '';
+    var time = /^\d{1,2}:\d{2}/.test(l.auctionTime || '') ? l.auctionTime.slice(0, 5) : '10:00';
+    return iso + 'T' + time;
+  }
+  // Data AAAA-MM-DD no fuso do navegador (coluna date do banco).
+  function isoDay(d) {
+    return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+  }
+  // Rótulo do leilão no padrão "Leilão 5 — 26/10".
+  function groupLabel(g, d) {
+    var dd = pad2(d.getDate()), mm = pad2(d.getMonth() + 1);
+    if (g.num != null) return 'Leilão ' + g.num + ' — ' + dd + '/' + mm;
+    return /—\s*\d{2}\/\d{2}/.test(g.label)
+      ? g.label.replace(/—\s*\d{2}\/\d{2}(?:\/\d{4})?/, '— ' + dd + '/' + mm)
+      : (g.label ? g.label + ' — ' + dd + '/' + mm : 'Leilão — ' + dd + '/' + mm);
+  }
+  function datesPatch(g, sd, ed) {
+    return {
+      auction_date: isoDay(sd),
+      auction_time: pad2(sd.getHours()) + ':' + pad2(sd.getMinutes()),
+      auction_label: groupLabel(g, sd),
+      ends_at: ed.toISOString()
+    };
+  }
+  // Encerramento coerente: se o encerramento ficar antes da nova data do leilão,
+  // adota no novo dia a MESMA HORA do encerramento antigo (ou +4h quando não há antigo).
+  function autoEnd(sd, oldEndMs) {
+    var ed = new Date(sd.getTime());
+    var old = oldEndMs ? new Date(Number(oldEndMs)) : null;
+    if (old && !isNaN(old.getTime())) ed.setHours(old.getHours(), old.getMinutes(), 0, 0);
+    else ed.setHours(ed.getHours() + 4);
+    if (ed <= sd) ed = new Date(sd.getTime() + 4 * 3600000);
+    return ed;
+  }
+  // Grava a data em todos os lotes do leilão e mantém a tabela auctions coerente.
+  function saveGroupDates(g, sd, ed) {
+    return A.setAuctionDates(g.ids, datesPatch(g, sd, ed)).then(function () {
+      if (g.num == null) return null;
+      return A.setAuctionSchedule('LO-2026/' + pad2(g.num), sd.toISOString(), ed.toISOString())
+        .catch(function () { return null; });
+    });
+  }
   // CPF/telefone no padrão oficial (o banco guarda o CPF só com dígitos).
   function fmt(type, v) { return v ? (window.NLMasks ? window.NLMasks.format(type, v) : v) : ''; }
   function money(v) { return v == null ? '—' : window.NL_BRL(Math.round(Number(v))); }
@@ -146,10 +225,21 @@
     if (b) openContract(b.getAttribute('data-win-user'), b.getAttribute('data-win-lot'));
   });
   document.getElementById('wins-csv').addEventListener('click', function () {
-    downloadCSV('arremates', ['Encerramento', 'Lote', 'Veículo', 'Leilão', 'Cliente', 'E-mail', 'CPF', 'Telefone', 'Endereço', 'Valor', 'Lances', 'Situação'],
-      filteredWins().map(function (w) {
-        return [fmtDate(w.when), w.lot.n, w.lot.title, w.lot.auction, w.user.name, w.user.email, fmt('cpf', w.user.cpf), fmt('phone', w.user.phone),
-          w.user.address, csvMoney(w.bid.amount), w.lot.bids || 0, w.ended ? 'Encerrado' : 'Em andamento'];
+    // Arrematantes organizados: um lote por linha, ordenado por leilão e número do lote.
+    var list = filteredWins().slice().sort(function (a, b) {
+      return (Number(a.lot.auctionNum) || 0) - (Number(b.lot.auctionNum) || 0) ||
+        (parseInt(a.lot.n, 10) || 0) - (parseInt(b.lot.n, 10) || 0);
+    });
+    downloadCSV('arremates',
+      ['Leilão', 'Data do leilão', 'Hora', 'Lote', 'Item', 'Categoria', 'Arrematante', 'E-mail', 'CPF',
+        'Telefone', 'Endereço', 'Encerramento dos lances', 'Lance atual (R$)', 'Total de lances', 'Situação'],
+      list.map(function (w) {
+        var di = window.NL_DATEINFO(w.lot);
+        return [w.lot.auctionNum != null ? 'Leilão ' + w.lot.auctionNum : (w.lot.auction || ''),
+          di.date, di.time, w.lot.n, w.lot.title, w.lot.catLabel,
+          w.user.name || '', w.user.email || '', fmt('cpf', w.user.cpf), fmt('phone', w.user.phone), w.user.address || '',
+          fmtDate(w.when), csvMoney(w.bid.amount), w.lot.bids || 0,
+          w.ended ? 'Encerrado' : 'Em andamento'];
       }));
   });
 
@@ -193,9 +283,12 @@
             '<td>' + esc(c.email) + '</td><td class="nowrap">' + esc(fmt('cpf', c.cpf) || '—') + '</td><td class="nowrap">' + esc(fmt('phone', c.phone) || '—') + '</td>' +
             '<td>' + esc(c.address || '—') + '</td><td class="nowrap">' + fmtDate(c.created_at) + '</td><td class="nowrap">' + fmtDate(c.last_sign_in_at) + '</td>' +
             '<td>' + c.bid_count + '</td><td class="nowrap">' + money(c.max_bid) + '</td><td>' + vehicles + '</td>' +
+            '<td class="nowrap">' + (c.doc_url
+              ? '<button class="btn btn--ghost btn--sm" data-doc="' + esc(c.doc_url) + '" type="button">Ver documento</button>'
+              : '<span class="muted">—</span>') + '</td>' +
             '<td><button class="btn btn--ghost btn--sm" data-contract="' + c.id + '" type="button">Contrato</button></td></tr>';
         }).join('')
-      : '<tr><td colspan="11" class="muted">' + (clients.length ? 'Nenhum cliente encontrado para a busca.' : 'Nenhum cliente cadastrado ainda.') + '</td></tr>';
+      : '<tr><td colspan="12" class="muted">' + (clients.length ? 'Nenhum cliente encontrado para a busca.' : 'Nenhum cliente cadastrado ainda.') + '</td></tr>';
   }
   function loadClients() {
     return A.clients().then(function (list) {
@@ -204,7 +297,7 @@
       return true;
     }, function (err) {
       var missing = /admin_clients|schema cache|PGRST202/i.test(errText(err) + ' ' + (err && err.code));
-      document.getElementById('clients-body').innerHTML = '<tr><td colspan="11" class="muted">' +
+      document.getElementById('clients-body').innerHTML = '<tr><td colspan="12" class="muted">' +
         esc(missing ? MIGRATION_HINT : 'Não foi possível carregar os clientes: ' + errText(err)) + '</td></tr>';
       kClient.innerHTML = '<option value="">' + esc(missing ? 'Rode a migração 002 primeiro' : 'Erro ao carregar') + '</option>';
       return false;
@@ -221,6 +314,14 @@
   document.getElementById('clients-body').addEventListener('click', function (e) {
     var b = e.target.closest('[data-contract]');
     if (b) openContract(b.getAttribute('data-contract'));
+    var d = e.target.closest('[data-doc]');
+    if (d) {
+      // Link assinado (válido por 5 min) — o documento não fica em URL pública.
+      d.disabled = true;
+      A.docLink(d.getAttribute('data-doc')).then(function (url) { window.open(url, '_blank'); },
+        function (err) { alert('Não foi possível abrir o documento: ' + errText(err)); })
+        .then(function () { d.disabled = false; });
+    }
   });
 
   // Exportação CSV (abre no Excel com acentos: BOM + ponto e vírgula).
@@ -230,10 +331,15 @@
     var rows = filteredClients().filter(function (c) {
       return includeSim || !/^(sim|demo)-/.test(String(c.id));
     });
-    downloadCSV('clientes', ['Nome', 'E-mail', 'CPF', 'Telefone', 'Endereço', 'Cadastro', 'Último acesso', 'Lances', 'Maior lance', 'Deve arrematar'],
+    downloadCSV('clientes', ['Nome', 'E-mail', 'CPF', 'Telefone', 'Endereço', 'Documento', 'Cadastro', 'Último acesso',
+      'Lances dados', 'Arremates a fazer', 'Itens a arrematar', 'Maior lance (R$)'],
       rows.map(function (c) {
-        return [c.name, c.email, fmt('cpf', c.cpf), fmt('phone', c.phone), c.address, fmtDate(c.created_at), fmtDate(c.last_sign_in_at), c.bid_count,
-          csvMoney(c.max_bid), winsOf(c.id).map(function (w) { return lotLabel(w.lot.n, w.lot.title) + ' (' + money(w.bid.amount) + ')'; }).join(' | ')];
+        var mine = winsOf(c.id);
+        return [c.name || '', c.email || '', fmt('cpf', c.cpf), fmt('phone', c.phone), c.address || '',
+          c.doc_url ? 'Sim' : 'Não',
+          fmtDate(c.created_at), fmtDate(c.last_sign_in_at), c.bid_count || 0, mine.length,
+          mine.map(function (w) { return lotLabel(w.lot.n, w.lot.title) + ' (R$ ' + csvMoney(w.bid.amount) + ')'; }).join(' | '),
+          csvMoney(c.max_bid)];
       }));
   });
 
@@ -295,35 +401,61 @@
     kInfo.textContent = 'Maior lance do cliente: ' + money(l.my_max) + ' · lance atual do lote: ' + money(l.current_price) + ' · ' +
       (l.is_leading ? 'cliente está vencendo' : 'cliente NÃO é o maior lance') + ' · ' + (ended ? 'leilão encerrado' : 'leilão ainda aberto');
   });
-  document.getElementById('form-contract').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var msg = document.getElementById('k-msg');
-    function fail(t) { msg.textContent = t; msg.className = 'form__msg form__msg--err'; }
+  // Dados comuns ao contrato e ao termo de arrematação: valida o formulário e
+  // devolve o objeto pronto (ou null + mensagem de erro).
+  function collectContractData(fail) {
     var c = clients.filter(function (x) { return x.id === kClient.value; })[0];
-    if (!c) return fail('Selecione o cliente.');
+    if (!c) { fail('Selecione o cliente.'); return null; }
     var lote, data;
     if (kLot.value === MANUAL) {
       lote = kVehicle.value.trim();
-      if (!lote) { kVehicle.focus(); return fail('Digite o veículo / lote do contrato.'); }
-      if (!(Number(kValue.value) > 0)) { kValue.focus(); return fail('Informe o valor de arremate.'); }
+      if (!lote) { kVehicle.focus(); fail('Digite o veículo / lote do contrato.'); return null; }
+      if (!(Number(kValue.value) > 0)) { kValue.focus(); fail('Informe o valor de arremate.'); return null; }
       data = kDate.value ? kDate.value.split('-').reverse().join('/') : new Date().toLocaleDateString('pt-BR');
     } else {
       var l = clientLots.filter(function (x) { return String(x.lot_id) === kLot.value; })[0];
-      if (!l) return fail('Selecione o lote ou escolha "Digitar o veículo manualmente".');
-      if (!l.is_leading && !confirm('Este cliente não tem o maior lance do lote. Gerar o contrato mesmo assim?')) return;
+      if (!l) { fail('Selecione o lote ou escolha "Digitar o veículo manualmente".'); return null; }
+      if (!l.is_leading && !confirm('Este cliente não tem o maior lance do lote. Gerar o documento mesmo assim?')) return null;
       lote = lotLabel(l.n || l.lot_id, l.title) + (l.auction_label ? ' (' + l.auction_label + ')' : '');
       data = l.ends_at ? fmtDate(l.ends_at) : '—';
     }
-    window.NLContractPrint({
+    return {
       numero: document.getElementById('k-number').value.trim(),
       comitente: document.getElementById('k-comitente').value.trim(),
       nome: c.name, cpf: fmt('cpf', c.cpf), email: c.email, tel: fmt('phone', c.phone), endereco: c.address,
       lote: lote,
       valor: Number(kValue.value) || 0,
       data: data
-    });
+    };
+  }
+  document.getElementById('form-contract').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var msg = document.getElementById('k-msg');
+    function fail(t) { msg.textContent = t; msg.className = 'form__msg form__msg--err'; }
+    var d = collectContractData(fail);
+    if (!d) return;
+    window.NLContractPrint(d);
     msg.textContent = 'Contrato aberto em nova janela para imprimir ou salvar em PDF.';
     msg.className = 'form__msg form__msg--ok';
+  });
+  // Termo de arrematação: baixa o .doc (várias páginas) com os mesmos dados do formulário.
+  document.getElementById('k-termo').addEventListener('click', function () {
+    var btn = this, msg = document.getElementById('k-msg');
+    function fail(t) { msg.textContent = t; msg.className = 'form__msg form__msg--err'; }
+    var d = collectContractData(fail);
+    if (!d) return;
+    btn.disabled = true;
+    msg.textContent = 'Gerando o termo de arrematação…';
+    msg.className = 'form__msg';
+    window.NLTermoDownload(d).then(function (nome) {
+      btn.disabled = false;
+      msg.textContent = 'Termo baixado: ' + nome + ' — abre no Word com várias páginas (partes e bem, pagamento e declarações, condições e assinaturas).';
+      msg.className = 'form__msg form__msg--ok';
+    }, function (err) {
+      btn.disabled = false;
+      msg.textContent = 'Falha ao gerar o termo: ' + (err && err.message ? err.message : 'tente novamente.');
+      msg.className = 'form__msg form__msg--err';
+    });
   });
 
   // ---- Visualizações do site (admin_views, migração 003) ----
@@ -413,6 +545,29 @@
     });
   }
 
+  // Baixar as pessoas que estão dando lance: uma linha por arrematante com lances reais
+  // (dados de admin_clients, que cobre TODO o histórico, não só os 200 da tabela).
+  // Fictícios da simulação/demo ficam de fora.
+  document.getElementById('bids-csv').addEventListener('click', function () {
+    var excl = DEMO ? /^sim-/ : /^(sim|demo)-/;
+    var bidders = clients.filter(function (c) {
+      return (Number(c.bid_count) || 0) > 0 && !excl.test(String(c.id));
+    }).sort(function (a, b) {
+      return (Date.parse(b.last_bid_at) || 0) - (Date.parse(a.last_bid_at) || 0) ||
+        (Number(b.bid_count) || 0) - (Number(a.bid_count) || 0);
+    });
+    downloadCSV('lances',
+      ['Arrematante', 'E-mail', 'CPF', 'Telefone', 'Endereço', 'Documento', 'Total de lances',
+        'Maior lance (R$)', 'Último lance', 'Está à frente de', 'Lotes em que está à frente'],
+      bidders.map(function (c) {
+        var mine = winsOf(c.id);
+        return [c.name || '', c.email || '', fmt('cpf', c.cpf), fmt('phone', c.phone), c.address || '',
+          c.doc_url ? 'Sim' : 'Não', Number(c.bid_count) || 0, csvMoney(c.max_bid),
+          fmtDate(c.last_bid_at), mine.length,
+          mine.map(function (w) { return lotLabel(w.lot.n, w.lot.title) + ' (R$ ' + csvMoney(w.bid.amount) + ')'; }).join(' | ')];
+      }));
+  });
+
   function loadLots() {
     return Promise.all([A.lots(), A.leaders()]).then(function (r) {
       allLots = r[0];
@@ -435,6 +590,486 @@
     }).join('');
   }
 
+  // ---- Datas dos leilões (agenda + encerramento) ----
+  function drawAuctionDates() {
+    var groups = {};
+    allLots.forEach(function (l) {
+      var key = l.auctionNum != null ? 'n' + l.auctionNum : 'l' + (l.auction || l.id);
+      var g = groups[key];
+      if (!g) g = groups[key] = { num: l.auctionNum, label: l.auction || '', ids: [], first: l, lots: 0, endsAt: 0 };
+      g.ids.push(l.id);
+      g.lots += 1;
+      if (l.endsAt && (!g.endsAt || l.endsAt < g.endsAt)) g.endsAt = l.endsAt;
+    });
+    dateGroups = Object.keys(groups).map(function (k) {
+      var g = groups[k];
+      g.sortKey = window.NL_DATEINFO(g.first).sortKey;
+      return g;
+    }).sort(function (a, b) {
+      return a.sortKey - b.sortKey || (Number(a.num) || 0) - (Number(b.num) || 0);
+    });
+
+    var body = document.getElementById('dates-body');
+    body.innerHTML = dateGroups.length ? dateGroups.map(function (g, i) {
+      var title = g.num != null ? 'Leilão ' + g.num : (g.label || 'Sem leilão');
+      var end = g.endsAt || (g.first.endsAt || 0);
+      var now = Date.now();
+      var state = end && end <= now
+        ? '<span class="tag tag--done">Encerrado</span>'
+        : '<span class="tag tag--open">Programado</span>';
+      return '<tr><td><strong>' + esc(title) + '</strong><br><small class="muted">' + esc(g.label || '—') + '</small></td>' +
+        '<td>' + g.lots + '</td>' +
+        '<td><input class="date-input" type="datetime-local" data-start-date="' + i + '" value="' + lotStartInput(g.first) + '" aria-label="Data e hora do ' + esc(title) + '"></td>' +
+        '<td><input class="date-input" type="datetime-local" data-end-date="' + i + '" value="' + dtInput(end) + '" aria-label="Encerramento dos lances do ' + esc(title) + '"></td>' +
+        '<td><button class="btn btn--primary btn--sm" type="button" data-save-dates="' + i + '">Salvar</button><br>' + state + '</td></tr>';
+    }).join('') : '<tr><td colspan="5" class="muted">Nenhum lote cadastrado.</td></tr>';
+
+    var totalLots = dateGroups.reduce(function (n, g) { return n + g.lots; }, 0);
+    var countEl = document.getElementById('bulk-count');
+    if (countEl) {
+      countEl.textContent = dateGroups.length + (dateGroups.length === 1 ? ' leilão' : ' leilões') +
+        ' (' + totalLots + (totalLots === 1 ? ' lote' : ' lotes') + ')';
+    }
+    var bStart = document.getElementById('bulk-date-start');
+    var bEnd = document.getElementById('bulk-date-end');
+    if (bStart && bEnd && !bStart.value && !bEnd.value && dateGroups.length) {
+      var upcoming = dateGroups.filter(function (g) { return g.endsAt && g.endsAt > Date.now(); });
+      var first = upcoming[0] || dateGroups[0];
+      bStart.value = lotStartInput(first.first);
+      bEnd.value = dtInput(first.endsAt || first.first.endsAt);
+    }
+    datesDrawn = true;
+  }
+
+  document.getElementById('dates-body').addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-save-dates]');
+    if (!btn) return;
+    var i = Number(btn.getAttribute('data-save-dates'));
+    var g = dateGroups[i];
+    if (!g) return;
+    var msg = document.getElementById('dates-msg');
+    var startEl = document.querySelector('[data-start-date="' + i + '"]');
+    var endEl = document.querySelector('[data-end-date="' + i + '"]');
+    var start = startEl && startEl.value;
+    var end = endEl && endEl.value;
+    if (!start || !end) {
+      msg.textContent = 'Informe a data/hora do leilão e o encerramento dos lances.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    var sd = new Date(start), ed = new Date(end);
+    if (isNaN(sd) || isNaN(ed)) {
+      msg.textContent = 'Data inválida. Confira os campos.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    if (ed <= sd) {
+      ed = autoEnd(sd, g.endsAt || g.first.endsAt || 0);
+      if (endEl) endEl.value = dtInput(ed);
+      msg.textContent = 'Encerramento ajustado automaticamente para ' + fmtDate(ed) + '.';
+      msg.className = 'form__msg';
+    }
+    btn.disabled = true;
+    msg.textContent = 'Salvando datas…';
+    msg.className = 'form__msg';
+    saveGroupDates(g, sd, ed).then(function () {
+      datesDrawn = false; lotDatesDrawn = false;
+      return loadLots();
+    }).then(function () {
+      buildWins(); drawLots(); drawWins(); drawAuctionDates(); drawLotDates();
+      msg.textContent = 'Datas salvas. O site já mostra a nova data em todas as páginas.';
+      msg.className = 'form__msg form__msg--ok';
+      nlToast('✅ Data alterada — o site já mostra a nova data em todas as páginas.');
+    }).catch(function (err) {
+      msg.textContent = 'Não foi possível salvar as datas: ' + errText(err);
+      msg.className = 'form__msg form__msg--err';
+      nlToast('⚠️ Não foi possível salvar as datas: ' + errText(err), 'err');
+    }).then(function () { btn.disabled = false; });
+  });
+
+  // Ao mudar a data/hora do leilão, o encerramento acompanha quando ficaria antes dele
+  // (mesma hora do encerramento anterior, no novo dia).
+  function liveAdjust(startEl, endEl, oldEndMs, msg) {
+    if (!startEl || !endEl || !startEl.value) return;
+    var sd = new Date(startEl.value);
+    if (isNaN(sd)) return;
+    var ed = endEl.value ? new Date(endEl.value) : NaN;
+    if (!isNaN(ed) && ed > sd) return;
+    var ed2 = autoEnd(sd, oldEndMs);
+    endEl.value = dtInput(ed2);
+    if (msg) {
+      msg.textContent = 'Encerramento ajustado automaticamente para ' + fmtDate(ed2) + ' (o anterior era antes da nova data do leilão).';
+      msg.className = 'form__msg';
+    }
+  }
+  document.getElementById('dates-body').addEventListener('change', function (e) {
+    var s = e.target.closest('[data-start-date]');
+    if (!s) return;
+    var i = Number(s.getAttribute('data-start-date'));
+    var g = dateGroups[i];
+    if (!g) return;
+    liveAdjust(s, document.querySelector('[data-end-date="' + i + '"]'), g.endsAt || g.first.endsAt || 0, document.getElementById('dates-msg'));
+  });
+  var bulkStart = document.getElementById('bulk-date-start');
+  var bulkEnd = document.getElementById('bulk-date-end');
+  if (bulkStart && bulkEnd) {
+    bulkStart.addEventListener('change', function () {
+      liveAdjust(bulkStart, bulkEnd, bulkEnd.value ? Date.parse(bulkEnd.value) : 0, document.getElementById('bulk-dates-msg'));
+    });
+  }
+
+  // ---- Atualização em massa: mesma data para todos os leilões ----
+  var bulkApply = document.getElementById('bulk-dates-apply');
+  if (bulkApply) {
+    bulkApply.addEventListener('click', function () {
+      var msg = document.getElementById('bulk-dates-msg');
+      var start = val('bulk-date-start');
+      var end = val('bulk-date-end');
+      if (!dateGroups.length) {
+        msg.textContent = 'Nenhum leilão carregado. Use "Atualizar" e tente de novo.';
+        msg.className = 'form__msg form__msg--err';
+        return;
+      }
+      if (!start || !end) {
+        msg.textContent = 'Informe a nova data/hora do leilão e o novo encerramento.';
+        msg.className = 'form__msg form__msg--err';
+        return;
+      }
+      var sd = new Date(start), ed = new Date(end);
+      if (isNaN(sd) || isNaN(ed)) {
+        msg.textContent = 'Data inválida. Confira os campos.';
+        msg.className = 'form__msg form__msg--err';
+        return;
+      }
+      // Encerramento no passado ou antes do leilão: ajusta por leilão em vez de bloquear.
+      var autoClose = ed <= sd;
+      var totalLots = dateGroups.reduce(function (n, g) { return n + g.lots; }, 0);
+      var startTxt = sd.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+      var endTxt = autoClose ? 'ajustado por leilão, mantendo a hora atual' : ed.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+      if (!confirm('Aplicar a data ' + startTxt + ' (encerramento ' + endTxt + ') a todos os ' +
+        dateGroups.length + ' leilões (' + totalLots + ' lotes)?\n\nAs datas atuais serão substituídas.')) return;
+
+      var groups = dateGroups.slice();
+      bulkApply.disabled = true;
+      msg.textContent = 'Atualizando ' + groups.length + ' leilões…';
+      msg.className = 'form__msg';
+      var chain = Promise.resolve();
+      groups.forEach(function (g, i) {
+        chain = chain.then(function () {
+          msg.textContent = 'Atualizando leilão ' + (i + 1) + ' de ' + groups.length + '…';
+          var edg = autoClose ? autoEnd(sd, g.endsAt || g.first.endsAt || 0) : ed;
+          return saveGroupDates(g, sd, edg);
+        });
+      });
+      chain.then(function () {
+        datesDrawn = false; lotDatesDrawn = false;
+        return loadLots();
+      }).then(function () {
+        buildWins(); drawLots(); drawWins(); drawAuctionDates(); drawLotDates();
+        msg.textContent = 'Pronto: ' + groups.length + ' leilões e ' + totalLots +
+          ' lotes atualizados. O site já mostra a nova data.' + (autoClose ? ' Encerramento de cada leilão mantido na mesma hora do dia.' : '');
+        msg.className = 'form__msg form__msg--ok';
+        nlToast('✅ Data alterada: ' + groups.length + ' leilões (' + totalLots + ' lotes) atualizados no site.');
+      }).catch(function (err) {
+        datesDrawn = false; lotDatesDrawn = false;
+        loadLots().then(function () {
+          buildWins(); drawLots(); drawWins(); drawAuctionDates(); drawLotDates();
+        }, function () {});
+        msg.textContent = 'Falha na atualização em massa: ' + errText(err) +
+          ' Alguns leilões podem ter sido alterados.';
+        msg.className = 'form__msg form__msg--err';
+        nlToast('⚠️ Falha na atualização em massa: ' + errText(err), 'err');
+      }).then(function () { bulkApply.disabled = false; });
+    });
+  }
+
+  document.getElementById('dates-refresh').addEventListener('click', function () {
+    datesDrawn = false; lotDatesDrawn = false;
+    renderAll();
+  });
+
+  // ---- Datas por lote (individual): data/hora de leilão + encerramento de um lote específico ----
+  var lotDatesDrawn = false;
+  var lotDatesFiltered = [];
+  var selectedLots = {};   // lotId -> true (marcados para atualização em massa por lote)
+  function lotDateLabel(l, sd) {
+    var dd = pad2(sd.getDate()), mm = pad2(sd.getMonth() + 1);
+    if (l.auctionNum != null) return 'Leilão ' + l.auctionNum + ' — ' + dd + '/' + mm;
+    if (/—\s*\d{2}\/\d{2}/.test(l.auction || '')) return l.auction.replace(/—\s*\d{2}\/\d{2}(?:\/\d{4})?/, '— ' + dd + '/' + mm);
+    return l.auction || '';
+  }
+  function lotGroupKey(l) { return l.auctionNum != null ? 'n' + l.auctionNum : 'l' + (l.auction || l.id); }
+  function drawLotDates() {
+    var sel = document.getElementById('lotdates-auction');
+    var search = document.getElementById('lotdates-search');
+    var msg = document.getElementById('lotdates-msg');
+    if (msg) { msg.textContent = ''; msg.className = 'form__msg'; }
+
+    // Leilões na lista (mesmos grupos da tabela acima, na mesma ordem).
+    var groups = {};
+    allLots.forEach(function (l) {
+      var k = lotGroupKey(l);
+      if (!groups[k]) groups[k] = { key: k, num: l.auctionNum, label: l.auction || '', first: l, lots: 0 };
+      groups[k].lots += 1;
+    });
+    Object.keys(groups).forEach(function (k) { groups[k].sortKey = window.NL_DATEINFO(groups[k].first).sortKey; });
+    var keys = Object.keys(groups).sort(function (a, b) { return groups[a].sortKey - groups[b].sortKey; });
+    var current = sel.value || 'all';
+    sel.innerHTML = '<option value="all">Todos os lotes</option>' + keys.map(function (k) {
+      var g = groups[k];
+      var t = g.num != null ? 'Leilão ' + g.num : (g.label || 'Sem leilão');
+      return '<option value="' + esc(k) + '">' + esc(t) + ' · ' + g.lots + ' lote(s)</option>';
+    }).join('');
+    if (Array.prototype.some.call(sel.options, function (o) { return o.value === current; })) sel.value = current;
+
+    var q = search.value.toLowerCase();
+    lotDatesFiltered = allLots.filter(function (l) {
+      if (sel.value !== 'all' && lotGroupKey(l) !== sel.value) return false;
+      if (!q) return true;
+      return textMatches([l.title, 'lote ' + l.n, l.auction, String(l.n)], q);
+    }).sort(function (a, b) {
+      return (groups[lotGroupKey(a)].sortKey - groups[lotGroupKey(b)].sortKey) ||
+        (parseInt(a.n, 10) || 0) - (parseInt(b.n, 10) || 0);
+    });
+
+    var now = Date.now();
+    var selCount = Object.keys(selectedLots).length;
+    document.getElementById('lotdates-count').textContent = allLots.length
+      ? lotDatesFiltered.length + ' de ' + allLots.length + ' lote(s)' + (selCount ? ' · ' + selCount + ' selecionado(s)' : '')
+      : '';
+    document.getElementById('lotdates-body').innerHTML = lotDatesFiltered.length
+      ? lotDatesFiltered.map(function (l, i) {
+          var ended = l.endsAt && l.endsAt <= now;
+          return '<tr><td><input type="checkbox" data-lot-select="' + l.id + '"' + (selectedLots[l.id] ? ' checked' : '') +
+            ' aria-label="Selecionar lote ' + esc(l.n) + '"></td>' +
+            '<td class="nowrap"><strong>Lote ' + esc(l.n) + '</strong></td>' +
+            '<td>' + esc(l.title) + (l.auction ? '<br><small class="muted">' + esc(l.auction) + '</small>' : '') + '</td>' +
+            '<td><input class="date-input" type="datetime-local" data-lot-start="' + i + '" value="' + lotStartInput(l) + '" aria-label="Data e hora do leilão do lote ' + esc(l.n) + '"></td>' +
+            '<td><input class="date-input" type="datetime-local" data-lot-end="' + i + '" value="' + dtInput(l.endsAt) + '" aria-label="Encerramento dos lances do lote ' + esc(l.n) + '"></td>' +
+            '<td><button class="btn btn--primary btn--sm" type="button" data-save-lot="' + i + '">Salvar</button><br>' +
+            (ended ? '<span class="tag tag--done">Encerrado</span>' : '<span class="tag tag--open">Programado</span>') + '</td></tr>';
+        }).join('')
+      : '<tr><td colspan="6" class="muted">' + (allLots.length ? 'Nenhum lote encontrado para os filtros.' : 'Nenhum lote cadastrado.') + '</td></tr>';
+    updateLotSelection();
+    lotDatesDrawn = true;
+  }
+  // Atualiza o contador de selecionados, o botão de aplicar e o "selecionar todos" visível.
+  function updateLotSelection() {
+    var n = Object.keys(selectedLots).length;
+    var span = document.getElementById('bulk-lots-count');
+    var apply = document.getElementById('bulk-dates-lots');
+    var quick = document.getElementById('quick-dates-apply');
+    var clear = document.getElementById('lotdates-clearsel');
+    if (span) span.textContent = n;
+    if (apply) apply.disabled = !n;
+    if (quick) quick.disabled = !n;
+    if (clear) clear.disabled = !n;
+    var countEl = document.getElementById('lotdates-count');
+    if (countEl && allLots.length) {
+      countEl.textContent = lotDatesFiltered.length + ' de ' + allLots.length + ' lote(s)' + (n ? ' · ' + n + ' selecionado(s)' : '');
+    }
+    var all = document.getElementById('lotdates-all');
+    if (all) {
+      var selVis = lotDatesFiltered.filter(function (l) { return selectedLots[l.id]; }).length;
+      all.checked = lotDatesFiltered.length > 0 && selVis === lotDatesFiltered.length;
+      all.indeterminate = selVis > 0 && selVis < lotDatesFiltered.length;
+    }
+  }
+  document.getElementById('lotdates-all').addEventListener('change', function () {
+    var on = this.checked;
+    lotDatesFiltered.forEach(function (l) { if (on) selectedLots[l.id] = true; else delete selectedLots[l.id]; });
+    drawLotDates();
+  });
+  // Marcar lotes pelos NÚMEROS (ex.: "1, 3, 12" ou "1 3 12").
+  // Respeita o filtro atual: com um leilão selecionado, marca só os números dele
+  // (o nº de lote se repete entre os leilões); em "Todos os lotes", marca todos os iguais.
+  document.getElementById('lotdates-mark').addEventListener('click', function () {
+    var msg = document.getElementById('lotdates-msg');
+    var raw = document.getElementById('lotdates-nums').value || '';
+    var nums = raw.split(/[^\d]+/).filter(Boolean).map(function (s) { return parseInt(s, 10); })
+      .filter(function (n) { return n > 0; });
+    if (!nums.length) {
+      msg.textContent = 'Digite os números dos lotes (ex.: 1, 3, 12).';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    var achou = [], faltou = [], count = 0, multiplos = false;
+    nums.forEach(function (n) {
+      var hits = lotDatesFiltered.filter(function (l) { return parseInt(String(l.n), 10) === n; });
+      if (hits.length) {
+        hits.forEach(function (lot) { selectedLots[lot.id] = true; count += 1; });
+        achou.push(String(n).padStart(2, '0'));
+        if (hits.length > 1) multiplos = true;
+      } else faltou.push(String(n).padStart(2, '0'));
+    });
+    document.getElementById('lotdates-nums').value = '';
+    drawLotDates();
+    msg.textContent = 'Marcados: ' + count + ' lote(s) — nº ' + achou.join(', ') + '.' +
+      (multiplos ? ' Alguns nº existem em vários leilões: selecione um leilão no filtro para marcar só dele.' : '') +
+      (faltou.length ? ' Não encontrados na lista exibida: ' + faltou.join(', ') + '.' : '') +
+      ' Escolha a data em Atualização em massa e clique em "Aplicar aos lotes selecionados".';
+    msg.className = 'form__msg form__msg--ok';
+  });
+  document.getElementById('lotdates-nums').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('lotdates-mark').click(); }
+  });
+  document.getElementById('lotdates-clearsel').addEventListener('click', function () {
+    selectedLots = {};
+    drawLotDates();
+  });
+  // Aplica a mesma data/hora de leilão + encerramento a todos os lotes marcados
+  // (selecionados). Usada pelo botão rápido (ao lado de "Marcar") e pelo de massa.
+  function applyDatesToSelected(sd, ed, msg, btn) {
+    var ids = Object.keys(selectedLots);
+    if (!ids.length) return Promise.resolve(false);
+    // Encerramento no passado ou antes do leilão: ajusta por lote em vez de bloquear.
+    var autoClose = ed <= sd;
+    var startTxt = sd.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+    var endTxt = autoClose ? 'ajustado por lote, mantendo a hora atual' : ed.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+    if (!confirm('Aplicar a data ' + startTxt + ' (encerramento ' + endTxt + ') aos ' +
+      ids.length + ' lote(s) selecionado(s)?\n\nAs datas atuais desses lotes serão substituídas.')) return Promise.resolve(false);
+    if (btn) btn.disabled = true;
+    msg.textContent = 'Atualizando ' + ids.length + ' lote(s)…';
+    msg.className = 'form__msg';
+    var chain = Promise.resolve();
+    ids.forEach(function (id, i) {
+      chain = chain.then(function () {
+        msg.textContent = 'Atualizando lote ' + (i + 1) + ' de ' + ids.length + '…';
+        var l = lotsById[id];
+        if (!l) return null; // lote excluído no meio do caminho: pula
+        var edl = autoClose ? autoEnd(sd, l.endsAt || 0) : ed;
+        return A.setLotDates(l.id, {
+          auction_date: isoDay(sd),
+          auction_time: pad2(sd.getHours()) + ':' + pad2(sd.getMinutes()),
+          auction_label: lotDateLabel(l, sd),
+          ends_at: edl.toISOString()
+        });
+      });
+    });
+    return chain.then(function () {
+      selectedLots = {};
+      datesDrawn = false; lotDatesDrawn = false;
+      return loadLots();
+    }).then(function () {
+      buildWins(); drawLots(); drawWins(); drawAuctionDates(); drawLotDates();
+      msg.textContent = 'Pronto: ' + ids.length + ' lote(s) atualizado(s). O site já mostra a nova data nesses lotes.';
+      msg.className = 'form__msg form__msg--ok';
+      nlToast('✅ Data alterada: ' + ids.length + ' lote(s) atualizado(s) — o site já mostra a nova data.');
+    }).catch(function (err) {
+      datesDrawn = false; lotDatesDrawn = false;
+      loadLots().then(function () {
+        buildWins(); drawLots(); drawWins(); drawAuctionDates(); drawLotDates();
+      }, function () {});
+      msg.textContent = 'Falha na atualização por seleção: ' + errText(err) +
+        ' Alguns lotes podem ter sido alterados.';
+      msg.className = 'form__msg form__msg--err';
+      nlToast('⚠️ Falha na atualização por seleção: ' + errText(err), 'err');
+    }).then(function () { updateLotSelection(); });
+  }
+  // Valida os campos de data e chama o aplicador compartilhado.
+  function quickApply(fieldStart, fieldEnd, msg, btn) {
+    var start = val(fieldStart), end = val(fieldEnd);
+    if (!Object.keys(selectedLots).length) {
+      msg.textContent = 'Marque os lotes primeiro — por número, busca ou caixinha na lista.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    if (!start || !end) {
+      msg.textContent = 'Informe a data/hora do leilão e o encerramento dos lances.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    var sd = new Date(start), ed = new Date(end);
+    if (isNaN(sd) || isNaN(ed)) {
+      msg.textContent = 'Data inválida. Confira os campos.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    applyDatesToSelected(sd, ed, msg, btn);
+  }
+  document.getElementById('bulk-dates-lots').addEventListener('click', function () {
+    quickApply('bulk-date-start', 'bulk-date-end', document.getElementById('bulk-dates-msg'), this);
+  });
+  // Botão rápido "Aplicar data aos selecionados", ao lado do botão Marcar (por nº).
+  document.getElementById('quick-dates-apply').addEventListener('click', function () {
+    quickApply('quick-date-start', 'quick-date-end', document.getElementById('lotdates-msg'), this);
+  });
+  // Ao mudar a data rápida, o encerramento acompanha (mesma regra do bloco de massa).
+  var quickStart = document.getElementById('quick-date-start');
+  var quickEnd = document.getElementById('quick-date-end');
+  if (quickStart && quickEnd) {
+    quickStart.addEventListener('change', function () {
+      liveAdjust(quickStart, quickEnd, quickEnd.value ? Date.parse(quickEnd.value) : 0, document.getElementById('lotdates-msg'));
+    });
+  }
+  document.getElementById('lotdates-auction').addEventListener('change', drawLotDates);
+  document.getElementById('lotdates-search').addEventListener('input', drawLotDates);
+  document.getElementById('lotdates-body').addEventListener('change', function (e) {
+    var cb = e.target.closest('[data-lot-select]');
+    if (cb) {
+      var lotId = Number(cb.getAttribute('data-lot-select'));
+      if (cb.checked) selectedLots[lotId] = true; else delete selectedLots[lotId];
+      updateLotSelection();
+      return;
+    }
+    var s = e.target.closest('[data-lot-start]');
+    if (!s) return;
+    var i = Number(s.getAttribute('data-lot-start'));
+    var l = lotDatesFiltered[i];
+    if (!l) return;
+    liveAdjust(s, document.querySelector('[data-lot-end="' + i + '"]'), l.endsAt || 0, document.getElementById('lotdates-msg'));
+  });
+  document.getElementById('lotdates-body').addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-save-lot]');
+    if (!btn) return;
+    var i = Number(btn.getAttribute('data-save-lot'));
+    var l = lotDatesFiltered[i];
+    if (!l) return;
+    var msg = document.getElementById('lotdates-msg');
+    var startEl = document.querySelector('[data-lot-start="' + i + '"]');
+    var endEl = document.querySelector('[data-lot-end="' + i + '"]');
+    var start = startEl && startEl.value;
+    var end = endEl && endEl.value;
+    if (!start || !end) {
+      msg.textContent = 'Informe a data/hora do leilão e o encerramento deste lote.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    var sd = new Date(start), ed = new Date(end);
+    if (isNaN(sd) || isNaN(ed)) {
+      msg.textContent = 'Data inválida. Confira os campos.';
+      msg.className = 'form__msg form__msg--err';
+      return;
+    }
+    if (ed <= sd) {
+      ed = autoEnd(sd, l.endsAt || 0);
+      if (endEl) endEl.value = dtInput(ed);
+      msg.textContent = 'Encerramento ajustado automaticamente para ' + fmtDate(ed) + '.';
+      msg.className = 'form__msg';
+    }
+    btn.disabled = true;
+    msg.textContent = 'Salvando datas do lote ' + l.n + '…';
+    msg.className = 'form__msg';
+    A.setLotDates(l.id, {
+      auction_date: isoDay(sd),
+      auction_time: pad2(sd.getHours()) + ':' + pad2(sd.getMinutes()),
+      auction_label: lotDateLabel(l, sd),
+      ends_at: ed.toISOString()
+    }).then(function () {
+      datesDrawn = false; lotDatesDrawn = false;
+      return loadLots();
+    }).then(function () {
+      buildWins(); drawLots(); drawWins(); drawAuctionDates(); drawLotDates();
+      msg.textContent = 'Datas salvas no lote ' + l.n + '. O site já mostra a nova data neste lote.';
+      msg.className = 'form__msg form__msg--ok';
+      nlToast('✅ Data alterada no lote ' + l.n + ' — o site já mostra a nova data.');
+    }).catch(function (err) {
+      msg.textContent = 'Não foi possível salvar as datas do lote: ' + errText(err);
+      msg.className = 'form__msg form__msg--err';
+      nlToast('⚠️ Não foi possível salvar as datas do lote: ' + errText(err), 'err');
+    }).then(function () { btn.disabled = false; });
+  });
+
   document.getElementById('lots-body').addEventListener('click', function (e) {
     var btn = e.target.closest('button');
     if (!btn) return;
@@ -442,7 +1077,7 @@
     if (del) {
       var lot = lotsById[del];
       if (!confirm('Excluir definitivamente o lote ' + (lot ? lot.n + ' — ' + lot.title : del) + '? Os lances dele também serão apagados.')) return;
-      A.removeLot(Number(del)).then(renderAll, function (err) { alert('Não foi possível excluir: ' + errText(err)); });
+      A.removeLot(Number(del)).then(function () { datesDrawn = false; return renderAll(); }, function (err) { alert('Não foi possível excluir: ' + errText(err)); });
     } else if (rm) {
       A.removeCover(lotsById[rm]).then(renderAll, function (err) { alert('Não foi possível remover: ' + errText(err)); });
     } else if (ph) {
@@ -490,7 +1125,11 @@
   }
 
   function renderAll() {
-    var lots = loadLots().then(function () { buildWins(); drawLots(); drawWins(); });
+    var lots = loadLots().then(function () {
+      buildWins(); drawLots(); drawWins();
+      if (!datesDrawn) drawAuctionDates();
+      if (!lotDatesDrawn) drawLotDates();
+    });
     var cl = loadClients();
     var done = Promise.all([lots, cl]).then(function (r) { if (r[1]) drawClients(); });
     return Promise.all([renderStats(), renderBids(), renderViews(), done]).catch(function (err) {
@@ -538,6 +1177,7 @@
       addForm.reset();
       msg.textContent = 'Lote adicionado e publicado! Ele já aparece na listagem pública.';
       msg.className = 'form__msg form__msg--ok';
+      datesDrawn = false; lotDatesDrawn = false;
       renderAll();
     }, function (err) {
       msg.textContent = 'Não foi possível adicionar: ' + errText(err);
@@ -564,6 +1204,32 @@
     if (viewTimer) clearInterval(viewTimer);
     window.NLAdmin.logout().then(function () { location.href = 'admin-login.html'; });
   });
+
+  // ---- Navegação do painel: botões no topo rolam até cada seção e marcam a atual ----
+  (function () {
+    var bar = document.querySelector('.adminnav');
+    if (!bar) return;
+    var links = [].slice.call(bar.querySelectorAll('.adminnav__btn[data-goto]'));
+    var secs = links.map(function (a) { return document.getElementById(a.getAttribute('data-goto')); }).filter(Boolean);
+    bar.addEventListener('click', function (e) {
+      var a = e.target.closest('.adminnav__btn[data-goto]');
+      if (!a) return;
+      e.preventDefault();
+      var sec = document.getElementById(a.getAttribute('data-goto'));
+      if (!sec) return;
+      sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (history.replaceState) history.replaceState(null, '', '#' + a.getAttribute('data-goto'));
+    });
+    function setActive(id) {
+      links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('data-goto') === id); });
+    }
+    if ('IntersectionObserver' in window) {
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) setActive(en.target.id); });
+      }, { rootMargin: '-25% 0px -65% 0px' });
+      secs.forEach(function (s) { spy.observe(s); });
+    }
+  })();
 
   // Faixa do modo de exemplo / atalho para entrar nele.
   (function () {
@@ -666,6 +1332,7 @@
       });
     };
     demo.addLot = demo.removeLot = demo.uploadCover = demo.removeCover = blocked;
+    demo.setAuctionDates = demo.setAuctionSchedule = demo.setLotDates = blocked;
     return demo;
   }
 })();

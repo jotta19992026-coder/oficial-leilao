@@ -14,13 +14,13 @@
     cnpj: '',
     endereco: 'Estr. Muranaka, 199 - Jardim Novo Horizonte, Itaquaquecetuba - SP, 08597-230',
     telefone: '',
-    email: '',
+    email: 'atendimento@leiloes-copart.com',
     site: '',
     logo: 'images/logo.webp',
-    leiloeiro: '',          // nome do leiloeiro oficial
+    leiloeiro: 'Ricardo Almeida',          // nome do leiloeiro oficial
     leiloeiroCpf: '',
-    matricula: '',          // nº de matrícula na Junta Comercial
-    junta: '',              // ex.: 'JUCEPAR — Junta Comercial do Paraná'
+    matricula: '12.638/2019',              // nº de matrícula na Junta Comercial
+    junta: 'JUCESP — Junta Comercial do Estado de São Paulo',
     comissao: 5,            // % sobre o valor de arremate (art. 24 do Decreto 21.981/1932)
     prazoPagamentoDias: 2,  // dias úteis após o encerramento
     prazoRetiradaDias: 10,  // dias úteis após a liberação
@@ -113,8 +113,8 @@
       ]),
       clause(8, 'Da forma e do prazo de pagamento', [
         'O pagamento do preço, da comissão e dos encargos deverá ser feito integralmente em até <strong>' + esc(E.prazoPagamentoDias) + ' (' + esc(E.prazoPagamentoDias) + ') dia(s) útil(eis)</strong> após o encerramento do lote, salvo condição diversa prevista no edital.',
-        'O pagamento será feito <strong>exclusivamente</strong> por boleto ou transferência para conta bancária de titularidade do LEILOEIRO OFICIAL ou do COMITENTE, com os dados informados no edital e na área do cliente. <strong>Nenhum pagamento deve ser feito a pessoa física diversa ou a empresa estranha a este contrato.</strong>',
-        'O ARREMATANTE deve conferir, antes de pagar, se o beneficiário do boleto ou da transferência corresponde ao LEILOEIRO ou ao COMITENTE identificados neste contrato. Pagamentos a terceiros não quitam a obrigação.',
+        'O pagamento será feito <strong>exclusivamente</strong> por TED/TFF ao preposto leiloeiro indicado pelo leiloeiro oficial do leilão, para que realize a quitação dos débitos do lote junto à instituição financeira responsável (comitente), com os dados informados no edital e na área do cliente. <strong>Nenhum pagamento deve ser feito a pessoa física diversa ou a empresa estranha a este contrato.</strong>',
+        'O ARREMATANTE deve conferir, antes de pagar, se o beneficiário da TED/TFF corresponde ao preposto do LEILOEIRO ou ao COMITENTE identificados neste contrato. Pagamentos a terceiros não quitam a obrigação.',
         'Em caso de parcelamento ou financiamento admitido no edital, as condições específicas constarão de instrumento próprio, que passará a integrar este contrato.'
       ]),
       clause(9, 'Da inadimplência', [
@@ -239,7 +239,7 @@
       '<tr><th>Comissão do leiloeiro (' + esc(E.comissao) + '%)</th><td>' + brl(comissao) + '</td></tr>' +
       '<tr><th>Total (preço + comissão)</th><td><strong>' + brl(valor + comissao) + '</strong> + despesas previstas no edital</td></tr>' +
       '<tr><th>Prazo de pagamento</th><td>' + esc(E.prazoPagamentoDias) + ' dia(s) útil(eis) após o encerramento</td></tr>' +
-      '<tr><th>Conta para pagamento</th><td>Somente conta de titularidade do LEILOEIRO ou do COMITENTE: banco ' + f('', 6) + ', agência ' + f('', 4) + ', conta ' + f('', 7) + ', titular ' + f('', 14) + '</td></tr>' +
+      '<tr><th>Forma de pagamento (TED/TFF)</th><td>TED/TFF ao preposto leiloeiro indicado pelo leiloeiro oficial do leilão, para que realize a quitação dos débitos do lote junto à instituição financeira responsável. Banco ' + f('', 6) + ', agência ' + f('', 4) + ', conta ' + f('', 7) + ', titular ' + f('', 14) + '</td></tr>' +
       '<tr><th>Prazo de retirada</th><td>' + esc(E.prazoRetiradaDias) + ' dia(s) útil(eis) após a liberação</td></tr>' +
       '<tr><th>Local de retirada</th><td>' + f('', 22) + '</td></tr>' +
       '<tr><th>Multa por inadimplência</th><td>' + esc(E.multaInadimplencia) + '% sobre o preço de arrematação</td></tr>' +
@@ -261,5 +261,137 @@
       'html,body{background:#fff;margin:0}body{padding:24px}@media print{body{padding:0}}</style></head><body>' +
       window.NLContractHTML(d) + '<script>window.onload=function(){setTimeout(function(){window.print()},400)}<\/script></body></html>');
     w.document.close();
+  };
+
+  // ------------------------------------------------------------------
+  // TERMO DE ARREMAÇÃO — documento em várias páginas, para BAIXAR.
+  // Gera um .doc (HTML no formato que o Word abre) com quebras de página
+  // explícitas: 1ª pág. partes/bem, 2ª pág. valores/pagamento/declarações,
+  // 3ª pág. condições/assinaturas/recebimento.
+  // ------------------------------------------------------------------
+  var TERMO_CSS = CSS +
+    '.ct-ttitle{font-size:17pt;text-align:center;text-transform:uppercase;letter-spacing:.06em;margin:.3em 0 .2em}' +
+    '.ct-page{page-break-before:always;break-before:page;padding-top:.6em}' +
+    '.ct-decl li{margin:0 0 .5em;text-align:justify}' +
+    '.ct-receipt{border:2px solid #1b1f24;padding:.8em 1em;margin-top:2.4em;page-break-inside:avoid}' +
+    '@page WordSection1{size:595.3pt 841.9pt;margin:56.7pt 51pt 62.4pt}div.WordSection1{page:WordSection1}';
+
+  window.NLTermoHTML = function (d) {
+    var E = EMPRESA;
+    var valor = Number(d.valor) || 0;
+    var comissao = valor * (Number(E.comissao) || 0) / 100;
+    var hoje = new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+    var empresaNome = E.razaoSocial || E.nomeFantasia;
+
+    var head = '<header class="ct-head">' +
+      (E.logo ? '<img src="' + esc(E.logo) + '" alt="' + esc(empresaNome || 'Logo da empresa') + '">' : '<div><strong>' + f(empresaNome, 14) + '</strong></div>') +
+      '<div class="ct-head__co"><strong>' + f(empresaNome, 14) + '</strong><br>CNPJ ' + f(E.cnpj, 10) + '<br>' + f(E.endereco, 18) +
+      (E.telefone || E.email ? '<br>' + esc([E.telefone, E.email].filter(Boolean).join(' · ')) : '') + '</div></header>';
+
+    // PÁGINA 1 — identificação do termo, das partes e do bem arrematado
+    var p1 = head +
+      '<h2 class="ct-ttitle">Termo de arrematação</h2>' +
+      '<p class="ct-sub">Termo nº ' + f(d.numero, 8) + ' · Leilão eletrônico · Emitido em ' + esc(hoje) + '</p>' +
+      '<p>Pelo presente TERMO DE ARREMAÇÃO, fica formalizada a arrematação do bem descrito no quadro abaixo, realizada em leilão eletrônico conduzido pela plataforma ' + esc(empresaNome) + ', observadas as regras publicadas no edital do leilão e na página do lote, documentos que integram este termo.</p>' +
+      '<table>' +
+      '<tr><th>Termo nº</th><td>' + f(d.numero, 8) + '</td></tr>' +
+      '<tr><th>Modalidade</th><td>Leilão eletrônico (exclusivamente online)</td></tr>' +
+      '<tr><th>Lote / bem arrematado</th><td><strong>' + esc(d.lote || '—') + '</strong></td></tr>' +
+      '<tr><th>Encerramento do pregão do lote</th><td>' + esc(d.data || '—') + '</td></tr>' +
+      '<tr><th>Comitente (vendedor)</th><td>' + f(d.comitente, 16) + '</td></tr>' +
+      '<tr><th>Arrematante (comprador)</th><td>' + f(d.nome, 14) + ' — CPF/CNPJ ' + f(d.cpf, 9) + '</td></tr>' +
+      '<tr><th>Preço de arrematação</th><td><strong>' + brl(valor) + '</strong></td></tr>' +
+      '<tr><th>Comissão do leiloeiro (' + esc(E.comissao) + '%)</th><td>' + brl(comissao) + '</td></tr>' +
+      '<tr><th>Total devido (preço + comissão)</th><td><strong>' + brl(valor + comissao) + '</strong>, além das despesas previstas no edital</td></tr>' +
+      '</table>' +
+      '<h3>Qualificação das partes</h3>' +
+      '<div class="ct-box">' +
+      '<p><strong>LEILOEIRO OFICIAL:</strong> ' + f(E.leiloeiro, 16) + ', leiloeiro(a) oficial, inscrito(a) no CPF sob o nº ' + f(E.leiloeiroCpf, 9) + ', matriculado(a) na ' + f(E.junta, 16) + ' sob o nº <strong>' + f(E.matricula, 8) + '</strong>.</p>' +
+      '<p><strong>EMPRESA ORGANIZADORA DA PLATAFORMA:</strong> ' + f(empresaNome, 16) + ', inscrita no CNPJ sob o nº ' + f(E.cnpj, 10) + ', com sede em ' + f(E.endereco, 22) + '.</p>' +
+      '<p><strong>COMITENTE (VENDEDOR):</strong> ' + f(d.comitente, 20) + ', proprietário(a) ou detentor(a) da posse do bem, representado(a) pelo LEILOEIRO.</p>' +
+      '<p><strong>ARREMATANTE (COMPRADOR):</strong> ' + f(d.nome, 16) + ', inscrito(a) no CPF/CNPJ sob o nº ' + f(d.cpf, 10) + ', residente e domiciliado(a) em ' + f(d.endereco, 22) + ', e-mail ' + f(d.email, 12) + ', telefone ' + f(d.tel, 9) + '.</p>' +
+      '</div>' +
+      '<div class="ct-alert"><strong>Aviso de segurança:</strong> antes de pagar, confirme na Junta Comercial a matrícula do leiloeiro indicada acima. Pagamentos somente nas contas informadas pela equipe oficial — nunca a pessoas físicas ou empresas estranhas a este termo.</div>';
+
+    // PÁGINA 2 — pagamento (TED/TFF), prazos e declarações do arrematante
+    var p2 =
+      '<h3>1. Do pagamento</h3>' +
+      '<div class="ct-box">' +
+      '<p><strong>Forma de pagamento (TED/TFF)</strong> ao preposto leiloeiro indicado pelo leiloeiro oficial do leilão, para que realize a quitação dos débitos do lote junto à instituição financeira responsável.</p>' +
+      '<p>Banco ' + f('', 6) + ' · Agência ' + f('', 4) + ' · Conta ' + f('', 7) + ' · Titular ' + f('', 14) + ' (dados informados pela equipe oficial após o encerramento).</p>' +
+      '</div>' +
+      '<p><strong>1.1.</strong> O pagamento do preço de arrematação e da comissão do leiloeiro deverá ser realizado integralmente em até <strong>' + esc(E.prazoPagamentoDias) + ' (' + esc(E.prazoPagamentoDias) + ') dia(s) útil(eis)</strong> após o encerramento do lote, por TED/TFF na conta indicada acima.</p>' +
+      '<p><strong>1.2.</strong> Pagamentos feitos a conta diversa da informada pela equipe oficial não quitam a obrigação, não configurando pagamento válido perante o LEILOEIRO e o COMITENTE.</p>' +
+      '<h3>2. Das declarações do arrematante</h3>' +
+      '<ol class="ct-decl">' +
+      '<li><strong>2.1.</strong> Declaro ter lido e aceitado integralmente o edital do leilão, as condições gerais de venda e a página do lote arrematado, documentos que integram este termo.</li>' +
+      '<li><strong>2.2.</strong> Declaro ter sido facultada a visitação/vistoria prévia do bem, mediante agendamento prévio com a equipe para designação do pátio indicado, e que a não realização não me dá direito a reclamação posterior sobre o estado do bem.</li>' +
+      '<li><strong>2.3.</strong> Declaro que o bem é vendido <em>ad corpus</em>, no estado em que se encontra, usado, sem garantia de funcionamento ou de integralidade de acessórios, peças e documentação.</li>' +
+      '<li><strong>2.4.</strong> Declaro que meu lance é irrevogável e irretratável e que as informações por mim cadastradas são verdadeiras e de minha responsabilidade.</li>' +
+      '<li><strong>2.5.</strong> Declaro estar habilitado(a) a participar do leilão e que os recursos utilizados no pagamento têm origem lícita.</li>' +
+      '</ol>' +
+      '<h3>3. Da inadimplência</h3>' +
+      '<p><strong>3.1.</strong> O não pagamento no prazo indicado caracteriza inadimplência e sujeita o ARREMATANTE ao desfazimento da arrematação, à multa de <strong>' + esc(E.multaInadimplencia) + '%</strong> sobre o preço de arrematação, além da comissão do leiloeiro, e à suspensão do cadastro na plataforma.</p>';
+
+    // PÁGINA 3 — retirada, transferência, assinaturas e recebimento
+    var p3 =
+      '<h3>4. Da retirada do bem</h3>' +
+      '<p><strong>4.1.</strong> A retirada será feita mediante agendamento prévio com a nossa equipe, que designará o pátio indicado, em até <strong>' + esc(E.prazoRetiradaDias) + ' (' + esc(E.prazoRetiradaDias) + ') dia(s) útil(eis)</strong> após a confirmação do pagamento integral e a liberação do bem.</p>' +
+      '<p><strong>4.2.</strong> No ato da retirada, o ARREMATANTE apresentará documento oficial com foto e assinará o termo de recebimento abaixo. O transporte, o guincho e as despesas de remoção correm por conta e risco do ARREMATANTE.</p>' +
+      '<p><strong>4.3.</strong> Esgotado o prazo de retirada sem a remoção do bem, poderá incidir taxa de armazenagem ' + f(E.taxaArmazenagem, 10) + ' por dia, conforme o edital.</p>' +
+      '<h3>5. Da documentação e da transferência</h3>' +
+      '<p><strong>5.1.</strong> Confirmado o pagamento, o LEILOEIRO emitirá a nota de venda em leilão e entregará os documentos necessários à transferência, nos prazos do edital. Em veículos, a transferência no órgão de trânsito é de responsabilidade do ARREMATANTE, no prazo legal de 30 (trinta) dias.</p>' +
+      '<h3>6. Das disposições gerais</h3>' +
+      '<p><strong>6.1.</strong> Aplicam-se a este termo, supletivamente, as cláusulas do contrato de arrematação, o edital do leilão e a legislação vigente (Decreto nº 21.981/1932, Código Civil, CDC e LGPD).</p>' +
+      '<p style="margin-top:1.2em">' + f('', 14) + ', ' + esc(hoje) + '.</p>' +
+      '<div class="ct-sign">' +
+      '<div>' + (d.nome ? esc(d.nome) : '&nbsp;') + '<br>ARREMATANTE<br>CPF/CNPJ ' + f(d.cpf, 9) + '</div>' +
+      '<div>' + (E.leiloeiro ? esc(E.leiloeiro) : '&nbsp;') + '<br>LEILOEIRO OFICIAL<br>Matrícula ' + f(E.matricula, 7) + '</div>' +
+      '<div>Testemunha 1<br>Nome: ' + f('', 12) + '<br>CPF: ' + f('', 9) + '</div>' +
+      '<div>Testemunha 2<br>Nome: ' + f('', 12) + '<br>CPF: ' + f('', 9) + '</div>' +
+      '</div>' +
+      '<div class="ct-receipt"><p><strong>TERMO DE RECEBIMENTO DO BEM</strong></p>' +
+      '<p>Recebi de forma satisfatória o bem arrematado e descrito neste termo (lote <strong>' + esc(d.lote || '—') + '</strong>), no estado em que se encontra, nada tendo a reclamar, retirando-o por minha conta e risco.</p>' +
+      '<p style="margin-top:1.2em">' + f('', 24) + ', ' + f('', 10) + '.</p>' +
+      '<div class="ct-sign"><div>' + (d.nome ? esc(d.nome) : '&nbsp;') + '<br>ARREMATANTE — assinatura do recebimento</div><div>' + (E.leiloeiro ? esc(E.leiloeiro) : '&nbsp;') + '<br>LEILOEIRO OFICIAL — liberação</div></div></div>' +
+      '<p class="ct-foot">Documento gerado pela plataforma ' + esc(empresaNome) + ' em ' + esc(hoje) + ' — válido com as assinaturas do arrematante e do leiloeiro oficial.</p>';
+
+    return '<style>' + TERMO_CSS + '</style><div class="WordSection1"><article class="ct">' + p1 +
+      '<div class="ct-page">' + p2 + '</div>' +
+      '<div class="ct-page">' + p3 + '</div>' +
+      '</article></div>';
+  };
+
+  // Baixa o termo como .doc (abre no Word/LibreOffice/Google Docs em várias páginas A4).
+  window.NLTermoDownload = function (d) {
+    var base = location.href.replace(/[^/]*$/, '');
+    return Promise.resolve()
+      .then(function () {
+        // logo embutido em base64 para o Word conseguir exibir sem o site aberto
+        if (!EMPRESA.logo) return null;
+        return fetch(base + EMPRESA.logo).then(function (r) { return r.ok ? r.blob() : null; }).catch(function () { return null; })
+          .then(function (blob) {
+            if (!blob) return null;
+            return new Promise(function (res) {
+              var fr = new FileReader();
+              fr.onload = function () { res(fr.result); };
+              fr.onerror = function () { res(null); };
+              fr.readAsDataURL(blob);
+            });
+          });
+      })
+      .then(function (logoData) {
+        var html = window.NLTermoHTML(d).replace('src="' + esc(EMPRESA.logo) + '"', 'src="' + (logoData || '') + '"');
+        var slug = String(d.nome || d.numero || 'termo').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
+        var nome = 'termo-arrematacao-' + (slug || 'cliente') + '.doc';
+        var blob = new Blob(['\ufeff<!doctype html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>Termo de Arrematação — ' + esc(d.nome || '') + '</title></head><body>' + html + '</body></html>'], { type: 'application/msword' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url; a.download = nome;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 5000);
+        return nome;
+      });
   };
 })();

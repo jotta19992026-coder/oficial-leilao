@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Painel administrativo — Leilão Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=53">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=53">
+  <link rel="icon" type="image/png" href="favicon.png?v=70">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=70">
   <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=53">
+  <link rel="stylesheet" href="css/styles.css?v=70">
 </head>
 <body>
   <div class="admin-top">
@@ -31,6 +31,20 @@
       </div>
     </div>
   </div>
+
+  <nav class="adminnav" aria-label="Seções do painel">
+    <div class="container adminnav__inner">
+      <a class="adminnav__btn" href="#dates-panel" data-goto="dates-panel">Datas dos leilões</a>
+      <a class="adminnav__btn" href="#sim-panel" data-goto="sim-panel">Simulador</a>
+      <a class="adminnav__btn" href="#views-panel" data-goto="views-panel">Visualizações</a>
+      <a class="adminnav__btn" href="#add-panel" data-goto="add-panel">Adicionar lote</a>
+      <a class="adminnav__btn" href="#contract-panel" data-goto="contract-panel">Contratos</a>
+      <a class="adminnav__btn" href="#wins-panel" data-goto="wins-panel">Arremates</a>
+      <a class="adminnav__btn" href="#clients-panel" data-goto="clients-panel">Clientes</a>
+      <a class="adminnav__btn" href="#bids-panel" data-goto="bids-panel">Lances</a>
+      <a class="adminnav__btn" href="#lots-panel" data-goto="lots-panel">Lotes</a>
+    </div>
+  </nav>
 
   <main class="container admin" id="admin-panel">
 
@@ -55,6 +69,83 @@
       <div class="kpi"><span>Online agora <small>(5 min)</small></span><strong id="kpi-online">—</strong></div>
     </section>
 
+    <section class="panel" id="dates-panel">
+      <div class="panel__head">
+        <h2>Datas dos leilões <small class="muted">(agenda e prazo dos lances)</small></h2>
+        <div class="panel__tools">
+          <button class="btn btn--ghost btn--sm" id="dates-refresh" type="button">Atualizar</button>
+        </div>
+      </div>
+      <p class="muted">Altere a data/hora do leilão e o encerramento dos lances. Ao salvar, todos os lotes do
+        leilão são atualizados e o site (Próximos leilões, agenda, cards, filtro de datas e página do lote)
+        passa a mostrar a nova data. Se você mudar só a data do leilão, o encerramento acompanha sozinho
+        (mesma hora do dia). O encerramento no passado bloqueia novos lances. Para mudar a data de
+        <strong>um único lote</strong>, use <strong>Datas por lote</strong> no fim desta seção.</p>
+
+      <div class="dates-bulk">
+        <div class="dates-bulk__intro">
+          <h3>Atualização em massa</h3>
+          <p class="muted">Aplica a mesma data e o mesmo encerramento a <strong id="bulk-count">todos os leilões</strong>
+            de uma vez. Para alterar apenas um leilão, use a tabela abaixo. Para escolher
+            <strong>lotes específicos</strong>, marque-os na lista <strong>Datas por lote</strong> e clique em
+            <strong>Aplicar aos lotes selecionados</strong>.</p>
+        </div>
+        <div class="dates-bulk__form">
+          <div class="field"><label for="bulk-date-start">Nova data e hora do leilão</label>
+            <input id="bulk-date-start" class="date-input" type="datetime-local"></div>
+          <div class="field"><label for="bulk-date-end">Novo encerramento dos lances</label>
+            <input id="bulk-date-end" class="date-input" type="datetime-local"></div>
+          <button class="btn btn--primary" id="bulk-dates-apply" type="button">Aplicar a todos</button>
+          <button class="btn btn--ghost" id="bulk-dates-lots" type="button" disabled>
+            Aplicar aos lotes selecionados (<span id="bulk-lots-count">0</span>)</button>
+        </div>
+        <p class="form__msg" id="bulk-dates-msg"></p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table dates-table">
+          <thead><tr><th>Leilão</th><th>Lotes</th><th>Data e hora do leilão</th><th>Encerramento dos lances</th><th></th></tr></thead>
+          <tbody id="dates-body"><tr><td colspan="5" class="muted">Carregando…</td></tr></tbody>
+        </table>
+      </div>
+      <p class="form__msg" id="dates-msg"></p>
+
+      <div class="dates-lots">
+        <div class="dates-lots__intro">
+          <h3>Datas por lote <small class="muted">(individual — exceção ao leilão)</small></h3>
+          <p class="muted">Ajusta a data/hora do leilão e o encerramento dos lances <strong>de um lote
+            específico</strong> — para encerramento escalonado ou um lote fora da regra do leilão. Os demais
+            lotes seguem a data do leilão na tabela acima. Marque os lotes <strong>filtrando, buscando ou
+            digitando os números</strong> (ex.: 1, 3, 12 — vale para o leilão selecionado no filtro) e clique
+            em <strong>Aplicar data aos selecionados</strong> aqui mesmo, ou use <strong>Atualização em
+            massa → Aplicar aos lotes selecionados</strong>. <strong>Atenção:</strong> salvar as datas do
+            leilão inteiro (tabela acima) sobrescreve as datas individuais.</p>
+        </div>
+        <div class="dates-lots__filters">
+          <div class="field"><label for="lotdates-auction">Leilão</label><select id="lotdates-auction"></select></div>
+          <div class="field"><label for="lotdates-search">Buscar lote</label><input id="lotdates-search" placeholder="Nº do lote ou título"></div>
+          <div class="field"><label for="lotdates-nums">Marcar por nº dos lotes</label>
+            <input id="lotdates-nums" inputmode="numeric" placeholder="Ex.: 1, 3, 12"></div>
+          <button class="btn btn--primary btn--sm" id="lotdates-mark" type="button">Marcar</button>
+          <div class="field"><label for="quick-date-start">Data e hora do leilão</label>
+            <input id="quick-date-start" class="date-input" type="datetime-local"></div>
+          <div class="field"><label for="quick-date-end">Encerramento dos lances</label>
+            <input id="quick-date-end" class="date-input" type="datetime-local"></div>
+          <button class="btn btn--primary btn--sm" id="quick-dates-apply" type="button" disabled>Aplicar data aos selecionados</button>
+          <p class="muted dates-lots__count" id="lotdates-count"></p>
+          <button class="btn btn--ghost btn--sm" id="lotdates-clearsel" type="button" disabled>Limpar seleção</button>
+        </div>
+        <div class="table-wrap">
+          <table class="table lotdates-table">
+            <thead><tr><th><input type="checkbox" id="lotdates-all" aria-label="Selecionar todos os lotes exibidos"></th>
+              <th>Lote</th><th>Item</th><th>Data e hora do leilão</th><th>Encerramento dos lances</th><th></th></tr></thead>
+            <tbody id="lotdates-body"><tr><td colspan="6" class="muted">Carregando…</td></tr></tbody>
+          </table>
+        </div>
+        <p class="form__msg" id="lotdates-msg"></p>
+      </div>
+    </section>
+
     <section class="panel panel--sim" id="sim-panel">
       <div class="panel__head">
         <h2>Simulador de lances <small class="muted">(arrematantes fictícios para teste)</small></h2>
@@ -67,9 +158,10 @@
       <p class="sim-note">Cria <strong>arrematantes fictícios</strong> que dão <strong>lances automáticos</strong> nos lotes do
         catálogo — no escopo <strong>Todos os lotes do catálogo</strong>, todos os lotes (abertos e encerrados) recebem lances
         em rajadas, para você testar tudo no painel: arremates por data, clientes, CSV e geração de contrato (procure o chip
-        <span class="chip chip--sim" style="margin:0">sim</span> nas tabelas). Os dados ficam <strong>só neste navegador</strong> —
-        nada é gravado no banco e <strong>o site público não mostra esses lances</strong>. Lances inventados exibidos a
-        arrematantes reais são fraude (lance de reserva), então nunca saem daqui.</p>
+        <span class="chip chip--sim" style="margin:0">sim</span> nas tabelas). Os lances fictícios <strong>aparecem no site
+        público também</strong> — mas <strong>só neste navegador</strong>: visitantes reais não veem nada inventado (lance
+        inventado mostrado a arrematante real é fraude — lance de reserva) e <strong>nada é gravado no banco</strong>.
+        O lance real sempre vence quando for maior que o fictício.</p>
       <div class="switches">
         <label class="switch"><span>Arrematantes fictícios</span>
           <select id="sim-bidders">
@@ -93,7 +185,7 @@
       <p class="muted" id="sim-status">Simulação parada — nenhum lance fictício no painel.</p>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="views-panel">
       <div class="panel__head">
         <h2>Visualizações do site</h2>
         <div class="panel__tools">
@@ -128,7 +220,7 @@
     </section>
 
     <div class="admin-grid">
-      <section class="panel">
+      <section class="panel" id="add-panel">
         <h2>Adicionar veículo / lote</h2>
         <form id="form-add-lot" novalidate>
           <div class="field"><label for="a-title">Título (marca e modelo)</label><input id="a-title" required placeholder="Ex.: Honda Civic 2.0"></div>
@@ -149,7 +241,7 @@
         </form>
       </section>
 
-      <section class="panel">
+      <section class="panel" id="contract-panel">
         <h2>Gerar contrato de arrematação</h2>
         <form id="form-contract" novalidate>
           <div class="field"><label for="k-client">Cliente</label><select id="k-client" required><option value="">Carregando clientes…</option></select></div>
@@ -166,12 +258,14 @@
           <div class="field"><label for="k-comitente">Comitente / vendedor (banco, financeira ou proprietário)</label><input id="k-comitente" placeholder="Razão social e CNPJ do vendedor"></div>
           <p class="muted" id="k-info" style="font-size:.85rem;margin:-.2rem 0 .8rem"></p>
           <button class="btn btn--primary" type="submit">Gerar contrato (imprimir / PDF)</button>
+          <button class="btn btn--ghost" id="k-termo" type="button">⬇ Baixar termo de arrematação (.doc)</button>
+          <p class="muted" style="font-size:.8rem;margin:.4rem 0 0">O termo de arrematação usa os mesmos dados acima e baixa em várias páginas (partes e bem, pagamento/declarações, condições e assinaturas).</p>
           <p class="form__msg" id="k-msg"></p>
         </form>
       </section>
     </div>
 
-    <section class="panel">
+    <section class="panel" id="wins-panel">
       <div class="panel__head">
         <h2>Arremates por data <small class="muted">(quem deve arrematar cada veículo)</small></h2>
         <div class="panel__tools">
@@ -195,7 +289,7 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="clients-panel">
       <div class="panel__head">
         <h2>Clientes cadastrados</h2>
         <div class="panel__tools">
@@ -219,19 +313,27 @@
       </div>
       <p class="muted filters__count" id="clients-count"></p>
       <div class="table-wrap">
-        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Cadastro</th><th>Último acesso</th><th>Lances</th><th>Maior lance</th><th>Deve arrematar</th><th></th></tr></thead>
+        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Cadastro</th><th>Último acesso</th><th>Lances</th><th>Maior lance</th><th>Deve arrematar</th><th>Documento</th><th></th></tr></thead>
         <tbody id="clients-body"></tbody></table>
       </div>
     </section>
 
-    <section class="panel">
-      <h2>Lances</h2>
+    <section class="panel" id="bids-panel">
+      <div class="panel__head">
+        <h2>Lances <small class="muted">(200 mais recentes)</small></h2>
+        <div class="panel__tools">
+          <button class="btn btn--primary btn--sm" id="bids-csv" type="button">⬇ Baixar lances (CSV)</button>
+        </div>
+      </div>
+      <p class="muted">O CSV traz <strong>todas as pessoas que estão dando lance</strong> (não só as 200 mais recentes):
+        uma linha por arrematante com contato, documento, total de lances, maior lance, último lance e
+        em quais lotes está à frente.</p>
       <div class="table-wrap">
         <table class="table"><thead><tr><th>Lote</th><th>Usuário</th><th>Valor</th><th>Data/hora</th></tr></thead><tbody id="bids-body"></tbody></table>
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="lots-panel">
       <h2>Lotes cadastrados</h2>
       <div class="table-wrap">
         <table class="table"><thead><tr><th>#</th><th>Foto</th><th>Título</th><th>Categoria</th><th>Lance inicial</th><th>Ações</th></tr></thead><tbody id="lots-body"></tbody></table>
@@ -239,14 +341,14 @@
     </section>
   </main>
 
-  <script src="js/data.js?v=53"></script>
+  <script src="js/data.js?v=70"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=53"></script>
-  <script src="js/auth.js?v=53"></script>
-  <script src="js/store.js?v=53"></script>
-  <script src="js/masks.js?v=53"></script>
-  <script src="js/contract.js?v=53"></script>
-  <script src="js/simulate.js?v=53"></script>
-  <script src="js/admin.js?v=53"></script>
+  <script src="js/supabase.js?v=70"></script>
+  <script src="js/auth.js?v=70"></script>
+  <script src="js/store.js?v=70"></script>
+  <script src="js/masks.js?v=70"></script>
+  <script src="js/contract.js?v=70"></script>
+  <script src="js/simulate.js?v=70"></script>
+  <script src="js/admin.js?v=70"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=53';
+      s.src = 'js/lots-data.js?v=70';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -56,6 +56,8 @@
       auction: r.auction_label || '',
       auctionNum: r.auction_num,
       auctionDate: dm ? dm[3] + '/' + dm[2] + '/' + dm[1] : '',
+      auctionDateISO: dm ? r.auction_date : '',
+      auctionTime: r.auction_time || '',
       featured: !!r.featured,
       status: r.status,
       photos: photos,
@@ -102,6 +104,46 @@
       }, function () { return []; });
   }
 
+  // ------------------------------------------------------------------
+  // Lances fictícios do simulador (painel admin) também aparecem no site.
+  // A simulação vive no localStorage (nl_sim_v1), então o efeito é deste
+  // navegador: o dono vê os lances fictícios nos cards, na página do lote e
+  // no histórico; visitantes reais em outros dispositivos NÃO veem nada
+  // inventado (exibir lances falsos a arrematantes reais é lance de reserva).
+  // O lance real sempre vence quando for maior que o fictício.
+  // ------------------------------------------------------------------
+  function simState() {
+    try {
+      var s = JSON.parse(localStorage.getItem('nl_sim_v1'));
+      if (s && Array.isArray(s.bids) && s.leaders) return s;
+    } catch (e) {}
+    return null;
+  }
+  function simFirstName(name) {
+    var f = String(name || '').split(' ')[0];
+    return f || 'Participante';
+  }
+  // Mistura a simulação em cada lote do cache (idempotente: guarda os valores reais de base).
+  function applySim() {
+    var st = simState();
+    cache.lots.forEach(function (l) {
+      if (l.realPrice == null) { l.realPrice = l.price; l.realBids = l.bids; }
+      var price = l.realPrice, n = l.realBids;
+      if (st) {
+        var s = st.leaders[l.id];
+        var meta = st.lots[l.id];
+        if (s && (Number(s.amount) || 0) > price) price = Number(s.amount);
+        n += (meta && meta.simBids) || 0;
+      }
+      l.price = price;
+      l.bids = n;
+    });
+  }
+  // Simulação ativa agora? (páginas usam para atualizar o lote sozinho)
+  function simActive() { var st = simState(); return !!(st && st.on); }
+  // Acompanha a simulação: enquanto houver registro, re-mescla (idempotente).
+  setInterval(applySim, 10000);
+
   var ready = (supa
     ? fetchLots().then(function (list) {
         if (!list.length) throw new Error('Nenhum lote publicado no Supabase.');
@@ -114,6 +156,7 @@
       setLots((window.NL_LOTS || []).map(fromLocal), 'local');
     });
   }).then(function () {
+    applySim();
     return (window.NLAuth ? window.NLAuth.ready : Promise.resolve()).then(fetchMyBids);
   }).then(function (mine) {
     cache.myBids = mine;
@@ -145,21 +188,33 @@
         if (r.error) return { ok: false, error: pgMessage(r.error) };
         var lot = cache.byId[lotId];
         var value = Number(r.data.amount);
-        if (lot) { lot.price = Math.max(lot.price, value); lot.bids += 1; }
+        if (lot) {
+          lot.realPrice = Math.max(lot.realPrice == null ? lot.price : lot.realPrice, value);
+          lot.realBids = (lot.realBids == null ? lot.bids : lot.realBids) + 1;
+          applySim();
+        }
         cache.myBids.unshift({ lotId: lotId, amount: value, time: Date.parse(r.data.created_at) || Date.now(), userLabel: 'Você' });
         return { ok: true, lot: lot, amount: value };
       }, function (e) { return { ok: false, error: pgMessage(e) }; });
     },
 
     // Histórico público (primeiro nome + valor + data), via lot_bid_history.
+    // Lances fictícios do simulador (mesmo navegador) entram na lista também.
     history: function (lotId) {
-      if (!supa || cache.source !== 'supabase') return Promise.resolve([]);
+      var st = simState();
+      var sim = st ? (st.bids || []).filter(function (b) { return Number(b.lot_id) === Number(lotId); })
+        .map(function (b) {
+          return { userLabel: simFirstName(b.profiles && b.profiles.name), amount: Number(b.amount), time: Date.parse(b.created_at) };
+        }) : [];
+      if (!supa || cache.source !== 'supabase') {
+        return Promise.resolve(sim.sort(function (a, b) { return b.time - a.time; }));
+      }
       return supa.rpc('lot_bid_history', { p_lot_id: lotId }).then(function (r) {
-        if (r.error) return [];
-        return r.data.map(function (h) {
+        var real = r.error || !r.data ? [] : r.data.map(function (h) {
           return { userLabel: h.display_name, amount: Number(h.amount), time: Date.parse(h.created_at) };
         });
-      }, function () { return []; });
+        return real.concat(sim).sort(function (a, b) { return b.time - a.time; });
+      }, function () { return sim; });
     },
 
     // Relê um lote (preço/lances atuais).
@@ -168,8 +223,10 @@
       return supa.from('lots').select(LOT_COLUMNS).eq('id', id).maybeSingle().then(function (r) {
         if (r.error || !r.data) return cache.byId[id] || null;
         var fresh = fromRow(r.data);
+        fresh.realPrice = fresh.price;
+        fresh.realBids = fresh.bids;
         var lot = cache.byId[id];
-        if (lot) { for (var k in fresh) lot[k] = fresh[k]; return lot; }
+        if (lot) { for (var k in fresh) lot[k] = fresh[k]; applySim(); return lot; }
         cache.byId[id] = fresh; cache.lots.push(fresh);
         return fresh;
       });
@@ -182,13 +239,17 @@
         .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'lots', filter: 'id=eq.' + id }, function (payload) {
           var lot = cache.byId[id];
           var row = payload.new || {};
-          if (lot && row.current_price != null) lot.price = Number(row.current_price);
-          if (lot && row.bid_count != null) lot.bids = row.bid_count;
+          if (lot && row.current_price != null) lot.realPrice = Number(row.current_price);
+          if (lot && row.bid_count != null) lot.realBids = row.bid_count;
+          applySim();
           onChange(lot);
         })
         .subscribe();
       return function () { supa.removeChannel(channel); };
     },
+
+    // Simulação do painel rodando neste navegador? (lote.html atualiza sozinho)
+    simActive: simActive,
 
     // ---- Funções do painel administrativo (a RLS exige profiles.role = 'admin') ----
     admin: {
@@ -249,6 +310,24 @@
       removeLot: function (id) {
         return supa.from('lots').delete().eq('id', id).then(function (r) { if (r.error) throw r.error; });
       },
+      // Datas do leilão: grava a data/hora exibida e o encerramento dos lances nos lotes do grupos.
+      setAuctionDates: function (ids, patch) {
+        if (!supa) return Promise.reject(new Error('Supabase indisponível.'));
+        return supa.from('lots').update(patch).in('id', ids).select('id,n,auction_num,auction_date,auction_time,auction_label,ends_at')
+          .then(function (r) { if (r.error) throw r.error; return r.data; });
+      },
+      // Datas de UM lote (exceção ao leilão: encerramento escalonado etc.).
+      setLotDates: function (id, patch) {
+        if (!supa) return Promise.reject(new Error('Supabase indisponível.'));
+        return supa.from('lots').update(patch).eq('id', id).select('id,n,auction_num,auction_date,auction_time,auction_label,ends_at')
+          .then(function (r) { if (r.error) throw r.error; return r.data; });
+      },
+      // Mantém a tabela auctions coerente com os lotes (usada pelo edital/agenda).
+      setAuctionSchedule: function (numero, abertura, encerramento) {
+        if (!supa || !numero) return Promise.resolve(null);
+        return supa.from('auctions').update({ abertura: abertura, encerramento: encerramento }).eq('numero', numero)
+          .then(function (r) { if (r.error) throw r.error; return r.data; });
+      },
       // Envia a foto ao bucket lot-photos e a coloca como capa (mantendo as demais).
       uploadCover: function (lot, blob) {
         var path = 'lotes/' + lot.id + '/admin-' + Date.now() + '.jpg';
@@ -263,6 +342,12 @@
       removeCover: function (lot) {
         return supa.rpc('replace_lot_photos', { p_lot_id: lot.id, p_urls: (lot.photos || []).slice(1) })
           .then(function (r) { if (r.error) throw r.error; });
+      },
+      // Documento enviado pelo cliente (bucket privado user-docs): link assinado de 5 min.
+      docLink: function (path) {
+        if (!supa || !path) return Promise.reject(new Error('Documento indisponível.'));
+        return supa.storage.from('user-docs').createSignedUrl(path, 300)
+          .then(function (r) { if (r.error) throw r.error; return r.data.signedUrl; });
       }
     }
   };

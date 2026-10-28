@@ -138,7 +138,7 @@
             '</ul>' +
             '</div>';
         })() : '') +
-        '<a class="link" href="edital.html">Ver edital deste leilão →</a>' +
+        '<a class="link" href="edital.html?id=' + lot.id + '">Ver edital deste leilão →</a>' +
       '</div>' +
     '</div>' +
     '<div class="detail__desc"><h2>Descrição</h2>' +
@@ -443,6 +443,13 @@
     }, 20000);
   }
   loadHistory();
+  // Simulação do painel (mesmo navegador): preço e histórico se atualizam sozinhos.
+  setInterval(function () {
+    if (window.NLStore.simActive && window.NLStore.simActive()) {
+      applyLot(window.NLStore.lot(lot.id));
+      loadHistory();
+    }
+  }, 8000);
 
   var sending = false;
   btn.addEventListener('click', function () {

@@ -3,9 +3,10 @@
 // o painel: KPIs, "Arremates por data", Clientes, CSV e geração de contrato. Dois escopos:
 // "Automático" (até 10 lotes abertos por vez) e "Todos os lotes" (catálogo inteiro, incluindo
 // encerrados, coberto em rajadas de ~12 lotes por ciclo).
-// Os dados vivem só neste navegador (localStorage); NADA é gravado no Supabase e o site
-// público não vê esses lances. Lances inventados exibidos a arrematantes reais são
-// fraude (lance de reserva) — por isso esta simulação fica restrita ao painel.
+// Os dados vivem só neste navegador (localStorage); NADA é gravado no Supabase. As páginas
+// públicas leem esse registro e mostram os lances fictícios neste MESMO navegador — visitantes
+// reais em outros dispositivos não veem nada inventado (lance inventado exibido a arrematante
+// real é fraude — lance de reserva), e o lance real sempre vence quando for maior.
 (function () {
   'use strict';
 
@@ -328,8 +329,11 @@
     w.clients = function () {
       return real.clients().then(function (list) {
         return list.concat(simClients());
-      }, function () {
-        // Sem a migração 002 no banco, a simulação ainda serve para testar o contrato.
+      }, function (err) {
+        // Só entra no modo "só simulação" quando a função admin_clients não existe
+        // (migração 002 não rodada). Outros erros (sessão expirada, permissão…)
+        // são repassados para o painel mostrar a mensagem correta.
+        if (!/admin_clients|schema cache|PGRST202/i.test(String((err && err.message) || err))) throw err;
         return simClients();
       });
     };
@@ -339,8 +343,9 @@
         return list.concat(state.bids).sort(function (a, b) {
           return Date.parse(b.created_at) - Date.parse(a.created_at);
         }).slice(0, 250);
-      }, function () {
-        // Consulta real indisponível: mostra ao menos os lances fictícios.
+      }, function (err) {
+        // Consulta real indisponível por falta de tabela/migração: mostra ao menos os fictícios.
+        if (!/schema cache|PGRST2|Could not find/i.test(String((err && err.message) || err))) throw err;
         return state.bids.slice(-250);
       });
     };
@@ -389,7 +394,7 @@
       var last = nb ? state.bids[nb - 1].created_at : null;
       var ago = last ? Math.max(0, Math.round((Date.now() - Date.parse(last)) / 1000)) : null;
       el.innerHTML = '<span class="sim-live"></span>Simulação <strong>ativa</strong>: ' + nb + ' lance(s) fictício(s) em ' + nl +
-        ' lote(s)' + (ago != null ? ' · último lance há ' + ago + ' s' : '') + ' · 1 lance a cada ~' + state.cfg.iv + ' s. Os dados ficam só neste navegador.';
+        ' lote(s)' + (ago != null ? ' · último lance há ' + ago + ' s' : '') + ' · 1 lance a cada ~' + state.cfg.iv + ' s. Aparecem no site só neste navegador — nada vai ao banco.';
     } else if (nb) {
       el.innerHTML = '<strong>Pausada:</strong> ' + nb + ' lance(s) fictício(s) em ' + nl + ' lote(s) guardados neste navegador. Inicie para continuar a simulação.';
     } else {

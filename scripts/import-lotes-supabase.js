@@ -118,10 +118,10 @@ async function main() {
       abertura: date ? `${date}T10:00:00-03:00` : null,
       encerramento: date ? `${date}T14:00:00-03:00` : null,
       leiloeiro: 'Ricardo Almeida',
-      matricula: 'JUC/PR 12.345/2026',
+      matricula: 'JUCESP/SP 12.638/2019',
       comitente: 'Leilão Oficial',
       comissao: 5,
-      pagamento: 'PIX, boleto ou transferência bancária',
+      pagamento: 'TED/TFF ao preposto leiloeiro — quitação dos débitos do lote junto à instituição financeira responsável',
       retirada: 'Mediante comprovação de pagamento e agendamento',
     });
   }
