@@ -1,7 +1,9 @@
 .env
 .env.local
+vercel-token.txt
 node_modules/
 .vercel/
+__pycache__/
 js/lots-photos.preview.json
 js/lots-photos.partial.json
 
