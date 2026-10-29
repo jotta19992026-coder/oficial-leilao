@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=73';
+      s.src = 'js/lots-data.js?v=74';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -70,8 +70,10 @@
   function fromLocal(l) {
     var c = {};
     for (var k in l) { if (Object.prototype.hasOwnProperty.call(l, k)) c[k] = l[k]; }
-    c.basePrice = l.price;
-    c.increment = incrementFor(l.price);
+    // O catálogo local pode trazer basePrice (lance inicial) separado do price
+    // (maior lance). Se não trouxer, o price é o próprio lance inicial.
+    c.basePrice = l.basePrice != null ? l.basePrice : l.price;
+    c.increment = incrementFor(c.basePrice);
     return c;
   }
 
@@ -88,6 +90,16 @@
         if (r.error) throw r.error;
         return r.data.map(fromRow);
       });
+  }
+
+  // Uma falha de DNS/cold start do Supabase não deve jogar o visitante no catálogo
+  // local (que é um retrato antigo): tenta mais duas vezes antes de cair no fallback.
+  function fetchLotsRetry(tries) {
+    return fetchLots().catch(function (err) {
+      if (tries <= 1) throw err;
+      return new Promise(function (resolve) { setTimeout(resolve, 700); })
+        .then(function () { return fetchLotsRetry(tries - 1); });
+    });
   }
 
   // Lances do próprio usuário (a RLS só devolve os dele); servem para "Vencendo: Você".
@@ -145,7 +157,7 @@
   setInterval(applySim, 10000);
 
   var ready = (supa
-    ? fetchLots().then(function (list) {
+    ? fetchLotsRetry(3).then(function (list) {
         if (!list.length) throw new Error('Nenhum lote publicado no Supabase.');
         setLots(list, 'supabase');
       })

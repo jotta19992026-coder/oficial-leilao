@@ -10,13 +10,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 25000,
+    "price": 10000,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/401/01_principal.jpg",
       "images/lotes/401/02.jpg",
@@ -31,7 +31,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/401/01_principal.jpg",
     "desc": "Motocicleta BMW G 310, ano/modelo 2024/2024, ofertada no Leilão 5 (lote 01). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 10000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 399,
@@ -42,13 +45,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 21000,
+    "price": 8400,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/399/01_principal.jpg",
       "images/lotes/399/02.jpg",
@@ -63,7 +66,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/399/01_principal.jpg",
     "desc": "Motocicleta BMW S 1000, ano/modelo 2020/2021, ofertada no Leilão 5 (lote 02). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 198,
@@ -74,13 +80,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/198/01_principal.jpg",
       "images/lotes/198/02.jpg",
@@ -95,7 +101,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/198/01_principal.jpg",
     "desc": "Motocicleta HONDA BIZ, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 03). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 400,
@@ -106,13 +115,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 11000,
+    "price": 4400,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/400/01_principal.jpg",
       "images/lotes/400/02.jpg",
@@ -127,7 +136,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/400/01_principal.jpg",
     "desc": "Motocicleta HONDA CB 250 TWISTER, ano/modelo 2019/2020, ofertada no Leilão 5 (lote 04). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 404,
@@ -138,13 +150,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 11000,
+    "price": 4400,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/404/01_principal.jpg",
       "images/lotes/404/02.jpg",
@@ -158,7 +170,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/404/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2018/2019, ofertada no Leilão 5 (lote 06). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 201,
@@ -169,13 +184,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/201/01_principal.jpg",
       "images/lotes/201/02.jpg",
@@ -187,7 +202,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/201/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2021/2021, ofertada no Leilão 5 (lote 07). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 206,
@@ -198,13 +216,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/206/01_principal.jpg",
       "images/lotes/206/02.jpg",
@@ -219,7 +237,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/206/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2021/2021, ofertada no Leilão 5 (lote 08). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 205,
@@ -230,13 +251,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/205/01_principal.jpg",
       "images/lotes/205/02.jpg",
@@ -251,7 +272,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/205/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 09). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 199,
@@ -262,13 +286,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/199/01_principal.jpg",
       "images/lotes/199/02.jpg",
@@ -282,7 +306,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/199/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 010). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 204,
@@ -293,13 +320,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/204/01_principal.jpg",
       "images/lotes/204/02.jpg",
@@ -314,7 +341,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/204/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 011). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 197,
@@ -325,13 +355,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/197/01_principal.jpg",
       "images/lotes/197/02.jpg",
@@ -345,7 +375,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/197/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 START, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 012). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 639,
@@ -356,13 +389,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/639/01_principal.jpg",
       "images/lotes/639/02.jpg",
@@ -377,7 +410,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/639/01_principal.jpg",
     "desc": "Motocicleta HONDA CG TITAN CBS 160, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 013). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 208,
@@ -388,13 +424,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/208/01_principal.jpg",
       "images/lotes/208/02.jpg",
@@ -409,7 +445,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/208/01_principal.jpg",
     "desc": "Motocicleta HONDA NXR 160, ano/modelo 2020/2020, ofertada no Leilão 5 (lote 014). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 406,
@@ -420,13 +459,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 9000,
+    "price": 3600,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/406/01_principal.jpg",
       "images/lotes/406/02.jpg",
@@ -441,7 +480,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/406/01_principal.jpg",
     "desc": "Motocicleta HONDA PCX 150, ano/modelo 2015/2015, ofertada no Leilão 5 (lote 015). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 3600,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 403,
@@ -452,13 +494,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 9900,
+    "price": 4000,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/403/01_principal.jpg",
       "images/lotes/403/02.jpg",
@@ -473,7 +515,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/403/01_principal.jpg",
     "desc": "Motocicleta YAMAHA FAZER 150, ano/modelo 2015/2015, ofertada no Leilão 5 (lote 016). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 202,
@@ -484,13 +529,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/202/01_principal.jpg",
       "images/lotes/202/02.jpg",
@@ -505,7 +550,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/202/01_principal.jpg",
     "desc": "Motocicleta YAMAHA FLUO, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 017). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 407,
@@ -516,13 +564,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 22400,
+    "price": 9000,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/407/01_principal.jpg",
       "images/lotes/407/02.jpg",
@@ -537,7 +585,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/407/01_principal.jpg",
     "desc": "Motocicleta YAMAHA MT-07, ano/modelo 2023/2024, ofertada no Leilão 5 (lote 019). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 203,
@@ -548,13 +599,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 12100,
+    "price": 4800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/203/01_principal.jpg",
       "images/lotes/203/02.jpg",
@@ -566,7 +617,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/203/01_principal.jpg",
     "desc": "Motocicleta YAMAHA NMAX 160, ano/modelo 2019/2019, ofertada no Leilão 5 (lote 020). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 478,
@@ -577,13 +631,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 13500,
+    "price": 5400,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/478/01_principal.jpg",
       "images/lotes/478/02.jpg",
@@ -598,7 +652,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/478/01_principal.jpg",
     "desc": "Motocicleta BMW F 800 GS, ano/modelo 2015/2015, ofertada no Leilão 5 (lote 021). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 764,
@@ -609,13 +666,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17500,
+    "price": 7000,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/764/01_principal.jpg",
       "images/lotes/764/02.jpg",
@@ -629,7 +686,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/764/01_principal.jpg",
     "desc": "Motocicleta BMW G 310, ano/modelo 2021/2021, ofertada no Leilão 5 (lote 023). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 279,
@@ -640,13 +700,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 13800,
+    "price": 5500,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/279/01_principal.jpg",
       "images/lotes/279/02.jpg",
@@ -660,7 +720,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/279/01_principal.jpg",
     "desc": "Motocicleta BMW G 310 R, ano/modelo 2018/2018, ofertada no Leilão 5 (lote 024). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5500,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 771,
@@ -671,13 +734,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 25500,
+    "price": 10200,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/771/01_principal.jpg",
       "images/lotes/771/02.jpg",
@@ -692,7 +755,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/771/01_principal.jpg",
     "desc": "Motocicleta BMW R 1250, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 026). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 10200,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 79,
@@ -703,13 +769,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 20000,
+    "price": 8000,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/79/01_principal.jpg",
       "images/lotes/79/02.jpg",
@@ -724,7 +790,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/79/01_principal.jpg",
     "desc": "Motocicleta HONDA BIZ, ano/modelo 2024/2024, ofertada no Leilão 5 (lote 028). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 551,
@@ -735,13 +804,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/551/01_principal.jpg",
       "images/lotes/551/02.jpg",
@@ -755,7 +824,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/551/01_principal.jpg",
     "desc": "Motocicleta HONDA CB 500, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 029). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 763,
@@ -766,13 +838,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 13200,
+    "price": 5300,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/763/01_principal.jpg",
       "images/lotes/763/02.jpg",
@@ -786,7 +858,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/763/01_principal.jpg",
     "desc": "Motocicleta HONDA CB 650F, ano/modelo 2018/2018, ofertada no Leilão 5 (lote 030). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5300,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 559,
@@ -797,13 +872,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 7500,
+    "price": 3000,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/559/01_principal.jpg",
       "images/lotes/559/02.jpg",
@@ -817,7 +892,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/559/01_principal.jpg",
     "desc": "Motocicleta HONDA CB 600 F, ano/modelo 2013/2013, ofertada no Leilão 5 (lote 032). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 3000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 767,
@@ -828,13 +906,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 10800,
+    "price": 4300,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/767/01_principal.jpg",
       "images/lotes/767/02.jpg",
@@ -848,7 +926,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/767/01_principal.jpg",
     "desc": "Motocicleta HONDA CBR 500R, ano/modelo 2017/2018, ofertada no Leilão 5 (lote 033). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4300,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 638,
@@ -859,13 +940,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/638/01_principal.jpg",
       "images/lotes/638/02.jpg",
@@ -879,7 +960,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/638/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 038). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 477,
@@ -890,13 +974,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/477/01_principal.jpg",
       "images/lotes/477/02.jpg",
@@ -909,7 +993,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/477/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 039). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 635,
@@ -920,13 +1007,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/635/01_principal.jpg",
       "images/lotes/635/02.jpg",
@@ -941,7 +1028,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/635/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 041). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 275,
@@ -952,13 +1042,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 20000,
+    "price": 8000,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/275/01_principal.jpg",
       "images/lotes/275/02.jpg",
@@ -973,7 +1063,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/275/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2024/2024, ofertada no Leilão 5 (lote 042). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 273,
@@ -984,13 +1077,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 20000,
+    "price": 8000,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/273/01_principal.jpg",
       "images/lotes/273/02.jpg",
@@ -1004,7 +1097,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/273/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160, ano/modelo 2024/2024, ofertada no Leilão 5 (lote 043). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 488,
@@ -1015,19 +1111,22 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 11000,
+    "price": 4400,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/488/01_principal.jpg"
     ],
     "photo": "images/lotes/488/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 FAN, ano/modelo 2019/2019, ofertada no Leilão 5 (lote 044). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4400,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 85,
@@ -1038,13 +1137,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/85/01_principal.jpg",
       "images/lotes/85/02.jpg",
@@ -1059,7 +1158,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/85/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 FAN, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 045). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 87,
@@ -1070,13 +1172,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/87/01_principal.jpg",
       "images/lotes/87/02.jpg",
@@ -1091,7 +1193,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/87/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 FAN, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 046). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 83,
@@ -1102,13 +1207,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/83/01_principal.jpg",
       "images/lotes/83/02.jpg",
@@ -1123,7 +1228,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/83/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 START, ano/modelo 2020/2020, ofertada no Leilão 5 (lote 047). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 84,
@@ -1134,13 +1242,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/84/01_principal.jpg",
       "images/lotes/84/02.jpg",
@@ -1155,7 +1263,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/84/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 START, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 048). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 483,
@@ -1166,13 +1277,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/483/01_principal.jpg",
       "images/lotes/483/02.jpg",
@@ -1187,7 +1298,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/483/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 START, ano/modelo 2023/2024, ofertada no Leilão 5 (lote 049). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 480,
@@ -1198,13 +1312,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 20000,
+    "price": 8000,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/480/01_principal.jpg",
       "images/lotes/480/02.jpg",
@@ -1219,7 +1333,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/480/01_principal.jpg",
     "desc": "Motocicleta HONDA CG 160 TITAN, ano/modelo 2024/2024, ofertada no Leilão 5 (lote 050). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 80,
@@ -1230,13 +1347,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/80/01_principal.jpg",
       "images/lotes/80/02.jpg",
@@ -1248,7 +1365,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/80/01_principal.jpg",
     "desc": "Motocicleta HONDA NXR 160, ano/modelo 2021/2021, ofertada no Leilão 5 (lote 053). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 765,
@@ -1259,13 +1379,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/765/01_principal.jpg",
       "images/lotes/765/02.jpg",
@@ -1280,7 +1400,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/765/01_principal.jpg",
     "desc": "Motocicleta HONDA NXR 160, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 054). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 276,
@@ -1291,13 +1414,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/276/01_principal.jpg",
       "images/lotes/276/02.jpg",
@@ -1312,7 +1435,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/276/01_principal.jpg",
     "desc": "Motocicleta HONDA NXR 160, ano/modelo 2023/2024, ofertada no Leilão 5 (lote 055). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 769,
@@ -1323,13 +1449,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/769/01_principal.jpg",
       "images/lotes/769/02.jpg",
@@ -1343,7 +1469,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/769/01_principal.jpg",
     "desc": "Motocicleta HONDA PCX 150, ano/modelo 2020/2020, ofertada no Leilão 5 (lote 056). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 838,
@@ -1354,13 +1483,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/838/01_principal.jpg",
       "images/lotes/838/02.jpg",
@@ -1375,7 +1504,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/838/01_principal.jpg",
     "desc": "Motocicleta HONDA PCX 150, ano/modelo 2021/2022, ofertada no Leilão 5 (lote 057). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 773,
@@ -1386,13 +1518,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 11000,
+    "price": 4400,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/773/01_principal.jpg",
       "images/lotes/773/02.jpg",
@@ -1407,7 +1539,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/773/01_principal.jpg",
     "desc": "Motocicleta HONDA POP 110, ano/modelo 2018/2018, ofertada no Leilão 5 (lote 059). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4400,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 772,
@@ -1418,13 +1553,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 13200,
+    "price": 5300,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/772/01_principal.jpg",
       "images/lotes/772/02.jpg",
@@ -1438,7 +1573,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/772/01_principal.jpg",
     "desc": "Motocicleta HONDA X-ADV, ano/modelo 2018/2018, ofertada no Leilão 5 (lote 060). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5300,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 565,
@@ -1449,13 +1587,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 11000,
+    "price": 4400,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/565/01_principal.jpg",
       "images/lotes/565/02.jpg",
@@ -1469,7 +1607,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/565/01_principal.jpg",
     "desc": "Motocicleta HONDA XRE 300, ano/modelo 2019/2019, ofertada no Leilão 5 (lote 061). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4400,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 842,
@@ -1480,13 +1621,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 17000,
+    "price": 6800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/842/01_principal.jpg",
       "images/lotes/842/02.jpg",
@@ -1501,7 +1642,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/842/01_principal.jpg",
     "desc": "Motocicleta HONDA XRE 300, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 062). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 558,
@@ -1512,13 +1656,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 25500,
+    "price": 10200,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/558/01_principal.jpg",
       "images/lotes/558/02.jpg",
@@ -1533,7 +1677,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/558/01_principal.jpg",
     "desc": "Motocicleta KAWASAKI NINJA 400, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 063). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 10200,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 561,
@@ -1544,13 +1691,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 25500,
+    "price": 10200,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/561/01_principal.jpg",
       "images/lotes/561/02.jpg",
@@ -1565,7 +1712,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/561/01_principal.jpg",
     "desc": "Motocicleta KAWASAKI VERSYS 650, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 064). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 10200,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 562,
@@ -1576,13 +1726,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 13500,
+    "price": 5400,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/562/01_principal.jpg",
       "images/lotes/562/02.jpg",
@@ -1597,7 +1747,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/562/01_principal.jpg",
     "desc": "Motocicleta TRIUMPH TIGER, ano/modelo 2017/2018, ofertada no Leilão 5 (lote 065). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5400,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 278,
@@ -1608,13 +1761,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 21000,
+    "price": 8400,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/278/01_principal.jpg",
       "images/lotes/278/02.jpg",
@@ -1629,7 +1782,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/278/01_principal.jpg",
     "desc": "Motocicleta TRIUMPH TIGER, ano/modelo 2020/2020, ofertada no Leilão 5 (lote 066). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 564,
@@ -1640,13 +1796,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 25500,
+    "price": 10200,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/564/01_principal.jpg",
       "images/lotes/564/02.jpg",
@@ -1661,7 +1817,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/564/01_principal.jpg",
     "desc": "Motocicleta TRIUMPH TIGER 900, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 069). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 10200,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 271,
@@ -1672,13 +1831,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 22000,
+    "price": 8800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/271/01_principal.jpg",
       "images/lotes/271/02.jpg",
@@ -1693,7 +1852,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/271/01_principal.jpg",
     "desc": "Motocicleta YAMAHA CROSSER 150, ano/modelo 2024/2024, ofertada no Leilão 5 (lote 070). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 8800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 703,
@@ -1704,13 +1866,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/703/01_principal.jpg",
       "images/lotes/703/02.jpg",
@@ -1725,7 +1887,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/703/01_principal.jpg",
     "desc": "Motocicleta YAMAHA FAZER 150, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 071). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 481,
@@ -1736,13 +1901,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/481/01_principal.jpg",
       "images/lotes/481/02.jpg",
@@ -1756,7 +1921,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/481/01_principal.jpg",
     "desc": "Motocicleta YAMAHA FZ25 FAZER, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 073). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 557,
@@ -1767,13 +1935,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 12100,
+    "price": 4800,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/557/01_principal.jpg",
       "images/lotes/557/02.jpg",
@@ -1788,7 +1956,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/557/01_principal.jpg",
     "desc": "Motocicleta YAMAHA MT-03, ano/modelo 2019/2020, ofertada no Leilão 5 (lote 074). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4800,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 75,
@@ -1799,13 +1970,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 15400,
-    "bids": 0,
+    "price": 16000,
+    "bids": 3,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/75/01_principal.jpg",
       "images/lotes/75/02.jpg",
@@ -1820,7 +1991,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/75/01_principal.jpg",
     "desc": "Motocicleta YAMAHA MT-03, ano/modelo 2020/2020, ofertada no Leilão 5 (lote 075). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 6200,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 560,
@@ -1831,13 +2005,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 22400,
+    "price": 9000,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/560/01_principal.jpg",
       "images/lotes/560/02.jpg",
@@ -1851,7 +2025,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/560/01_principal.jpg",
     "desc": "Motocicleta YAMAHA MT-09, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 076). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 707,
@@ -1862,13 +2039,13 @@ window.NL_REAL_LOTS = [
     "year": "2016/2017",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 9900,
+    "price": 4000,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/707/01_principal.jpg",
       "images/lotes/707/02.jpg",
@@ -1882,7 +2059,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/707/01_principal.jpg",
     "desc": "Motocicleta YAMAHA NEO 125, ano/modelo 2016/2017, ofertada no Leilão 5 (lote 077). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 4000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 487,
@@ -1893,13 +2073,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 8300,
+    "price": 3300,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/487/01_principal.jpg",
       "images/lotes/487/02.jpg",
@@ -1914,7 +2094,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/487/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XJ6, ano/modelo 2013/2013, ofertada no Leilão 5 (lote 079). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 3300,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 844,
@@ -1925,13 +2108,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/844/01_principal.jpg",
       "images/lotes/844/02.jpg",
@@ -1946,7 +2129,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/844/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XMAX 250, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 080). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 86,
@@ -1957,13 +2143,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/86/01_principal.jpg",
       "images/lotes/86/02.jpg",
@@ -1978,7 +2164,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/86/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XMAX 250, ano/modelo 2022/2023, ofertada no Leilão 5 (lote 081). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 489,
@@ -1989,13 +2178,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/489/01_principal.jpg",
       "images/lotes/489/02.jpg",
@@ -2010,7 +2199,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/489/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XMAX 250, ano/modelo 2023/2023, ofertada no Leilão 5 (lote 082). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 490,
@@ -2021,13 +2213,13 @@ window.NL_REAL_LOTS = [
     "year": "2010/2011",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 8300,
+    "price": 3300,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/490/01_principal.jpg",
       "images/lotes/490/02.jpg",
@@ -2042,7 +2234,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/490/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XT 660, ano/modelo 2010/2011, ofertada no Leilão 5 (lote 083). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 3300,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 636,
@@ -2053,13 +2248,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/636/01_principal.jpg",
       "images/lotes/636/02.jpg",
@@ -2074,7 +2269,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/636/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XTZ 150, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 084). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 843,
@@ -2085,13 +2283,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/843/01_principal.jpg",
       "images/lotes/843/02.jpg",
@@ -2106,7 +2304,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/843/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XTZ 150, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 085). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 845,
@@ -2117,19 +2318,22 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m3",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/845/01_principal.jpg"
     ],
     "photo": "images/lotes/845/01_principal.jpg",
     "desc": "Motocicleta YAMAHA XTZ 150, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 087). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 556,
@@ -2140,13 +2344,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 18700,
+    "price": 7500,
     "bids": 0,
     "media": "m1",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/556/01_principal.jpg",
       "images/lotes/556/02.jpg",
@@ -2159,7 +2363,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/556/01_principal.jpg",
     "desc": "Motocicleta YAMAHA YS150 FAZER, ano/modelo 2022/2022, ofertada no Leilão 5 (lote 090). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 7500,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 637,
@@ -2170,13 +2377,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 14000,
+    "price": 5600,
     "bids": 0,
     "media": "m2",
     "ends": "+1d 6h",
-    "auction": "Leilão 5 — 26/10",
-    "auctionNum": 5,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/637/01_principal.jpg",
       "images/lotes/637/02.jpg",
@@ -2190,7 +2397,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/637/01_principal.jpg",
     "desc": "Motocicleta HONDA NXR 160, ano/modelo 2020/2020, ofertada no Leilão 5 (lote 525). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 5600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 571,
@@ -2201,13 +2411,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/571/01_principal.jpg",
       "images/lotes/571/02.jpg",
@@ -2222,7 +2432,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/571/01_principal.jpg",
     "desc": "Veículo TOYOTA HILUX 2.8, ano/modelo 2021/2021, ofertado no Leilão 20 (lote 01). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 566,
@@ -2233,13 +2446,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 97200,
+    "price": 38900,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/566/01_principal.jpg",
       "images/lotes/566/02.jpg",
@@ -2253,7 +2466,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/566/01_principal.jpg",
     "desc": "Veículo BMW X1 2.0, ano/modelo 2022/2022, ofertado no Leilão 20 (lote 02). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 38900,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 567,
@@ -2264,13 +2480,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/567/01_principal.jpg",
       "images/lotes/567/02.jpg",
@@ -2283,7 +2499,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/567/01_principal.jpg",
     "desc": "Veículo TOYOTA COROLLA CROSS 1.8, ano/modelo 2021/2022, ofertado no Leilão 20 (lote 03). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 568,
@@ -2294,13 +2513,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/568/01_principal.jpg",
       "images/lotes/568/02.jpg",
@@ -2315,7 +2534,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/568/01_principal.jpg",
     "desc": "Veículo NISSAN KICKS 1.6, ano/modelo 2019/2020, ofertado no Leilão 20 (lote 04). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 569,
@@ -2326,13 +2548,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 39000,
+    "price": 15600,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/569/01_principal.jpg",
       "images/lotes/569/02.jpg",
@@ -2346,7 +2568,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/569/01_principal.jpg",
     "desc": "Veículo TOYOTA HILUX 3.0, ano/modelo 2015/2015, ofertado no Leilão 20 (lote 05). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15600,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 570,
@@ -2357,13 +2582,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/570/01_principal.jpg",
       "images/lotes/570/02.jpg",
@@ -2378,7 +2603,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/570/01_principal.jpg",
     "desc": "Veículo FIAT TORO 1.8, ano/modelo 2021/2021, ofertado no Leilão 20 (lote 06). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 574,
@@ -2389,13 +2617,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/574/01_principal.jpg",
       "images/lotes/574/02.jpg",
@@ -2410,7 +2638,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/574/01_principal.jpg",
     "desc": "Veículo NISSAN KICKS 1.6, ano/modelo 2023/2023, ofertado no Leilão 20 (lote 07). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 572,
@@ -2421,13 +2652,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/572/01_principal.jpg",
       "images/lotes/572/02.jpg",
@@ -2442,7 +2673,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/572/01_principal.jpg",
     "desc": "Veículo CHEVROLET TRACKER 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 08). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 573,
@@ -2453,13 +2687,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/573/01_principal.jpg",
       "images/lotes/573/02.jpg",
@@ -2474,7 +2708,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/573/01_principal.jpg",
     "desc": "Veículo CHEVROLET EQUINOX 2.0, ano/modelo 2019/2019, ofertado no Leilão 20 (lote 09). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 577,
@@ -2485,13 +2722,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/577/01_principal.jpg",
       "images/lotes/577/02.jpg",
@@ -2506,7 +2743,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/577/01_principal.jpg",
     "desc": "Veículo CHEVROLET S10 2.8, ano/modelo 2018/2019, ofertado no Leilão 20 (lote 010). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 575,
@@ -2517,13 +2757,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 39000,
+    "price": 15600,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/575/01_principal.jpg",
       "images/lotes/575/02.jpg",
@@ -2537,7 +2777,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/575/01_principal.jpg",
     "desc": "Veículo HYUNDAI SANTA FE 3.3, ano/modelo 2017/2018, ofertado no Leilão 20 (lote 011). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15600,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 576,
@@ -2548,13 +2791,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/576/01_principal.jpg",
       "images/lotes/576/02.jpg",
@@ -2568,7 +2811,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/576/01_principal.jpg",
     "desc": "Veículo CHEVROLET CRUZE 1.4, ano/modelo 2017/2018, ofertado no Leilão 20 (lote 012). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 580,
@@ -2579,13 +2825,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/580/01_principal.jpg",
       "images/lotes/580/02.jpg",
@@ -2599,7 +2845,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/580/01_principal.jpg",
     "desc": "Veículo CHEVROLET ONIX 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 013). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 578,
@@ -2610,13 +2859,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/578/01_principal.jpg",
       "images/lotes/578/02.jpg",
@@ -2631,7 +2880,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/578/01_principal.jpg",
     "desc": "Veículo JEEP RENEGADE 1.8, ano/modelo 2019/2019, ofertado no Leilão 20 (lote 014). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 579,
@@ -2642,13 +2894,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/579/01_principal.jpg",
       "images/lotes/579/02.jpg",
@@ -2663,7 +2915,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/579/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20 1.0, ano/modelo 2021/2022, ofertado no Leilão 20 (lote 015). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 583,
@@ -2674,13 +2929,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/583/01_principal.jpg",
       "images/lotes/583/02.jpg",
@@ -2695,7 +2950,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/583/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN TAOS 1.4, ano/modelo 2022/2022, ofertado no Leilão 20 (lote 016). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 581,
@@ -2706,13 +2964,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/581/01_principal.jpg",
       "images/lotes/581/02.jpg",
@@ -2727,7 +2985,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/581/01_principal.jpg",
     "desc": "Veículo TOYOTA COROLLA 2.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 017). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 582,
@@ -2738,13 +2999,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/582/01_principal.jpg",
       "images/lotes/582/02.jpg",
@@ -2759,7 +3020,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/582/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN GOLF 2.0, ano/modelo 2015/2015, ofertado no Leilão 20 (lote 018). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 586,
@@ -2770,13 +3034,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/586/01_principal.jpg",
       "images/lotes/586/02.jpg",
@@ -2791,7 +3055,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/586/01_principal.jpg",
     "desc": "Veículo CHEVROLET TRACKER 1.0, ano/modelo 2022/2022, ofertado no Leilão 20 (lote 019). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 584,
@@ -2802,13 +3069,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/584/01_principal.jpg",
       "images/lotes/584/02.jpg",
@@ -2823,7 +3090,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/584/01_principal.jpg",
     "desc": "Veículo HONDA FIT 1.5, ano/modelo 2020/2020, ofertado no Leilão 20 (lote 020). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 585,
@@ -2834,13 +3104,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/585/01_principal.jpg",
       "images/lotes/585/02.jpg",
@@ -2855,7 +3125,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/585/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN T-CROSS 1.4, ano/modelo 2019/2020, ofertado no Leilão 20 (lote 021). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 589,
@@ -2866,13 +3139,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/589/01_principal.jpg",
       "images/lotes/589/02.jpg",
@@ -2887,7 +3160,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/589/01_principal.jpg",
     "desc": "Veículo RENAULT OROCH 1.3, ano/modelo 2023/2024, ofertado no Leilão 20 (lote 022). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 588,
@@ -2898,13 +3174,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/588/01_principal.jpg",
       "images/lotes/588/02.jpg",
@@ -2918,7 +3194,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/588/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 025). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 592,
@@ -2929,13 +3208,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/592/01_principal.jpg",
       "images/lotes/592/02.jpg",
@@ -2949,7 +3228,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/592/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN POLO 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 026). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 590,
@@ -2960,13 +3242,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/590/01_principal.jpg",
       "images/lotes/590/02.jpg",
@@ -2981,7 +3263,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/590/01_principal.jpg",
     "desc": "Veículo FIAT ARGO 1.8, ano/modelo 2017/2018, ofertado no Leilão 20 (lote 027). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 591,
@@ -2992,13 +3277,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 31200,
+    "price": 12500,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/591/01_principal.jpg",
       "images/lotes/591/02.jpg",
@@ -3013,7 +3298,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/591/01_principal.jpg",
     "desc": "Veículo FORD FUSION 2.0, ano/modelo 2013/2013, ofertado no Leilão 20 (lote 028). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12500,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 595,
@@ -3024,13 +3312,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/595/01_principal.jpg",
       "images/lotes/595/02.jpg",
@@ -3045,7 +3333,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/595/01_principal.jpg",
     "desc": "Veículo CHEVROLET ONIX 1.0, ano/modelo 2018/2019, ofertado no Leilão 20 (lote 029). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 593,
@@ -3056,13 +3347,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2014",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/593/01_principal.jpg",
       "images/lotes/593/02.jpg",
@@ -3076,7 +3367,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/593/01_principal.jpg",
     "desc": "Veículo HONDA FIT 1.5, ano/modelo 2013/2014, ofertado no Leilão 20 (lote 030). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 594,
@@ -3087,13 +3381,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/594/01_principal.jpg",
       "images/lotes/594/02.jpg",
@@ -3106,7 +3400,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/594/01_principal.jpg",
     "desc": "Veículo RENAULT CAPTUR 1.3, ano/modelo 2023/2023, ofertado no Leilão 20 (lote 031). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 598,
@@ -3117,13 +3414,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/598/01_principal.jpg",
       "images/lotes/598/02.jpg",
@@ -3138,7 +3435,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/598/01_principal.jpg",
     "desc": "Veículo FIAT CRONOS 1.8, ano/modelo 2018/2019, ofertado no Leilão 20 (lote 032). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 596,
@@ -3149,13 +3449,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/596/01_principal.jpg",
       "images/lotes/596/02.jpg",
@@ -3169,7 +3469,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/596/01_principal.jpg",
     "desc": "Veículo HYUNDAI I30 1.8, ano/modelo 2014/2015, ofertado no Leilão 20 (lote 033). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 597,
@@ -3180,13 +3483,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/597/01_principal.jpg",
       "images/lotes/597/02.jpg",
@@ -3201,7 +3504,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/597/01_principal.jpg",
     "desc": "Veículo FIAT MOBI 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 034). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 601,
@@ -3212,13 +3518,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/601/01_principal.jpg",
       "images/lotes/601/02.jpg",
@@ -3233,7 +3539,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/601/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN GOL 1.0, ano/modelo 2023/2023, ofertado no Leilão 20 (lote 035). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 599,
@@ -3244,13 +3553,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/599/01_principal.jpg",
       "images/lotes/599/02.jpg",
@@ -3265,7 +3574,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/599/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN VIRTUS 1.0, ano/modelo 2021/2021, ofertado no Leilão 20 (lote 036). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 600,
@@ -3276,13 +3588,13 @@ window.NL_REAL_LOTS = [
     "year": "2016/2017",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/600/01_principal.jpg",
       "images/lotes/600/02.jpg",
@@ -3297,7 +3609,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/600/01_principal.jpg",
     "desc": "Veículo FIAT MOBI 1.0, ano/modelo 2016/2017, ofertado no Leilão 20 (lote 037). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 604,
@@ -3308,13 +3623,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/604/01_principal.jpg",
       "images/lotes/604/02.jpg",
@@ -3328,7 +3643,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/604/01_principal.jpg",
     "desc": "Veículo RENAULT SANDERO 1.6, ano/modelo 2020/2021, ofertado no Leilão 20 (lote 038). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 602,
@@ -3339,13 +3657,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/602/01_principal.jpg",
       "images/lotes/602/02.jpg",
@@ -3360,7 +3678,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/602/01_principal.jpg",
     "desc": "Veículo RENAULT LOGAN 1.0, ano/modelo 2021/2022, ofertado no Leilão 20 (lote 039). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 603,
@@ -3371,13 +3692,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/603/01_principal.jpg",
       "images/lotes/603/02.jpg",
@@ -3392,7 +3713,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/603/01_principal.jpg",
     "desc": "Veículo FORD KA SEDAN 1.0, ano/modelo 2019/2020, ofertado no Leilão 20 (lote 040). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 607,
@@ -3403,13 +3727,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/607/01_principal.jpg",
       "images/lotes/607/02.jpg",
@@ -3424,7 +3748,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/607/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN SAVEIRO 1.6, ano/modelo 2013/2013, ofertado no Leilão 20 (lote 041). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 605,
@@ -3435,13 +3762,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2016",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/605/01_principal.jpg",
       "images/lotes/605/02.jpg",
@@ -3455,7 +3782,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/605/01_principal.jpg",
     "desc": "Veículo NISSAN MARCH 1.0, ano/modelo 2015/2016, ofertado no Leilão 20 (lote 042). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 606,
@@ -3466,13 +3796,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/606/01_principal.jpg",
       "images/lotes/606/02.jpg",
@@ -3486,7 +3816,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/606/01_principal.jpg",
     "desc": "Veículo FIAT STRADA 1.4, ano/modelo 2013/2013, ofertado no Leilão 20 (lote 043). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 608,
@@ -3497,13 +3830,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2014",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/608/01_principal.jpg",
       "images/lotes/608/02.jpg",
@@ -3518,7 +3851,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/608/01_principal.jpg",
     "desc": "Veículo FIAT IDEA 1.8, ano/modelo 2014/2014, ofertado no Leilão 20 (lote 044). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 611,
@@ -3529,13 +3865,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2014",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/611/01_principal.jpg",
       "images/lotes/611/02.jpg",
@@ -3550,7 +3886,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/611/01_principal.jpg",
     "desc": "Veículo CHEVROLET CELTA 1.0, ano/modelo 2013/2014, ofertado no Leilão 20 (lote 045). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 609,
@@ -3561,13 +3900,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/609/01_principal.jpg",
       "images/lotes/609/02.jpg",
@@ -3581,7 +3920,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/609/01_principal.jpg",
     "desc": "Veículo FIAT ARGO 1.0, ano/modelo 2019/2020, ofertado no Leilão 20 (lote 046). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 610,
@@ -3592,13 +3934,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/610/01_principal.jpg",
       "images/lotes/610/02.jpg",
@@ -3613,7 +3955,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/610/01_principal.jpg",
     "desc": "Veículo CITROEN C3 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 047). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 614,
@@ -3624,13 +3969,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/614/01_principal.jpg",
       "images/lotes/614/02.jpg",
@@ -3646,7 +3991,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/614/01_principal.jpg",
     "desc": "Veículo HONDA CIVIC 2.0, ano/modelo 2021/2021, ofertado no Leilão 20 (lote 048). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 612,
@@ -3657,13 +4005,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/612/01_principal.jpg",
       "images/lotes/612/02.jpg",
@@ -3678,7 +4026,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/612/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN GOL 1.0, ano/modelo 2022/2023, ofertado no Leilão 20 (lote 049). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 613,
@@ -3689,13 +4040,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/613/01_principal.jpg",
       "images/lotes/613/02.jpg",
@@ -3710,7 +4061,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/613/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20 1.0, ano/modelo 2022/2022, ofertado no Leilão 20 (lote 050). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 617,
@@ -3721,13 +4075,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2016",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/617/01_principal.jpg",
       "images/lotes/617/02.jpg",
@@ -3742,7 +4096,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/617/01_principal.jpg",
     "desc": "Veículo FORD KA 1.0, ano/modelo 2015/2016, ofertado no Leilão 20 (lote 051). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 616,
@@ -3753,13 +4110,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/616/01_principal.jpg",
       "images/lotes/616/02.jpg",
@@ -3774,7 +4131,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/616/01_principal.jpg",
     "desc": "Veículo FIAT STRADA 1.3, ano/modelo 2022/2022, ofertado no Leilão 20 (lote 052). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 619,
@@ -3785,13 +4145,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/619/01_principal.jpg",
       "images/lotes/619/02.jpg",
@@ -3806,7 +4166,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/619/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN UP 1.0, ano/modelo 2014/2015, ofertado no Leilão 20 (lote 053). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 618,
@@ -3817,13 +4180,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/618/01_principal.jpg",
       "images/lotes/618/02.jpg",
@@ -3838,7 +4201,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/618/01_principal.jpg",
     "desc": "Veículo FORD KA 1.0, ano/modelo 2017/2018, ofertado no Leilão 20 (lote 054). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 587,
@@ -3849,13 +4215,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/587/01_principal.jpg",
       "images/lotes/587/02.jpg",
@@ -3869,7 +4235,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/587/01_principal.jpg",
     "desc": "Veículo FIAT TORO 2.0, ano/modelo 2021/2022, ofertado no Leilão 20 (lote 055). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 615,
@@ -3880,13 +4249,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 20 — 26/10",
-    "auctionNum": 20,
-    "auctionDate": "26/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/615/01_principal.jpg",
       "images/lotes/615/02.jpg",
@@ -3901,7 +4270,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/615/01_principal.jpg",
     "desc": "Veículo RENAULT SANDERO 1.0, ano/modelo 2017/2018, ofertado no Leilão 20 (lote 057). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 941,
@@ -3912,13 +4284,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/941/01_principal.jpg",
       "images/lotes/941/02.jpg",
@@ -3933,7 +4305,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/941/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 01). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 937,
@@ -3944,13 +4319,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/937/01_principal.jpg",
       "images/lotes/937/02.jpg",
@@ -3965,7 +4340,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/937/01_principal.jpg",
     "desc": "Veículo TOYOTA COROLLA CROSS 2.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 02). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 938,
@@ -3976,13 +4354,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/938/01_principal.jpg",
       "images/lotes/938/02.jpg",
@@ -3995,7 +4373,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/938/01_principal.jpg",
     "desc": "Veículo CITROEN C3 AIRCROSS 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 03). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 936,
@@ -4006,13 +4387,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/936/01_principal.jpg",
       "images/lotes/936/02.jpg",
@@ -4027,7 +4408,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/936/01_principal.jpg",
     "desc": "Veículo PEUGEOT 208 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 04). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 939,
@@ -4038,13 +4422,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2017",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/939/01_principal.jpg",
       "images/lotes/939/08.jpg",
@@ -4053,7 +4437,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/939/01_principal.jpg",
     "desc": "Veículo CHEVROLET CRUZE 1.4, ano/modelo 2017/2017, ofertado no Leilão 32 (lote 05). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 940,
@@ -4064,13 +4451,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/940/01_principal.jpg",
       "images/lotes/940/02.jpg",
@@ -4085,7 +4472,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/940/01_principal.jpg",
     "desc": "Veículo FIAT FASTBACK 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 06). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 944,
@@ -4096,13 +4486,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/944/01_principal.jpg",
       "images/lotes/944/02.jpg",
@@ -4117,7 +4507,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/944/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 07). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 942,
@@ -4128,13 +4521,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/942/01_principal.jpg",
       "images/lotes/942/02.jpg",
@@ -4149,7 +4542,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/942/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 08). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 943,
@@ -4160,13 +4556,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 119600,
+    "price": 47800,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/943/01_principal.jpg",
       "images/lotes/943/02.jpg",
@@ -4180,7 +4576,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/943/01_principal.jpg",
     "desc": "Veículo GWM HAVAL H6 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 09). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 47800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 947,
@@ -4191,13 +4590,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/947/01_principal.jpg",
       "images/lotes/947/02.jpg",
@@ -4212,7 +4611,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/947/01_principal.jpg",
     "desc": "Veículo TOYOTA HILUX 2.8, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 010). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 945,
@@ -4223,13 +4625,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/945/01_principal.jpg",
       "images/lotes/945/02.jpg",
@@ -4243,7 +4645,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/945/01_principal.jpg",
     "desc": "Veículo HONDA HR-V 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 011). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 948,
@@ -4254,13 +4659,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/948/01_principal.jpg",
       "images/lotes/948/02.jpg",
@@ -4275,7 +4680,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/948/01_principal.jpg",
     "desc": "Veículo CHEVROLET ONIX 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 013). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 951,
@@ -4286,13 +4694,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 119600,
+    "price": 47800,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/951/01_principal.jpg",
       "images/lotes/951/02.jpg",
@@ -4306,7 +4714,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/951/01_principal.jpg",
     "desc": "Veículo BYD KING 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 014). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 47800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 949,
@@ -4317,13 +4728,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/949/01_principal.jpg",
       "images/lotes/949/02.jpg",
@@ -4337,7 +4748,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/949/01_principal.jpg",
     "desc": "Veículo JEEP COMMANDER 1.3, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 015). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 950,
@@ -4348,13 +4762,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/950/01_principal.jpg",
       "images/lotes/950/02.jpg",
@@ -4368,7 +4782,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/950/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 016). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 952,
@@ -4379,13 +4796,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 119600,
+    "price": 47800,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/952/01_principal.jpg",
       "images/lotes/952/08.jpg",
@@ -4394,7 +4811,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/952/01_principal.jpg",
     "desc": "Veículo BYD DOLPHIN MINI, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 017). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 47800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 955,
@@ -4405,13 +4825,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/955/01_principal.jpg",
       "images/lotes/955/02.jpg",
@@ -4426,7 +4846,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/955/01_principal.jpg",
     "desc": "Veículo FIAT FASTBACK 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 018). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 954,
@@ -4437,13 +4860,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/954/01_principal.jpg",
       "images/lotes/954/02.jpg",
@@ -4457,7 +4880,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/954/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20S 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 020). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 958,
@@ -4468,13 +4894,13 @@ window.NL_REAL_LOTS = [
     "year": "2025/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/958/01_principal.jpg",
       "images/lotes/958/02.jpg",
@@ -4489,7 +4915,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/958/01_principal.jpg",
     "desc": "Veículo HONDA HR-V 1.5, ano/modelo 2025/2025, ofertado no Leilão 32 (lote 021). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 956,
@@ -4500,13 +4929,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/956/01_principal.jpg",
       "images/lotes/956/02.jpg",
@@ -4519,7 +4948,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/956/01_principal.jpg",
     "desc": "Veículo RENAULT KARDIAN 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 022). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 957,
@@ -4530,13 +4962,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/957/01_principal.jpg",
       "images/lotes/957/02.jpg",
@@ -4551,7 +4983,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/957/01_principal.jpg",
     "desc": "Veículo CHEVROLET MONTANA 1.2, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 023). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 961,
@@ -4562,13 +4997,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/961/01_principal.jpg",
       "images/lotes/961/02.jpg",
@@ -4583,7 +5018,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/961/01_principal.jpg",
     "desc": "Veículo RENAULT KWID 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 024). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 959,
@@ -4594,13 +5032,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/959/01_principal.jpg",
       "images/lotes/959/02.jpg",
@@ -4612,7 +5050,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/959/01_principal.jpg",
     "desc": "Veículo FIAT PULSE 1.3, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 025). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 962,
@@ -4623,13 +5064,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 119600,
+    "price": 47800,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/962/01_principal.jpg",
       "images/lotes/962/02.jpg",
@@ -4644,7 +5085,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/962/01_principal.jpg",
     "desc": "Veículo BMW SERIE 3 320I 2.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 027). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 47800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 965,
@@ -4655,13 +5099,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/965/01_principal.jpg",
       "images/lotes/965/02.jpg",
@@ -4675,7 +5119,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/965/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.6, ano/modelo 2019/2020, ofertado no Leilão 32 (lote 028). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 963,
@@ -4686,13 +5133,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 119600,
+    "price": 47800,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/963/01_principal.jpg",
       "images/lotes/963/02.jpg",
@@ -4709,7 +5156,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/963/01_principal.jpg",
     "desc": "Veículo BYD SONG PLUS 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 029). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 47800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 964,
@@ -4720,13 +5170,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/964/01_principal.jpg",
       "images/lotes/964/02.jpg",
@@ -4740,7 +5190,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/964/01_principal.jpg",
     "desc": "Veículo FIAT FASTBACK 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 030). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 968,
@@ -4751,13 +5204,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/968/01_principal.jpg",
       "images/lotes/968/02.jpg",
@@ -4771,7 +5224,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/968/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20S 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 031). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 966,
@@ -4782,13 +5238,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/966/01_principal.jpg",
       "images/lotes/966/02.jpg",
@@ -4803,7 +5259,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/966/01_principal.jpg",
     "desc": "Veículo HONDA HR-V 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 032). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 967,
@@ -4814,13 +5273,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/967/01_principal.jpg",
       "images/lotes/967/08.jpg",
@@ -4829,7 +5288,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/967/01_principal.jpg",
     "desc": "Veículo NISSAN LEAF 110, ano/modelo 2022/2023, ofertado no Leilão 32 (lote 033). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 971,
@@ -4840,13 +5302,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/971/01_principal.jpg",
       "images/lotes/971/02.jpg",
@@ -4861,7 +5323,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/971/01_principal.jpg",
     "desc": "Veículo FIAT PULSE 1.3, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 034). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 969,
@@ -4872,13 +5337,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/969/01_principal.jpg",
       "images/lotes/969/07.jpg",
@@ -4887,7 +5352,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/969/01_principal.jpg",
     "desc": "Veículo JEEP RENEGADE 1.8, ano/modelo 2020/2021, ofertado no Leilão 32 (lote 035). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 970,
@@ -4898,20 +5366,23 @@ window.NL_REAL_LOTS = [
     "year": "2016/2016",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 30000,
+    "price": 12000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/970/01_principal.jpg",
       "images/lotes/970/09.jpg"
     ],
     "photo": "images/lotes/970/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN SAVEIRO 1.6, ano/modelo 2016/2016, ofertado no Leilão 32 (lote 036). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 12000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 974,
@@ -4922,13 +5393,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/974/01_principal.jpg",
       "images/lotes/974/02.jpg",
@@ -4943,7 +5414,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/974/01_principal.jpg",
     "desc": "Veículo RENAULT SANDERO 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 037). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 972,
@@ -4954,13 +5428,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2014",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 35900,
+    "price": 14400,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/972/01_principal.jpg",
       "images/lotes/972/08.jpg",
@@ -4969,7 +5443,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/972/01_principal.jpg",
     "desc": "Veículo BMW SERIE 1 125I 2.0, ano/modelo 2013/2014, ofertado no Leilão 32 (lote 038). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 14400,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 973,
@@ -4980,13 +5457,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 119600,
+    "price": 47800,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/973/01_principal.jpg",
       "images/lotes/973/02.jpg",
@@ -5000,7 +5477,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/973/01_principal.jpg",
     "desc": "Veículo CAOA CHERY TIGGO 7 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 039). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 47800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 977,
@@ -5011,13 +5491,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/977/01_principal.jpg",
       "images/lotes/977/02.jpg",
@@ -5032,7 +5512,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/977/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN TAOS 1.4, ano/modelo 2023/2023, ofertado no Leilão 32 (lote 040). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 975,
@@ -5043,13 +5526,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/975/01_principal.jpg",
       "images/lotes/975/02.jpg",
@@ -5064,7 +5547,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/975/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 041). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 976,
@@ -5075,13 +5561,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/976/01_principal.jpg",
       "images/lotes/976/02.jpg",
@@ -5096,7 +5582,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/976/01_principal.jpg",
     "desc": "Veículo CITROEN C3 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 042). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 980,
@@ -5107,13 +5596,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 84500,
+    "price": 33800,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/980/01_principal.jpg",
       "images/lotes/980/02.jpg",
@@ -5128,7 +5617,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/980/01_principal.jpg",
     "desc": "Veículo FIAT FASTBACK 1.0, ano/modelo 2022/2023, ofertado no Leilão 32 (lote 043). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 33800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 978,
@@ -5139,13 +5631,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/978/01_principal.jpg",
       "images/lotes/978/02.jpg",
@@ -5159,7 +5651,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/978/01_principal.jpg",
     "desc": "Veículo HYUNDAI HB20S 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 044). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 979,
@@ -5170,13 +5665,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/979/01_principal.jpg",
       "images/lotes/979/08.jpg",
@@ -5185,7 +5680,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/979/01_principal.jpg",
     "desc": "Veículo HONDA HR-V 1.8, ano/modelo 2021/2021, ofertado no Leilão 32 (lote 045). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 983,
@@ -5196,13 +5694,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/983/01_principal.jpg",
       "images/lotes/983/02.jpg",
@@ -5217,7 +5715,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/983/01_principal.jpg",
     "desc": "Veículo VOLKSWAGEN T-CROSS 1.0, ano/modelo 2019/2020, ofertado no Leilão 32 (lote 046). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 981,
@@ -5228,13 +5729,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/981/01_principal.jpg",
       "images/lotes/981/02.jpg",
@@ -5248,7 +5749,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/981/01_principal.jpg",
     "desc": "Veículo RENAULT KARDIAN 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 047). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 982,
@@ -5259,13 +5763,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 80000,
+    "price": 32000,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/982/01_principal.jpg",
       "images/lotes/982/02.jpg",
@@ -5279,7 +5783,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/982/01_principal.jpg",
     "desc": "Veículo JEEP COMPASS 1.3, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 048). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 32000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 986,
@@ -5290,13 +5797,13 @@ window.NL_REAL_LOTS = [
     "year": "2025/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/986/01_principal.jpg",
       "images/lotes/986/02.jpg",
@@ -5312,7 +5819,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/986/01_principal.jpg",
     "desc": "Veículo MITSUBISHI PAJERO 2.4, ano/modelo 2025/2025, ofertado no Leilão 32 (lote 049). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 984,
@@ -5323,13 +5833,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/984/01_principal.jpg",
       "images/lotes/984/07.jpg",
@@ -5338,7 +5848,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/984/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.6, ano/modelo 2024/2024, ofertado no Leilão 32 (lote 050). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 985,
@@ -5349,13 +5862,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/985/01_principal.jpg",
       "images/lotes/985/02.jpg",
@@ -5369,7 +5882,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/985/01_principal.jpg",
     "desc": "Veículo RENAULT KARDIAN 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 051). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 989,
@@ -5380,13 +5896,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/989/01_principal.jpg",
       "images/lotes/989/02.jpg",
@@ -5401,7 +5917,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/989/01_principal.jpg",
     "desc": "Veículo HYUNDAI CRETA 1.6, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 052). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 987,
@@ -5412,13 +5931,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/987/01_principal.jpg",
       "images/lotes/987/02.jpg",
@@ -5433,7 +5952,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/987/01_principal.jpg",
     "desc": "Veículo HONDA HR-V 1.5, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 053). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 988,
@@ -5444,13 +5966,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 104000,
+    "price": 41600,
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 32 — 27/10",
-    "auctionNum": 32,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/988/01_principal.jpg",
       "images/lotes/988/02.jpg",
@@ -5464,7 +5986,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/988/01_principal.jpg",
     "desc": "Veículo RENAULT KARDIAN 1.0, ano/modelo 2024/2025, ofertado no Leilão 32 (lote 054). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 41600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1110,
@@ -5475,13 +6000,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 170000,
+    "price": 68000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1110/01_principal.jpg",
       "images/lotes/1110/03.jpg",
@@ -5496,7 +6021,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1110/01_principal.jpg",
     "desc": "Caminhão/utilitário SCANIA R 510, ano/modelo 2018/2018, ofertado no Leilão 43 (lote 01). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 68000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1115,
@@ -5507,13 +6035,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1115/01_principal.jpg",
       "images/lotes/1115/02.jpg",
@@ -5528,7 +6056,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1115/01_principal.jpg",
     "desc": "Caminhão/utilitário TGX 29.440 12.4 I6, ano/modelo 2013/2013, ofertado no Leilão 43 (lote 02). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1112,
@@ -5539,13 +6070,13 @@ window.NL_REAL_LOTS = [
     "year": "2012/2012",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1112/01_principal.jpg",
       "images/lotes/1112/02.jpg",
@@ -5559,7 +6090,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1112/01_principal.jpg",
     "desc": "Caminhão/utilitário Mercedes Benz MB815 Manual, ano/modelo 2012/2012, ofertado no Leilão 43 (lote 04). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1111,
@@ -5570,13 +6104,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 230000,
+    "price": 92000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1111/01_principal.jpg",
       "images/lotes/1111/02.jpg",
@@ -5591,7 +6125,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1111/01_principal.jpg",
     "desc": "Caminhão/utilitário ACTROS 2546 LS, ano/modelo 2020/2020, ofertado no Leilão 43 (lote 05). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 92000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1113,
@@ -5602,13 +6139,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2014",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1113/01_principal.jpg",
       "images/lotes/1113/02.jpg",
@@ -5628,7 +6165,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1113/01_principal.jpg",
     "desc": "Caminhão/utilitário Caminhão 17 190 Volkswagen, ano/modelo 2014/2014, ofertado no Leilão 43 (lote 06). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1114,
@@ -5639,13 +6179,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2014",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1114/01_principal.jpg",
       "images/lotes/1114/03.jpg",
@@ -5654,7 +6194,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1114/01_principal.jpg",
     "desc": "Caminhão/utilitário Caminhão MB4144 Mercedes Benz, ano/modelo 2014/2014, ofertado no Leilão 43 (lote 07). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1118,
@@ -5665,13 +6208,13 @@ window.NL_REAL_LOTS = [
     "year": "2016/2016",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 170000,
+    "price": 68000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1118/01_principal.jpg",
       "images/lotes/1118/02.jpg",
@@ -5680,7 +6223,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1118/01_principal.jpg",
     "desc": "Caminhão/utilitário Caminhão MB4144 Mercedes Benz, ano/modelo 2016/2016, ofertado no Leilão 43 (lote 08). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 68000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1116,
@@ -5691,13 +6237,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 170000,
+    "price": 68000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1116/01_principal.jpg",
       "images/lotes/1116/02.jpg",
@@ -5712,7 +6258,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1116/01_principal.jpg",
     "desc": "Caminhão/utilitário MASTER FURGAO L3H2 - 13M3, ano/modelo 2015/2015, ofertado no Leilão 43 (lote 09). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 68000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1117,
@@ -5723,13 +6272,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1117/01_principal.jpg",
       "images/lotes/1117/02.jpg",
@@ -5746,7 +6295,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1117/01_principal.jpg",
     "desc": "Caminhão/utilitário Cavalo Mecânico R440 Scania, ano/modelo 2013/2013, ofertado no Leilão 43 (lote 010). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1119,
@@ -5757,13 +6309,13 @@ window.NL_REAL_LOTS = [
     "year": "2010/2010",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1119/01_principal.jpg",
       "images/lotes/1119/02.jpg",
@@ -5777,7 +6329,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1119/01_principal.jpg",
     "desc": "Caminhão/utilitário Caminhão Cargo2428 Ford, ano/modelo 2010/2010, ofertado no Leilão 43 (lote 011). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1120,
@@ -5788,13 +6343,13 @@ window.NL_REAL_LOTS = [
     "year": "2012/2012",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 125000,
+    "price": 50000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1120/01_principal.jpg",
       "images/lotes/1120/02.jpg",
@@ -5804,7 +6359,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1120/01_principal.jpg",
     "desc": "Caminhão/utilitário SPRINTER 311 CDI STREET 2, ano/modelo 2012/2012, ofertado no Leilão 43 (lote 012). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 50000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1121,
@@ -5815,13 +6373,13 @@ window.NL_REAL_LOTS = [
     "year": "Não informado",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 100000,
+    "price": 40000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1121/01_principal.jpg",
       "images/lotes/1121/02.jpg",
@@ -5836,7 +6394,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1121/01_principal.jpg",
     "desc": "Caminhão/utilitário CONSTELLATION 24.280 6.9 I6, ano/modelo Não informado, ofertado no Leilão 43 (lote 013). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 40000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1122,
@@ -5847,13 +6408,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 230000,
+    "price": 92000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1122/01_principal.jpg",
       "images/lotes/1122/02.jpg",
@@ -5868,7 +6429,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1122/01_principal.jpg",
     "desc": "Caminhão/utilitário SPRINTER FURGAO 416 CDI 2.2 BITURBO, ano/modelo 2022/2022, ofertado no Leilão 43 (lote 014). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 92000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1123,
@@ -5879,13 +6443,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 170000,
+    "price": 68000,
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1123/01_principal.jpg",
       "images/lotes/1123/02.jpg",
@@ -5901,7 +6465,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1123/01_principal.jpg",
     "desc": "Caminhão/utilitário Caminhão Express RDC 4X2 Volkswagen, ano/modelo 2019/2019, ofertado no Leilão 43 (lote 015). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 68000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1124,
@@ -5912,13 +6479,13 @@ window.NL_REAL_LOTS = [
     "year": "2015/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 170000,
+    "price": 68000,
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 43 — 27/10",
-    "auctionNum": 43,
-    "auctionDate": "27/10/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1124/01_principal.jpg",
       "images/lotes/1124/02.jpg",
@@ -5933,7 +6500,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1124/01_principal.jpg",
     "desc": "Caminhão/utilitário DELIVERY 8.160 3.8, ano/modelo 2015/2015, ofertado no Leilão 43 (lote 016). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria."
+    "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
+    "basePrice": 68000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1006,
@@ -5944,13 +6514,13 @@ window.NL_REAL_LOTS = [
     "year": "2025/2025",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 121000,
+    "price": 48400,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1006/01_principal.jpg",
       "images/lotes/1006/02.jpg",
@@ -5962,7 +6532,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1006/01_principal.jpg",
     "desc": "Embarcação SEA-DOO GTI SE 170, ano/modelo 2025/2025, ofertada no Leilão 34 (lote 01). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 48400,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1009,
@@ -5973,13 +6546,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 165000,
+    "price": 66000,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1009/01_principal.jpg",
       "images/lotes/1009/02.jpg",
@@ -5993,7 +6566,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1009/01_principal.jpg",
     "desc": "Embarcação Lancha 300 Nx Phantom, ano/modelo 2024/2024, ofertada no Leilão 34 (lote 02). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 66000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1041,
@@ -6004,13 +6580,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 65000,
+    "price": 26000,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1041/01_principal.jpg",
       "images/lotes/1041/02.jpg",
@@ -6019,7 +6595,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1041/01_principal.jpg",
     "desc": "Embarcação Sea Doo GTI SE 130 HP, ano/modelo 2019/2019, ofertada no Leilão 34 (lote 03). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 26000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1007,
@@ -6030,13 +6609,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 85000,
-    "bids": 0,
+    "price": 85900,
+    "bids": 1,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1007/01_principal.jpg",
       "images/lotes/1007/02.jpg",
@@ -6048,7 +6627,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1007/01_principal.jpg",
     "desc": "Embarcação SEA DOO RXT-X 300, ano/modelo 2022/2022, ofertada no Leilão 34 (lote 04). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 34000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1008,
@@ -6059,13 +6641,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 110000,
+    "price": 44000,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 44 — 03/11",
+    "auctionNum": 44,
+    "auctionDate": "03/11/2026",
     "photos": [
       "images/lotes/1008/01_principal.jpg",
       "images/lotes/1008/02.jpg",
@@ -6078,7 +6660,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1008/01_principal.jpg",
     "desc": "Embarcação SEA DOO GTX 300 LIMITED, ano/modelo 2023/2023, ofertada no Leilão 34 (lote 05). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 44000,
+    "auctionTime": "10:00",
+    "endsAt": 1793718000000
   },
   {
     "id": 1012,
@@ -6089,13 +6674,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 72000,
+    "price": 28800,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1012/01_principal.jpg",
       "images/lotes/1012/02.jpg",
@@ -6106,7 +6691,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1012/01_principal.jpg",
     "desc": "Embarcação YAMAHA GP 1800 R, ano/modelo 2019/2019, ofertada no Leilão 34 (lote 06). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 28800,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1011,
@@ -6117,13 +6705,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 121000,
+    "price": 48400,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1011/01_principal.jpg",
       "images/lotes/1011/02.jpg",
@@ -6135,7 +6723,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1011/01_principal.jpg",
     "desc": "Embarcação YAMAHA VX CRUISER 1100, ano/modelo 2023/2023, ofertada no Leilão 34 (lote 08). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 48400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1068,
@@ -6146,13 +6737,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 72000,
+    "price": 28800,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1068/01_principal.jpg",
       "images/lotes/1068/02.jpg",
@@ -6162,7 +6753,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1068/01_principal.jpg",
     "desc": "Embarcação SEA-DOO GTI SE, ano/modelo 2019/2019, ofertada no Leilão 34 (lote 09). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 28800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1013,
@@ -6173,13 +6767,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 121000,
+    "price": 48400,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1013/01_principal.jpg",
       "images/lotes/1013/02.jpg",
@@ -6192,7 +6786,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1013/01_principal.jpg",
     "desc": "Embarcação Sea-Doo Fish-pro, ano/modelo 2023/2023, ofertada no Leilão 34 (lote 010). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 48400,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1067,
@@ -6203,13 +6800,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2017",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 72000,
+    "price": 28800,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1067/01_principal.jpg",
       "images/lotes/1067/02.jpg",
@@ -6218,7 +6815,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1067/01_principal.jpg",
     "desc": "Embarcação SEA-DOO GTX 155, ano/modelo 2017/2017, ofertada no Leilão 34 (lote 011). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 28800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1021,
@@ -6229,13 +6829,13 @@ window.NL_REAL_LOTS = [
     "year": "2021/2021",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 68000,
+    "price": 27200,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1021/01_principal.jpg",
       "images/lotes/1021/02.jpg",
@@ -6247,7 +6847,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1021/01_principal.jpg",
     "desc": "Embarcação Can-Am Maverick X3, ano/modelo 2021/2021, ofertada no Leilão 34 (lote 012). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 27200,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1022,
@@ -6258,13 +6861,13 @@ window.NL_REAL_LOTS = [
     "year": "2017/2017",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 72000,
+    "price": 28800,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1022/01_principal.jpg",
       "images/lotes/1022/03.jpg",
@@ -6276,7 +6879,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1022/01_principal.jpg",
     "desc": "Embarcação Sea-Doo RXT-X 300, ano/modelo 2017/2017, ofertada no Leilão 34 (lote 013). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 28800,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1014,
@@ -6287,13 +6893,13 @@ window.NL_REAL_LOTS = [
     "year": "2013/2013",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 55000,
+    "price": 22000,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 45 — 04/11",
+    "auctionNum": 45,
+    "auctionDate": "04/11/2026",
     "photos": [
       "images/lotes/1014/01_principal.jpg",
       "images/lotes/1014/02.jpg",
@@ -6303,7 +6909,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1014/01_principal.jpg",
     "desc": "Embarcação Kawasaki ULTRA LX, ano/modelo 2013/2013, ofertada no Leilão 34 (lote 014). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 22000,
+    "auctionTime": "10:00",
+    "endsAt": 1793804400000
   },
   {
     "id": 1015,
@@ -6314,13 +6923,13 @@ window.NL_REAL_LOTS = [
     "year": "2008/2008",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1015/01_principal.jpg",
       "images/lotes/1015/03.jpeg",
@@ -6334,7 +6943,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1015/01_principal.jpg",
     "desc": "Embarcação Honda Quadriciclo Four Trax 420, ano/modelo 2008/2008, ofertada no Leilão 34 (lote 015). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1016,
@@ -6345,13 +6957,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 121000,
+    "price": 48400,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1016/01_principal.jpg",
       "images/lotes/1016/02.jpg",
@@ -6362,7 +6974,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1016/01_principal.jpg",
     "desc": "Embarcação SEA-DOO APEX RXP-X, ano/modelo 2023/2023, ofertada no Leilão 34 (lote 016). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 48400,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1059,
@@ -6373,13 +6988,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 110000,
+    "price": 44000,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 47 — 06/11",
+    "auctionNum": 47,
+    "auctionDate": "06/11/2026",
     "photos": [
       "images/lotes/1059/01_principal.jpg",
       "images/lotes/1059/02.jpg",
@@ -6390,7 +7005,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1059/01_principal.jpg",
     "desc": "Embarcação Sea Doo Gti 170 Se, ano/modelo 2024/2024, ofertada no Leilão 34 (lote 017). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 44000,
+    "auctionTime": "10:00",
+    "endsAt": 1793977200000
   },
   {
     "id": 1017,
@@ -6401,13 +7019,13 @@ window.NL_REAL_LOTS = [
     "year": "2024/2024",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 110000,
+    "price": 44000,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1017/01_principal.jpg",
       "images/lotes/1017/02.jpg",
@@ -6419,7 +7037,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1017/01_principal.jpg",
     "desc": "Embarcação Sea Doo Gti Wake 170, ano/modelo 2024/2024, ofertada no Leilão 34 (lote 018). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 44000,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1018,
@@ -6430,13 +7051,13 @@ window.NL_REAL_LOTS = [
     "year": "2022/2022",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 94000,
+    "price": 37600,
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 46 — 05/11",
+    "auctionNum": 46,
+    "auctionDate": "05/11/2026",
     "photos": [
       "images/lotes/1018/01_principal.jpg",
       "images/lotes/1018/03.jpg",
@@ -6448,7 +7069,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1018/01_principal.jpg",
     "desc": "Embarcação Sea-doo Fish Pro 170, ano/modelo 2022/2022, ofertada no Leilão 34 (lote 019). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 37600,
+    "auctionTime": "10:00",
+    "endsAt": 1793890800000
   },
   {
     "id": 1075,
@@ -6459,13 +7083,13 @@ window.NL_REAL_LOTS = [
     "year": "2023/2023",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 121000,
+    "price": 48400,
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 34 — 07/11",
-    "auctionNum": 34,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1075/01_principal.jpg",
       "images/lotes/1075/02.jpg",
@@ -6479,7 +7103,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1075/01_principal.jpg",
     "desc": "Embarcação Sea-Doo RXP-X Apex Carbon 300, ano/modelo 2023/2023, ofertada no Leilão 34 (lote 020). O bem é comercializado no estado em que se encontra; motorização, acessórios e avarias devem ser conferidos na vistoria. Consulte o edital para documentação e retirada.",
-    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital."
+    "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
+    "basePrice": 48400,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1079,
@@ -6490,13 +7117,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c1",
     "ends": "+13d 4h",
-    "auction": "Leilão 39 — 07/11",
-    "auctionNum": 39,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1079/01_principal.jpeg",
       "images/lotes/1079/02.jpeg",
@@ -6506,7 +7133,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1079/01_principal.jpeg",
     "desc": "Veículo CHEVROLET ONIX LT 1.4 SPE, ano/modelo 2014/2015, ofertado no Leilão 39 (lote 01). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1082,
@@ -6517,13 +7147,13 @@ window.NL_REAL_LOTS = [
     "year": "2020/2020",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 50000,
+    "price": 20000,
     "bids": 0,
     "media": "c2",
     "ends": "+13d 4h",
-    "auction": "Leilão 39 — 07/11",
-    "auctionNum": 39,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1082/01_principal.jpeg",
       "images/lotes/1082/02.jpeg",
@@ -6534,7 +7164,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1082/01_principal.jpeg",
     "desc": "Veículo FORD KA SE 1.0 12V TIVCT, ano/modelo 2020/2020, ofertado no Leilão 39 (lote 02). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 20000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1080,
@@ -6545,13 +7178,13 @@ window.NL_REAL_LOTS = [
     "year": "2014/2015",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 24000,
+    "price": 9600,
     "bids": 0,
     "media": "c3",
     "ends": "+13d 4h",
-    "auction": "Leilão 39 — 07/11",
-    "auctionNum": 39,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1080/01_principal.jpeg",
       "images/lotes/1080/02.jpeg",
@@ -6562,7 +7195,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1080/01_principal.jpeg",
     "desc": "Veículo HONDA CITY EX 1.5 16V I-VTEC, ano/modelo 2014/2015, ofertado no Leilão 39 (lote 03). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 9600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1081,
@@ -6573,13 +7209,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2018",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c1",
     "ends": "+13d 4h",
-    "auction": "Leilão 39 — 07/11",
-    "auctionNum": 39,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1081/01_principal.jpeg",
       "images/lotes/1081/02.jpeg",
@@ -6590,7 +7226,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1081/01_principal.jpeg",
     "desc": "Veículo VOLKSAWAGEN GOL TRENDLINE 1.0 12V MPI, ano/modelo 2018/2018, ofertado no Leilão 39 (lote 04). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1083,
@@ -6601,13 +7240,13 @@ window.NL_REAL_LOTS = [
     "year": "2019/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 38000,
+    "price": 15200,
     "bids": 0,
     "media": "c2",
     "ends": "+13d 4h",
-    "auction": "Leilão 39 — 07/11",
-    "auctionNum": 39,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1083/01_principal.jpeg",
       "images/lotes/1083/02.jpeg",
@@ -6618,7 +7257,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1083/01_principal.jpeg",
     "desc": "Veículo FIAT GRAND SIENA ATTRACTIVE 1.4 EVO, ano/modelo 2019/2019, ofertado no Leilão 39 (lote 05). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 15200,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1084,
@@ -6629,13 +7271,13 @@ window.NL_REAL_LOTS = [
     "year": "2018/2019",
     "km": "Não informado",
     "city": "Consultar edital",
-    "price": 49400,
+    "price": 19800,
     "bids": 0,
     "media": "c3",
     "ends": "+13d 4h",
-    "auction": "Leilão 39 — 07/11",
-    "auctionNum": 39,
-    "auctionDate": "07/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1084/01_principal.jpeg",
       "images/lotes/1084/02.jpeg",
@@ -6646,7 +7288,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1084/01_principal.jpeg",
     "desc": "Veículo FORD RANGER CD XLS AT 2.2 DURATORQ, ano/modelo 2018/2019, ofertado no Leilão 39 (lote 06). O bem é comercializado no estado em que se encontra. Consulte o edital para as condições de pagamento, transferência, débitos e retirada. A vistoria prévia é recomendada.",
-    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital."
+    "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
+    "basePrice": 19800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1092,
@@ -6657,13 +7302,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Consultar edital",
-    "price": 1200,
+    "price": 500,
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 41 — 10/11",
-    "auctionNum": 41,
-    "auctionDate": "10/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1092/01_principal.jpg",
       "images/lotes/1092/02.jpg",
@@ -6673,7 +7318,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1092/01_principal.jpg",
     "desc": "Lote composto por Ar Condicionado, ofertado no Leilão 41 (lote 02). Os itens são usados e comercializados no estado em que se encontram, sem garantia de funcionamento ou de integralidade. Confira a relação de bens e as condições de retirada no edital.",
-    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos."
+    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
+    "basePrice": 500,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1091,
@@ -6684,13 +7332,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Consultar edital",
-    "price": 8500,
+    "price": 3400,
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 41 — 10/11",
-    "auctionNum": 41,
-    "auctionDate": "10/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1091/01_principal.jpg",
       "images/lotes/1091/03.jpg",
@@ -6703,7 +7351,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1091/01_principal.jpg",
     "desc": "Lote composto por SERVIDORES IBM - 05 SERVIDORES, ofertado no Leilão 41 (lote 03). Os itens são usados e comercializados no estado em que se encontram, sem garantia de funcionamento ou de integralidade. Confira a relação de bens e as condições de retirada no edital.",
-    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos."
+    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
+    "basePrice": 3400,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1093,
@@ -6714,13 +7365,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Consultar edital",
-    "price": 1900,
+    "price": 800,
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 41 — 10/11",
-    "auctionNum": 41,
-    "auctionDate": "10/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1093/01_principal.jpg",
       "images/lotes/1093/02.jpg",
@@ -6728,7 +7379,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1093/01_principal.jpg",
     "desc": "Lote composto por MONITORES - 08 UNIDADES, ofertado no Leilão 41 (lote 04). Os itens são usados e comercializados no estado em que se encontram, sem garantia de funcionamento ou de integralidade. Confira a relação de bens e as condições de retirada no edital.",
-    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos."
+    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
+    "basePrice": 800,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1090,
@@ -6739,13 +7393,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Consultar edital",
-    "price": 2900,
+    "price": 1200,
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 41 — 10/11",
-    "auctionNum": 41,
-    "auctionDate": "10/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1090/01_principal.jpg",
       "images/lotes/1090/02.jpg",
@@ -6756,7 +7410,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1090/01_principal.jpg",
     "desc": "Lote composto por IMPRESSORAS - 9 UNIDADES, ofertado no Leilão 41 (lote 05). Os itens são usados e comercializados no estado em que se encontram, sem garantia de funcionamento ou de integralidade. Confira a relação de bens e as condições de retirada no edital.",
-    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos."
+    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
+    "basePrice": 1200,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1094,
@@ -6767,13 +7424,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Consultar edital",
-    "price": 950,
+    "price": 400,
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 41 — 10/11",
-    "auctionNum": 41,
-    "auctionDate": "10/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1094/01_principal.jpg",
       "images/lotes/1094/03.jpg",
@@ -6782,7 +7439,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1094/01_principal.jpg",
     "desc": "Lote composto por 10 Baterias de Notebook, ofertado no Leilão 41 (lote 06). Os itens são usados e comercializados no estado em que se encontram, sem garantia de funcionamento ou de integralidade. Confira a relação de bens e as condições de retirada no edital.",
-    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos."
+    "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
+    "basePrice": 400,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1085,
@@ -6793,13 +7453,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "São Paulo/SP",
-    "price": 480000,
+    "price": 192000,
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 40 — 12/11",
-    "auctionNum": 40,
-    "auctionDate": "12/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1085/01_principal.jpg",
       "images/lotes/1085/02.jpg",
@@ -6811,7 +7471,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1085/01_principal.jpg",
     "desc": "Imóvel Apartamento 137 m² - Campos Elíseos - SP, ofertado no Leilão 40 (lote 01). A descrição completa, a matrícula, a situação de ocupação e as condições de pagamento e regularização constam no edital do leilão. A vistoria prévia do imóvel é recomendada.",
-    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão."
+    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
+    "basePrice": 192000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1087,
@@ -6822,19 +7485,22 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Teresina/PI",
-    "price": 1813000,
+    "price": 725200,
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 40 — 12/11",
-    "auctionNum": 40,
-    "auctionDate": "12/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1087/01_principal.jpg"
     ],
     "photo": "images/lotes/1087/01_principal.jpg",
     "desc": "Imóvel Prédio Comercial com 517,88 m² - Centro TERESINA-PI, ofertado no Leilão 40 (lote 02). A descrição completa, a matrícula, a situação de ocupação e as condições de pagamento e regularização constam no edital do leilão. A vistoria prévia do imóvel é recomendada.",
-    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão."
+    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
+    "basePrice": 725200,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1086,
@@ -6845,13 +7511,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Pérola/PR",
-    "price": 2909000,
+    "price": 1163600,
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 40 — 12/11",
-    "auctionNum": 40,
-    "auctionDate": "12/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1086/01_principal.jpg",
       "images/lotes/1086/02.jpg",
@@ -6865,7 +7531,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1086/01_principal.jpg",
     "desc": "Imóvel Terreno com 831,12 m² - Perola PÉROLA PR, ofertado no Leilão 40 (lote 03). A descrição completa, a matrícula, a situação de ocupação e as condições de pagamento e regularização constam no edital do leilão. A vistoria prévia do imóvel é recomendada.",
-    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão."
+    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
+    "basePrice": 1163600,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1088,
@@ -6876,13 +7545,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Sumaré/SP",
-    "price": 286000,
+    "price": 114400,
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 40 — 12/11",
-    "auctionNum": 40,
-    "auctionDate": "12/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1088/01_principal.jpeg",
       "images/lotes/1088/02.jpeg",
@@ -6903,7 +7572,10 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1088/01_principal.jpeg",
     "desc": "Imóvel Casa com 81,73 m² - Jardim Sao Domingos SUMARÉ SP, ofertado no Leilão 40 (lote 04). A descrição completa, a matrícula, a situação de ocupação e as condições de pagamento e regularização constam no edital do leilão. A vistoria prévia do imóvel é recomendada.",
-    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão."
+    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
+    "basePrice": 114400,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   },
   {
     "id": 1089,
@@ -6914,13 +7586,13 @@ window.NL_REAL_LOTS = [
     "year": "—",
     "km": "—",
     "city": "Aparecida de Goiânia/GO",
-    "price": 390000,
+    "price": 156000,
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 40 — 12/11",
-    "auctionNum": 40,
-    "auctionDate": "12/11/2026",
+    "auction": "Leilão 48 — 11/11",
+    "auctionNum": 48,
+    "auctionDate": "11/11/2026",
     "photos": [
       "images/lotes/1089/01_principal.jpeg",
       "images/lotes/1089/02.jpeg",
@@ -6934,6 +7606,9 @@ window.NL_REAL_LOTS = [
     ],
     "photo": "images/lotes/1089/01_principal.jpeg",
     "desc": "Imóvel Casa com 111,55 m² - Parque Ibirapuera APARECIDA DE GOIÂNIA, ofertado no Leilão 40 (lote 05). A descrição completa, a matrícula, a situação de ocupação e as condições de pagamento e regularização constam no edital do leilão. A vistoria prévia do imóvel é recomendada.",
-    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão."
+    "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
+    "basePrice": 156000,
+    "auctionTime": "10:00",
+    "endsAt": 1794409200000
   }
 ];

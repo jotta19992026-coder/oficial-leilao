@@ -3,7 +3,7 @@
 
 // Reorganiza o catálogo em eventos semanais de 45 lotes (terça a sexta, 10h–12h),
 // misturando veículos, motos, pesados e náuticos. Os 45 lotes que sobram formam
-// o evento da terça seguinte, para nenhum lote ficar sem leilão.
+// um 5º evento 5 dias depois do último (quarta 11/11), para nenhum lote ficar sem leilão.
 //
 // Uso:
 //   node scripts/setup-eventos-semanais.js --dry-run   # só mostra o plano
@@ -29,7 +29,7 @@ const EVENTS = [
   { num: 45, date: '2026-11-04', counts: { carro: 20, moto: 17, pesado: 4, nautico: 4 } },
   { num: 46, date: '2026-11-05', counts: { carro: 20, moto: 17, pesado: 4, nautico: 4 } },
   { num: 47, date: '2026-11-06', counts: { carro: 21, moto: 17, pesado: 3, nautico: 4 } },
-  { num: 48, date: '2026-11-10', leftover: true }
+  { num: 48, date: '2026-11-11', leftover: true }
 ];
 
 function loadEnv() {
