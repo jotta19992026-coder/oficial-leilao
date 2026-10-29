@@ -20,6 +20,12 @@ node scripts/import-lotes.js
 node scripts/setup-eventos-semanais.js --dry-run
 node scripts/setup-eventos-semanais.js
 
+# Reduzir lances iniciais (padrão 60%) e sincronizar o fallback do catálogo com o banco
+node scripts/reduzir-precos.js --dry-run
+node scripts/reduzir-precos.js
+node scripts/sync-catalogo-local.js --dry-run
+node scripts/sync-catalogo-local.js
+
 # Validar sintaxe
 node --check js/data.js
 node --check js/lote.js
