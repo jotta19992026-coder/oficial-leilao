@@ -227,6 +227,7 @@ img{max-width:100%;display:block}
 .event--closed{opacity:.72}
 .event__day{font-family:"Sora";font-weight:600;color:var(--navy)}
 .event__date{font-size:1.6rem;font-family:"Sora";font-weight:700;color:var(--ink)}
+.event__time{font-size:.78rem;font-weight:600;color:var(--muted);letter-spacing:.01em}
 .event__meta{color:var(--muted);font-size:.9rem}
 
 /* Lotes */

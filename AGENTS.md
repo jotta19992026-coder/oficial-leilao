@@ -16,6 +16,10 @@ python -m http.server 8000 --bind 127.0.0.1
 # Reimportar catálogo da pasta Desktop\Leilão
 node scripts/import-lotes.js
 
+# Reorganizar o catálogo em eventos semanais de 45 lotes (10h–12h) no Supabase
+node scripts/setup-eventos-semanais.js --dry-run
+node scripts/setup-eventos-semanais.js
+
 # Validar sintaxe
 node --check js/data.js
 node --check js/lote.js

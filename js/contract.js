@@ -15,7 +15,7 @@
     endereco: 'Estr. Muranaka, 199 - Jardim Novo Horizonte, Itaquaquecetuba - SP, 08597-230',
     telefone: '(11) 4863-5629',
     email: 'atendimento@leiloes-copart.com',
-    site: '',
+    site: 'https://leiloes-copart.com',
     logo: 'images/logo.webp',
     leiloeiro: 'Ricardo Almeida',          // nome do leiloeiro oficial
     leiloeiroCpf: '',
@@ -35,6 +35,18 @@
   function brl(v) { return 'R$ ' + (Number(v) || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
   // Valor preenchido ou linha para preencher à mão.
   function f(v, size) { return v ? esc(v) : '<span class="ct-blank" style="min-width:' + (size || 12) + 'em"></span>'; }
+
+  // Contato oficial da empresa (telefone · e-mail · site), usado no cabeçalho, na
+  // qualificação das partes, nas comunicações e no rodapé dos documentos.
+  function contatoEmpresa() {
+    return [EMPRESA.telefone, EMPRESA.email, EMPRESA.site].filter(Boolean).join(' · ');
+  }
+  function companyHead(empresaNome) {
+    return '<header class="ct-head">' +
+      (EMPRESA.logo ? '<img src="' + esc(EMPRESA.logo) + '" alt="' + esc(empresaNome || 'Logo da empresa') + '">' : '<div><strong>' + f(empresaNome, 14) + '</strong></div>') +
+      '<div class="ct-head__co"><strong>' + f(empresaNome, 14) + '</strong><br>CNPJ ' + f(EMPRESA.cnpj, 10) + '<br>' + f(EMPRESA.endereco, 18) +
+      (contatoEmpresa() ? '<br>' + esc(contatoEmpresa()) : '') + '</div></header>';
+  }
   function clause(n, title, paragraphs) {
     return '<section class="ct-clause"><h3>Cláusula ' + n + ' — ' + title + '</h3>' +
       paragraphs.map(function (p, i) { return '<p><strong>' + n + '.' + (i + 1) + '.</strong> ' + p + '</p>'; }).join('') + '</section>';
@@ -73,12 +85,10 @@
     var empresaNome = E.razaoSocial || E.nomeFantasia;
     var leiloeiroTxt = f(E.leiloeiro, 16) + ', leiloeiro(a) oficial, inscrito(a) no CPF sob o nº ' + f(E.leiloeiroCpf, 9) +
       ', matriculado(a) na ' + f(E.junta, 16) + ' sob o nº ' + f(E.matricula, 8);
-    var empresaTxt = f(empresaNome, 16) + ', inscrita no CNPJ sob o nº ' + f(E.cnpj, 10) + ', com sede em ' + f(E.endereco, 22);
+    var empresaTxt = f(empresaNome, 16) + ', inscrita no CNPJ sob o nº ' + f(E.cnpj, 10) + ', com sede em ' + f(E.endereco, 22) +
+      ', telefone ' + f(E.telefone, 9) + ', e-mail ' + f(E.email, 12) + (E.site ? ', site ' + esc(E.site) : '');
 
-    var head = '<header class="ct-head">' +
-      (E.logo ? '<img src="' + esc(E.logo) + '" alt="' + esc(empresaNome || 'Logo da empresa') + '">' : '<div><strong>' + f(empresaNome, 14) + '</strong></div>') +
-      '<div class="ct-head__co"><strong>' + f(empresaNome, 14) + '</strong><br>CNPJ ' + f(E.cnpj, 10) + '<br>' + f(E.endereco, 18) +
-      (E.telefone || E.email ? '<br>' + esc([E.telefone, E.email].filter(Boolean).join(' · ')) : '') + '</div></header>';
+    var head = companyHead(empresaNome);
 
     var parts = [
       clause(1, 'Do objeto', [
@@ -179,7 +189,7 @@
         'Não serão aceitos pagamentos em espécie acima dos limites legais nem pagamentos feitos por terceiros não identificados.'
       ]),
       clause(23, 'Das comunicações', [
-        'As comunicações entre as partes serão feitas por escrito, preferencialmente pelo e-mail e telefone informados no cadastro do ARREMATANTE e pelos canais oficiais do LEILOEIRO indicados no cabeçalho deste contrato.',
+        'As comunicações entre as partes serão feitas por escrito, preferencialmente pelo e-mail e telefone informados no cadastro do ARREMATANTE e pelos canais oficiais do LEILOEIRO: telefone ' + f(E.telefone, 9) + ', e-mail ' + f(E.email, 12) + (E.site ? ' e site ' + esc(E.site) : '') + '.',
         'Considera-se recebida a comunicação enviada ao e-mail cadastrado, cabendo ao ARREMATANTE mantê-lo atualizado.'
       ]),
       clause(24, 'Da cessão', [
@@ -226,6 +236,7 @@
       '<div>Testemunha 1<br>Nome: ' + f('', 12) + '<br>CPF: ' + f('', 9) + '</div>' +
       '<div>Testemunha 2<br>Nome: ' + f('', 12) + '<br>CPF: ' + f('', 9) + '</div>' +
       '</div>' +
+      '<p class="ct-foot">Central de atendimento: ' + esc(contatoEmpresa()) + '</p>' +
 
       '<section class="ct-annex">' + head +
       '<h2>Anexo I — Quadro-resumo da arrematação</h2>' +
@@ -283,10 +294,7 @@
     var hoje = new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
     var empresaNome = E.razaoSocial || E.nomeFantasia;
 
-    var head = '<header class="ct-head">' +
-      (E.logo ? '<img src="' + esc(E.logo) + '" alt="' + esc(empresaNome || 'Logo da empresa') + '">' : '<div><strong>' + f(empresaNome, 14) + '</strong></div>') +
-      '<div class="ct-head__co"><strong>' + f(empresaNome, 14) + '</strong><br>CNPJ ' + f(E.cnpj, 10) + '<br>' + f(E.endereco, 18) +
-      (E.telefone || E.email ? '<br>' + esc([E.telefone, E.email].filter(Boolean).join(' · ')) : '') + '</div></header>';
+    var head = companyHead(empresaNome);
 
     // PÁGINA 1 — identificação do termo, das partes e do bem arrematado
     var p1 = head +
@@ -307,7 +315,7 @@
       '<h3>Qualificação das partes</h3>' +
       '<div class="ct-box">' +
       '<p><strong>LEILOEIRO OFICIAL:</strong> ' + f(E.leiloeiro, 16) + ', leiloeiro(a) oficial, inscrito(a) no CPF sob o nº ' + f(E.leiloeiroCpf, 9) + ', matriculado(a) na ' + f(E.junta, 16) + ' sob o nº <strong>' + f(E.matricula, 8) + '</strong>.</p>' +
-      '<p><strong>EMPRESA ORGANIZADORA DA PLATAFORMA:</strong> ' + f(empresaNome, 16) + ', inscrita no CNPJ sob o nº ' + f(E.cnpj, 10) + ', com sede em ' + f(E.endereco, 22) + '.</p>' +
+      '<p><strong>EMPRESA ORGANIZADORA DA PLATAFORMA:</strong> ' + f(empresaNome, 16) + ', inscrita no CNPJ sob o nº ' + f(E.cnpj, 10) + ', com sede em ' + f(E.endereco, 22) + ', telefone ' + f(E.telefone, 9) + ', e-mail ' + f(E.email, 12) + (E.site ? ', site ' + esc(E.site) : '') + '.</p>' +
       '<p><strong>COMITENTE (VENDEDOR):</strong> ' + f(d.comitente, 20) + ', proprietário(a) ou detentor(a) da posse do bem, representado(a) pelo LEILOEIRO.</p>' +
       '<p><strong>ARREMATANTE (COMPRADOR):</strong> ' + f(d.nome, 16) + ', inscrito(a) no CPF/CNPJ sob o nº ' + f(d.cpf, 10) + ', residente e domiciliado(a) em ' + f(d.endereco, 22) + ', e-mail ' + f(d.email, 12) + ', telefone ' + f(d.tel, 9) + '.</p>' +
       '</div>' +
@@ -354,7 +362,7 @@
       '<p>Recebi de forma satisfatória o bem arrematado e descrito neste termo (lote <strong>' + esc(d.lote || '—') + '</strong>), no estado em que se encontra, nada tendo a reclamar, retirando-o por minha conta e risco.</p>' +
       '<p style="margin-top:1.2em">' + f('', 24) + ', ' + f('', 10) + '.</p>' +
       '<div class="ct-sign"><div>' + (d.nome ? esc(d.nome) : '&nbsp;') + '<br>ARREMATANTE — assinatura do recebimento</div><div>' + (E.leiloeiro ? esc(E.leiloeiro) : '&nbsp;') + '<br>LEILOEIRO OFICIAL — liberação</div></div></div>' +
-      '<p class="ct-foot">Documento gerado pela plataforma ' + esc(empresaNome) + ' em ' + esc(hoje) + ' — válido com as assinaturas do arrematante e do leiloeiro oficial.</p>';
+      '<p class="ct-foot">Documento gerado pela plataforma ' + esc(empresaNome) + ' em ' + esc(hoje) + ' — válido com as assinaturas do arrematante e do leiloeiro oficial.<br>Central de atendimento: ' + esc(contatoEmpresa()) + '</p>';
 
     return '<style>' + TERMO_CSS + '</style><div class="WordSection1"><article class="ct">' + p1 +
       '<div class="ct-page">' + p2 + '</div>' +

@@ -69,11 +69,23 @@
       var status = g.di.status;
       var label = (!g.mixed && window.NL_CATS && window.NL_CATS[g.cat]) ? window.NL_CATS[g.cat].label : 'Itens';
       var meta = (g.num != null ? 'Leilão ' + g.num + ' · ' : '') + g.lots.length + ' ' + label;
+      // Horário do evento: início (auction_time) e fim (maior ends_at do grupo).
+      var ends = g.lots.map(function (l) { return Number(l.endsAt) || 0; }).filter(Boolean);
+      var endTxt = '';
+      if (ends.length) {
+        try {
+          endTxt = new Date(Math.max.apply(null, ends)).toLocaleTimeString('pt-BR', {
+            hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'
+          });
+        } catch (e) { endTxt = ''; }
+      }
+      var timeTxt = g.di.time + (endTxt ? ' – ' + endTxt : '');
       var href = 'lotes.html?date=' + encodeURIComponent(g.di.dm) + (g.mixed ? '' : '&cat=' + encodeURIComponent(g.cat));
       return '<a class="event' + (status.k === 'closed' ? ' event--closed' : '') + '" href="' + href + '">' +
         '<span class="event__status event__status--' + status.k + '">' + (EVENT_STATUS[status.k] || 'Aberto para lances') + '</span>' +
         '<span class="event__day">' + g.di.weekday + '</span>' +
         '<span class="event__date">' + g.di.dm + '</span>' +
+        '<span class="event__time">' + esc(timeTxt) + '</span>' +
         '<span class="event__meta">' + esc(meta) + '</span>' +
         '<span class="event__sponsor">' + window.NLSponsorBadge(i) + '</span></a>';
     }).join('');
