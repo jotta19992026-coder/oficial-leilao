@@ -46,7 +46,7 @@
       '<li><span>' + (w ? 'Vencendo' : 'Categoria') + '</span><strong>' + (w || lot.catLabel) + '</strong></li>' +
       '</ul>' +
       '<div class="lot__row">' +
-      '<span class="lot__pricewrap"><span class="lot__price">' + window.NL_BRL(lot.price) + '</span><span class="lot__pricelabel">Maior lance</span></span>' +
+      '<span class="lot__pricewrap"><span class="lot__price">' + window.NL_BRL(lot.price) + '</span>' + (lot.demoPrice ? ' <span class="chip chip--demo">ilustrativo</span>' : '') + '<span class="lot__pricelabel">Maior lance</span></span>' +
       '<span class="lot__timer"' + (lot.endsAt ? ' data-ends-at="' + lot.endsAt + '"' : ' data-ends="' + lot.ends + '"') + '>—</span>' +
       '</div>' +
       '<a class="btn btn--block" href="lote.html?id=' + lot.id + '">' + (CTA[lot.cat] || 'Ver detalhes') + '</a>' +

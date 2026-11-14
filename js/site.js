@@ -302,19 +302,7 @@
       .then(function () {}, function () {});
   }
 
-  function demoBar() {
-    if (!(window.NLDemo && window.NLDemo.enabled && window.NLDemo.enabled())) return;
-    if (document.getElementById('demo-bar')) return; // evita duplicata
-    var bar = document.createElement('div');
-    bar.id = 'demo-bar';
-    bar.className = 'demobar';
-    bar.textContent = 'Demonstração — lances e visualizações exibidos são ilustrativos (projeto de portfólio)';
-    var header = document.getElementById('site-header');
-    if (header && header.parentNode) header.parentNode.insertBefore(bar, header);
-  }
-
   function init() {
-    demoBar();
     mount('site-header', headerHTML());
     mount('site-footer', footerHTML());
     fillSponsors();

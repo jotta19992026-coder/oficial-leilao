@@ -255,7 +255,8 @@
     if (!tb) return;
     tb.innerHTML = list.length
       ? list.map(function (b) {
-          return '<tr><td>' + esc(b.userLabel) + '</td><td>' + window.NL_BRL(b.amount) + '</td><td>' +
+          var chip = (b.demo || b.sim) ? ' <span class="chip chip--demo">ilustrativo</span>' : '';
+          return '<tr><td>' + esc(b.userLabel) + chip + '</td><td>' + window.NL_BRL(b.amount) + '</td><td>' +
             new Date(b.time).toLocaleString('pt-BR') + '</td></tr>';
         }).join('')
       : '<tr><td colspan="3" class="muted">Ainda não há lances para este lote. Seja o primeiro.</td></tr>';

@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=82';
+      s.src = 'js/lots-data.js?v=83';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -140,7 +140,7 @@
     var st = simState();
     cache.lots.forEach(function (l) {
       if (l.realPrice == null) { l.realPrice = l.price; l.realBids = l.bids; }
-      var price = l.realPrice, n = l.realBids;
+      var price = l.realPrice, n = l.realBids, demoPrice = false;
       if (st) {
         var s = st.leaders[l.id];
         var meta = st.lots[l.id];
@@ -152,10 +152,12 @@
         if (d) {
           if (d.top > price) price = d.top;
           n += d.count;
+          demoPrice = true;
         }
       }
       l.price = price;
       l.bids = n;
+      l.demoPrice = demoPrice;
     });
   }
   // SimulaÃ§Ã£o ativa agora? (pÃ¡ginas usam para atualizar o lote sozinho)
@@ -223,20 +225,20 @@
       var st = simState();
       var sim = st ? (st.bids || []).filter(function (b) { return Number(b.lot_id) === Number(lotId); })
         .map(function (b) {
-          return { userLabel: simFirstName(b.profiles && b.profiles.name), amount: Number(b.amount), time: Date.parse(b.created_at) };
+          return { userLabel: simFirstName(b.profiles && b.profiles.name), amount: Number(b.amount), time: Date.parse(b.created_at), sim: true };
         }) : [];
       var lot = cache.byId[parseInt(lotId, 10)];
       var dm = (window.NLDemo && window.NLDemo.enabled() && lot) ? window.NLDemo.forLot(lot) : null;
-      var demo = dm ? dm.rows.slice() : [];
+      var demo = dm ? dm.rows.slice().map(function (r) { r.demo = true; return r; }) : [];
       if (!supa || cache.source !== 'supabase') {
-        return Promise.resolve(sim.sort(function (a, b) { return b.time - a.time; }));
+        return Promise.resolve(sim.concat(demo).sort(function (a, b) { return b.time - a.time; }));
       }
       return supa.rpc('lot_bid_history', { p_lot_id: lotId }).then(function (r) {
         var real = r.error || !r.data ? [] : r.data.map(function (h) {
           return { userLabel: h.display_name, amount: Number(h.amount), time: Date.parse(h.created_at) };
         });
-        return real.concat(sim).sort(function (a, b) { return b.time - a.time; });
-      }, function () { return sim.sort(function (a, b) { return b.time - a.time; }); });
+        return real.concat(sim).concat(demo).sort(function (a, b) { return b.time - a.time; });
+      }, function () { return sim.concat(demo).sort(function (a, b) { return b.time - a.time; }); });
     },
 
     // VisualizaÃ§Ãµes do lote: contagem REAL de page_views (migraÃ§Ã£o 003, leitura na 006).
