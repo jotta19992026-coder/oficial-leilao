@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Painel administrativo — Leilão Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=74">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=74">
+  <link rel="icon" type="image/png" href="favicon.png?v=81">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=81">
   <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=74">
+  <link rel="stylesheet" href="css/styles.css?v=81">
 </head>
 <body>
   <div class="admin-top">
@@ -153,6 +153,7 @@
           <button class="btn btn--primary btn--sm" id="sim-start" type="button">▶ Iniciar</button>
           <button class="btn btn--ghost btn--sm" id="sim-pause" type="button" hidden>⏸ Pausar</button>
           <button class="btn btn--ghost btn--sm" id="sim-clear" type="button" hidden>🗑 Limpar dados</button>
+          <a class="btn btn--ghost btn--sm" href="index.html" target="_blank" rel="noopener">↗ Ver no site</a>
         </div>
       </div>
       <p class="sim-note">Cria <strong>arrematantes fictícios</strong> que dão <strong>lances automáticos</strong> nos lotes do
@@ -161,7 +162,10 @@
         <span class="chip chip--sim" style="margin:0">sim</span> nas tabelas). Os lances fictícios <strong>aparecem no site
         público também</strong> — mas <strong>só neste navegador</strong>: visitantes reais não veem nada inventado (lance
         inventado mostrado a arrematante real é fraude — lance de reserva) e <strong>nada é gravado no banco</strong>.
-        O lance real sempre vence quando for maior que o fictício.</p>
+        O lance real sempre vence quando for maior que o fictício. Cada lote tem teto: os lances fictícios
+        <strong>param sozinhos em 70% acima do preço inicial</strong> do lote (e o lote sai da disputa). Abra o site na <strong>mesma janela normal</strong>
+        (não anônima) para ver os lances nos cards, na página do lote e no histórico; se limpar os dados do site,
+        a simulação é apagada (ela fica salva só no navegador).</p>
       <div class="switches">
         <label class="switch"><span>Arrematantes fictícios</span>
           <select id="sim-bidders">
@@ -341,14 +345,15 @@
     </section>
   </main>
 
-  <script src="js/data.js?v=74"></script>
+  <script src="js/data.js?v=81"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=74"></script>
-  <script src="js/auth.js?v=74"></script>
-  <script src="js/store.js?v=74"></script>
-  <script src="js/masks.js?v=74"></script>
-  <script src="js/contract.js?v=74"></script>
-  <script src="js/simulate.js?v=74"></script>
-  <script src="js/admin.js?v=74"></script>
+  <script src="js/supabase.js?v=81"></script>
+  <script src="js/auth.js?v=81"></script>
+  <script src="js/demo.js?v=81"></script>
+  <script src="js/store.js?v=81"></script>
+  <script src="js/masks.js?v=81"></script>
+  <script src="js/contract.js?v=81"></script>
+  <script src="js/simulate.js?v=81"></script>
+  <script src="js/admin.js?v=81"></script>
 </body>
 </html>

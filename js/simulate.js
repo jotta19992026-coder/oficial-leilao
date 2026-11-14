@@ -199,26 +199,50 @@
 
   // Escolhe o próximo lote a receber um lance fictício.
   function pickLot(open) {
+    // Só entram lotes que ainda têm espaço até o teto de 70% acima do valor do
+    // produto (o preço inicial). Lote no teto sai da disputa até ser limpo.
+    var room = open.filter(function (l) {
+      var m = state.lots[l.id];
+      var s = state.leaders[l.id];
+      var cur = s ? (Number(s.amount) || 0) : (Number(l.price) || 0);
+      var cap = capFor(m ? m.basePrice : l.basePrice, m ? m.increment : l.increment);
+      return !cap || cur < cap;
+    });
+    if (!room.length) return null;
+
     var openIds = {};
-    open.forEach(function (l) { openIds[l.id] = l; });
+    room.forEach(function (l) { openIds[l.id] = l; });
 
     // Lotes em disputa: no automático, no máximo 10 abertos por vez.
     var warring = Object.keys(state.lots).map(Number).filter(function (id) { return openIds[id]; });
-    var pool = open;
+    var pool = room;
     if (state.cfg.scope === 'auto') {
-      var limit = Math.min(10, open.length);
+      var limit = Math.min(10, room.length);
       var chosen = warring.slice(0, limit);
-      var candidates = open.filter(function (l) { return !state.lots[l.id]; });
-      while (chosen.length < limit && candidates.length) {
-        chosen.push(candidates.splice(Math.floor(Math.random() * candidates.length), 1)[0]);
+      var fresh = room.filter(function (l) { return !state.lots[l.id]; });
+      while (chosen.length < limit && fresh.length) {
+        chosen.push(fresh.splice(Math.floor(Math.random() * fresh.length), 1)[0]);
       }
       pool = chosen;
     }
+    if (!pool.length) return null;
     // 65% das vezes continua uma disputa já aberta (cria batalhas de lances).
     var lot = (warring.length && Math.random() < 0.65)
       ? openIds[warring[Math.floor(Math.random() * warring.length)]]
       : pool[Math.floor(Math.random() * pool.length)];
     return lot;
+  }
+
+  // Teto dos lances fictícios: no máximo 70% acima do valor do produto, que aqui
+  // é o preço inicial do lote (é o único "valor do produto" que existe no banco;
+  // os preços do catálogo são estimativas). O teto é alinhado ao incremento para
+  // os valores continuarem redondos (ex.: 16.000 com passo 600 → teto 26.800).
+  var MAX_OVER = 0.7;
+  function capFor(base, step) {
+    base = Number(base) || 0;
+    step = Number(step) || 100;
+    if (!base) return 0;
+    return base + Math.floor(((base * 7) / 10) / step) * step;
   }
 
   // Registra 1 lance fictício em um lote (persistência/render ficam com quem chama).
@@ -246,10 +270,18 @@
     if (!who) return;
 
     // Valor: primeiro lance supera o lance atual real do lote; depois sobe 1–2 incrementos.
+    // Nunca passa do teto de 70% acima do preço inicial.
     var step = meta.increment || 100;
+    var cap = capFor(meta.basePrice, step);
+    var current = leader ? (Number(leader.amount) || 0)
+      : Math.max(Number(meta.basePrice) || 0, Number(lot.price) || 0);
+    meta.cap = cap;
+    if (cap && current >= cap) { meta.capped = true; return; }
     var amount = leader
-      ? leader.amount + step * (Math.random() < 0.25 ? 2 : 1)
-      : Math.max(meta.basePrice, lot.price);
+      ? current + step * (Math.random() < 0.25 ? 2 : 1)
+      : current;
+    if (cap && amount > cap) amount = cap;
+    if (leader && amount <= current) { meta.capped = true; return; }
 
     state.seq++;
     var now = new Date().toISOString();
@@ -261,6 +293,7 @@
     });
     meta.price = amount;
     meta.simBids++;
+    meta.capped = cap ? amount >= cap : false;
     state.leaders[lot.id] = {
       lot_id: lot.id, amount: amount, created_at: now, user_id: who.id, sim: true,
       profiles: { id: who.id, name: who.name, email: who.email, cpf: who.cpf, phone: who.phone, address: who.address, sim: true }
@@ -389,14 +422,24 @@
     var el = $('sim-status');
     var nb = state.bids.length;
     var nl = Object.keys(state.lots).length;
+    // Lotes que já bateram no teto (70% acima do preço inicial).
+    var capped = Object.keys(state.lots).filter(function (id) {
+      var m = state.lots[id], s = state.leaders[id];
+      var cap = capFor(m.basePrice, m.increment);
+      var cur = s ? (Number(s.amount) || 0) : (Number(m.price) || 0);
+      return cap && cur >= cap;
+    }).length;
     var start = $('sim-start'), pause = $('sim-pause'), clear = $('sim-clear');
     if (state.on) {
       var last = nb ? state.bids[nb - 1].created_at : null;
       var ago = last ? Math.max(0, Math.round((Date.now() - Date.parse(last)) / 1000)) : null;
       el.innerHTML = '<span class="sim-live"></span>Simulação <strong>ativa</strong>: ' + nb + ' lance(s) fictício(s) em ' + nl +
-        ' lote(s)' + (ago != null ? ' · último lance há ' + ago + ' s' : '') + ' · 1 lance a cada ~' + state.cfg.iv + ' s. Aparecem no site só neste navegador — nada vai ao banco.';
+        ' lote(s)' + (ago != null ? ' · último lance há ' + ago + ' s' : '') + ' · 1 lance a cada ~' + state.cfg.iv + ' s' +
+        (capped ? ' · <strong>' + capped + '</strong> no teto de 70%' : '') +
+        '. Teto: 70% acima do preço inicial. Aparecem no site só neste navegador — nada vai ao banco.';
     } else if (nb) {
-      el.innerHTML = '<strong>Pausada:</strong> ' + nb + ' lance(s) fictício(s) em ' + nl + ' lote(s) guardados neste navegador. Inicie para continuar a simulação.';
+      el.innerHTML = '<strong>Pausada:</strong> ' + nb + ' lance(s) fictício(s) em ' + nl + ' lote(s) guardados neste navegador' +
+        (capped ? ' (' + capped + ' no teto de 70%)' : '') + '. Inicie para continuar a simulação.';
     } else {
       el.textContent = 'Simulação parada — nenhum lance fictício no painel.';
     }

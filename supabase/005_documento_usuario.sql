@@ -9,7 +9,7 @@
 alter table public.profiles add column if not exists doc_url text;
 
 -- O usuário grava SÓ o caminho do próprio documento — sem poder tocar em
--- name, cpf, phone, address, role etc. (não precisa de policy de update no perfil).
+-- name, cpf, phone, address, role etc. (não precisa de policy de update no perfil)./
 create or replace function public.user_set_doc_url(p_doc_url text)
 returns void
 language plpgsql

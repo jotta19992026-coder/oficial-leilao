@@ -13,10 +13,10 @@ window.NL_REAL_LOTS = [
     "price": 10000,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/401/01_principal.jpg",
       "images/lotes/401/02.jpg",
@@ -34,7 +34,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 10000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 399,
@@ -48,10 +48,10 @@ window.NL_REAL_LOTS = [
     "price": 8400,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/399/01_principal.jpg",
       "images/lotes/399/02.jpg",
@@ -69,7 +69,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 198,
@@ -83,10 +83,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/198/01_principal.jpg",
       "images/lotes/198/02.jpg",
@@ -104,7 +104,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 400,
@@ -118,10 +118,10 @@ window.NL_REAL_LOTS = [
     "price": 4400,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/400/01_principal.jpg",
       "images/lotes/400/02.jpg",
@@ -139,7 +139,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 404,
@@ -153,10 +153,10 @@ window.NL_REAL_LOTS = [
     "price": 4400,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/404/01_principal.jpg",
       "images/lotes/404/02.jpg",
@@ -173,7 +173,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 201,
@@ -187,10 +187,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/201/01_principal.jpg",
       "images/lotes/201/02.jpg",
@@ -205,7 +205,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 206,
@@ -219,10 +219,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/206/01_principal.jpg",
       "images/lotes/206/02.jpg",
@@ -240,7 +240,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 205,
@@ -254,10 +254,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/205/01_principal.jpg",
       "images/lotes/205/02.jpg",
@@ -275,7 +275,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 199,
@@ -289,10 +289,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/199/01_principal.jpg",
       "images/lotes/199/02.jpg",
@@ -309,7 +309,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 204,
@@ -323,10 +323,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/204/01_principal.jpg",
       "images/lotes/204/02.jpg",
@@ -344,7 +344,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 197,
@@ -358,10 +358,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/197/01_principal.jpg",
       "images/lotes/197/02.jpg",
@@ -378,7 +378,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 639,
@@ -392,10 +392,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/639/01_principal.jpg",
       "images/lotes/639/02.jpg",
@@ -413,7 +413,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 208,
@@ -427,10 +427,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/208/01_principal.jpg",
       "images/lotes/208/02.jpg",
@@ -448,7 +448,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 406,
@@ -462,10 +462,10 @@ window.NL_REAL_LOTS = [
     "price": 3600,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/406/01_principal.jpg",
       "images/lotes/406/02.jpg",
@@ -483,7 +483,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 3600,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 403,
@@ -497,10 +497,10 @@ window.NL_REAL_LOTS = [
     "price": 4000,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/403/01_principal.jpg",
       "images/lotes/403/02.jpg",
@@ -518,7 +518,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 202,
@@ -532,10 +532,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/202/01_principal.jpg",
       "images/lotes/202/02.jpg",
@@ -553,7 +553,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 407,
@@ -567,10 +567,10 @@ window.NL_REAL_LOTS = [
     "price": 9000,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/407/01_principal.jpg",
       "images/lotes/407/02.jpg",
@@ -588,7 +588,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 203,
@@ -602,10 +602,10 @@ window.NL_REAL_LOTS = [
     "price": 4800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/203/01_principal.jpg",
       "images/lotes/203/02.jpg",
@@ -620,7 +620,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 478,
@@ -634,10 +634,10 @@ window.NL_REAL_LOTS = [
     "price": 5400,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/478/01_principal.jpg",
       "images/lotes/478/02.jpg",
@@ -655,7 +655,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 764,
@@ -669,10 +669,10 @@ window.NL_REAL_LOTS = [
     "price": 7000,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/764/01_principal.jpg",
       "images/lotes/764/02.jpg",
@@ -689,7 +689,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 279,
@@ -703,10 +703,10 @@ window.NL_REAL_LOTS = [
     "price": 5500,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/279/01_principal.jpg",
       "images/lotes/279/02.jpg",
@@ -723,7 +723,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5500,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 771,
@@ -737,10 +737,10 @@ window.NL_REAL_LOTS = [
     "price": 10200,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/771/01_principal.jpg",
       "images/lotes/771/02.jpg",
@@ -758,7 +758,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 10200,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 79,
@@ -772,10 +772,10 @@ window.NL_REAL_LOTS = [
     "price": 8000,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/79/01_principal.jpg",
       "images/lotes/79/02.jpg",
@@ -793,7 +793,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 551,
@@ -807,10 +807,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/551/01_principal.jpg",
       "images/lotes/551/02.jpg",
@@ -827,7 +827,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 763,
@@ -841,10 +841,10 @@ window.NL_REAL_LOTS = [
     "price": 5300,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/763/01_principal.jpg",
       "images/lotes/763/02.jpg",
@@ -861,7 +861,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5300,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 559,
@@ -875,10 +875,10 @@ window.NL_REAL_LOTS = [
     "price": 3000,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/559/01_principal.jpg",
       "images/lotes/559/02.jpg",
@@ -895,7 +895,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 3000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 767,
@@ -909,10 +909,10 @@ window.NL_REAL_LOTS = [
     "price": 4300,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/767/01_principal.jpg",
       "images/lotes/767/02.jpg",
@@ -929,7 +929,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4300,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 638,
@@ -943,10 +943,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/638/01_principal.jpg",
       "images/lotes/638/02.jpg",
@@ -963,7 +963,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 477,
@@ -977,10 +977,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/477/01_principal.jpg",
       "images/lotes/477/02.jpg",
@@ -996,7 +996,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 635,
@@ -1010,10 +1010,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/635/01_principal.jpg",
       "images/lotes/635/02.jpg",
@@ -1031,7 +1031,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 275,
@@ -1045,10 +1045,10 @@ window.NL_REAL_LOTS = [
     "price": 8000,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/275/01_principal.jpg",
       "images/lotes/275/02.jpg",
@@ -1066,7 +1066,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 273,
@@ -1080,10 +1080,10 @@ window.NL_REAL_LOTS = [
     "price": 8000,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/273/01_principal.jpg",
       "images/lotes/273/02.jpg",
@@ -1100,7 +1100,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 488,
@@ -1114,10 +1114,10 @@ window.NL_REAL_LOTS = [
     "price": 4400,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/488/01_principal.jpg"
     ],
@@ -1126,7 +1126,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4400,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 85,
@@ -1140,10 +1140,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/85/01_principal.jpg",
       "images/lotes/85/02.jpg",
@@ -1161,7 +1161,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 87,
@@ -1175,10 +1175,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/87/01_principal.jpg",
       "images/lotes/87/02.jpg",
@@ -1196,7 +1196,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 83,
@@ -1210,10 +1210,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/83/01_principal.jpg",
       "images/lotes/83/02.jpg",
@@ -1231,7 +1231,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 84,
@@ -1245,10 +1245,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/84/01_principal.jpg",
       "images/lotes/84/02.jpg",
@@ -1266,7 +1266,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 483,
@@ -1280,10 +1280,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/483/01_principal.jpg",
       "images/lotes/483/02.jpg",
@@ -1301,7 +1301,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 480,
@@ -1315,10 +1315,10 @@ window.NL_REAL_LOTS = [
     "price": 8000,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/480/01_principal.jpg",
       "images/lotes/480/02.jpg",
@@ -1336,7 +1336,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 80,
@@ -1350,10 +1350,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/80/01_principal.jpg",
       "images/lotes/80/02.jpg",
@@ -1368,7 +1368,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 765,
@@ -1382,10 +1382,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/765/01_principal.jpg",
       "images/lotes/765/02.jpg",
@@ -1403,7 +1403,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 276,
@@ -1417,10 +1417,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/276/01_principal.jpg",
       "images/lotes/276/02.jpg",
@@ -1438,7 +1438,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 769,
@@ -1452,10 +1452,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/769/01_principal.jpg",
       "images/lotes/769/02.jpg",
@@ -1472,7 +1472,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 838,
@@ -1486,10 +1486,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/838/01_principal.jpg",
       "images/lotes/838/02.jpg",
@@ -1507,7 +1507,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 773,
@@ -1521,10 +1521,10 @@ window.NL_REAL_LOTS = [
     "price": 4400,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/773/01_principal.jpg",
       "images/lotes/773/02.jpg",
@@ -1542,7 +1542,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4400,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 772,
@@ -1556,10 +1556,10 @@ window.NL_REAL_LOTS = [
     "price": 5300,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/772/01_principal.jpg",
       "images/lotes/772/02.jpg",
@@ -1576,7 +1576,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5300,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 565,
@@ -1590,10 +1590,10 @@ window.NL_REAL_LOTS = [
     "price": 4400,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/565/01_principal.jpg",
       "images/lotes/565/02.jpg",
@@ -1610,7 +1610,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4400,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 842,
@@ -1624,10 +1624,10 @@ window.NL_REAL_LOTS = [
     "price": 6800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/842/01_principal.jpg",
       "images/lotes/842/02.jpg",
@@ -1645,7 +1645,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 558,
@@ -1659,10 +1659,10 @@ window.NL_REAL_LOTS = [
     "price": 10200,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/558/01_principal.jpg",
       "images/lotes/558/02.jpg",
@@ -1680,7 +1680,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 10200,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 561,
@@ -1694,10 +1694,10 @@ window.NL_REAL_LOTS = [
     "price": 10200,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/561/01_principal.jpg",
       "images/lotes/561/02.jpg",
@@ -1715,7 +1715,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 10200,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 562,
@@ -1729,10 +1729,10 @@ window.NL_REAL_LOTS = [
     "price": 5400,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/562/01_principal.jpg",
       "images/lotes/562/02.jpg",
@@ -1750,7 +1750,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5400,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 278,
@@ -1764,10 +1764,10 @@ window.NL_REAL_LOTS = [
     "price": 8400,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/278/01_principal.jpg",
       "images/lotes/278/02.jpg",
@@ -1785,7 +1785,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 564,
@@ -1799,10 +1799,10 @@ window.NL_REAL_LOTS = [
     "price": 10200,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/564/01_principal.jpg",
       "images/lotes/564/02.jpg",
@@ -1820,7 +1820,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 10200,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 271,
@@ -1834,10 +1834,10 @@ window.NL_REAL_LOTS = [
     "price": 8800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/271/01_principal.jpg",
       "images/lotes/271/02.jpg",
@@ -1855,7 +1855,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 8800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 703,
@@ -1869,10 +1869,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/703/01_principal.jpg",
       "images/lotes/703/02.jpg",
@@ -1890,7 +1890,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 481,
@@ -1904,10 +1904,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/481/01_principal.jpg",
       "images/lotes/481/02.jpg",
@@ -1924,7 +1924,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 557,
@@ -1938,10 +1938,10 @@ window.NL_REAL_LOTS = [
     "price": 4800,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/557/01_principal.jpg",
       "images/lotes/557/02.jpg",
@@ -1959,7 +1959,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4800,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 75,
@@ -1973,10 +1973,10 @@ window.NL_REAL_LOTS = [
     "price": 16000,
     "bids": 3,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/75/01_principal.jpg",
       "images/lotes/75/02.jpg",
@@ -1994,7 +1994,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 6200,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 560,
@@ -2008,10 +2008,10 @@ window.NL_REAL_LOTS = [
     "price": 9000,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/560/01_principal.jpg",
       "images/lotes/560/02.jpg",
@@ -2028,7 +2028,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 707,
@@ -2042,10 +2042,10 @@ window.NL_REAL_LOTS = [
     "price": 4000,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/707/01_principal.jpg",
       "images/lotes/707/02.jpg",
@@ -2062,7 +2062,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 4000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 487,
@@ -2076,10 +2076,10 @@ window.NL_REAL_LOTS = [
     "price": 3300,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/487/01_principal.jpg",
       "images/lotes/487/02.jpg",
@@ -2097,7 +2097,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 3300,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 844,
@@ -2111,10 +2111,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 48 — 11/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/844/01_principal.jpg",
       "images/lotes/844/02.jpg",
@@ -2132,7 +2132,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 86,
@@ -2146,10 +2146,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/86/01_principal.jpg",
       "images/lotes/86/02.jpg",
@@ -2167,7 +2167,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 489,
@@ -2181,10 +2181,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/489/01_principal.jpg",
       "images/lotes/489/02.jpg",
@@ -2202,7 +2202,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 490,
@@ -2216,10 +2216,10 @@ window.NL_REAL_LOTS = [
     "price": 3300,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/490/01_principal.jpg",
       "images/lotes/490/02.jpg",
@@ -2237,7 +2237,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 3300,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 636,
@@ -2251,10 +2251,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/636/01_principal.jpg",
       "images/lotes/636/02.jpg",
@@ -2272,7 +2272,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 843,
@@ -2286,10 +2286,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/843/01_principal.jpg",
       "images/lotes/843/02.jpg",
@@ -2307,7 +2307,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 845,
@@ -2321,10 +2321,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m3",
-    "ends": "+1d 6h",
-    "auction": "Leilão 48 — 11/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/845/01_principal.jpg"
     ],
@@ -2333,7 +2333,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 556,
@@ -2347,10 +2347,10 @@ window.NL_REAL_LOTS = [
     "price": 7500,
     "bids": 0,
     "media": "m1",
-    "ends": "+1d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/556/01_principal.jpg",
       "images/lotes/556/02.jpg",
@@ -2366,7 +2366,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 7500,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 637,
@@ -2380,10 +2380,10 @@ window.NL_REAL_LOTS = [
     "price": 5600,
     "bids": 0,
     "media": "m2",
-    "ends": "+1d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "ends": "+30d 6h",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/637/01_principal.jpg",
       "images/lotes/637/02.jpg",
@@ -2400,7 +2400,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 5600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 571,
@@ -2415,9 +2415,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/571/01_principal.jpg",
       "images/lotes/571/02.jpg",
@@ -2435,7 +2435,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 566,
@@ -2450,9 +2450,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/566/01_principal.jpg",
       "images/lotes/566/02.jpg",
@@ -2469,7 +2469,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 38900,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 567,
@@ -2484,9 +2484,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/567/01_principal.jpg",
       "images/lotes/567/02.jpg",
@@ -2502,7 +2502,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 568,
@@ -2517,9 +2517,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/568/01_principal.jpg",
       "images/lotes/568/02.jpg",
@@ -2537,7 +2537,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 569,
@@ -2552,9 +2552,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/569/01_principal.jpg",
       "images/lotes/569/02.jpg",
@@ -2571,7 +2571,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15600,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 570,
@@ -2586,9 +2586,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/570/01_principal.jpg",
       "images/lotes/570/02.jpg",
@@ -2606,7 +2606,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 574,
@@ -2621,9 +2621,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/574/01_principal.jpg",
       "images/lotes/574/02.jpg",
@@ -2641,7 +2641,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 572,
@@ -2656,9 +2656,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/572/01_principal.jpg",
       "images/lotes/572/02.jpg",
@@ -2676,7 +2676,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 573,
@@ -2691,9 +2691,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/573/01_principal.jpg",
       "images/lotes/573/02.jpg",
@@ -2711,7 +2711,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 577,
@@ -2726,9 +2726,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/577/01_principal.jpg",
       "images/lotes/577/02.jpg",
@@ -2746,7 +2746,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 575,
@@ -2761,9 +2761,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/575/01_principal.jpg",
       "images/lotes/575/02.jpg",
@@ -2780,7 +2780,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15600,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 576,
@@ -2795,9 +2795,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/576/01_principal.jpg",
       "images/lotes/576/02.jpg",
@@ -2814,7 +2814,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 580,
@@ -2829,9 +2829,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/580/01_principal.jpg",
       "images/lotes/580/02.jpg",
@@ -2848,7 +2848,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 578,
@@ -2863,9 +2863,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/578/01_principal.jpg",
       "images/lotes/578/02.jpg",
@@ -2883,7 +2883,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 579,
@@ -2898,9 +2898,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/579/01_principal.jpg",
       "images/lotes/579/02.jpg",
@@ -2918,7 +2918,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 583,
@@ -2933,9 +2933,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/583/01_principal.jpg",
       "images/lotes/583/02.jpg",
@@ -2953,7 +2953,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 581,
@@ -2968,9 +2968,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/581/01_principal.jpg",
       "images/lotes/581/02.jpg",
@@ -2988,7 +2988,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 582,
@@ -3003,9 +3003,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/582/01_principal.jpg",
       "images/lotes/582/02.jpg",
@@ -3023,7 +3023,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 586,
@@ -3038,9 +3038,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/586/01_principal.jpg",
       "images/lotes/586/02.jpg",
@@ -3058,7 +3058,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 584,
@@ -3073,9 +3073,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/584/01_principal.jpg",
       "images/lotes/584/02.jpg",
@@ -3093,7 +3093,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 585,
@@ -3108,9 +3108,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/585/01_principal.jpg",
       "images/lotes/585/02.jpg",
@@ -3128,7 +3128,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 589,
@@ -3143,9 +3143,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/589/01_principal.jpg",
       "images/lotes/589/02.jpg",
@@ -3163,7 +3163,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 588,
@@ -3178,9 +3178,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/588/01_principal.jpg",
       "images/lotes/588/02.jpg",
@@ -3197,7 +3197,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 592,
@@ -3212,9 +3212,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/592/01_principal.jpg",
       "images/lotes/592/02.jpg",
@@ -3231,7 +3231,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 590,
@@ -3246,9 +3246,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/590/01_principal.jpg",
       "images/lotes/590/02.jpg",
@@ -3266,7 +3266,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 591,
@@ -3281,9 +3281,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/591/01_principal.jpg",
       "images/lotes/591/02.jpg",
@@ -3301,7 +3301,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12500,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 595,
@@ -3316,9 +3316,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/595/01_principal.jpg",
       "images/lotes/595/02.jpg",
@@ -3336,7 +3336,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 593,
@@ -3351,9 +3351,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/593/01_principal.jpg",
       "images/lotes/593/02.jpg",
@@ -3370,7 +3370,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 594,
@@ -3385,9 +3385,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/594/01_principal.jpg",
       "images/lotes/594/02.jpg",
@@ -3403,7 +3403,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 598,
@@ -3418,9 +3418,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/598/01_principal.jpg",
       "images/lotes/598/02.jpg",
@@ -3438,7 +3438,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 596,
@@ -3453,9 +3453,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/596/01_principal.jpg",
       "images/lotes/596/02.jpg",
@@ -3472,7 +3472,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 597,
@@ -3487,9 +3487,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/597/01_principal.jpg",
       "images/lotes/597/02.jpg",
@@ -3507,7 +3507,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 601,
@@ -3522,9 +3522,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/601/01_principal.jpg",
       "images/lotes/601/02.jpg",
@@ -3542,7 +3542,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 599,
@@ -3557,9 +3557,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/599/01_principal.jpg",
       "images/lotes/599/02.jpg",
@@ -3577,7 +3577,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 600,
@@ -3592,9 +3592,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/600/01_principal.jpg",
       "images/lotes/600/02.jpg",
@@ -3612,7 +3612,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 604,
@@ -3627,9 +3627,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/604/01_principal.jpg",
       "images/lotes/604/02.jpg",
@@ -3646,7 +3646,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 602,
@@ -3661,9 +3661,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/602/01_principal.jpg",
       "images/lotes/602/02.jpg",
@@ -3681,7 +3681,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 603,
@@ -3696,9 +3696,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/603/01_principal.jpg",
       "images/lotes/603/02.jpg",
@@ -3716,7 +3716,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 607,
@@ -3731,9 +3731,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/607/01_principal.jpg",
       "images/lotes/607/02.jpg",
@@ -3751,7 +3751,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 605,
@@ -3766,9 +3766,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/605/01_principal.jpg",
       "images/lotes/605/02.jpg",
@@ -3785,7 +3785,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 606,
@@ -3800,9 +3800,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/606/01_principal.jpg",
       "images/lotes/606/02.jpg",
@@ -3819,7 +3819,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 608,
@@ -3834,9 +3834,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/608/01_principal.jpg",
       "images/lotes/608/02.jpg",
@@ -3854,7 +3854,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 611,
@@ -3869,9 +3869,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/611/01_principal.jpg",
       "images/lotes/611/02.jpg",
@@ -3889,7 +3889,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 609,
@@ -3904,9 +3904,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/609/01_principal.jpg",
       "images/lotes/609/02.jpg",
@@ -3923,7 +3923,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 610,
@@ -3938,9 +3938,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/610/01_principal.jpg",
       "images/lotes/610/02.jpg",
@@ -3958,7 +3958,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 614,
@@ -3973,9 +3973,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/614/01_principal.jpg",
       "images/lotes/614/02.jpg",
@@ -3994,7 +3994,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 612,
@@ -4009,9 +4009,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/612/01_principal.jpg",
       "images/lotes/612/02.jpg",
@@ -4029,7 +4029,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 613,
@@ -4044,9 +4044,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/613/01_principal.jpg",
       "images/lotes/613/02.jpg",
@@ -4064,7 +4064,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 617,
@@ -4079,9 +4079,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/617/01_principal.jpg",
       "images/lotes/617/02.jpg",
@@ -4099,7 +4099,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 616,
@@ -4114,9 +4114,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/616/01_principal.jpg",
       "images/lotes/616/02.jpg",
@@ -4134,7 +4134,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 619,
@@ -4149,9 +4149,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/619/01_principal.jpg",
       "images/lotes/619/02.jpg",
@@ -4169,7 +4169,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 618,
@@ -4184,9 +4184,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/618/01_principal.jpg",
       "images/lotes/618/02.jpg",
@@ -4204,7 +4204,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 587,
@@ -4219,9 +4219,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+1d 8h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/587/01_principal.jpg",
       "images/lotes/587/02.jpg",
@@ -4238,7 +4238,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 615,
@@ -4253,9 +4253,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+1d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/615/01_principal.jpg",
       "images/lotes/615/02.jpg",
@@ -4273,7 +4273,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 941,
@@ -4288,9 +4288,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/941/01_principal.jpg",
       "images/lotes/941/02.jpg",
@@ -4308,7 +4308,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 937,
@@ -4323,9 +4323,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/937/01_principal.jpg",
       "images/lotes/937/02.jpg",
@@ -4343,7 +4343,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 938,
@@ -4358,9 +4358,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/938/01_principal.jpg",
       "images/lotes/938/02.jpg",
@@ -4376,7 +4376,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 936,
@@ -4391,9 +4391,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/936/01_principal.jpg",
       "images/lotes/936/02.jpg",
@@ -4411,7 +4411,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 939,
@@ -4426,9 +4426,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/939/01_principal.jpg",
       "images/lotes/939/08.jpg",
@@ -4440,7 +4440,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 940,
@@ -4455,9 +4455,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/940/01_principal.jpg",
       "images/lotes/940/02.jpg",
@@ -4475,7 +4475,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 944,
@@ -4490,9 +4490,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/944/01_principal.jpg",
       "images/lotes/944/02.jpg",
@@ -4510,7 +4510,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 942,
@@ -4525,9 +4525,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/942/01_principal.jpg",
       "images/lotes/942/02.jpg",
@@ -4545,7 +4545,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 943,
@@ -4560,9 +4560,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/943/01_principal.jpg",
       "images/lotes/943/02.jpg",
@@ -4579,7 +4579,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 47800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 947,
@@ -4594,9 +4594,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/947/01_principal.jpg",
       "images/lotes/947/02.jpg",
@@ -4614,7 +4614,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 945,
@@ -4629,9 +4629,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/945/01_principal.jpg",
       "images/lotes/945/02.jpg",
@@ -4648,7 +4648,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 948,
@@ -4663,9 +4663,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/948/01_principal.jpg",
       "images/lotes/948/02.jpg",
@@ -4683,7 +4683,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 951,
@@ -4698,9 +4698,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/951/01_principal.jpg",
       "images/lotes/951/02.jpg",
@@ -4717,7 +4717,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 47800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 949,
@@ -4732,9 +4732,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/949/01_principal.jpg",
       "images/lotes/949/02.jpg",
@@ -4751,7 +4751,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 950,
@@ -4766,9 +4766,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/950/01_principal.jpg",
       "images/lotes/950/02.jpg",
@@ -4785,7 +4785,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 952,
@@ -4800,9 +4800,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/952/01_principal.jpg",
       "images/lotes/952/08.jpg",
@@ -4814,7 +4814,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 47800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 955,
@@ -4829,9 +4829,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/955/01_principal.jpg",
       "images/lotes/955/02.jpg",
@@ -4849,7 +4849,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 954,
@@ -4864,9 +4864,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/954/01_principal.jpg",
       "images/lotes/954/02.jpg",
@@ -4883,7 +4883,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 958,
@@ -4898,9 +4898,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/958/01_principal.jpg",
       "images/lotes/958/02.jpg",
@@ -4918,7 +4918,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 956,
@@ -4933,9 +4933,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/956/01_principal.jpg",
       "images/lotes/956/02.jpg",
@@ -4951,7 +4951,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 957,
@@ -4966,9 +4966,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/957/01_principal.jpg",
       "images/lotes/957/02.jpg",
@@ -4986,7 +4986,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 961,
@@ -5001,9 +5001,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/961/01_principal.jpg",
       "images/lotes/961/02.jpg",
@@ -5021,7 +5021,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 959,
@@ -5036,9 +5036,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/959/01_principal.jpg",
       "images/lotes/959/02.jpg",
@@ -5053,7 +5053,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 962,
@@ -5068,9 +5068,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/962/01_principal.jpg",
       "images/lotes/962/02.jpg",
@@ -5088,7 +5088,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 47800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 965,
@@ -5103,9 +5103,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/965/01_principal.jpg",
       "images/lotes/965/02.jpg",
@@ -5122,7 +5122,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 963,
@@ -5137,9 +5137,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/963/01_principal.jpg",
       "images/lotes/963/02.jpg",
@@ -5159,7 +5159,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 47800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 964,
@@ -5174,9 +5174,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/964/01_principal.jpg",
       "images/lotes/964/02.jpg",
@@ -5193,7 +5193,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 968,
@@ -5208,9 +5208,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/968/01_principal.jpg",
       "images/lotes/968/02.jpg",
@@ -5227,7 +5227,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 966,
@@ -5242,9 +5242,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/966/01_principal.jpg",
       "images/lotes/966/02.jpg",
@@ -5262,7 +5262,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 967,
@@ -5277,9 +5277,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/967/01_principal.jpg",
       "images/lotes/967/08.jpg",
@@ -5291,7 +5291,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 971,
@@ -5306,9 +5306,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/971/01_principal.jpg",
       "images/lotes/971/02.jpg",
@@ -5326,7 +5326,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 969,
@@ -5341,9 +5341,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/969/01_principal.jpg",
       "images/lotes/969/07.jpg",
@@ -5355,7 +5355,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 970,
@@ -5370,9 +5370,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/970/01_principal.jpg",
       "images/lotes/970/09.jpg"
@@ -5382,7 +5382,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 12000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 974,
@@ -5397,9 +5397,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/974/01_principal.jpg",
       "images/lotes/974/02.jpg",
@@ -5417,7 +5417,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 972,
@@ -5432,9 +5432,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/972/01_principal.jpg",
       "images/lotes/972/08.jpg",
@@ -5446,7 +5446,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 14400,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 973,
@@ -5461,9 +5461,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/973/01_principal.jpg",
       "images/lotes/973/02.jpg",
@@ -5480,7 +5480,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 47800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 977,
@@ -5495,9 +5495,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/977/01_principal.jpg",
       "images/lotes/977/02.jpg",
@@ -5515,7 +5515,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 975,
@@ -5530,9 +5530,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/975/01_principal.jpg",
       "images/lotes/975/02.jpg",
@@ -5550,7 +5550,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 976,
@@ -5565,9 +5565,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/976/01_principal.jpg",
       "images/lotes/976/02.jpg",
@@ -5585,7 +5585,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 980,
@@ -5600,9 +5600,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/980/01_principal.jpg",
       "images/lotes/980/02.jpg",
@@ -5620,7 +5620,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 33800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 978,
@@ -5635,9 +5635,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/978/01_principal.jpg",
       "images/lotes/978/02.jpg",
@@ -5654,7 +5654,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 979,
@@ -5669,9 +5669,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/979/01_principal.jpg",
       "images/lotes/979/08.jpg",
@@ -5683,7 +5683,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 983,
@@ -5698,9 +5698,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/983/01_principal.jpg",
       "images/lotes/983/02.jpg",
@@ -5718,7 +5718,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 981,
@@ -5733,9 +5733,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/981/01_principal.jpg",
       "images/lotes/981/02.jpg",
@@ -5752,7 +5752,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 982,
@@ -5767,9 +5767,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/982/01_principal.jpg",
       "images/lotes/982/02.jpg",
@@ -5786,7 +5786,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 32000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 986,
@@ -5801,9 +5801,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/986/01_principal.jpg",
       "images/lotes/986/02.jpg",
@@ -5822,7 +5822,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 984,
@@ -5837,9 +5837,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/984/01_principal.jpg",
       "images/lotes/984/07.jpg",
@@ -5851,7 +5851,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 985,
@@ -5866,9 +5866,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/985/01_principal.jpg",
       "images/lotes/985/02.jpg",
@@ -5885,7 +5885,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 989,
@@ -5900,9 +5900,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/989/01_principal.jpg",
       "images/lotes/989/02.jpg",
@@ -5920,7 +5920,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 987,
@@ -5935,9 +5935,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/987/01_principal.jpg",
       "images/lotes/987/02.jpg",
@@ -5955,7 +5955,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 988,
@@ -5970,9 +5970,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+2d 8h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/988/01_principal.jpg",
       "images/lotes/988/02.jpg",
@@ -5989,7 +5989,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 41600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1110,
@@ -6004,9 +6004,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1110/01_principal.jpg",
       "images/lotes/1110/03.jpg",
@@ -6024,7 +6024,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 68000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1115,
@@ -6039,9 +6039,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1115/01_principal.jpg",
       "images/lotes/1115/02.jpg",
@@ -6059,7 +6059,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1112,
@@ -6074,9 +6074,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1112/01_principal.jpg",
       "images/lotes/1112/02.jpg",
@@ -6093,7 +6093,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1111,
@@ -6108,9 +6108,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1111/01_principal.jpg",
       "images/lotes/1111/02.jpg",
@@ -6128,7 +6128,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 92000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1113,
@@ -6143,9 +6143,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1113/01_principal.jpg",
       "images/lotes/1113/02.jpg",
@@ -6168,7 +6168,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1114,
@@ -6183,9 +6183,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1114/01_principal.jpg",
       "images/lotes/1114/03.jpg",
@@ -6197,7 +6197,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1118,
@@ -6212,9 +6212,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1118/01_principal.jpg",
       "images/lotes/1118/02.jpg",
@@ -6226,7 +6226,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 68000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1116,
@@ -6241,9 +6241,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1116/01_principal.jpg",
       "images/lotes/1116/02.jpg",
@@ -6261,7 +6261,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 68000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1117,
@@ -6276,9 +6276,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1117/01_principal.jpg",
       "images/lotes/1117/02.jpg",
@@ -6298,7 +6298,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1119,
@@ -6313,9 +6313,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1119/01_principal.jpg",
       "images/lotes/1119/02.jpg",
@@ -6332,7 +6332,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1120,
@@ -6347,9 +6347,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1120/01_principal.jpg",
       "images/lotes/1120/02.jpg",
@@ -6362,7 +6362,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 50000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1121,
@@ -6377,9 +6377,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1121/01_principal.jpg",
       "images/lotes/1121/02.jpg",
@@ -6397,7 +6397,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 40000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1122,
@@ -6412,9 +6412,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1122/01_principal.jpg",
       "images/lotes/1122/02.jpg",
@@ -6432,7 +6432,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 92000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1123,
@@ -6447,9 +6447,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+2d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1123/01_principal.jpg",
       "images/lotes/1123/02.jpg",
@@ -6468,7 +6468,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 68000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1124,
@@ -6483,9 +6483,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p2",
     "ends": "+2d 6h",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1124/01_principal.jpg",
       "images/lotes/1124/02.jpg",
@@ -6503,7 +6503,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação do veículo disponível para consulta no edital. O estado de conservação, a quilometragem e eventuais débitos devem ser confirmados na vistoria.",
     "basePrice": 68000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1006,
@@ -6518,9 +6518,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1006/01_principal.jpg",
       "images/lotes/1006/02.jpg",
@@ -6535,7 +6535,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 48400,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1009,
@@ -6550,9 +6550,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1009/01_principal.jpg",
       "images/lotes/1009/02.jpg",
@@ -6569,7 +6569,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 66000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1041,
@@ -6584,9 +6584,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1041/01_principal.jpg",
       "images/lotes/1041/02.jpg",
@@ -6598,7 +6598,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 26000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1007,
@@ -6613,9 +6613,9 @@ window.NL_REAL_LOTS = [
     "bids": 1,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1007/01_principal.jpg",
       "images/lotes/1007/02.jpg",
@@ -6630,7 +6630,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 34000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1008,
@@ -6645,9 +6645,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 44 — 03/11",
+    "auction": "Leilão 44 — 01/12",
     "auctionNum": 44,
-    "auctionDate": "03/11/2026",
+    "auctionDate": "01/12/2026",
     "photos": [
       "images/lotes/1008/01_principal.jpg",
       "images/lotes/1008/02.jpg",
@@ -6663,7 +6663,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 44000,
     "auctionTime": "10:00",
-    "endsAt": 1793718000000
+    "endsAt": 1796214000000
   },
   {
     "id": 1012,
@@ -6678,9 +6678,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1012/01_principal.jpg",
       "images/lotes/1012/02.jpg",
@@ -6694,7 +6694,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 28800,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1011,
@@ -6709,9 +6709,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1011/01_principal.jpg",
       "images/lotes/1011/02.jpg",
@@ -6726,7 +6726,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 48400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1068,
@@ -6741,9 +6741,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1068/01_principal.jpg",
       "images/lotes/1068/02.jpg",
@@ -6756,7 +6756,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 28800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1013,
@@ -6771,9 +6771,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1013/01_principal.jpg",
       "images/lotes/1013/02.jpg",
@@ -6789,7 +6789,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 48400,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1067,
@@ -6804,9 +6804,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1067/01_principal.jpg",
       "images/lotes/1067/02.jpg",
@@ -6818,7 +6818,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 28800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1021,
@@ -6833,9 +6833,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1021/01_principal.jpg",
       "images/lotes/1021/02.jpg",
@@ -6850,7 +6850,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 27200,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1022,
@@ -6865,9 +6865,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1022/01_principal.jpg",
       "images/lotes/1022/03.jpg",
@@ -6882,7 +6882,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 28800,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1014,
@@ -6897,9 +6897,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 45 — 04/11",
+    "auction": "Leilão 45 — 02/12",
     "auctionNum": 45,
-    "auctionDate": "04/11/2026",
+    "auctionDate": "02/12/2026",
     "photos": [
       "images/lotes/1014/01_principal.jpg",
       "images/lotes/1014/02.jpg",
@@ -6912,7 +6912,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 22000,
     "auctionTime": "10:00",
-    "endsAt": 1793804400000
+    "endsAt": 1796300400000
   },
   {
     "id": 1015,
@@ -6927,9 +6927,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1015/01_principal.jpg",
       "images/lotes/1015/03.jpeg",
@@ -6946,7 +6946,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1016,
@@ -6961,9 +6961,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1016/01_principal.jpg",
       "images/lotes/1016/02.jpg",
@@ -6977,7 +6977,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 48400,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1059,
@@ -6992,9 +6992,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 47 — 06/11",
+    "auction": "Leilão 47 — 04/12",
     "auctionNum": 47,
-    "auctionDate": "06/11/2026",
+    "auctionDate": "04/12/2026",
     "photos": [
       "images/lotes/1059/01_principal.jpg",
       "images/lotes/1059/02.jpg",
@@ -7008,7 +7008,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 44000,
     "auctionTime": "10:00",
-    "endsAt": 1793977200000
+    "endsAt": 1796473200000
   },
   {
     "id": 1017,
@@ -7023,9 +7023,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1017/01_principal.jpg",
       "images/lotes/1017/02.jpg",
@@ -7040,7 +7040,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 44000,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1018,
@@ -7055,9 +7055,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d",
-    "auction": "Leilão 46 — 05/11",
+    "auction": "Leilão 46 — 03/12",
     "auctionNum": 46,
-    "auctionDate": "05/11/2026",
+    "auctionDate": "03/12/2026",
     "photos": [
       "images/lotes/1018/01_principal.jpg",
       "images/lotes/1018/03.jpg",
@@ -7072,7 +7072,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 37600,
     "auctionTime": "10:00",
-    "endsAt": 1793890800000
+    "endsAt": 1796386800000
   },
   {
     "id": 1075,
@@ -7087,9 +7087,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1075/01_principal.jpg",
       "images/lotes/1075/02.jpg",
@@ -7106,7 +7106,7 @@ window.NL_REAL_LOTS = [
     "obs": "Embarcação vendida no estado em que se encontra. Motor, casco, acessórios e documentação devem ser verificados na vistoria e no edital.",
     "basePrice": 48400,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1079,
@@ -7121,9 +7121,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d 4h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1079/01_principal.jpeg",
       "images/lotes/1079/02.jpeg",
@@ -7136,7 +7136,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1082,
@@ -7151,9 +7151,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d 4h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1082/01_principal.jpeg",
       "images/lotes/1082/02.jpeg",
@@ -7167,7 +7167,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 20000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1080,
@@ -7182,9 +7182,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+13d 4h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1080/01_principal.jpeg",
       "images/lotes/1080/02.jpeg",
@@ -7198,7 +7198,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 9600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1081,
@@ -7213,9 +7213,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c1",
     "ends": "+13d 4h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1081/01_principal.jpeg",
       "images/lotes/1081/02.jpeg",
@@ -7229,7 +7229,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1083,
@@ -7244,9 +7244,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+13d 4h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1083/01_principal.jpeg",
       "images/lotes/1083/02.jpeg",
@@ -7260,7 +7260,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 15200,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1084,
@@ -7275,9 +7275,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c3",
     "ends": "+13d 4h",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1084/01_principal.jpeg",
       "images/lotes/1084/02.jpeg",
@@ -7291,7 +7291,7 @@ window.NL_REAL_LOTS = [
     "obs": "Documentação e laudo cadastral disponíveis para consulta. Eventuais débitos, avarias e condições de transferência seguem o que estiver descrito no edital.",
     "basePrice": 19800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1092,
@@ -7306,9 +7306,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1092/01_principal.jpg",
       "images/lotes/1092/02.jpg",
@@ -7321,7 +7321,7 @@ window.NL_REAL_LOTS = [
     "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
     "basePrice": 500,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1091,
@@ -7336,9 +7336,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1091/01_principal.jpg",
       "images/lotes/1091/03.jpg",
@@ -7354,7 +7354,7 @@ window.NL_REAL_LOTS = [
     "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
     "basePrice": 3400,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1093,
@@ -7369,9 +7369,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1093/01_principal.jpg",
       "images/lotes/1093/02.jpg",
@@ -7382,7 +7382,7 @@ window.NL_REAL_LOTS = [
     "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
     "basePrice": 800,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1090,
@@ -7397,9 +7397,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1090/01_principal.jpg",
       "images/lotes/1090/02.jpg",
@@ -7413,7 +7413,7 @@ window.NL_REAL_LOTS = [
     "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
     "basePrice": 1200,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1094,
@@ -7428,9 +7428,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "p1",
     "ends": "+16d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1094/01_principal.jpg",
       "images/lotes/1094/03.jpg",
@@ -7442,7 +7442,7 @@ window.NL_REAL_LOTS = [
     "obs": "Itens usados, vendidos no estado em que se encontram e sem garantia. A quantidade e a composição do lote seguem a descrição e as fotos.",
     "basePrice": 400,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1085,
@@ -7457,9 +7457,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1085/01_principal.jpg",
       "images/lotes/1085/02.jpg",
@@ -7474,7 +7474,7 @@ window.NL_REAL_LOTS = [
     "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
     "basePrice": 192000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1087,
@@ -7489,9 +7489,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1087/01_principal.jpg"
     ],
@@ -7500,7 +7500,7 @@ window.NL_REAL_LOTS = [
     "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
     "basePrice": 725200,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1086,
@@ -7515,9 +7515,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1086/01_principal.jpg",
       "images/lotes/1086/02.jpg",
@@ -7534,7 +7534,7 @@ window.NL_REAL_LOTS = [
     "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
     "basePrice": 1163600,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1088,
@@ -7549,9 +7549,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1088/01_principal.jpeg",
       "images/lotes/1088/02.jpeg",
@@ -7575,7 +7575,7 @@ window.NL_REAL_LOTS = [
     "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
     "basePrice": 114400,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   },
   {
     "id": 1089,
@@ -7590,9 +7590,9 @@ window.NL_REAL_LOTS = [
     "bids": 0,
     "media": "c2",
     "ends": "+18d",
-    "auction": "Leilão 48 — 11/11",
+    "auction": "Leilão 48 — 05/12",
     "auctionNum": 48,
-    "auctionDate": "11/11/2026",
+    "auctionDate": "05/12/2026",
     "photos": [
       "images/lotes/1089/01_principal.jpeg",
       "images/lotes/1089/02.jpeg",
@@ -7609,6 +7609,6 @@ window.NL_REAL_LOTS = [
     "obs": "Imóvel vendido no estado em que se encontra. Matrícula, ocupação, débitos e demais condições constam no edital do leilão.",
     "basePrice": 156000,
     "auctionTime": "10:00",
-    "endsAt": 1794409200000
+    "endsAt": 1796559600000
   }
 ];

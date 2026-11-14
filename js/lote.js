@@ -72,7 +72,7 @@
     '<nav class="crumbs"><a href="index.html">Início</a> / <a href="lotes.html">Lotes</a> / <span>Lote ' + lot.n + '</span></nav>' +
     '<div class="detail">' +
       '<div class="detail__media">' +
-        '<div class="gallery gallery--' + lot.media + '"><img class="gallery__img" id="d-main" fetchpriority="high" src="' + photos[0] + '" alt="' + lot.title + '"><span class="lot__tag">Lote ' + lot.n + '</span></div>' +
+        '<div class="gallery gallery--' + lot.media + '"><img class="gallery__img" id="d-main" fetchpriority="high" src="' + photos[0] + '" alt="' + lot.title + '"><span class="lot__tag">Lote ' + lot.n + '</span><button class="gallery__nav gallery__nav--prev" aria-label="Foto anterior" title="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><button class="gallery__nav gallery__nav--next" aria-label="Próxima foto" title="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>' +
         '<div class="thumbs" id="d-thumbs">' + thumbs + '</div>' +
       '</div>' +
       '<div class="detail__info">' +
@@ -146,7 +146,7 @@
       '<h3 style="color:var(--navy);font-size:1.05rem;margin:1.2rem 0 .3rem">' + obsTitle + '</h3>' +
       '<p>' + obsText + '</p>' +
     '</div>' +
-    '<div class="detail__history"><h2>Histórico de lances</h2>' +
+    '<div class="detail__history"><h2>Histórico de lances <small class="muted" id="d-demo-tag" hidden>(ilustrativo)</small></h2>' +
       '<div class="table-wrap"><table class="table"><thead><tr><th>Participante</th><th>Valor</th><th>Quando</th></tr></thead>' +
       '<tbody id="bid-history"></tbody></table></div>' +
     '</div>' +
@@ -155,6 +155,8 @@
   var thumbsWrap = document.getElementById('d-thumbs');
   var mainImg = document.getElementById('d-main');
   if (thumbsWrap && mainImg) {
+    var photos = (lot.photos && lot.photos.length) ? lot.photos : [window.NL_IMG_FOR(lot)];
+    var curIndex = 0;
     function selectPhoto(el) {
       var src = el.getAttribute('data-src');
       if (!src) return;
@@ -162,6 +164,18 @@
       mainImg.alt = el.getAttribute('aria-label') || lot.title;
       thumbsWrap.querySelectorAll('[data-src]').forEach(function (s) { s.classList.remove('is-active'); });
       el.classList.add('is-active');
+      var idx = Array.prototype.indexOf.call(thumbsWrap.querySelectorAll('[data-src]'), el);
+      if (idx >= 0) curIndex = idx;
+    }
+    function showIndex(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= photos.length) idx = photos.length - 1;
+      curIndex = idx;
+      mainImg.src = photos[idx];
+      mainImg.alt = photos.length > 1 ? lot.title + ' — foto ' + (idx + 1) + ' de ' + photos.length : lot.title;
+      thumbsWrap.querySelectorAll('[data-src]').forEach(function (s, i) {
+        s.classList.toggle('is-active', i === idx);
+      });
     }
     thumbsWrap.addEventListener('click', function (e) {
       var el = e.target.closest('[data-src]');
@@ -171,6 +185,13 @@
       if (e.key !== 'Enter' && e.key !== ' ') return;
       var el = e.target.closest('[data-src]');
       if (el) { e.preventDefault(); selectPhoto(el); }
+    });
+    // Setas de navegação da galeria (transparentes, laterais)
+    document.querySelectorAll('.gallery__nav').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.classList.contains('gallery__nav--prev')) showIndex(curIndex - 1);
+        else if (btn.classList.contains('gallery__nav--next')) showIndex(curIndex + 1);
+      });
     });
   }
 

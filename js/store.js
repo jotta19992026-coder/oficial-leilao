@@ -17,7 +17,7 @@
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=74';
+      s.src = 'js/lots-data.js?v=81';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -147,6 +147,13 @@
         if (s && (Number(s.amount) || 0) > price) price = Number(s.amount);
         n += (meta && meta.simBids) || 0;
       }
+      if (window.NLDemo && window.NLDemo.enabled()) {
+        var d = window.NLDemo.forLot(l);
+        if (d) {
+          if (d.top > price) price = d.top;
+          n += d.count;
+        }
+      }
       l.price = price;
       l.bids = n;
     });
@@ -168,8 +175,8 @@
       setLots((window.NL_LOTS || []).map(fromLocal), 'local');
     });
   }).then(function () {
-    applySim();
-    return (window.NLAuth ? window.NLAuth.ready : Promise.resolve()).then(fetchMyBids);
+    var dl = (window.NLDemo && window.NLDemo.loadConfig) ? window.NLDemo.loadConfig() : Promise.resolve();
+    return dl.then(function () { applySim(); return (window.NLAuth ? window.NLAuth.ready : Promise.resolve()).then(fetchMyBids); });
   }).then(function (mine) {
     cache.myBids = mine;
     return cache.lots;
@@ -218,6 +225,9 @@
         .map(function (b) {
           return { userLabel: simFirstName(b.profiles && b.profiles.name), amount: Number(b.amount), time: Date.parse(b.created_at) };
         }) : [];
+      var lot = cache.byId[parseInt(lotId, 10)];
+      var dm = (window.NLDemo && window.NLDemo.enabled() && lot) ? window.NLDemo.forLot(lot) : null;
+      var demo = dm ? dm.rows.slice() : [];
       if (!supa || cache.source !== 'supabase') {
         return Promise.resolve(sim.sort(function (a, b) { return b.time - a.time; }));
       }
@@ -226,12 +236,12 @@
           return { userLabel: h.display_name, amount: Number(h.amount), time: Date.parse(h.created_at) };
         });
         return real.concat(sim).sort(function (a, b) { return b.time - a.time; });
-      }, function () { return sim; });
+      }, function () { return sim.sort(function (a, b) { return b.time - a.time; }); });
     },
 
-    // Visualizações REAIS do lote (page_views da migração 003; leitura via lot_view_count, migração 006).
-    // Devolve { views: total, online: visitantes únicos nos últimos 5 min } — null se o banco não responder.
+    // Visualizações do lote: contagem REAL de page_views (migração 003, leitura na 006).
     lotViews: function (lotId) {
+      if (window.NLDemo && window.NLDemo.enabled()) return Promise.resolve(window.NLDemo.views(lotId));
       if (!supa || cache.source !== 'supabase') return Promise.resolve(null);
       return supa.rpc('lot_view_count', { p_lot_id: lotId }).then(function (r) {
         if (r.error || !r.data) return null;
@@ -366,6 +376,17 @@
           .then(function (r) { if (r.error) throw r.error; });
       },
       // Documento enviado pelo cliente (bucket privado user-docs): link assinado de 5 min.
+      // Exclui o cliente (função admin_delete_user, migração 007). Apaga antes o documento
+      // do bucket user-docs (melhor esforço) e depois a conta; os lances ficam no histórico sem dono.
+      deleteUser: function (userId, docPath) {
+        if (!supa || !userId) return Promise.reject(new Error('Supabase indisponível.'));
+        var rmDoc = docPath
+          ? supa.storage.from('user-docs').remove([docPath]).then(function () {}, function () {})
+          : Promise.resolve();
+        return rmDoc.then(function () {
+          return supa.rpc('admin_delete_user', { p_user_id: userId });
+        }).then(function (r) { if (r.error) throw r.error; });
+      },
       docLink: function (path) {
         if (!supa || !path) return Promise.reject(new Error('Documento indisponível.'));
         return supa.storage.from('user-docs').createSignedUrl(path, 300)
