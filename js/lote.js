@@ -262,7 +262,11 @@
   }
   function loadHistory() {
     if (!window.NLStore) return;
-    window.NLStore.history(lot.id).then(renderHistory);
+    window.NLStore.history(lot.id).then(function (rows) {
+      renderHistory(rows);
+      var tag = document.getElementById('d-demo-tag');
+      if (tag && window.NLDemo && window.NLDemo.enabled()) tag.hidden = false;
+    });
   }
   // Aplica preço/quantidade de lances vindos do banco.
   function applyLot(fresh) {

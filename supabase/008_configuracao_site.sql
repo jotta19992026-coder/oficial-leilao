@@ -23,10 +23,9 @@ create policy site_settings_admin_write on public.site_settings
   with check (public.is_admin());
 
 insert into public.site_settings (key, value)
-values ('demo_mode', '{"enabled": false}'::jsonb)
-on conflict (key) do nothing;
+values ('demo_mode', '{"enabled": true}'::jsonb)
+on conflict (key) do update set value = '{"enabled": true}'::jsonb;
 
--- Funções auxiliares para leitura/atualização do modo ilustrativo.
 create or replace function public.get_site_setting(p_key text)
 returns jsonb
 language sql

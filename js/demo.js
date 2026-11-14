@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var NAMES = ['João', 'Maria', 'Pedro', 'Ana', 'Lucas', 'Julia', 'Gabriel', 'Fernanda', 'Rafael', 'Camila', 'Bruno', 'Larissa', 'Matheus', 'Beatriz', 'Thiago', 'Patrícia', 'Vinícius', 'Amanda', 'Diego', 'Natália'];
-  var ON = { enabled: false };
+  var ON = { enabled: true };
 
   function hash(s) {
     var h = 2166136261;
@@ -17,14 +17,14 @@
   }
   function loadConfig() {
     var supa = window.NLSupa;
-    if (!supa) { ON.enabled = false; return Promise.resolve(ON); }
+    if (!supa) { ON.enabled = true; return Promise.resolve(ON); }
     return supa.rpc('get_site_setting', { p_key: 'demo_mode' }).then(function (r) {
       var v = r && r.data;
       if (v && typeof v === 'object' && 'enabled' in v) ON.enabled = !!v.enabled;
-      else if (v && typeof v === 'string') { try { v = JSON.parse(v); ON.enabled = !!v.enabled; } catch (e) { ON.enabled = false; } }
-      else ON.enabled = false;
+      else if (v && typeof v === 'string') { try { v = JSON.parse(v); ON.enabled = !!v.enabled; } catch (e) { ON.enabled = true; } }
+      else ON.enabled = true; // padrão: demonstração ativa para todos os visitantes
       return ON;
-    }, function () { ON.enabled = false; return ON; });
+    }, function () { ON.enabled = true; return ON; });
   }
   function enabled() {
     if (/[?&]demo=0(&|$)/.test(location.search || '')) return false;

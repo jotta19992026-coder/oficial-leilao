@@ -1,13 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Painel administrativo — Leilão Oficial</title>
+  <title>Painel administrativo â€” LeilÃ£o Oficial</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="favicon.png?v=81">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=81">
-  <!-- Guarda rápida: sem sessão do Supabase, nem renderiza. A permissão de admin é confirmada no banco (admin.js). -->
+  <link rel="icon" type="image/png" href="favicon.png?v=82">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=82">
+  <!-- Guarda rÃ¡pida: sem sessÃ£o do Supabase, nem renderiza. A permissÃ£o de admin Ã© confirmada no banco (admin.js). -->
   <script>try{if(!localStorage.getItem('sb-srxtmyhcfncscjvyibhg-auth-token'))location.replace('admin-login.html');}catch(e){location.replace('admin-login.html');}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=81">
+  <link rel="stylesheet" href="css/styles.css?v=82">
 </head>
 <body>
   <div class="admin-top">
@@ -32,11 +32,11 @@
     </div>
   </div>
 
-  <nav class="adminnav" aria-label="Seções do painel">
+  <nav class="adminnav" aria-label="SeÃ§Ãµes do painel">
     <div class="container adminnav__inner">
-      <a class="adminnav__btn" href="#dates-panel" data-goto="dates-panel">Datas dos leilões</a>
+      <a class="adminnav__btn" href="#dates-panel" data-goto="dates-panel">Datas dos leilÃµes</a>
       <a class="adminnav__btn" href="#sim-panel" data-goto="sim-panel">Simulador</a>
-      <a class="adminnav__btn" href="#views-panel" data-goto="views-panel">Visualizações</a>
+      <a class="adminnav__btn" href="#views-panel" data-goto="views-panel">VisualizaÃ§Ãµes</a>
       <a class="adminnav__btn" href="#add-panel" data-goto="add-panel">Adicionar lote</a>
       <a class="adminnav__btn" href="#contract-panel" data-goto="contract-panel">Contratos</a>
       <a class="adminnav__btn" href="#wins-panel" data-goto="wins-panel">Arremates</a>
@@ -49,14 +49,14 @@
   <main class="container admin" id="admin-panel">
 
     <section class="panel">
-      <h2>Atualização automática</h2>
+      <h2>AtualizaÃ§Ã£o automÃ¡tica</h2>
       <div class="switches">
         <label class="switch"><input type="checkbox" id="auto-view" checked> <span>Atualizar a tela automaticamente</span></label>
         <label class="switch"><span>Intervalo</span>
           <select id="auto-interval"><option value="5000">5s</option><option value="10000" selected>10s</option><option value="30000">30s</option></select>
         </label>
       </div>
-      <p class="muted" id="auto-status">Atualização automática parada.</p>
+      <p class="muted" id="auto-status">AtualizaÃ§Ã£o automÃ¡tica parada.</p>
     </section>
 
     <section class="kpis">
@@ -64,34 +64,34 @@
       <div class="kpi"><span>Lotes</span><strong id="kpi-lots">0</strong></div>
       <div class="kpi"><span>Lances registrados</span><strong id="kpi-bids">0</strong></div>
       <div class="kpi"><span>Lotes com vencedor</span><strong id="kpi-wins">0</strong></div>
-      <div class="kpi"><span>Visualizações hoje</span><strong id="kpi-views">—</strong></div>
-      <div class="kpi"><span>Visitantes hoje</span><strong id="kpi-visitors">—</strong></div>
-      <div class="kpi"><span>Online agora <small>(5 min)</small></span><strong id="kpi-online">—</strong></div>
+      <div class="kpi"><span>VisualizaÃ§Ãµes hoje</span><strong id="kpi-views">â€”</strong></div>
+      <div class="kpi"><span>Visitantes hoje</span><strong id="kpi-visitors">â€”</strong></div>
+      <div class="kpi"><span>Online agora <small>(5 min)</small></span><strong id="kpi-online">â€”</strong></div>
     </section>
 
     <section class="panel" id="dates-panel">
       <div class="panel__head">
-        <h2>Datas dos leilões <small class="muted">(agenda e prazo dos lances)</small></h2>
+        <h2>Datas dos leilÃµes <small class="muted">(agenda e prazo dos lances)</small></h2>
         <div class="panel__tools">
           <button class="btn btn--ghost btn--sm" id="dates-refresh" type="button">Atualizar</button>
         </div>
       </div>
-      <p class="muted">Altere a data/hora do leilão e o encerramento dos lances. Ao salvar, todos os lotes do
-        leilão são atualizados e o site (Próximos leilões, agenda, cards, filtro de datas e página do lote)
-        passa a mostrar a nova data. Se você mudar só a data do leilão, o encerramento acompanha sozinho
+      <p class="muted">Altere a data/hora do leilÃ£o e o encerramento dos lances. Ao salvar, todos os lotes do
+        leilÃ£o sÃ£o atualizados e o site (PrÃ³ximos leilÃµes, agenda, cards, filtro de datas e pÃ¡gina do lote)
+        passa a mostrar a nova data. Se vocÃª mudar sÃ³ a data do leilÃ£o, o encerramento acompanha sozinho
         (mesma hora do dia). O encerramento no passado bloqueia novos lances. Para mudar a data de
-        <strong>um único lote</strong>, use <strong>Datas por lote</strong> no fim desta seção.</p>
+        <strong>um Ãºnico lote</strong>, use <strong>Datas por lote</strong> no fim desta seÃ§Ã£o.</p>
 
       <div class="dates-bulk">
         <div class="dates-bulk__intro">
-          <h3>Atualização em massa</h3>
-          <p class="muted">Aplica a mesma data e o mesmo encerramento a <strong id="bulk-count">todos os leilões</strong>
-            de uma vez. Para alterar apenas um leilão, use a tabela abaixo. Para escolher
-            <strong>lotes específicos</strong>, marque-os na lista <strong>Datas por lote</strong> e clique em
+          <h3>AtualizaÃ§Ã£o em massa</h3>
+          <p class="muted">Aplica a mesma data e o mesmo encerramento a <strong id="bulk-count">todos os leilÃµes</strong>
+            de uma vez. Para alterar apenas um leilÃ£o, use a tabela abaixo. Para escolher
+            <strong>lotes especÃ­ficos</strong>, marque-os na lista <strong>Datas por lote</strong> e clique em
             <strong>Aplicar aos lotes selecionados</strong>.</p>
         </div>
         <div class="dates-bulk__form">
-          <div class="field"><label for="bulk-date-start">Nova data e hora do leilão</label>
+          <div class="field"><label for="bulk-date-start">Nova data e hora do leilÃ£o</label>
             <input id="bulk-date-start" class="date-input" type="datetime-local"></div>
           <div class="field"><label for="bulk-date-end">Novo encerramento dos lances</label>
             <input id="bulk-date-end" class="date-input" type="datetime-local"></div>
@@ -104,42 +104,42 @@
 
       <div class="table-wrap">
         <table class="table dates-table">
-          <thead><tr><th>Leilão</th><th>Lotes</th><th>Data e hora do leilão</th><th>Encerramento dos lances</th><th></th></tr></thead>
-          <tbody id="dates-body"><tr><td colspan="5" class="muted">Carregando…</td></tr></tbody>
+          <thead><tr><th>LeilÃ£o</th><th>Lotes</th><th>Data e hora do leilÃ£o</th><th>Encerramento dos lances</th><th></th></tr></thead>
+          <tbody id="dates-body"><tr><td colspan="5" class="muted">Carregandoâ€¦</td></tr></tbody>
         </table>
       </div>
       <p class="form__msg" id="dates-msg"></p>
 
       <div class="dates-lots">
         <div class="dates-lots__intro">
-          <h3>Datas por lote <small class="muted">(individual — exceção ao leilão)</small></h3>
-          <p class="muted">Ajusta a data/hora do leilão e o encerramento dos lances <strong>de um lote
-            específico</strong> — para encerramento escalonado ou um lote fora da regra do leilão. Os demais
-            lotes seguem a data do leilão na tabela acima. Marque os lotes <strong>filtrando, buscando ou
-            digitando os números</strong> (ex.: 1, 3, 12 — vale para o leilão selecionado no filtro) e clique
-            em <strong>Aplicar data aos selecionados</strong> aqui mesmo, ou use <strong>Atualização em
-            massa → Aplicar aos lotes selecionados</strong>. <strong>Atenção:</strong> salvar as datas do
-            leilão inteiro (tabela acima) sobrescreve as datas individuais.</p>
+          <h3>Datas por lote <small class="muted">(individual â€” exceÃ§Ã£o ao leilÃ£o)</small></h3>
+          <p class="muted">Ajusta a data/hora do leilÃ£o e o encerramento dos lances <strong>de um lote
+            especÃ­fico</strong> â€” para encerramento escalonado ou um lote fora da regra do leilÃ£o. Os demais
+            lotes seguem a data do leilÃ£o na tabela acima. Marque os lotes <strong>filtrando, buscando ou
+            digitando os nÃºmeros</strong> (ex.: 1, 3, 12 â€” vale para o leilÃ£o selecionado no filtro) e clique
+            em <strong>Aplicar data aos selecionados</strong> aqui mesmo, ou use <strong>AtualizaÃ§Ã£o em
+            massa â†’ Aplicar aos lotes selecionados</strong>. <strong>AtenÃ§Ã£o:</strong> salvar as datas do
+            leilÃ£o inteiro (tabela acima) sobrescreve as datas individuais.</p>
         </div>
         <div class="dates-lots__filters">
-          <div class="field"><label for="lotdates-auction">Leilão</label><select id="lotdates-auction"></select></div>
-          <div class="field"><label for="lotdates-search">Buscar lote</label><input id="lotdates-search" placeholder="Nº do lote ou título"></div>
-          <div class="field"><label for="lotdates-nums">Marcar por nº dos lotes</label>
+          <div class="field"><label for="lotdates-auction">LeilÃ£o</label><select id="lotdates-auction"></select></div>
+          <div class="field"><label for="lotdates-search">Buscar lote</label><input id="lotdates-search" placeholder="NÂº do lote ou tÃ­tulo"></div>
+          <div class="field"><label for="lotdates-nums">Marcar por nÂº dos lotes</label>
             <input id="lotdates-nums" inputmode="numeric" placeholder="Ex.: 1, 3, 12"></div>
           <button class="btn btn--primary btn--sm" id="lotdates-mark" type="button">Marcar</button>
-          <div class="field"><label for="quick-date-start">Data e hora do leilão</label>
+          <div class="field"><label for="quick-date-start">Data e hora do leilÃ£o</label>
             <input id="quick-date-start" class="date-input" type="datetime-local"></div>
           <div class="field"><label for="quick-date-end">Encerramento dos lances</label>
             <input id="quick-date-end" class="date-input" type="datetime-local"></div>
           <button class="btn btn--primary btn--sm" id="quick-dates-apply" type="button" disabled>Aplicar data aos selecionados</button>
           <p class="muted dates-lots__count" id="lotdates-count"></p>
-          <button class="btn btn--ghost btn--sm" id="lotdates-clearsel" type="button" disabled>Limpar seleção</button>
+          <button class="btn btn--ghost btn--sm" id="lotdates-clearsel" type="button" disabled>Limpar seleÃ§Ã£o</button>
         </div>
         <div class="table-wrap">
           <table class="table lotdates-table">
             <thead><tr><th><input type="checkbox" id="lotdates-all" aria-label="Selecionar todos os lotes exibidos"></th>
-              <th>Lote</th><th>Item</th><th>Data e hora do leilão</th><th>Encerramento dos lances</th><th></th></tr></thead>
-            <tbody id="lotdates-body"><tr><td colspan="6" class="muted">Carregando…</td></tr></tbody>
+              <th>Lote</th><th>Item</th><th>Data e hora do leilÃ£o</th><th>Encerramento dos lances</th><th></th></tr></thead>
+            <tbody id="lotdates-body"><tr><td colspan="6" class="muted">Carregandoâ€¦</td></tr></tbody>
           </table>
         </div>
         <p class="form__msg" id="lotdates-msg"></p>
@@ -148,26 +148,26 @@
 
     <section class="panel panel--sim" id="sim-panel">
       <div class="panel__head">
-        <h2>Simulador de lances <small class="muted">(arrematantes fictícios para teste)</small></h2>
+        <h2>Simulador de lances <small class="muted">(arrematantes fictÃ­cios para teste)</small></h2>
         <div class="panel__tools">
-          <button class="btn btn--primary btn--sm" id="sim-start" type="button">▶ Iniciar</button>
-          <button class="btn btn--ghost btn--sm" id="sim-pause" type="button" hidden>⏸ Pausar</button>
-          <button class="btn btn--ghost btn--sm" id="sim-clear" type="button" hidden>🗑 Limpar dados</button>
-          <a class="btn btn--ghost btn--sm" href="index.html" target="_blank" rel="noopener">↗ Ver no site</a>
+          <button class="btn btn--primary btn--sm" id="sim-start" type="button">â–¶ Iniciar</button>
+          <button class="btn btn--ghost btn--sm" id="sim-pause" type="button" hidden>â¸ Pausar</button>
+          <button class="btn btn--ghost btn--sm" id="sim-clear" type="button" hidden>ðŸ—‘ Limpar dados</button>
+          <a class="btn btn--ghost btn--sm" href="index.html" target="_blank" rel="noopener">â†— Ver no site</a>
         </div>
       </div>
-      <p class="sim-note">Cria <strong>arrematantes fictícios</strong> que dão <strong>lances automáticos</strong> nos lotes do
-        catálogo — no escopo <strong>Todos os lotes do catálogo</strong>, todos os lotes (abertos e encerrados) recebem lances
-        em rajadas, para você testar tudo no painel: arremates por data, clientes, CSV e geração de contrato (procure o chip
-        <span class="chip chip--sim" style="margin:0">sim</span> nas tabelas). Os lances fictícios <strong>aparecem no site
-        público também</strong> — mas <strong>só neste navegador</strong>: visitantes reais não veem nada inventado (lance
-        inventado mostrado a arrematante real é fraude — lance de reserva) e <strong>nada é gravado no banco</strong>.
-        O lance real sempre vence quando for maior que o fictício. Cada lote tem teto: os lances fictícios
-        <strong>param sozinhos em 70% acima do preço inicial</strong> do lote (e o lote sai da disputa). Abra o site na <strong>mesma janela normal</strong>
-        (não anônima) para ver os lances nos cards, na página do lote e no histórico; se limpar os dados do site,
-        a simulação é apagada (ela fica salva só no navegador).</p>
+      <p class="sim-note">Cria <strong>arrematantes fictÃ­cios</strong> que dÃ£o <strong>lances automÃ¡ticos</strong> nos lotes do
+        catÃ¡logo â€” no escopo <strong>Todos os lotes do catÃ¡logo</strong>, todos os lotes (abertos e encerrados) recebem lances
+        em rajadas, para vocÃª testar tudo no painel: arremates por data, clientes, CSV e geraÃ§Ã£o de contrato (procure o chip
+        <span class="chip chip--sim" style="margin:0">sim</span> nas tabelas). Os lances fictÃ­cios <strong>aparecem no site
+        pÃºblico tambÃ©m</strong> â€” mas <strong>sÃ³ neste navegador</strong>: visitantes reais nÃ£o veem nada inventado (lance
+        inventado mostrado a arrematante real Ã© fraude â€” lance de reserva) e <strong>nada Ã© gravado no banco</strong>.
+        O lance real sempre vence quando for maior que o fictÃ­cio. Cada lote tem teto: os lances fictÃ­cios
+        <strong>param sozinhos em 70% acima do preÃ§o inicial</strong> do lote (e o lote sai da disputa). Abra o site na <strong>mesma janela normal</strong>
+        (nÃ£o anÃ´nima) para ver os lances nos cards, na pÃ¡gina do lote e no histÃ³rico; se limpar os dados do site,
+        a simulaÃ§Ã£o Ã© apagada (ela fica salva sÃ³ no navegador).</p>
       <div class="switches">
-        <label class="switch"><span>Arrematantes fictícios</span>
+        <label class="switch"><span>Arrematantes fictÃ­cios</span>
           <select id="sim-bidders">
             <option value="2">2</option><option value="4">4</option><option value="6" selected>6</option>
             <option value="8">8</option><option value="10">10</option><option value="12">12</option>
@@ -181,19 +181,19 @@
         </label>
         <label class="switch"><span>Escopo dos lances</span>
           <select id="sim-scope">
-            <option value="all" selected>Todos os lotes do catálogo</option>
-            <option value="auto">Automático (até 10 abertos)</option>
+            <option value="all" selected>Todos os lotes do catÃ¡logo</option>
+            <option value="auto">AutomÃ¡tico (atÃ© 10 abertos)</option>
           </select>
         </label>
       </div>
-      <p class="muted" id="sim-status">Simulação parada — nenhum lance fictício no painel.</p>
+      <p class="muted" id="sim-status">SimulaÃ§Ã£o parada â€” nenhum lance fictÃ­cio no painel.</p>
     </section>
 
     <section class="panel" id="views-panel">
       <div class="panel__head">
-        <h2>Visualizações do site</h2>
+        <h2>VisualizaÃ§Ãµes do site</h2>
         <div class="panel__tools">
-          <label class="switch"><span>Período</span>
+          <label class="switch"><span>PerÃ­odo</span>
             <select id="views-days"><option value="7">7 dias</option><option value="14" selected>14 dias</option><option value="30">30 dias</option></select>
           </label>
         </div>
@@ -201,23 +201,23 @@
       <p class="muted" id="views-hint" hidden></p>
       <div class="views" id="views-box">
         <div class="views__totals">
-          <div><span>Últimos 7 dias</span><strong id="views-7">—</strong></div>
-          <div><span>Últimos 30 dias</span><strong id="views-30">—</strong></div>
-          <div><span>Total registrado</span><strong id="views-total">—</strong></div>
+          <div><span>Ãšltimos 7 dias</span><strong id="views-7">â€”</strong></div>
+          <div><span>Ãšltimos 30 dias</span><strong id="views-30">â€”</strong></div>
+          <div><span>Total registrado</span><strong id="views-total">â€”</strong></div>
         </div>
         <figure class="vchart">
-          <figcaption class="vchart__title">Visualizações por dia</figcaption>
-          <div class="vchart__plot" id="views-chart" role="img" aria-label="Gráfico de visualizações por dia"></div>
+          <figcaption class="vchart__title">VisualizaÃ§Ãµes por dia</figcaption>
+          <div class="vchart__plot" id="views-chart" role="img" aria-label="GrÃ¡fico de visualizaÃ§Ãµes por dia"></div>
           <div class="vchart__tip" id="views-tip" hidden></div>
         </figure>
         <div class="admin-grid admin-grid--flush">
           <div class="table-wrap">
-            <table class="table"><caption class="table__cap">Lotes mais vistos no período</caption>
-              <thead><tr><th>Lote</th><th>Veículo</th><th>Visualizações</th><th>Última</th></tr></thead><tbody id="views-lots"></tbody></table>
+            <table class="table"><caption class="table__cap">Lotes mais vistos no perÃ­odo</caption>
+              <thead><tr><th>Lote</th><th>VeÃ­culo</th><th>VisualizaÃ§Ãµes</th><th>Ãšltima</th></tr></thead><tbody id="views-lots"></tbody></table>
           </div>
           <div class="table-wrap">
-            <table class="table"><caption class="table__cap">Páginas mais vistas no período</caption>
-              <thead><tr><th>Página</th><th>Visualizações</th></tr></thead><tbody id="views-pages"></tbody></table>
+            <table class="table"><caption class="table__cap">PÃ¡ginas mais vistas no perÃ­odo</caption>
+              <thead><tr><th>PÃ¡gina</th><th>VisualizaÃ§Ãµes</th></tr></thead><tbody id="views-pages"></tbody></table>
           </div>
         </div>
       </div>
@@ -225,45 +225,45 @@
 
     <div class="admin-grid">
       <section class="panel" id="add-panel">
-        <h2>Adicionar veículo / lote</h2>
+        <h2>Adicionar veÃ­culo / lote</h2>
         <form id="form-add-lot" novalidate>
-          <div class="field"><label for="a-title">Título (marca e modelo)</label><input id="a-title" required placeholder="Ex.: Honda Civic 2.0"></div>
+          <div class="field"><label for="a-title">TÃ­tulo (marca e modelo)</label><input id="a-title" required placeholder="Ex.: Honda Civic 2.0"></div>
           <div class="grid-2">
             <div class="field"><label for="a-cat">Categoria</label>
-              <select id="a-cat"><option value="carro">Veículo</option><option value="moto">Moto</option><option value="pesado">Pesado</option><option value="nautico">Náutico</option></select>
+              <select id="a-cat"><option value="carro">VeÃ­culo</option><option value="moto">Moto</option><option value="pesado">Pesado</option><option value="nautico">NÃ¡utico</option></select>
             </div>
             <div class="field"><label for="a-price">Lance inicial (R$)</label><input id="a-price" type="number" min="0" required placeholder="35000"></div>
           </div>
           <div class="grid-2">
             <div class="field"><label for="a-year">Ano/Modelo</label><input id="a-year" placeholder="2020/2021"></div>
-            <div class="field"><label for="a-km">Hodômetro</label><input id="a-km" placeholder="45.000 km"></div>
+            <div class="field"><label for="a-km">HodÃ´metro</label><input id="a-km" placeholder="45.000 km"></div>
           </div>
-          <div class="field"><label for="a-city">Localização</label><input id="a-city" placeholder="Curitiba/PR"></div>
-          <div class="field"><label for="a-photo">Foto do veículo (opcional)</label><input id="a-photo" type="file" accept="image/*"></div>
+          <div class="field"><label for="a-city">LocalizaÃ§Ã£o</label><input id="a-city" placeholder="Curitiba/PR"></div>
+          <div class="field"><label for="a-photo">Foto do veÃ­culo (opcional)</label><input id="a-photo" type="file" accept="image/*"></div>
           <button class="btn btn--primary" type="submit">Adicionar lote</button>
           <p class="form__msg" id="add-msg"></p>
         </form>
       </section>
 
       <section class="panel" id="contract-panel">
-        <h2>Gerar contrato de arrematação</h2>
+        <h2>Gerar contrato de arremataÃ§Ã£o</h2>
         <form id="form-contract" novalidate>
-          <div class="field"><label for="k-client">Cliente</label><select id="k-client" required><option value="">Carregando clientes…</option></select></div>
-          <div class="field"><label for="k-lot">Lote (lances deste cliente)</label><select id="k-lot" required><option value="">Selecione um cliente</option><option value="__manual">✎ Digitar o veículo manualmente</option></select></div>
+          <div class="field"><label for="k-client">Cliente</label><select id="k-client" required><option value="">Carregando clientesâ€¦</option></select></div>
+          <div class="field"><label for="k-lot">Lote (lances deste cliente)</label><select id="k-lot" required><option value="">Selecione um cliente</option><option value="__manual">âœŽ Digitar o veÃ­culo manualmente</option></select></div>
           <div class="field" id="k-manual" hidden>
-            <label for="k-vehicle">Veículo / lote (digitado)</label>
-            <input id="k-vehicle" placeholder="Ex.: Lote 12 — Toyota Corolla XEi 2.0 2021, placa ABC-1D23">
+            <label for="k-vehicle">VeÃ­culo / lote (digitado)</label>
+            <input id="k-vehicle" placeholder="Ex.: Lote 12 â€” Toyota Corolla XEi 2.0 2021, placa ABC-1D23">
           </div>
           <div class="field" id="k-date-field" hidden><label for="k-date">Data do arremate</label><input id="k-date" type="date"></div>
           <div class="grid-2">
             <div class="field"><label for="k-value">Valor de arremate (R$)</label><input id="k-value" type="number" min="0" step="1" required></div>
-            <div class="field"><label for="k-number">Nº do contrato (opcional)</label><input id="k-number" placeholder="Ex.: 2026/0001"></div>
+            <div class="field"><label for="k-number">NÂº do contrato (opcional)</label><input id="k-number" placeholder="Ex.: 2026/0001"></div>
           </div>
-          <div class="field"><label for="k-comitente">Comitente / vendedor (banco, financeira ou proprietário)</label><input id="k-comitente" placeholder="Razão social e CNPJ do vendedor"></div>
+          <div class="field"><label for="k-comitente">Comitente / vendedor (banco, financeira ou proprietÃ¡rio)</label><input id="k-comitente" placeholder="RazÃ£o social e CNPJ do vendedor"></div>
           <p class="muted" id="k-info" style="font-size:.85rem;margin:-.2rem 0 .8rem"></p>
           <button class="btn btn--primary" type="submit">Gerar contrato (imprimir / PDF)</button>
-          <button class="btn btn--ghost" id="k-termo" type="button">⬇ Baixar termo de arrematação (.doc)</button>
-          <p class="muted" style="font-size:.8rem;margin:.4rem 0 0">O termo de arrematação usa os mesmos dados acima e baixa em várias páginas (partes e bem, pagamento/declarações, condições e assinaturas).</p>
+          <button class="btn btn--ghost" id="k-termo" type="button">â¬‡ Baixar termo de arremataÃ§Ã£o (.doc)</button>
+          <p class="muted" style="font-size:.8rem;margin:.4rem 0 0">O termo de arremataÃ§Ã£o usa os mesmos dados acima e baixa em vÃ¡rias pÃ¡ginas (partes e bem, pagamento/declaraÃ§Ãµes, condiÃ§Ãµes e assinaturas).</p>
           <p class="form__msg" id="k-msg"></p>
         </form>
       </section>
@@ -271,24 +271,24 @@
 
     <section class="panel" id="wins-panel">
       <div class="panel__head">
-        <h2>Arremates por data <small class="muted">(quem deve arrematar cada veículo)</small></h2>
+        <h2>Arremates por data <small class="muted">(quem deve arrematar cada veÃ­culo)</small></h2>
         <div class="panel__tools">
           <button class="btn btn--ghost btn--sm" id="wins-csv" type="button">Exportar CSV</button>
         </div>
       </div>
       <div class="filters">
         <label>Encerramento de<input id="wins-from" type="date"></label>
-        <label>até<input id="wins-to" type="date"></label>
-        <label>Situação
+        <label>atÃ©<input id="wins-to" type="date"></label>
+        <label>SituaÃ§Ã£o
           <select id="wins-status"><option value="">Todos</option><option value="ended">Encerrados</option><option value="open">Em andamento</option></select>
         </label>
-        <label class="filters__grow">Buscar<input id="wins-search" type="search" placeholder="Veículo, lote, cliente, CPF ou telefone"></label>
+        <label class="filters__grow">Buscar<input id="wins-search" type="search" placeholder="VeÃ­culo, lote, cliente, CPF ou telefone"></label>
         <button class="btn btn--ghost btn--sm" id="wins-today" type="button">Hoje</button>
         <button class="btn btn--ghost btn--sm" id="wins-clear" type="button">Limpar</button>
       </div>
       <p class="muted filters__count" id="wins-count"></p>
       <div class="table-wrap">
-        <table class="table"><thead><tr><th>Encerramento</th><th>Lote</th><th>Veículo</th><th>Cliente (maior lance)</th><th>CPF</th><th>Telefone</th><th>Valor</th><th>Lances</th><th>Situação</th><th></th></tr></thead>
+        <table class="table"><thead><tr><th>Encerramento</th><th>Lote</th><th>VeÃ­culo</th><th>Cliente (maior lance)</th><th>CPF</th><th>Telefone</th><th>Valor</th><th>Lances</th><th>SituaÃ§Ã£o</th><th></th></tr></thead>
         <tbody id="wins-body"></tbody></table>
       </div>
     </section>
@@ -297,27 +297,27 @@
       <div class="panel__head">
         <h2>Clientes cadastrados</h2>
         <div class="panel__tools">
-          <label class="switch" title="Desligado: o CSV traz só quem se cadastrou de verdade (sem os 'sim')">
-            <input type="checkbox" id="clients-include-sim"> <span>Incluir fictícios no CSV</span>
+          <label class="switch" title="Desligado: o CSV traz sÃ³ quem se cadastrou de verdade (sem os 'sim')">
+            <input type="checkbox" id="clients-include-sim"> <span>Incluir fictÃ­cios no CSV</span>
           </label>
           <button class="btn btn--ghost btn--sm" id="clients-csv" type="button">Exportar CSV</button>
         </div>
       </div>
       <div class="filters">
         <label>Cadastro de<input id="clients-from" type="date"></label>
-        <label>até<input id="clients-to" type="date"></label>
+        <label>atÃ©<input id="clients-to" type="date"></label>
         <label>Ordenar
           <select id="clients-sort">
-            <option value="recent">Mais recentes</option><option value="name">Nome (A–Z)</option>
+            <option value="recent">Mais recentes</option><option value="name">Nome (Aâ€“Z)</option>
             <option value="bids">Mais lances</option><option value="max">Maior lance</option><option value="leading">Mais arremates</option>
           </select>
         </label>
-        <label class="filters__grow">Buscar<input id="clients-search" type="search" placeholder="Nome, e-mail, CPF, telefone ou veículo"></label>
+        <label class="filters__grow">Buscar<input id="clients-search" type="search" placeholder="Nome, e-mail, CPF, telefone ou veÃ­culo"></label>
         <button class="btn btn--ghost btn--sm" id="clients-clear" type="button">Limpar</button>
       </div>
       <p class="muted filters__count" id="clients-count"></p>
       <div class="table-wrap">
-        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>Endereço</th><th>Cadastro</th><th>Último acesso</th><th>Lances</th><th>Maior lance</th><th>Deve arrematar</th><th>Documento</th><th></th></tr></thead>
+        <table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>CPF</th><th>Telefone</th><th>EndereÃ§o</th><th>Cadastro</th><th>Ãšltimo acesso</th><th>Lances</th><th>Maior lance</th><th>Deve arrematar</th><th>Documento</th><th></th></tr></thead>
         <tbody id="clients-body"></tbody></table>
       </div>
     </section>
@@ -326,34 +326,34 @@
       <div class="panel__head">
         <h2>Lances <small class="muted">(200 mais recentes)</small></h2>
         <div class="panel__tools">
-          <button class="btn btn--primary btn--sm" id="bids-csv" type="button">⬇ Baixar lances (CSV)</button>
+          <button class="btn btn--primary btn--sm" id="bids-csv" type="button">â¬‡ Baixar lances (CSV)</button>
         </div>
       </div>
-      <p class="muted">O CSV traz <strong>todas as pessoas que estão dando lance</strong> (não só as 200 mais recentes):
-        uma linha por arrematante com contato, documento, total de lances, maior lance, último lance e
-        em quais lotes está à frente.</p>
+      <p class="muted">O CSV traz <strong>todas as pessoas que estÃ£o dando lance</strong> (nÃ£o sÃ³ as 200 mais recentes):
+        uma linha por arrematante com contato, documento, total de lances, maior lance, Ãºltimo lance e
+        em quais lotes estÃ¡ Ã  frente.</p>
       <div class="table-wrap">
-        <table class="table"><thead><tr><th>Lote</th><th>Usuário</th><th>Valor</th><th>Data/hora</th></tr></thead><tbody id="bids-body"></tbody></table>
+        <table class="table"><thead><tr><th>Lote</th><th>UsuÃ¡rio</th><th>Valor</th><th>Data/hora</th></tr></thead><tbody id="bids-body"></tbody></table>
       </div>
     </section>
 
     <section class="panel" id="lots-panel">
       <h2>Lotes cadastrados</h2>
       <div class="table-wrap">
-        <table class="table"><thead><tr><th>#</th><th>Foto</th><th>Título</th><th>Categoria</th><th>Lance inicial</th><th>Ações</th></tr></thead><tbody id="lots-body"></tbody></table>
+        <table class="table"><thead><tr><th>#</th><th>Foto</th><th>TÃ­tulo</th><th>Categoria</th><th>Lance inicial</th><th>AÃ§Ãµes</th></tr></thead><tbody id="lots-body"></tbody></table>
       </div>
     </section>
   </main>
 
-  <script src="js/data.js?v=81"></script>
+  <script src="js/data.js?v=82"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=81"></script>
-  <script src="js/auth.js?v=81"></script>
-  <script src="js/demo.js?v=81"></script>
-  <script src="js/store.js?v=81"></script>
-  <script src="js/masks.js?v=81"></script>
-  <script src="js/contract.js?v=81"></script>
-  <script src="js/simulate.js?v=81"></script>
-  <script src="js/admin.js?v=81"></script>
+  <script src="js/supabase.js?v=82"></script>
+  <script src="js/auth.js?v=82"></script>
+  <script src="js/demo.js?v=82"></script>
+  <script src="js/store.js?v=82"></script>
+  <script src="js/masks.js?v=82"></script>
+  <script src="js/contract.js?v=82"></script>
+  <script src="js/simulate.js?v=82"></script>
+  <script src="js/admin.js?v=82"></script>
 </body>
 </html>
