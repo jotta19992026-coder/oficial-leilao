@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 747" width="780" height="747">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2548"/>
+      <stop offset="60%" stop-color="#0d3d6b"/>
+      <stop offset="100%" stop-color="#0e5240"/>
+    </linearGradient>
+    <linearGradient id="houseFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a6b4a"/>
+      <stop offset="100%" stop-color="#0d4a30"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#12a06a"/>
+      <stop offset="100%" stop-color="#16c47e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="780" height="747" fill="url(#bg)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="780" height="6" fill="url(#accent)"/>
+
+  <!-- === ILLUSTRATION (top half) === -->
+  <!-- Sky glow -->
+  <circle cx="390" cy="230" r="260" fill="#0e5240" opacity="0.4"/>
+  <circle cx="390" cy="230" r="180" fill="#12a06a" opacity="0.07"/>
+
+  <!-- House 2 (left bg) -->
+  <g transform="translate(80, 160)">
+    <polygon points="90,0 0,75 180,75" fill="#0d9e5a" opacity="0.7"/>
+    <rect x="15" y="75" width="150" height="130" fill="#0a4530" opacity="0.8"/>
+    <rect x="55" y="140" width="40" height="65" rx="3" fill="#0a2548" opacity="0.9"/>
+    <rect x="22" y="90" width="38" height="30" rx="2" fill="#12a06a" opacity="0.4"/>
+    <rect x="100" y="90" width="38" height="30" rx="2" fill="#12a06a" opacity="0.4"/>
+  </g>
+
+  <!-- House 1 (center, largest) -->
+  <g transform="translate(270, 100)">
+    <polygon points="120,0 0,100 240,100" fill="#16c47e" opacity="0.9"/>
+    <rect x="22" y="100" width="196" height="160" fill="url(#houseFill)"/>
+    <rect x="90" y="175" width="60" height="85" rx="4" fill="#0a2548"/>
+    <rect x="32" y="118" width="55" height="48" rx="3" fill="#12a06a" opacity="0.5"/>
+    <rect x="153" y="118" width="55" height="48" rx="3" fill="#12a06a" opacity="0.5"/>
+    <line x1="59" y1="118" x2="59" y2="166" stroke="#0a2548" stroke-width="2"/>
+    <line x1="32" y1="142" x2="87" y2="142" stroke="#0a2548" stroke-width="2"/>
+    <line x1="180" y1="118" x2="180" y2="166" stroke="#0a2548" stroke-width="2"/>
+    <line x1="153" y1="142" x2="208" y2="142" stroke="#0a2548" stroke-width="2"/>
+    <rect x="168" y="-22" width="28" height="50" fill="#0d4a30"/>
+    <rect x="162" y="-26" width="40" height="12" fill="#12a06a"/>
+  </g>
+
+  <!-- House 3 (right bg) -->
+  <g transform="translate(580, 180)">
+    <polygon points="80,0 0,65 160,65" fill="#0d9e5a" opacity="0.7"/>
+    <rect x="12" y="65" width="136" height="115" fill="#0a4530" opacity="0.8"/>
+    <rect x="52" y="125" width="32" height="55" rx="3" fill="#0a2548" opacity="0.9"/>
+    <rect x="18" y="80" width="35" height="28" rx="2" fill="#12a06a" opacity="0.4"/>
+    <rect x="93" y="80" width="35" height="28" rx="2" fill="#12a06a" opacity="0.4"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="360" width="780" height="6" fill="#12a06a" opacity="0.5"/>
+  <rect x="0" y="366" width="780" height="30" fill="#0a3d2e" opacity="0.4"/>
+
+  <!-- Price tag floating -->
+  <g transform="translate(580, 100)">
+    <rect width="150" height="58" rx="12" fill="#ffffff" opacity="0.95"/>
+    <text x="75" y="22" font-family="Arial, sans-serif" font-size="11" fill="#0a2548" text-anchor="middle" font-weight="600">A PARTIR DE</text>
+    <text x="75" y="46" font-family="Arial Black, Arial, sans-serif" font-size="20" fill="#12a06a" text-anchor="middle" font-weight="900">R$ 85.000</text>
+  </g>
+
+  <!-- === TEXT (bottom half) === -->
+  <!-- Label chip -->
+  <rect x="40" y="420" width="260" height="30" rx="15" fill="#12a06a" opacity="0.25"/>
+  <text x="170" y="440" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#12a06a" text-anchor="middle" letter-spacing="2">DECEMBER REAL ESTATE AUCTION</text>
+
+  <!-- Title -->
+  <text x="40" y="502" font-family="Arial Black, Arial, sans-serif" font-size="46" font-weight="900" fill="#ffffff" letter-spacing="-1">Leilão de</text>
+  <text x="40" y="558" font-family="Arial Black, Arial, sans-serif" font-size="46" font-weight="900" fill="#12a06a" letter-spacing="-1">Imóveis</text>
+  <text x="40" y="604" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="#ffffff">Dezembro 2026</text>
+
+  <!-- Subtitle -->
+  <text x="40" y="638" font-family="Arial, sans-serif" font-size="16" fill="#b0cce0">Apartamentos, casas e imóveis comerciais.</text>
+  <text x="40" y="660" font-family="Arial, sans-serif" font-size="16" fill="#b0cce0">Lances 100% online — 15/12 e 20/12 às 10h.</text>
+
+  <!-- CTA button -->
+  <rect x="40" y="680" width="200" height="48" rx="10" fill="url(#accent)"/>
+  <text x="140" y="710" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">Ver imóveis →</text>
+</svg>

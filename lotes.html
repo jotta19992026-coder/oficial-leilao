@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lotes â€” LeilÃ£o Oficial</title>
-  <meta name="description" content="Todos os lotes disponÃ­veis no LeilÃ£o Oficial: veÃ­culos, motos, pesados e nÃ¡uticos.">
-  <link rel="icon" type="image/png" href="favicon.png?v=83">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=83">
+  <title>Lotes — Leilão Oficial</title>
+  <meta name="description" content="Todos os lotes disponíveis no Leilão Oficial: veículos, motos, pesados e náuticos.">
+  <link rel="icon" type="image/png" href="favicon.png?v=90">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=90">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://srxtmyhcfncscjvyibhg.supabase.co" crossorigin>
@@ -14,12 +14,12 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/styles.css?v=83">
+  <link rel="stylesheet" href="css/styles.css?v=90">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <div class="pagehead"><div class="container"><h1>Lotes disponÃ­veis</h1><p>Encontre veÃ­culos, motos, pesados e nÃ¡uticos em leilÃ£o.</p></div></div>
+  <div class="pagehead"><div class="container"><h1>Lotes disponíveis</h1><p>Encontre veículos, motos, pesados e náuticos em leilão.</p></div></div>
 
   <section class="section">
     <div class="container lots-layout">
@@ -28,25 +28,25 @@
         <form id="lots-filters">
           <fieldset>
             <legend>Categoria</legend>
-            <label><input type="checkbox" data-f="cat" value="carro"> VeÃ­culos</label>
+            <label><input type="checkbox" data-f="cat" value="carro"> Veículos</label>
             <label><input type="checkbox" data-f="cat" value="moto"> Motos</label>
             <label><input type="checkbox" data-f="cat" value="pesado"> Pesados</label>
-            <label><input type="checkbox" data-f="cat" value="nautico"> NÃ¡uticos</label>
-            <label><input type="checkbox" data-f="cat" value="imovel"> ImÃ³veis</label>
+            <label><input type="checkbox" data-f="cat" value="nautico"> Náuticos</label>
+            <label><input type="checkbox" data-f="cat" value="imovel"> Imóveis</label>
             <label><input type="checkbox" data-f="cat" value="equipamento"> Equipamentos</label>
           </fieldset>
           <fieldset>
-            <legend>Faixa de preÃ§o</legend>
+            <legend>Faixa de preço</legend>
             <select id="f-price">
               <option value="">Qualquer valor</option>
-              <option value="0-20000">AtÃ© R$ 20.000</option>
+              <option value="0-20000">Até R$ 20.000</option>
               <option value="20000-60000">R$ 20.000 a 60.000</option>
               <option value="60000-150000">R$ 60.000 a 150.000</option>
               <option value="150000-">Acima de R$ 150.000</option>
             </select>
           </fieldset>
           <fieldset>
-            <legend>Data do leilÃ£o</legend>
+            <legend>Data do leilão</legend>
             <select id="f-date"><option value="">Todas as datas</option></select>
           </fieldset>
           <button type="button" class="btn btn--ghost btn--block" id="filters-clear">Limpar filtros</button>
@@ -56,15 +56,15 @@
       <div class="lots-main">
         <div class="toolbar">
           <form class="search" id="lots-search" role="search">
-            <input type="search" placeholder="Buscar por marca ou modeloâ€¦" aria-label="Buscar">
+            <input type="search" placeholder="Buscar por marca ou modelo…" aria-label="Buscar">
             <button class="btn btn--primary" type="submit">Buscar</button>
           </form>
           <label class="sort">Ordenar
             <select id="f-sort">
-              <option value="default">PadrÃ£o</option>
-              <option value="price-asc">Menor preÃ§o</option>
-              <option value="price-desc">Maior preÃ§o</option>
-              <option value="name">Nome (Aâ€“Z)</option>
+              <option value="default">Padrão</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="name">Nome (A–Z)</option>
             </select>
           </label>
         </div>
@@ -76,15 +76,15 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=83"></script>
+  <script src="js/data.js?v=90"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="js/supabase.js?v=83"></script>
-  <script src="js/auth.js?v=83"></script>
-  <script src="js/demo.js?v=83"></script>
-  <script src="js/store.js?v=83"></script>
-  <script src="js/site.js?v=83"></script>
-  <script src="js/timers.js?v=83"></script>
-  <script src="js/card.js?v=83"></script>
-  <script src="js/lotes.js?v=83"></script>
+  <script src="js/supabase.js?v=90"></script>
+  <script src="js/auth.js?v=90"></script>
+  <script src="js/demo.js?v=90"></script>
+  <script src="js/store.js?v=90"></script>
+  <script src="js/site.js?v=90"></script>
+  <script src="js/timers.js?v=90"></script>
+  <script src="js/card.js?v=90"></script>
+  <script src="js/lotes.js?v=90"></script>
 </body>
 </html>

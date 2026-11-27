@@ -101,16 +101,8 @@ window.NL_DATEINFO = function (lot) {
 
   var today = nlStartOfToday();
   var endsAt = Number(lot.endsAt) || (lot.ends_at ? Date.parse(lot.ends_at) : 0);
-  var status;
-  // Regra: todos os lotes ficam abertos para lance; só encerra quem passou do prazo (ends_at).
-  // Sem ends_at, vale a data do leilão (data passada = encerrado).
-  if (endsAt) {
-    status = endsAt <= Date.now() ? { k: 'closed', l: 'Encerrado' }
-      : { k: 'open', l: 'Aberto para lances' };
-  } else {
-    var diff = Math.round((dateObj - today) / 86400000);
-    status = diff < 0 ? { k: 'closed', l: 'Encerrado' } : { k: 'open', l: 'Aberto para lances' };
-  }
+  // Todos os lotes sempre abertos para lances.
+  var status = { k: 'open', l: 'Aberto para lances' };
 
   var wd = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'][dateObj.getDay()];
   var wdShort = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'][dateObj.getDay()];

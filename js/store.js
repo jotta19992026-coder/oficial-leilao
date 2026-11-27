@@ -1,23 +1,23 @@
-﻿// LeilÃ£o Oficial â€” dados do site vindos do Supabase (lotes, fotos e lances).
-// NLStore.ready carrega os lotes publicados uma vez; depois lots()/lot()/bids() sÃ£o sÃ­ncronos,
-// lendo do cache. Se o Supabase estiver fora do ar, cai para o catÃ¡logo local (js/lots-data.js).
-// Lances passam pela funÃ§Ã£o place_bid (validaÃ§Ã£o e gravaÃ§Ã£o no banco, nunca no navegador).
+// Leilão Oficial — dados do site vindos do Supabase (lotes, fotos e lances).
+// NLStore.ready carrega os lotes publicados uma vez; depois lots()/lot()/bids() são síncronos,
+// lendo do cache. Se o Supabase estiver fora do ar, cai para o catálogo local (js/lots-data.js).
+// Lances passam pela função place_bid (validação e gravação no banco, nunca no navegador).
 (function () {
   'use strict';
 
   var supa = window.NLSupa;
-  var CAT_LABEL = { carro: 'VeÃ­culo', moto: 'Moto', pesado: 'Pesado', nautico: 'NÃ¡utico', imovel: 'ImÃ³vel', equipamento: 'Equipamento' };
+  var CAT_LABEL = { carro: 'Veículo', moto: 'Moto', pesado: 'Pesado', nautico: 'Náutico', imovel: 'Imóvel', equipamento: 'Equipamento' };
   var LOT_COLUMNS = 'id,n,title,description,obs,category,year,km,city,price,increment,media,auction_num,auction_date,' +
     'auction_time,auction_label,ends_at,ends_label,status,featured,bid_count,current_price,lot_photos(url,position)';
 
   var cache = { lots: [], byId: {}, myBids: [], source: 'loading' };
 
-  // O catÃ¡logo local (270 KB) sÃ³ Ã© baixado quando o Supabase falha; as pÃ¡ginas nÃ£o o carregam mais.
+  // O catálogo local (270 KB) só é baixado quando o Supabase falha; as páginas não o carregam mais.
   function loadLocalCatalog() {
     if (window.NL_REAL_LOTS) return Promise.resolve();
     return new Promise(function (resolve) {
       var s = document.createElement('script');
-      s.src = 'js/lots-data.js?v=83';
+      s.src = 'js/lots-data.js?v=90';
       s.onload = function () {
         if (window.NL_REAL_LOTS && window.NL_REAL_LOTS.length) window.NL_LOTS = window.NL_REAL_LOTS;
         resolve();
@@ -43,8 +43,8 @@
       title: r.title,
       cat: r.category,
       catLabel: CAT_LABEL[r.category] || r.category,
-      year: r.year || 'â€”',
-      km: r.km || 'â€”',
+      year: r.year || '—',
+      km: r.km || '—',
       city: r.city || 'Consultar edital',
       price: current,            // lance atual (o card e o detalhe mostram este valor)
       basePrice: base,           // lance inicial
@@ -70,8 +70,8 @@
   function fromLocal(l) {
     var c = {};
     for (var k in l) { if (Object.prototype.hasOwnProperty.call(l, k)) c[k] = l[k]; }
-    // O catÃ¡logo local pode trazer basePrice (lance inicial) separado do price
-    // (maior lance). Se nÃ£o trouxer, o price Ã© o prÃ³prio lance inicial.
+    // O catálogo local pode trazer basePrice (lance inicial) separado do price
+    // (maior lance). Se não trouxer, o price é o próprio lance inicial.
     c.basePrice = l.basePrice != null ? l.basePrice : l.price;
     c.increment = incrementFor(c.basePrice);
     return c;
@@ -92,8 +92,8 @@
       });
   }
 
-  // Uma falha de DNS/cold start do Supabase nÃ£o deve jogar o visitante no catÃ¡logo
-  // local (que Ã© um retrato antigo): tenta mais duas vezes antes de cair no fallback.
+  // Uma falha de DNS/cold start do Supabase não deve jogar o visitante no catálogo
+  // local (que é um retrato antigo): tenta mais duas vezes antes de cair no fallback.
   function fetchLotsRetry(tries) {
     return fetchLots().catch(function (err) {
       if (tries <= 1) throw err;
@@ -102,7 +102,7 @@
     });
   }
 
-  // Lances do prÃ³prio usuÃ¡rio (a RLS sÃ³ devolve os dele); servem para "Vencendo: VocÃª".
+  // Lances do próprio usuário (a RLS só devolve os dele); servem para "Vencendo: Você".
   function fetchMyBids() {
     var u = window.NLAuth && window.NLAuth.current();
     if (!supa || !u) return Promise.resolve([]);
@@ -111,18 +111,18 @@
       .then(function (r) {
         if (r.error) return [];
         return r.data.map(function (b) {
-          return { lotId: Number(b.lot_id), amount: Number(b.amount), time: Date.parse(b.created_at), userLabel: 'VocÃª' };
+          return { lotId: Number(b.lot_id), amount: Number(b.amount), time: Date.parse(b.created_at), userLabel: 'Você' };
         });
       }, function () { return []; });
   }
 
   // ------------------------------------------------------------------
-  // Lances fictÃ­cios do simulador (painel admin) tambÃ©m aparecem no site.
-  // A simulaÃ§Ã£o vive no localStorage (nl_sim_v1), entÃ£o o efeito Ã© deste
-  // navegador: o dono vÃª os lances fictÃ­cios nos cards, na pÃ¡gina do lote e
-  // no histÃ³rico; visitantes reais em outros dispositivos NÃƒO veem nada
-  // inventado (exibir lances falsos a arrematantes reais Ã© lance de reserva).
-  // O lance real sempre vence quando for maior que o fictÃ­cio.
+  // Lances fictícios do simulador (painel admin) também aparecem no site.
+  // A simulação vive no localStorage (nl_sim_v1), então o efeito é deste
+  // navegador: o dono vê os lances fictícios nos cards, na página do lote e
+  // no histórico; visitantes reais em outros dispositivos NÃO veem nada
+  // inventado (exibir lances falsos a arrematantes reais é lance de reserva).
+  // O lance real sempre vence quando for maior que o fictício.
   // ------------------------------------------------------------------
   function simState() {
     try {
@@ -135,7 +135,7 @@
     var f = String(name || '').split(' ')[0];
     return f || 'Participante';
   }
-  // Mistura a simulaÃ§Ã£o em cada lote do cache (idempotente: guarda os valores reais de base).
+  // Mistura a simulação em cada lote do cache (idempotente: guarda os valores reais de base).
   function applySim() {
     var st = simState();
     cache.lots.forEach(function (l) {
@@ -160,9 +160,9 @@
       l.demoPrice = demoPrice;
     });
   }
-  // SimulaÃ§Ã£o ativa agora? (pÃ¡ginas usam para atualizar o lote sozinho)
+  // Simulação ativa agora? (páginas usam para atualizar o lote sozinho)
   function simActive() { var st = simState(); return !!(st && st.on); }
-  // Acompanha a simulaÃ§Ã£o: enquanto houver registro, re-mescla (idempotente).
+  // Acompanha a simulação: enquanto houver registro, re-mescla (idempotente).
   setInterval(applySim, 10000);
 
   var ready = (supa
@@ -170,9 +170,9 @@
         if (!list.length) throw new Error('Nenhum lote publicado no Supabase.');
         setLots(list, 'supabase');
       })
-    : Promise.reject(new Error('supabase-js indisponÃ­vel'))
+    : Promise.reject(new Error('supabase-js indisponível'))
   ).catch(function (err) {
-    // Sem ruÃ­do no console: em silÃªncio usa o catÃ¡logo local (js/lots-data.js).
+    // Sem ruído no console: em silêncio usa o catálogo local (js/lots-data.js).
     return loadLocalCatalog().then(function () {
       setLots((window.NL_LOTS || []).map(fromLocal), 'local');
     });
@@ -186,11 +186,11 @@
 
   function pgMessage(err) {
     var m = (err && err.message) || '';
-    var min = /lance mÃ­nimo Ã© (\d+(?:\.\d+)?)/i.exec(m);
-    if (min) return 'O lance mÃ­nimo Ã© ' + window.NL_BRL(Math.round(Number(min[1]))) + '.';
-    if (/JWT|not authenticated|FaÃ§a login/i.test(m)) return 'Sua sessÃ£o expirou. Entre novamente para dar lances.';
-    if (/failed to fetch|network/i.test(m)) return 'Sem conexÃ£o com o servidor. Tente de novo.';
-    return m || 'NÃ£o foi possÃ­vel registrar o lance.';
+    var min = /lance mínimo é (\d+(?:\.\d+)?)/i.exec(m);
+    if (min) return 'O lance mínimo é ' + window.NL_BRL(Math.round(Number(min[1]))) + '.';
+    if (/JWT|not authenticated|Faça login/i.test(m)) return 'Sua sessão expirou. Entre novamente para dar lances.';
+    if (/failed to fetch|network/i.test(m)) return 'Sem conexão com o servidor. Tente de novo.';
+    return m || 'Não foi possível registrar o lance.';
   }
 
   var NLStore = {
@@ -199,12 +199,12 @@
     lots: function () { return cache.lots; },
     lot: function (id) { return cache.byId[parseInt(id, 10)] || null; },
 
-    // Lances do usuÃ¡rio logado (mais recente primeiro).
+    // Lances do usuário logado (mais recente primeiro).
     bids: function () { return cache.myBids; },
 
-    // Lance via funÃ§Ã£o place_bid: Promise<{ ok, lot?, error? }>.
+    // Lance via função place_bid: Promise<{ ok, lot?, error? }>.
     placeBid: function (lotId, amount) {
-      if (!supa || cache.source !== 'supabase') return Promise.resolve({ ok: false, error: 'Lances indisponÃ­veis no momento.' });
+      if (!supa || cache.source !== 'supabase') return Promise.resolve({ ok: false, error: 'Lances indisponíveis no momento.' });
       return supa.rpc('place_bid', { p_lot_id: lotId, p_amount: amount }).then(function (r) {
         if (r.error) return { ok: false, error: pgMessage(r.error) };
         var lot = cache.byId[lotId];
@@ -214,13 +214,13 @@
           lot.realBids = (lot.realBids == null ? lot.bids : lot.realBids) + 1;
           applySim();
         }
-        cache.myBids.unshift({ lotId: lotId, amount: value, time: Date.parse(r.data.created_at) || Date.now(), userLabel: 'VocÃª' });
+        cache.myBids.unshift({ lotId: lotId, amount: value, time: Date.parse(r.data.created_at) || Date.now(), userLabel: 'Você' });
         return { ok: true, lot: lot, amount: value };
       }, function (e) { return { ok: false, error: pgMessage(e) }; });
     },
 
-    // HistÃ³rico pÃºblico (primeiro nome + valor + data), via lot_bid_history.
-    // Lances fictÃ­cios do simulador (mesmo navegador) entram na lista tambÃ©m.
+    // Histórico público (primeiro nome + valor + data), via lot_bid_history.
+    // Lances fictícios do simulador (mesmo navegador) entram na lista também.
     history: function (lotId) {
       var st = simState();
       var sim = st ? (st.bids || []).filter(function (b) { return Number(b.lot_id) === Number(lotId); })
@@ -241,9 +241,9 @@
       }, function () { return sim.concat(demo).sort(function (a, b) { return b.time - a.time; }); });
     },
 
-    // VisualizaÃ§Ãµes do lote: contagem REAL de page_views (migraÃ§Ã£o 003, leitura na 006).
+    // Visualizações do lote: contagem REAL de page_views (migração 003, leitura na 006).
     lotViews: function (lotId) {
-      if (window.NLDemo && window.NLDemo.enabled()) return Promise.resolve(window.NLDemo.views(lotId));
+      if (window.NLDemo && window.NLDemo.enabled()) return Promise.resolve(window.NLDemo.views(lotId, cache.byId[lotId]));
       if (!supa || cache.source !== 'supabase') return Promise.resolve(null);
       return supa.rpc('lot_view_count', { p_lot_id: lotId }).then(function (r) {
         if (r.error || !r.data) return null;
@@ -251,7 +251,7 @@
       }, function () { return null; });
     },
 
-    // RelÃª um lote (preÃ§o/lances atuais).
+    // Relê um lote (preço/lances atuais).
     refreshLot: function (id) {
       if (!supa || cache.source !== 'supabase') return Promise.resolve(cache.byId[id] || null);
       return supa.from('lots').select(LOT_COLUMNS).eq('id', id).maybeSingle().then(function (r) {
@@ -266,7 +266,7 @@
       });
     },
 
-    // Avisa quando o lote muda no banco (novo lance de qualquer pessoa). Devolve funÃ§Ã£o para cancelar.
+    // Avisa quando o lote muda no banco (novo lance de qualquer pessoa). Devolve função para cancelar.
     watchLot: function (id, onChange) {
       if (!supa || cache.source !== 'supabase') return function () {};
       var channel = supa.channel('lot-' + id)
@@ -282,10 +282,10 @@
       return function () { supa.removeChannel(channel); };
     },
 
-    // SimulaÃ§Ã£o do painel rodando neste navegador? (lote.html atualiza sozinho)
+    // Simulação do painel rodando neste navegador? (lote.html atualiza sozinho)
     simActive: simActive,
 
-    // ---- FunÃ§Ãµes do painel administrativo (a RLS exige profiles.role = 'admin') ----
+    // ---- Funções do painel administrativo (a RLS exige profiles.role = 'admin') ----
     admin: {
       lots: function () {
         return supa.from('lots').select(LOT_COLUMNS).order('id').then(function (r) {
@@ -293,7 +293,7 @@
           return r.data.map(fromRow);
         });
       },
-      // Todos os clientes com resumo de lances (funÃ§Ã£o admin_clients, migraÃ§Ã£o 002).
+      // Todos os clientes com resumo de lances (função admin_clients, migração 002).
       clients: function () {
         return supa.rpc('admin_clients').then(function (r) { if (r.error) throw r.error; return r.data; });
       },
@@ -301,7 +301,7 @@
       clientLots: function (userId) {
         return supa.rpc('admin_client_lots', { p_user_id: userId }).then(function (r) { if (r.error) throw r.error; return r.data; });
       },
-      // Resumo das visualizaÃ§Ãµes do site (funÃ§Ã£o admin_views, migraÃ§Ã£o 003).
+      // Resumo das visualizações do site (função admin_views, migração 003).
       views: function (days) {
         return supa.rpc('admin_views', { p_days: days || 14 }).then(function (r) { if (r.error) throw r.error; return r.data; });
       },
@@ -344,19 +344,19 @@
       removeLot: function (id) {
         return supa.from('lots').delete().eq('id', id).then(function (r) { if (r.error) throw r.error; });
       },
-      // Datas do leilÃ£o: grava a data/hora exibida e o encerramento dos lances nos lotes do grupos.
+      // Datas do leilão: grava a data/hora exibida e o encerramento dos lances nos lotes do grupos.
       setAuctionDates: function (ids, patch) {
-        if (!supa) return Promise.reject(new Error('Supabase indisponÃ­vel.'));
+        if (!supa) return Promise.reject(new Error('Supabase indisponível.'));
         return supa.from('lots').update(patch).in('id', ids).select('id,n,auction_num,auction_date,auction_time,auction_label,ends_at')
           .then(function (r) { if (r.error) throw r.error; return r.data; });
       },
-      // Datas de UM lote (exceÃ§Ã£o ao leilÃ£o: encerramento escalonado etc.).
+      // Datas de UM lote (exceção ao leilão: encerramento escalonado etc.).
       setLotDates: function (id, patch) {
-        if (!supa) return Promise.reject(new Error('Supabase indisponÃ­vel.'));
+        if (!supa) return Promise.reject(new Error('Supabase indisponível.'));
         return supa.from('lots').update(patch).eq('id', id).select('id,n,auction_num,auction_date,auction_time,auction_label,ends_at')
           .then(function (r) { if (r.error) throw r.error; return r.data; });
       },
-      // MantÃ©m a tabela auctions coerente com os lotes (usada pelo edital/agenda).
+      // Mantém a tabela auctions coerente com os lotes (usada pelo edital/agenda).
       setAuctionSchedule: function (numero, abertura, encerramento) {
         if (!supa || !numero) return Promise.resolve(null);
         return supa.from('auctions').update({ abertura: abertura, encerramento: encerramento }).eq('numero', numero)
@@ -378,10 +378,10 @@
           .then(function (r) { if (r.error) throw r.error; });
       },
       // Documento enviado pelo cliente (bucket privado user-docs): link assinado de 5 min.
-      // Exclui o cliente (funÃ§Ã£o admin_delete_user, migraÃ§Ã£o 007). Apaga antes o documento
-      // do bucket user-docs (melhor esforÃ§o) e depois a conta; os lances ficam no histÃ³rico sem dono.
+      // Exclui o cliente (função admin_delete_user, migração 007). Apaga antes o documento
+      // do bucket user-docs (melhor esforço) e depois a conta; os lances ficam no histórico sem dono.
       deleteUser: function (userId, docPath) {
-        if (!supa || !userId) return Promise.reject(new Error('Supabase indisponÃ­vel.'));
+        if (!supa || !userId) return Promise.reject(new Error('Supabase indisponível.'));
         var rmDoc = docPath
           ? supa.storage.from('user-docs').remove([docPath]).then(function () {}, function () {})
           : Promise.resolve();
@@ -390,7 +390,7 @@
         }).then(function (r) { if (r.error) throw r.error; });
       },
       docLink: function (path) {
-        if (!supa || !path) return Promise.reject(new Error('Documento indisponÃ­vel.'));
+        if (!supa || !path) return Promise.reject(new Error('Documento indisponível.'));
         return supa.storage.from('user-docs').createSignedUrl(path, 300)
           .then(function (r) { if (r.error) throw r.error; return r.data.signedUrl; });
       }

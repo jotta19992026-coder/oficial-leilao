@@ -44,14 +44,40 @@
       '<li><span>Lote</span><strong>' + lot.n + '</strong></li>' +
       '<li><span>Data / Hora</span><strong>' + di.label + '</strong></li>' +
       '<li><span>' + (w ? 'Vencendo' : 'Categoria') + '</span><strong>' + (w || lot.catLabel) + '</strong></li>' +
+      '<li><span>Visualizações</span><strong class="lot__views" data-lot-id="' + lot.id + '">…</strong></li>' +
       '</ul>' +
       '<div class="lot__row">' +
-      '<span class="lot__pricewrap"><span class="lot__price">' + window.NL_BRL(lot.price) + '</span>' + (lot.demoPrice ? ' <span class="chip chip--demo">ilustrativo</span>' : '') + '<span class="lot__pricelabel">Maior lance</span></span>' +
+      '<span class="lot__pricewrap"><span class="lot__price">' + window.NL_BRL(lot.price) + '</span><span class="lot__pricelabel">Maior lance</span></span>' +
       '<span class="lot__timer"' + (lot.endsAt ? ' data-ends-at="' + lot.endsAt + '"' : ' data-ends="' + lot.ends + '"') + '>—</span>' +
       '</div>' +
       '<a class="btn btn--block" href="lote.html?id=' + lot.id + '">' + (CTA[lot.cat] || 'Ver detalhes') + '</a>' +
       '</div></article>';
   };
+
+  // Preenche o contador de visualizações em todos os cards da página.
+  function fillCardViews() {
+    var els = document.querySelectorAll('.lot__views[data-lot-id]');
+    if (!els.length) return;
+    Array.prototype.forEach.call(els, function (el) {
+      var id = el.getAttribute('data-lot-id');
+      if (el.dataset.loaded) return;
+      el.dataset.loaded = '1';
+      if (window.NLStore && window.NLStore.lotViews) {
+        window.NLStore.lotViews(id).then(function (v) {
+          if (v && v.views) el.textContent = v.views.toLocaleString('pt-BR');
+        });
+      } else if (window.NLDemo) {
+        var lot = window.NLStore ? window.NLStore.lot(id) : null;
+        var v = window.NLDemo.views(id, lot);
+        el.textContent = v.views.toLocaleString('pt-BR');
+      }
+    });
+  }
+  // Preenche quando os cards forem inseridos no DOM (store.ready ou fallback imediato)
+  (window.NLStore ? window.NLStore.ready : Promise.resolve()).then(fillCardViews);
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(fillCardViews, 400);
+  });
 
   // Troca automática das fotos dos cards visíveis, com fade e pausa no hover.
   // A rotação continua mesmo com "prefers-reduced-motion"; nesse caso o CSS

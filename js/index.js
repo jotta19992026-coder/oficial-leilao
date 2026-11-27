@@ -1,24 +1,32 @@
-// Leilão Oficial — página inicial: lotes em destaque + seções por leilão (ordem cronológica).
+// Leilão Oficial — página inicial: lotes em destaque + seções por categoria.
 (function () {
   'use strict';
-  // Renderiza depois que os lotes chegam do Supabase (ou do catálogo local, se offline).
+
+  var CAT_LABEL = {
+    carro:       { label: 'Veículos',    href: 'lotes.html?cat=carro',       promo: 'Recuperados de bancos e financeiras, com documentação em dia e lances 100% online.' },
+    moto:        { label: 'Motos',       href: 'lotes.html?cat=moto',         promo: 'Modelos populares e esportivas, com lance inicial acessível.' },
+    imovel:      { label: 'Imóveis',     href: 'lotes.html?cat=imovel',       promo: 'Apartamentos, casas e imóveis comerciais disponíveis para arrematação em dezembro.' },
+    pesado:      { label: 'Pesados',     href: 'lotes.html?cat=pesado',       promo: 'Caminhões, vans e implementos prontos para arrematar.' },
+    nautico:     { label: 'Náuticos',    href: 'lotes.html?cat=nautico',      promo: 'Barcos e embarcações em leilão com documentação regularizada.' },
+    equipamento: { label: 'Equipamentos', href: 'lotes.html?cat=equipamento', promo: 'Máquinas e equipamentos industriais e agrícolas.' }
+  };
+
   (window.NLStore ? window.NLStore.ready : Promise.resolve()).then(function () {
     var lots = window.NLStore ? window.NLStore.lots() : (window.NL_LOTS || []);
     var card = window.NLCard;
 
-    // Ordem cronológica por data do leilão
     var byDate = lots.slice().sort(function (a, b) {
       return window.NL_DATEINFO(a).sortKey - window.NL_DATEINFO(b).sortKey;
     });
 
-    // Próximos leilões: gerados a partir das datas atuais do banco (editáveis no painel).
+    // Próximos leilões
     var events = document.getElementById('upcoming-events');
     if (events && window.NL_EVENT_LIST) {
       events.innerHTML = window.NL_EVENT_LIST(lots, 4, true) ||
         '<p class="empty">Nenhum leilão programado no momento.</p>';
     }
 
-    // Datas do filtro "Data do leilão" da home (antes eram opções fixas no HTML).
+    // Datas do filtro da home
     var dateSel = document.getElementById('finder-date');
     if (dateSel) {
       var seen = {};
@@ -40,25 +48,54 @@
     var grid = document.getElementById('featured-grid');
     if (grid) grid.innerHTML = byDate.slice(0, 8).map(card).join('');
 
-    // Seções por leilão, blocos em ordem cronológica
-    var wrap = document.getElementById('auction-sections');
-    if (wrap) {
-      var groups = {};
-      byDate.forEach(function (l) { (groups[l.auction] = groups[l.auction] || []).push(l); });
-      var names = Object.keys(groups).sort(function (a, b) {
-        return window.NL_DATEINFO(groups[a][0]).sortKey - window.NL_DATEINFO(groups[b][0]).sortKey;
-      });
-      wrap.innerHTML = names.map(function (name) {
-        var di = window.NL_DATEINFO(groups[name][0]);
-        var type = name.replace(/\s*—.*$/, '');
-        return '<div class="auction-block"><div class="auction-block__head">' +
-          '<div class="auction-block__when"><h3>' + di.weekday + ' · ' + di.date + '</h3>' +
-          '<span class="auction-block__type">' + type + '</span></div>' +
-          '<a class="link" href="lotes.html">Ver todos os itens →</a></div>' +
-          '<div class="auction-row">' + groups[name].map(card).join('') + '</div></div>';
-      }).join('');
-    }
+    // Seções por categoria (apenas categorias com 2+ lotes)
+    var catWrap = document.getElementById('cat-sections');
+    if (!catWrap) return;
 
+    // Agrupar por categoria
+    var groups = {};
+    byDate.forEach(function (l) {
+      (groups[l.cat] = groups[l.cat] || []).push(l);
+    });
+
+    // Ordem de exibição: categorias com mais lotes primeiro
+    var catOrder = Object.keys(groups).sort(function (a, b) {
+      return groups[b].length - groups[a].length;
+    });
+
+    var html = '';
+    var alt = false;
+    catOrder.forEach(function (cat) {
+      var items = groups[cat];
+      if (items.length < 2) return; // só exibe categorias com 2+ lotes
+      var meta = CAT_LABEL[cat] || { label: cat, icon: '', href: 'lotes.html?cat=' + cat, promo: '' };
+      var show = items.slice(0, 4); // mostra até 4 lotes por categoria
+      var total = items.length;
+
+      html += '<section class="section' + (alt ? ' section--alt' : '') + '" id="cat-' + cat + '">' +
+        '<div class="container">' +
+        '<div class="section__head">' +
+        '<h2>' + meta.label + '</h2>' +
+        '<a class="link" href="' + meta.href + '">Ver todos (' + total + ') →</a>' +
+        '</div>';
+
+      if (meta.promo) {
+        html += '<p class="cat-section__sub">' + meta.promo + '</p>';
+      }
+
+      html += '<div class="lot-grid lot-grid--4">' + show.map(card).join('') + '</div>';
+
+      if (total > 4) {
+        html += '<div style="text-align:center;margin-top:1.5rem">' +
+          '<a class="btn btn--ghost" href="' + meta.href + '">Ver mais ' + meta.label.toLowerCase() + ' (' + (total - 4) + ' restantes) →</a>' +
+          '</div>';
+      }
+
+      html += '</div></section>';
+      alt = !alt;
+    });
+
+    catWrap.innerHTML = html;
     if (window.NLTimers) window.NLTimers.scan();
   });
 })();

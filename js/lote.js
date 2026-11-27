@@ -64,7 +64,7 @@
   var obsText = lot.obs || ex.laudo;
   var descText = lot.desc ||
     (lot.title + ' (' + lot.year + '), ' + lot.km + ', localizado em ' + lot.city + '. ' +
-      'Lote da Norte Leilões, com laudo e fotos ilustrativos. ' +
+      'Lote da Norte Leilões. ' +
       'Confira as condições completas no edital antes de ofertar.');
 
   root.innerHTML =
@@ -139,16 +139,19 @@
             '</div>';
         })() : '') +
         '<a class="link" href="edital.html?id=' + lot.id + '">Ver edital deste leilão →</a>' +
+        '<div class="detail__history detail__history--inline">' +
+          '<h3 class="detail__history-title">Histórico de lances</h3>' +
+          '<div class="detail__history-scroll">' +
+            '<table class="table"><thead><tr><th>Participante</th><th>Valor</th><th>Quando</th></tr></thead>' +
+            '<tbody id="bid-history"></tbody></table>' +
+          '</div>' +
+        '</div>' +
       '</div>' +
     '</div>' +
     '<div class="detail__desc"><h2>Descrição</h2>' +
       '<p>' + descText + '</p>' +
       '<h3 style="color:var(--navy);font-size:1.05rem;margin:1.2rem 0 .3rem">' + obsTitle + '</h3>' +
       '<p>' + obsText + '</p>' +
-    '</div>' +
-    '<div class="detail__history"><h2>Histórico de lances <small class="muted" id="d-demo-tag" hidden>(ilustrativo)</small></h2>' +
-      '<div class="table-wrap"><table class="table"><thead><tr><th>Participante</th><th>Valor</th><th>Quando</th></tr></thead>' +
-      '<tbody id="bid-history"></tbody></table></div>' +
     '</div>' +
     '</div>';
 
@@ -255,8 +258,7 @@
     if (!tb) return;
     tb.innerHTML = list.length
       ? list.map(function (b) {
-          var chip = (b.demo || b.sim) ? ' <span class="chip chip--demo">ilustrativo</span>' : '';
-          return '<tr><td>' + esc(b.userLabel) + chip + '</td><td>' + window.NL_BRL(b.amount) + '</td><td>' +
+          return '<tr><td>' + esc(b.userLabel) + '</td><td>' + window.NL_BRL(b.amount) + '</td><td>' +
             new Date(b.time).toLocaleString('pt-BR') + '</td></tr>';
         }).join('')
       : '<tr><td colspan="3" class="muted">Ainda não há lances para este lote. Seja o primeiro.</td></tr>';
@@ -265,8 +267,6 @@
     if (!window.NLStore) return;
     window.NLStore.history(lot.id).then(function (rows) {
       renderHistory(rows);
-      var tag = document.getElementById('d-demo-tag');
-      if (tag && window.NLDemo && window.NLDemo.enabled()) tag.hidden = false;
     });
   }
   // Aplica preço/quantidade de lances vindos do banco.

@@ -88,6 +88,15 @@ img{max-width:100%;display:block}
 .banner__badge{position:absolute;top:0;right:0;z-index:2;background:var(--brand);color:#fff;
   font-family:"Sora",sans-serif;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;
   padding:.45rem 1rem;border-radius:0 13px 0 14px}
+/* December real estate banners */
+.banner--imovel-dez{background:linear-gradient(125deg,#0a3d2e 0%,#0d5c40 55%,#0a7a4f 100%);padding:0}
+.banner--imovel-dez .banner__figure{background:#0a3d2e;border-color:#12a06a}
+.banner--imovel-online{background:linear-gradient(125deg,#1a0a3d 0%,#2d0d5c 55%,#3a0a7a 100%);padding:0}
+.banner--imovel-online .banner__figure{background:#1a0a3d;border-color:#9b59b6}
+.banner--imovel-dez .banner__inner,
+.banner--imovel-online .banner__inner{padding:2rem 0}
+.banner--imovel-dez .banner__sub:first-child,
+.banner--imovel-online .banner__sub:first-child{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-bottom:.35rem}
 /* Todos os slides seguem o quadro do 1º banner (Bradesco): 1140×297 no desktop e 780×747 em ≤560 px.
    As artes RIZA/Daycoval/Pan-mobile foram recompostas nesse formato (scripts/recompose-banners.py). */
 .banner--promo{display:block;min-height:0;background:#fff}
@@ -208,6 +217,11 @@ img{max-width:100%;display:block}
 /* Seções */
 .section{padding:64px 0}
 .section--alt{background:var(--bg-alt)}
+.cat-section__sub{color:var(--muted);font-size:1rem;margin:-.8rem 0 1.6rem;max-width:620px}
+.lot-grid--4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+@media(max-width:1024px){.lot-grid--4{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.lot-grid--4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.lot-grid--4{grid-template-columns:1fr}}
 .section__head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.8rem;flex-wrap:wrap}
 .section__head h2{font-size:1.8rem;color:var(--navy);margin:0}
 .link{color:var(--brand-600);font-weight:600}
@@ -415,8 +429,21 @@ img{max-width:100%;display:block}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem 0}
 
 /* Detalhe do lote */
-.detail{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;margin:1rem 0 2rem}
+.detail{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;margin:1rem 0 2rem;align-items:start}
 .detail>*{min-width:0}
+/* Coluna direita: card fixo que acompanha o scroll */
+.detail__info{position:sticky;top:88px;max-height:calc(100vh - 108px);overflow-y:auto;padding-right:4px}
+.detail__info::-webkit-scrollbar{width:4px}
+.detail__info::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+/* Histórico de lances inline no card fixo */
+.detail__history--inline{margin-top:1.2rem;border-top:1px solid var(--line);padding-top:1rem}
+.detail__history-title{font-size:1rem;color:var(--navy);font-family:"Sora",sans-serif;margin:0 0 .7rem}
+.detail__history-scroll{max-height:220px;overflow-y:auto;border:1px solid var(--line);border-radius:10px}
+.detail__history-scroll::-webkit-scrollbar{width:4px}
+.detail__history-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.detail__history-scroll .table{font-size:.82rem}
+/* Descrição fora do grid: largura total */
+.detail__desc{margin-bottom:2rem}
 .gallery{aspect-ratio:4/3;border-radius:var(--radius);position:relative;display:block;overflow:hidden}
 .gallery__img{width:100%;height:100%;object-fit:contain;background:linear-gradient(135deg,#d9dde3,#eef1f5);display:block}
 
@@ -579,6 +606,9 @@ img{max-width:100%;display:block}
 @media (max-width:860px){
   .detail{grid-template-columns:1fr}
   .account{grid-template-columns:1fr}
+  /* No mobile: card deixa de ser sticky e usa altura livre */
+  .detail__info{position:static;max-height:none;overflow-y:visible}
+  .detail__history-scroll{max-height:280px}
 }
 
 /* ---- Painel admin ---- */
@@ -734,6 +764,7 @@ a.stat:hover{background:rgba(255,255,255,.08)}
 .lot__badge{position:absolute;top:.7rem;right:.7rem;z-index:2;font-size:.68rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.03em;padding:.25rem .55rem;border-radius:6px;color:#fff}
 .lot__badge--open{background:var(--brand)}
+.lot__badge--sched{background:#0a7a4f}
 .lot__badge--soon{background:var(--navy)}
 .lot__badge--closed{background:#8a93a3}
 .lot__media .lot__img{transition:opacity .35s ease,transform .5s ease}
