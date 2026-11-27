@@ -611,6 +611,11 @@ img{max-width:100%;display:block}
   .detail__history-scroll{max-height:280px}
 }
 
+/* ---- Selo anti-phishing ---- */
+.nl-trust-badge{display:flex;align-items:center;gap:.45rem;background:#f0faf4;border:1px solid #b6e5c8;border-radius:8px;padding:.45rem .8rem;font-size:.78rem;color:#1a7a46;margin-bottom:.85rem;width:fit-content}
+.nl-trust-badge svg{flex-shrink:0;color:#1a7a46}
+.nl-trust-badge strong{font-weight:600}
+
 /* ---- Painel admin ---- */
 .admin-top{background:var(--navy);position:sticky;top:0;z-index:40}
 .admin-top__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
